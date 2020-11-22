@@ -32,6 +32,10 @@
             System.Windows.Forms.Label label17;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMotivoVisita));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRefrescar = new System.Windows.Forms.Button();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.Eliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -46,12 +50,9 @@
             this.dbComisariaDataSet1 = new Comisarias.App.Escritorio.dbComisariaDataSet1();
             this.motivoVisitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.motivoVisitaTableAdapter = new Comisarias.App.Escritorio.dbComisariaDataSet1TableAdapters.MotivoVisitaTableAdapter();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.Eliminar = new System.Windows.Forms.Button();
-            this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.btnRefrescar = new System.Windows.Forms.Button();
             label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.pnlVentasMes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentasMes)).BeginInit();
             this.pnlVentasAnio.SuspendLayout();
@@ -60,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbComisariaDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motivoVisitaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // label17
@@ -95,6 +95,51 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INFORMACIÓN USUARIO";
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnRefrescar.Location = new System.Drawing.Point(467, 457);
+            this.btnRefrescar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(199, 34);
+            this.btnRefrescar.TabIndex = 43;
+            this.btnRefrescar.Text = "Refrescar";
+            this.btnRefrescar.UseVisualStyleBackColor = true;
+            // 
+            // dgvDatos
+            // 
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Location = new System.Drawing.Point(45, 196);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.RowHeadersWidth = 51;
+            this.dgvDatos.RowTemplate.Height = 24;
+            this.dgvDatos.Size = new System.Drawing.Size(621, 254);
+            this.dgvDatos.TabIndex = 42;
+            this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Eliminar.Location = new System.Drawing.Point(467, 131);
+            this.Eliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(199, 34);
+            this.Eliminar.TabIndex = 41;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseVisualStyleBackColor = true;
+            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnActualizar.Location = new System.Drawing.Point(467, 89);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(199, 34);
+            this.btnActualizar.TabIndex = 40;
+            this.btnActualizar.Text = "Editar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
             // 
             // lblMensaje
             // 
@@ -243,49 +288,6 @@
             // 
             this.motivoVisitaTableAdapter.ClearBeforeFill = true;
             // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnActualizar.Location = new System.Drawing.Point(467, 89);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(199, 34);
-            this.btnActualizar.TabIndex = 40;
-            this.btnActualizar.Text = "Editar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Eliminar.Location = new System.Drawing.Point(467, 131);
-            this.Eliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Size = new System.Drawing.Size(199, 34);
-            this.Eliminar.TabIndex = 41;
-            this.Eliminar.Text = "Eliminar";
-            this.Eliminar.UseVisualStyleBackColor = true;
-            // 
-            // dgvDatos
-            // 
-            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(45, 196);
-            this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.RowHeadersWidth = 51;
-            this.dgvDatos.RowTemplate.Height = 24;
-            this.dgvDatos.Size = new System.Drawing.Size(621, 254);
-            this.dgvDatos.TabIndex = 42;
-            // 
-            // btnRefrescar
-            // 
-            this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRefrescar.Location = new System.Drawing.Point(467, 457);
-            this.btnRefrescar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(199, 34);
-            this.btnRefrescar.TabIndex = 43;
-            this.btnRefrescar.Text = "Refrescar";
-            this.btnRefrescar.UseVisualStyleBackColor = true;
-            // 
             // FrmMotivoVisita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -304,6 +306,7 @@
             this.Load += new System.EventHandler(this.FrmMotivoVisita_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.pnlVentasMes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentasMes)).EndInit();
             this.pnlVentasAnio.ResumeLayout(false);
@@ -313,7 +316,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbComisariaDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motivoVisitaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
