@@ -2,7 +2,6 @@
 using DPFP.Capture;
 using Comisarias.App.Escritorio.Forms;
 using Comisarias.App.Escritorio.Models;
-using Comisarias.App.Escritorio.Services;
 using Comisarias.App.Escritorio.Utilities;
 using System;
 using System.Collections.Generic;
@@ -18,13 +17,16 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
-using static Comisarias.App.Escritorio.Models.AuthUser;
+using Comisarias.App.Escritorio.Models;
+using Comisarias.App.Escritorio.Controllers;
 
 namespace Comisarias.App.Escritorio
 {
     public partial class FrmLogin : Form
     {
-        private RegisterDesktopViewModel Usuario = new RegisterDesktopViewModel();
+        //private RegisterDesktopViewModel Usuario = new RegisterDesktopViewModel();
+        Login_Controller Login = new Login_Controller();
+
 
         public FrmLogin()
         {
@@ -38,20 +40,23 @@ namespace Comisarias.App.Escritorio
 
         }
 
-        public void IniciarSesion()
+        public void IniciarSesion(string usuario, string clave)
         {
-            Usuario.Nombres = "Jairo";
-            Usuario.Apellidos = "Marin";
-            Usuario.Documento = "8028050";
-            Usuario.Rol = new List<string>();
-            Usuario.Rol.Add("Rol1");
-            Usuario.Rol.Add("Rol2");
+            RespuestaAuth respuestaLogin = Login.ValidarUsuario(usuario, clave);
 
-            Program.usuarioGlobal = Usuario;
+            if (respuestaLogin.FueExitosa)
+            {
+                Program.usuarioGlobal = respuestaLogin.modelUserRole;
 
-            this.Hide();
-            FrmMain frmMain = new FrmMain();
-            frmMain.Show();
+                this.Hide();
+                FrmMain frmMain = new FrmMain();
+                frmMain.Show();
+            }
+            else {
+                lblMensaje.Text = respuestaLogin.Mensaje;
+            }
+
+            
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -61,14 +66,9 @@ namespace Comisarias.App.Escritorio
                 lblMensaje.Text = "Debe indicar el usuario y la clave para continuar";
                             }
             else {
-                if (txtUsuario.Text == txtClave.Text)
-                {
-                    IniciarSesion();
-                }
-                else
-                {
-                    lblMensaje.Text = "Usuario o clave incorrecta";
-                }
+                
+                    IniciarSesion(txtUsuario.Text, txtClave.Text);
+                
             }            
         }
     }

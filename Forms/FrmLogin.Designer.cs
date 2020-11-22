@@ -73,11 +73,12 @@
             // 
             // lblMensaje
             // 
+            this.lblMensaje.AutoSize = true;
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.ForeColor = System.Drawing.Color.IndianRed;
             this.lblMensaje.Location = new System.Drawing.Point(245, 328);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(394, 40);
+            this.lblMensaje.Size = new System.Drawing.Size(0, 25);
             this.lblMensaje.TabIndex = 8;
             // 
             // btnLogin
@@ -119,6 +120,7 @@
             this.txtClave.Margin = new System.Windows.Forms.Padding(4);
             this.txtClave.MaxLength = 60;
             this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(392, 34);
             this.txtClave.TabIndex = 2;
             // 

@@ -8,7 +8,7 @@ namespace Comisarias.App.Escritorio.Models
 {
    public class RespuestaAuth
     {
-        public int FueExitosa { get; set; }
+        public bool FueExitosa { get; set; }
         public string Mensaje { get; set; }
         public ViewModelUserRole modelUserRole { get; set; }
     }

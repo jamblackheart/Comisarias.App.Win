@@ -31,12 +31,7 @@ namespace Comisarias.App.Escritorio
         {
             List<string> rol = Program.usuarioGlobal.Rol;
            
-            //Cuando se implementen los roles vuela esto JAM
-            parametrosToolStripMenuItem.Visible = true;
-            registrarVisitaToolStripMenuItem.Visible = true;
-            registrarVisitaToolStripMenuItem.Visible = true;
-            procedimientosToolStripMenuItem.Visible = true;
-
+          
             if (rol.Contains("Parametros"))
             {
                 parametrosToolStripMenuItem.Visible = true;               

@@ -1,8 +1,6 @@
 ﻿using DPFP;
 using DPFP.Capture;
 using Comisarias.App.Escritorio.Models;
-using Comisarias.App.Escritorio.Services;
-
 using Comisarias.App.Escritorio.Utilities;
 using System;
 using System.Collections.Generic;
@@ -28,10 +26,10 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void ReiniciarPagina()
         {
-            btnConsultarBarequero.Enabled = true;
+            btnInsertar.Enabled = true;
             usuario = new Usuario();
             usuarioExiste = false;
-            txtCedulaConsultar.Text = "";
+            txtNombre.Text = "";
         }
 
         public FrmMotivoVisita()
@@ -44,6 +42,8 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void FrmMotivoVisita_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dbComisariaDataSet1.MotivoVisita' table. You can move, or remove it, as needed.
+            this.motivoVisitaTableAdapter.Fill(this.dbComisariaDataSet1.MotivoVisita);
             usuario = new Usuario();
         }
 

@@ -1,13 +1,13 @@
 ﻿
 using System;
 using System.Windows.Forms;
-using static Comisarias.App.Escritorio.Models.AuthUser;
+using Comisarias.App.Escritorio.Models;
 
 namespace Comisarias.App.Escritorio
 {
     static class Program
     {
-        public static RegisterDesktopViewModel usuarioGlobal = new RegisterDesktopViewModel();
+        public static ViewModelUserRole usuarioGlobal = new ViewModelUserRole();
 
         [STAThread]
         static void Main()

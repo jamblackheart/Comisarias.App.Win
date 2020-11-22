@@ -241,11 +241,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\Login.cs" />
+    <Compile Include="Controllers\MotivosVisita_Controller.cs" />
+    <Compile Include="Controllers\Login_Controller.cs" />
     <Compile Include="dbComisariaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbComisariaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbComisariaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbComisariaDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmGeneros.cs">
       <SubType>Form</SubType>
@@ -325,54 +331,15 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Anm.cs" />
-    <Compile Include="Models\AuthUser.cs" />
+    <Compile Include="Models\Respuestas.cs" />
     <Compile Include="Models\Usuario.cs" />
-    <Compile Include="Models\Barequero.cs" />
-    <Compile Include="Models\Compra.cs" />
-    <Compile Include="Models\Empresa.cs" />
-    <Compile Include="Models\Departamento.cs" />
-    <Compile Include="Models\DocumentosBarequero.cs" />
     <Compile Include="Models\EstadoCivil.cs" />
     <Compile Include="Models\Genero.cs" />
-    <Compile Include="Models\LimiteCompra.cs" />
-    <Compile Include="Models\Sede.cs" />
-    <Compile Include="Models\Municipio.cs" />
-    <Compile Include="Models\Declaracion.cs" />
-    <Compile Include="Models\Persona.cs" />
-    <Compile Include="Models\Precompra.cs" />
-    <Compile Include="Models\ReferenciasFamiliares.cs" />
-    <Compile Include="Models\Reporte.cs" />
     <Compile Include="Models\RespuestaAuth.cs" />
-    <Compile Include="Models\RespuestaEnvioDeDatos.cs" />
-    <Compile Include="Models\UploadFiles.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Models\ViewModelBarequero.cs" />
-    <Compile Include="Models\ViewModelComprasBarequerosAnoEmpresa.cs" />
-    <Compile Include="Models\ViewModelComprasBarequerosAno.cs" />
-    <Compile Include="Models\ViewModelBarequeroCompra.cs" />
-    <Compile Include="Models\ViewModelComprasBarequeros.cs" />
-    <Compile Include="Models\ViewModelConsultarBarequeroResumido.cs" />
-    <Compile Include="Models\ViewModelConsultarPrecompra.cs" />
-    <Compile Include="Models\ViewModelConsultarBarequero.cs" />
-    <Compile Include="Models\ViewModelDocRechazados.cs" />
-    <Compile Include="Models\ViewModelHuellaUsuario.cs" />
-    <Compile Include="Models\ViewModelCompraCompleta.cs" />
-    <Compile Include="Models\ViewModelRegistroCompra.cs" />
     <Compile Include="Models\ViewModelUserRole.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ApiRestAuth.cs" />
-    <Compile Include="Services\ApiRestConsultas.cs" />
-    <Compile Include="Services\ApiRestBarequero.cs" />
-    <Compile Include="Services\ApiRestCompra.cs" />
-    <Compile Include="Services\ApiRestPrecompra.cs" />
-    <Compile Include="Services\ApiRestReferenciasFamiliares.cs" />
-    <Compile Include="Services\SVDocumentos.cs" />
-    <Compile Include="Services\SVReporte.cs" />
-    <Compile Include="Services\TransformRequest.cs" />
-    <Compile Include="Services\UploadFile.cs" />
-    <Compile Include="Services\UploadMultiplesArchivos.cs" />
     <Compile Include="Utilities\AppPointer.cs" />
     <Compile Include="Utilities\AppRoles.cs" />
     <Compile Include="Utilities\Estados.cs" />
@@ -437,6 +404,17 @@
     </None>
     <None Include="dbComisariaDataSet.xss">
       <DependentUpon>dbComisariaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbComisariaDataSet1.xsc">
+      <DependentUpon>dbComisariaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbComisariaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbComisariaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbComisariaDataSet1.xss">
+      <DependentUpon>dbComisariaDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -521,6 +499,7 @@
     <Folder Include="Docs\" />
     <Folder Include="Forms\Reports\" />
     <Folder Include="Properties\DataSources\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

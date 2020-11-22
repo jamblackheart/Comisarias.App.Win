@@ -28,16 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label17;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMotivoVisita));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblNombrePpal = new System.Windows.Forms.Label();
-            this.btnAprobar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
             this.lblMensaje = new System.Windows.Forms.Label();
-            this.btnConsultarBarequero = new System.Windows.Forms.Button();
-            this.txtCedulaConsultar = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnInsertar = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.pnlVentasMes = new System.Windows.Forms.GroupBox();
             this.dgvVentasMes = new System.Windows.Forms.DataGridView();
             this.pnlVentasAnio = new System.Windows.Forms.GroupBox();
@@ -45,6 +43,13 @@
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.dbComisariaDataSet1 = new Comisarias.App.Escritorio.dbComisariaDataSet1();
+            this.motivoVisitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.motivoVisitaTableAdapter = new Comisarias.App.Escritorio.dbComisariaDataSet1TableAdapters.MotivoVisitaTableAdapter();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.Eliminar = new System.Windows.Forms.Button();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.btnRefrescar = new System.Windows.Forms.Button();
             label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.pnlVentasMes.SuspendLayout();
@@ -53,6 +58,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentasAno)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbComisariaDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motivoVisitaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // label17
@@ -70,13 +78,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblNombrePpal);
-            this.groupBox1.Controls.Add(this.btnAprobar);
-            this.groupBox1.Controls.Add(this.btnLimpiar);
+            this.groupBox1.Controls.Add(this.btnRefrescar);
+            this.groupBox1.Controls.Add(this.dgvDatos);
+            this.groupBox1.Controls.Add(this.Eliminar);
+            this.groupBox1.Controls.Add(this.btnActualizar);
             this.groupBox1.Controls.Add(this.lblMensaje);
-            this.groupBox1.Controls.Add(this.btnConsultarBarequero);
-            this.groupBox1.Controls.Add(this.txtCedulaConsultar);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btnInsertar);
+            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Controls.Add(this.lblNombre);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox1.Location = new System.Drawing.Point(16, 188);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -87,38 +96,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INFORMACIÓN USUARIO";
             // 
-            // lblNombrePpal
-            // 
-            this.lblNombrePpal.AutoSize = true;
-            this.lblNombrePpal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblNombrePpal.Location = new System.Drawing.Point(429, 121);
-            this.lblNombrePpal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombrePpal.Name = "lblNombrePpal";
-            this.lblNombrePpal.Size = new System.Drawing.Size(0, 25);
-            this.lblNombrePpal.TabIndex = 40;
-            // 
-            // btnAprobar
-            // 
-            this.btnAprobar.Location = new System.Drawing.Point(796, 346);
-            this.btnAprobar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAprobar.Name = "btnAprobar";
-            this.btnAprobar.Size = new System.Drawing.Size(205, 58);
-            this.btnAprobar.TabIndex = 34;
-            this.btnAprobar.Text = "Aprobar";
-            this.btnAprobar.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnLimpiar.Location = new System.Drawing.Point(1459, 148);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(156, 37);
-            this.btnLimpiar.TabIndex = 39;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
-            // 
             // lblMensaje
             // 
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -128,36 +105,36 @@
             this.lblMensaje.Size = new System.Drawing.Size(713, 32);
             this.lblMensaje.TabIndex = 38;
             // 
-            // btnConsultarBarequero
+            // btnInsertar
             // 
-            this.btnConsultarBarequero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnConsultarBarequero.Location = new System.Drawing.Point(163, 113);
-            this.btnConsultarBarequero.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConsultarBarequero.Name = "btnConsultarBarequero";
-            this.btnConsultarBarequero.Size = new System.Drawing.Size(199, 48);
-            this.btnConsultarBarequero.TabIndex = 2;
-            this.btnConsultarBarequero.Text = "Consultar";
-            this.btnConsultarBarequero.UseVisualStyleBackColor = true;
+            this.btnInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnInsertar.Location = new System.Drawing.Point(467, 47);
+            this.btnInsertar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsertar.Name = "btnInsertar";
+            this.btnInsertar.Size = new System.Drawing.Size(199, 34);
+            this.btnInsertar.TabIndex = 2;
+            this.btnInsertar.Text = "Insertar";
+            this.btnInsertar.UseVisualStyleBackColor = true;
             // 
-            // txtCedulaConsultar
+            // txtNombre
             // 
-            this.txtCedulaConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCedulaConsultar.Location = new System.Drawing.Point(163, 70);
-            this.txtCedulaConsultar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCedulaConsultar.Name = "txtCedulaConsultar";
-            this.txtCedulaConsultar.Size = new System.Drawing.Size(192, 30);
-            this.txtCedulaConsultar.TabIndex = 1;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNombre.Location = new System.Drawing.Point(163, 70);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(192, 30);
+            this.txtNombre.TabIndex = 1;
             // 
-            // label1
+            // lblNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(40, 70);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cédula";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblNombre.Location = new System.Drawing.Point(40, 70);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(81, 25);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre";
             // 
             // pnlVentasMes
             // 
@@ -252,6 +229,63 @@
             this.label19.TabIndex = 1;
             this.label19.Text = "____________________________";
             // 
+            // dbComisariaDataSet1
+            // 
+            this.dbComisariaDataSet1.DataSetName = "dbComisariaDataSet1";
+            this.dbComisariaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // motivoVisitaBindingSource
+            // 
+            this.motivoVisitaBindingSource.DataMember = "MotivoVisita";
+            this.motivoVisitaBindingSource.DataSource = this.dbComisariaDataSet1;
+            // 
+            // motivoVisitaTableAdapter
+            // 
+            this.motivoVisitaTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnActualizar.Location = new System.Drawing.Point(467, 89);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(199, 34);
+            this.btnActualizar.TabIndex = 40;
+            this.btnActualizar.Text = "Editar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Eliminar.Location = new System.Drawing.Point(467, 131);
+            this.Eliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(199, 34);
+            this.Eliminar.TabIndex = 41;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseVisualStyleBackColor = true;
+            // 
+            // dgvDatos
+            // 
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Location = new System.Drawing.Point(45, 196);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.RowHeadersWidth = 51;
+            this.dgvDatos.RowTemplate.Height = 24;
+            this.dgvDatos.Size = new System.Drawing.Size(621, 254);
+            this.dgvDatos.TabIndex = 42;
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnRefrescar.Location = new System.Drawing.Point(467, 457);
+            this.btnRefrescar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(199, 34);
+            this.btnRefrescar.TabIndex = 43;
+            this.btnRefrescar.Text = "Refrescar";
+            this.btnRefrescar.UseVisualStyleBackColor = true;
+            // 
             // FrmMotivoVisita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -277,6 +311,9 @@
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbComisariaDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motivoVisitaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -284,19 +321,23 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnConsultarBarequero;
-        private System.Windows.Forms.TextBox txtCedulaConsultar;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnInsertar;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.GroupBox pnlVentasMes;
         private System.Windows.Forms.DataGridView dgvVentasMes;
         private System.Windows.Forms.GroupBox pnlVentasAnio;
         private System.Windows.Forms.DataGridView dgvVentasAno;
         private System.Windows.Forms.Label lblMensaje;
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Label lblNombrePpal;
-        private System.Windows.Forms.Button btnAprobar;
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private dbComisariaDataSet1 dbComisariaDataSet1;
+        private System.Windows.Forms.BindingSource motivoVisitaBindingSource;
+        private dbComisariaDataSet1TableAdapters.MotivoVisitaTableAdapter motivoVisitaTableAdapter;
+        private System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.Button Eliminar;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnRefrescar;
     }
 }
