@@ -1,6 +1,4 @@
-﻿using DPFP;
-using DPFP.Capture;
-using Comisarias.App.Escritorio.Models;
+﻿using Comisarias.App.Escritorio.Models;
 using Comisarias.App.Escritorio.Utilities;
 using System;
 using System.Collections.Generic;
@@ -69,9 +67,9 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            parametro.Id = dgvDatos.Rows[e.RowIndex].Cells[0].Value.ToString();
-            parametro.Nombre = dgvDatos.Rows[e.RowIndex].Cells[1].Value.ToString();
-            InjectarValores();
+            //parametro.Id = dgvDatos.Rows[e.RowIndex].Cells[0].Value.ToString();
+            //parametro.Nombre = dgvDatos.Rows[e.RowIndex].Cells[1].Value.ToString();
+            //InjectarValores();
         }
 
         private void InjectarValores() {
@@ -93,6 +91,53 @@ namespace Comisarias.App.Escritorio.Forms
                 }
             }
 
+        }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            string nombre = txtNombre.Text;
+
+            if (nombre != "")
+            {
+                Respuesta respuesta = Controlador.AgregarRegistro(nombre);
+                if (respuesta.FueExitosa)
+                {
+                    CargarDatos();
+                    txtNombre.Text = "";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe indicar el nombre del motivo.");
+            }
+                
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            string nombre = txtNombre.Text;
+
+            if (nombre != "")
+            {
+                Respuesta respuesta = Controlador.ActualizarRegistro(parametro.Id,nombre);
+                if (respuesta.FueExitosa)
+                {
+                    CargarDatos();
+                    txtNombre.Text = "";
+                    MessageBox.Show("Registro actualizado correctamente.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("El Nombre no puede estar vacio.");
+            }
+        }
+
+        private void dgvDatos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            parametro.Id = dgvDatos.Rows[e.RowIndex].Cells[0].Value.ToString();
+            parametro.Nombre = dgvDatos.Rows[e.RowIndex].Cells[1].Value.ToString();
+            InjectarValores();
         }
     }
 }

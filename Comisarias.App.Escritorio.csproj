@@ -241,6 +241,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\RelacionAgresor_Controller.cs" />
+    <Compile Include="Controllers\MedidasProteccion_Controller.cs" />
+    <Compile Include="Controllers\Generos_Controller.cs" />
     <Compile Include="Controllers\MotivosVisita_Controller.cs" />
     <Compile Include="Controllers\Login_Controller.cs" />
     <Compile Include="dbComisariaDataSet.Designer.cs">
@@ -253,29 +256,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbComisariaDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmGeneros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmGeneros.Designer.cs">
-      <DependentUpon>FrmGeneros.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FrmEntrevista.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmEntrevista.Designer.cs">
       <DependentUpon>FrmEntrevista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmParametrosSistema.cs">
+    <Compile Include="Forms\FrmRelacionAgresor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmParametrosSistema.Designer.cs">
-      <DependentUpon>FrmParametrosSistema.cs</DependentUpon>
+    <Compile Include="Forms\FrmRelacionAgresor.Designer.cs">
+      <DependentUpon>FrmRelacionAgresor.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmMedidasProteccion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmMedidasProteccion.Designer.cs">
       <DependentUpon>FrmMedidasProteccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGeneros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGeneros.Designer.cs">
+      <DependentUpon>FrmGeneros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmParametrosSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmParametrosSistema.Designer.cs">
+      <DependentUpon>FrmParametrosSistema.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmHistoriaUsuario.cs">
       <SubType>Form</SubType>
@@ -300,12 +309,6 @@
     </Compile>
     <Compile Include="Forms\FrmConsultaHistoriaUsuario.Designer.cs">
       <DependentUpon>FrmConsultaHistoriaUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FrmRelacionAgresor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmRelacionAgresor.Designer.cs">
-      <DependentUpon>FrmRelacionAgresor.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmMotivoVisita.cs">
       <SubType>Form</SubType>
@@ -346,17 +349,20 @@
     <Compile Include="Utilities\Estados.cs" />
     <Compile Include="Utilities\FormUpload.cs" />
     <Compile Include="Utilities\Helper.cs" />
-    <EmbeddedResource Include="Forms\FrmGeneros.resx">
-      <DependentUpon>FrmGeneros.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmEntrevista.resx">
       <DependentUpon>FrmEntrevista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmParametrosSistema.resx">
-      <DependentUpon>FrmParametrosSistema.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmRelacionAgresor.resx">
+      <DependentUpon>FrmRelacionAgresor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMedidasProteccion.resx">
       <DependentUpon>FrmMedidasProteccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGeneros.resx">
+      <DependentUpon>FrmGeneros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmParametrosSistema.resx">
+      <DependentUpon>FrmParametrosSistema.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmHistoriaUsuario.resx">
       <DependentUpon>FrmHistoriaUsuario.cs</DependentUpon>
@@ -369,9 +375,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmConsultaHistoriaUsuario.resx">
       <DependentUpon>FrmConsultaHistoriaUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRelacionAgresor.resx">
-      <DependentUpon>FrmRelacionAgresor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMotivoVisita.resx">
       <DependentUpon>FrmMotivoVisita.cs</DependentUpon>

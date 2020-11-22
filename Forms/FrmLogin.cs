@@ -1,6 +1,4 @@
-﻿using DPFP;
-using DPFP.Capture;
-using Comisarias.App.Escritorio.Forms;
+﻿using Comisarias.App.Escritorio.Forms;
 using Comisarias.App.Escritorio.Models;
 using Comisarias.App.Escritorio.Utilities;
 using System;

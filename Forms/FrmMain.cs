@@ -1,6 +1,4 @@
-﻿using DPFP;
-using DPFP.Capture;
-using Comisarias.App.Escritorio.Forms;
+﻿using Comisarias.App.Escritorio.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -117,7 +115,7 @@ namespace Comisarias.App.Escritorio
         private void generosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cerrarTodasLasVentanas();
-            FrmGenero frmPantalla = new FrmGenero();
+            FrmGeneros frmPantalla = new FrmGeneros();
             frmPantalla.MdiParent = this;
             frmPantalla.Show();
         }

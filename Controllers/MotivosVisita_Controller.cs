@@ -91,6 +91,90 @@ namespace Comisarias.App.Escritorio.Controllers
 
         }
 
+        public Respuesta AgregarRegistro(string NombreMotivo)
+        {
+            Respuesta retorno = new Respuesta();
+            retorno.FueExitosa = false;
+            retorno.Mensaje = "validando...";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+                    using (SqlCommand command = new SqlCommand(@"INSERT INTO MotivoVisita VALUES (@pNombreMotivo)", con))
+                    {
+                        SqlParameter pNombreMotivo = new SqlParameter("@pNombreMotivo", SqlDbType.VarChar);
+
+                        pNombreMotivo.Value = NombreMotivo;
+                        command.Parameters.Add(pNombreMotivo);
+
+                        int rowsAfected = command.ExecuteNonQuery();
+                        retorno.FueExitosa = true;
+                        retorno.Mensaje = "Registro agregado correctamente";
+
+                    }
+                    if (con.State == ConnectionState.Open)
+                    {
+                        con.Dispose();
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                retorno.FueExitosa = false;
+                retorno.Mensaje = "Error en el servidor. Error: " + e.Message;
+            }
+
+            return retorno;
+
+        }
+
+        public Respuesta ActualizarRegistro(string id, string nombreMotivo)
+        {
+            Respuesta retorno = new Respuesta();
+            retorno.FueExitosa = false;
+            retorno.Mensaje = "validando...";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+                    using (SqlCommand command = new SqlCommand(@"UPDATE MotivoVisita SET Nombre = @pNombre WHERE Id = @pId", con))
+                    {
+                        SqlParameter pId = new SqlParameter("@pId", SqlDbType.VarChar);
+                        SqlParameter pNombre = new SqlParameter("@pNombre", SqlDbType.VarChar);
+
+                        pId.Value = id;
+                        pNombre.Value = nombreMotivo;
+
+                        command.Parameters.Add(pId);
+                        command.Parameters.Add(pNombre);
+
+                        command.ExecuteNonQuery();
+                        retorno.FueExitosa = true;
+                        retorno.Mensaje = "Registro actualizado correctamente";
+
+                    }
+                    if (con.State == ConnectionState.Open)
+                    {
+                        con.Dispose();
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                retorno.FueExitosa = false;
+                retorno.Mensaje = "Error en el servidor. Error: " + e.Message;
+            }
+
+            return retorno;
+
+        }
+
         private List<string> ObtenerRolesUsuario(string funcionario)
         {
             List<string> retorno = new List<string>();
