@@ -453,6 +453,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="Content\img\imgPerrito.jpg" />
     <Content Include="dbComisaria.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
