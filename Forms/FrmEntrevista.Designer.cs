@@ -43,8 +43,8 @@
             this.pnlVentasAnio = new System.Windows.Forms.GroupBox();
             this.dgvVentasAno = new System.Windows.Forms.DataGridView();
             this.pnlTitulo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.pnlVentasMes.SuspendLayout();
@@ -229,16 +229,6 @@
             this.pnlTitulo.Size = new System.Drawing.Size(1690, 147);
             this.pnlTitulo.TabIndex = 33;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1476, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 112);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -251,6 +241,17 @@
             this.label19.Size = new System.Drawing.Size(606, 42);
             this.label19.TabIndex = 1;
             this.label19.Text = "____________________________";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(759, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmEntrevista
             // 

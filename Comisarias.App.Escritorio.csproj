@@ -446,6 +446,7 @@
     </Content>
     <Content Include="Resources\close.png" />
     <None Include="Resources\close1.png" />
+    <Content Include="Resources\comisaria_de_familia.jpg" />
     <Content Include="Resources\done.png" />
     <None Include="Resources\done1.png" />
     <Content Include="Resources\img_barequero1.jpg" />
