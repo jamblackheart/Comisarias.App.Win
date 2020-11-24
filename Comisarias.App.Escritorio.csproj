@@ -241,6 +241,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Usuario_Controller.cs" />
     <Compile Include="Controllers\RelacionAgresor_Controller.cs" />
     <Compile Include="Controllers\MedidasProteccion_Controller.cs" />
     <Compile Include="Controllers\Generos_Controller.cs" />
