@@ -41,12 +41,24 @@ namespace Comisarias.App.Escritorio.Forms
         private void FrmValidarBarequero_Load(object sender, EventArgs e)
         {
             usuario = new Usuario();
+            lblFechaActual.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
+
+
+            cmbDia.add
         }
 
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             ReiniciarPagina();
+        }
+
+        private void LlenarCamposFecha() {
+            for (int i = 1; i <= 31; i++)
+            {
+                cmbDia.Items.Add(i);
+            }
+            comboBox1.Items.Add("Tokyo");
         }
 
 

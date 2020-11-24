@@ -31,7 +31,7 @@
             System.Windows.Forms.Label label17;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarVisita));
             this.pnlVentasMes = new System.Windows.Forms.GroupBox();
-            this.dgvVentasMes = new System.Windows.Forms.DataGridView();
+            this.dgvVisitasAnteriores = new System.Windows.Forms.DataGridView();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -49,41 +49,41 @@
             this.cmbAnio = new System.Windows.Forms.ComboBox();
             this.cmbMes = new System.Windows.Forms.ComboBox();
             this.lblDia = new System.Windows.Forms.Label();
-            this.cmbDía = new System.Windows.Forms.ComboBox();
+            this.cmbDia = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.cmbGeneros = new System.Windows.Forms.ComboBox();
             this.lblGeneros = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbArea = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCualEtnia = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbtEtniaNo = new System.Windows.Forms.RadioButton();
+            this.rbtEtniaSi = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCualDiscapacidad = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.rbtDiscapacidadNo = new System.Windows.Forms.RadioButton();
+            this.rbtDiscapacidadSi = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.rbtVictimaConfictoNo = new System.Windows.Forms.RadioButton();
+            this.rbtVictimaConfictoSi = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.cmbMotivoVisita = new System.Windows.Forms.ComboBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.btnGuardarVisita = new System.Windows.Forms.Button();
             label17 = new System.Windows.Forms.Label();
             this.pnlVentasMes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVentasMes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisitasAnteriores)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grbFechaNacimiento.SuspendLayout();
@@ -108,30 +108,30 @@
             // 
             // pnlVentasMes
             // 
-            this.pnlVentasMes.Controls.Add(this.dgvVentasMes);
+            this.pnlVentasMes.Controls.Add(this.dgvVisitasAnteriores);
             this.pnlVentasMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlVentasMes.Location = new System.Drawing.Point(13, 773);
+            this.pnlVentasMes.Location = new System.Drawing.Point(13, 852);
             this.pnlVentasMes.Margin = new System.Windows.Forms.Padding(4);
             this.pnlVentasMes.Name = "pnlVentasMes";
             this.pnlVentasMes.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlVentasMes.Size = new System.Drawing.Size(1627, 302);
+            this.pnlVentasMes.Size = new System.Drawing.Size(1101, 302);
             this.pnlVentasMes.TabIndex = 25;
             this.pnlVentasMes.TabStop = false;
             this.pnlVentasMes.Text = "Visitas Anteriores";
             this.pnlVentasMes.Visible = false;
             // 
-            // dgvVentasMes
+            // dgvVisitasAnteriores
             // 
-            this.dgvVentasMes.AllowUserToAddRows = false;
-            this.dgvVentasMes.AllowUserToDeleteRows = false;
-            this.dgvVentasMes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVentasMes.Location = new System.Drawing.Point(8, 34);
-            this.dgvVentasMes.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvVentasMes.Name = "dgvVentasMes";
-            this.dgvVentasMes.ReadOnly = true;
-            this.dgvVentasMes.RowHeadersWidth = 51;
-            this.dgvVentasMes.Size = new System.Drawing.Size(1595, 254);
-            this.dgvVentasMes.TabIndex = 24;
+            this.dgvVisitasAnteriores.AllowUserToAddRows = false;
+            this.dgvVisitasAnteriores.AllowUserToDeleteRows = false;
+            this.dgvVisitasAnteriores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVisitasAnteriores.Location = new System.Drawing.Point(8, 50);
+            this.dgvVisitasAnteriores.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvVisitasAnteriores.Name = "dgvVisitasAnteriores";
+            this.dgvVisitasAnteriores.ReadOnly = true;
+            this.dgvVisitasAnteriores.RowHeadersWidth = 51;
+            this.dgvVisitasAnteriores.Size = new System.Drawing.Size(1070, 244);
+            this.dgvVisitasAnteriores.TabIndex = 24;
             // 
             // pnlTitulo
             // 
@@ -146,13 +146,13 @@
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
             this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(1711, 147);
+            this.pnlTitulo.Size = new System.Drawing.Size(1145, 147);
             this.pnlTitulo.TabIndex = 33;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1476, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(941, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(168, 112);
@@ -177,7 +177,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(71, 96);
+            this.label1.Location = new System.Drawing.Point(71, 108);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 25);
@@ -187,7 +187,7 @@
             // txtCedulaConsultar
             // 
             this.txtCedulaConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCedulaConsultar.Location = new System.Drawing.Point(159, 98);
+            this.txtCedulaConsultar.Location = new System.Drawing.Point(154, 103);
             this.txtCedulaConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.txtCedulaConsultar.Name = "txtCedulaConsultar";
             this.txtCedulaConsultar.Size = new System.Drawing.Size(192, 30);
@@ -251,9 +251,9 @@
             this.lblFechaActual.Location = new System.Drawing.Point(154, 53);
             this.lblFechaActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaActual.Name = "lblFechaActual";
-            this.lblFechaActual.Size = new System.Drawing.Size(112, 25);
+            this.lblFechaActual.Size = new System.Drawing.Size(115, 25);
             this.lblFechaActual.TabIndex = 43;
-            this.lblFechaActual.Text = "23/11/2020";
+            this.lblFechaActual.Text = "fechaActual";
             // 
             // grbFechaNacimiento
             // 
@@ -262,10 +262,10 @@
             this.grbFechaNacimiento.Controls.Add(this.cmbAnio);
             this.grbFechaNacimiento.Controls.Add(this.cmbMes);
             this.grbFechaNacimiento.Controls.Add(this.lblDia);
-            this.grbFechaNacimiento.Controls.Add(this.cmbDía);
+            this.grbFechaNacimiento.Controls.Add(this.cmbDia);
             this.grbFechaNacimiento.Location = new System.Drawing.Point(523, 48);
             this.grbFechaNacimiento.Name = "grbFechaNacimiento";
-            this.grbFechaNacimiento.Size = new System.Drawing.Size(478, 100);
+            this.grbFechaNacimiento.Size = new System.Drawing.Size(528, 104);
             this.grbFechaNacimiento.TabIndex = 45;
             this.grbFechaNacimiento.TabStop = false;
             this.grbFechaNacimiento.Text = "Fecha nacimiento";
@@ -312,26 +312,26 @@
             // 
             this.lblDia.AutoSize = true;
             this.lblDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblDia.Location = new System.Drawing.Point(1, 33);
+            this.lblDia.Location = new System.Drawing.Point(11, 33);
             this.lblDia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDia.Name = "lblDia";
             this.lblDia.Size = new System.Drawing.Size(41, 25);
             this.lblDia.TabIndex = 41;
             this.lblDia.Text = "Día";
             // 
-            // cmbDía
+            // cmbDia
             // 
-            this.cmbDía.FormattingEnabled = true;
-            this.cmbDía.Location = new System.Drawing.Point(6, 61);
-            this.cmbDía.Name = "cmbDía";
-            this.cmbDía.Size = new System.Drawing.Size(121, 33);
-            this.cmbDía.TabIndex = 44;
+            this.cmbDia.FormattingEnabled = true;
+            this.cmbDia.Location = new System.Drawing.Point(16, 61);
+            this.cmbDia.Name = "cmbDia";
+            this.cmbDia.Size = new System.Drawing.Size(121, 33);
+            this.cmbDia.TabIndex = 44;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(71, 157);
+            this.label2.Location = new System.Drawing.Point(55, 163);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 25);
@@ -341,7 +341,7 @@
             // txtNombres
             // 
             this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNombres.Location = new System.Drawing.Point(159, 159);
+            this.txtNombres.Location = new System.Drawing.Point(154, 158);
             this.txtNombres.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(192, 30);
@@ -351,7 +351,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(385, 159);
+            this.label4.Location = new System.Drawing.Point(385, 163);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 25);
@@ -361,7 +361,7 @@
             // txtApellidos
             // 
             this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtApellidos.Location = new System.Drawing.Point(485, 159);
+            this.txtApellidos.Location = new System.Drawing.Point(485, 160);
             this.txtApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(192, 30);
@@ -370,35 +370,35 @@
             // cmbGeneros
             // 
             this.cmbGeneros.FormattingEnabled = true;
-            this.cmbGeneros.Location = new System.Drawing.Point(159, 213);
+            this.cmbGeneros.Location = new System.Drawing.Point(154, 213);
             this.cmbGeneros.Name = "cmbGeneros";
-            this.cmbGeneros.Size = new System.Drawing.Size(121, 33);
+            this.cmbGeneros.Size = new System.Drawing.Size(192, 33);
             this.cmbGeneros.TabIndex = 51;
             // 
             // lblGeneros
             // 
             this.lblGeneros.AutoSize = true;
             this.lblGeneros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblGeneros.Location = new System.Drawing.Point(71, 213);
+            this.lblGeneros.Location = new System.Drawing.Point(69, 218);
             this.lblGeneros.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGeneros.Name = "lblGeneros";
             this.lblGeneros.Size = new System.Drawing.Size(77, 25);
             this.lblGeneros.TabIndex = 50;
             this.lblGeneros.Text = "Genero";
             // 
-            // comboBox1
+            // cmbArea
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(157, 267);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 33);
-            this.comboBox1.TabIndex = 53;
+            this.cmbArea.FormattingEnabled = true;
+            this.cmbArea.Location = new System.Drawing.Point(154, 271);
+            this.cmbArea.Name = "cmbArea";
+            this.cmbArea.Size = new System.Drawing.Size(192, 33);
+            this.cmbArea.TabIndex = 53;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(69, 267);
+            this.label5.Location = new System.Drawing.Point(92, 273);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 25);
@@ -409,28 +409,28 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.Location = new System.Drawing.Point(385, 270);
+            this.label6.Location = new System.Drawing.Point(384, 273);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 25);
             this.label6.TabIndex = 54;
             this.label6.Text = "Direccion";
             // 
-            // textBox1
+            // txtDireccion
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(473, 272);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 30);
-            this.textBox1.TabIndex = 55;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtDireccion.Location = new System.Drawing.Point(485, 270);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(192, 30);
+            this.txtDireccion.TabIndex = 55;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txtCualEtnia);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.rbtEtniaNo);
+            this.groupBox2.Controls.Add(this.rbtEtniaSi);
             this.groupBox2.Location = new System.Drawing.Point(746, 173);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(305, 104);
@@ -438,14 +438,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pertenece a etnia?";
             // 
-            // textBox2
+            // txtCualEtnia
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(74, 63);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 30);
-            this.textBox2.TabIndex = 58;
+            this.txtCualEtnia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCualEtnia.Location = new System.Drawing.Point(74, 63);
+            this.txtCualEtnia.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCualEtnia.Name = "txtCualEtnia";
+            this.txtCualEtnia.Size = new System.Drawing.Size(192, 30);
+            this.txtCualEtnia.TabIndex = 58;
             // 
             // label7
             // 
@@ -458,34 +458,34 @@
             this.label7.TabIndex = 57;
             this.label7.Text = "Cúal?";
             // 
-            // radioButton2
+            // rbtEtniaNo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(104, 29);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(63, 29);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "NO";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtEtniaNo.AutoSize = true;
+            this.rbtEtniaNo.Location = new System.Drawing.Point(104, 29);
+            this.rbtEtniaNo.Name = "rbtEtniaNo";
+            this.rbtEtniaNo.Size = new System.Drawing.Size(63, 29);
+            this.rbtEtniaNo.TabIndex = 1;
+            this.rbtEtniaNo.TabStop = true;
+            this.rbtEtniaNo.Text = "NO";
+            this.rbtEtniaNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbtEtniaSi
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 30);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(52, 29);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "SI";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtEtniaSi.AutoSize = true;
+            this.rbtEtniaSi.Location = new System.Drawing.Point(6, 29);
+            this.rbtEtniaSi.Name = "rbtEtniaSi";
+            this.rbtEtniaSi.Size = new System.Drawing.Size(52, 29);
+            this.rbtEtniaSi.TabIndex = 0;
+            this.rbtEtniaSi.TabStop = true;
+            this.rbtEtniaSi.Text = "SI";
+            this.rbtEtniaSi.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.txtCualDiscapacidad);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.radioButton3);
-            this.groupBox3.Controls.Add(this.radioButton4);
+            this.groupBox3.Controls.Add(this.rbtDiscapacidadNo);
+            this.groupBox3.Controls.Add(this.rbtDiscapacidadSi);
             this.groupBox3.Location = new System.Drawing.Point(746, 300);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(305, 104);
@@ -493,14 +493,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Discapacidad?";
             // 
-            // textBox3
+            // txtCualDiscapacidad
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.Location = new System.Drawing.Point(74, 63);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(192, 30);
-            this.textBox3.TabIndex = 58;
+            this.txtCualDiscapacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCualDiscapacidad.Location = new System.Drawing.Point(74, 63);
+            this.txtCualDiscapacidad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCualDiscapacidad.Name = "txtCualDiscapacidad";
+            this.txtCualDiscapacidad.Size = new System.Drawing.Size(192, 30);
+            this.txtCualDiscapacidad.TabIndex = 58;
             // 
             // label8
             // 
@@ -513,32 +513,32 @@
             this.label8.TabIndex = 57;
             this.label8.Text = "Cúal?";
             // 
-            // radioButton3
+            // rbtDiscapacidadNo
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(104, 29);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(63, 29);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "NO";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbtDiscapacidadNo.AutoSize = true;
+            this.rbtDiscapacidadNo.Location = new System.Drawing.Point(104, 29);
+            this.rbtDiscapacidadNo.Name = "rbtDiscapacidadNo";
+            this.rbtDiscapacidadNo.Size = new System.Drawing.Size(63, 29);
+            this.rbtDiscapacidadNo.TabIndex = 1;
+            this.rbtDiscapacidadNo.TabStop = true;
+            this.rbtDiscapacidadNo.Text = "NO";
+            this.rbtDiscapacidadNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rbtDiscapacidadSi
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(7, 30);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(52, 29);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "SI";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbtDiscapacidadSi.AutoSize = true;
+            this.rbtDiscapacidadSi.Location = new System.Drawing.Point(7, 30);
+            this.rbtDiscapacidadSi.Name = "rbtDiscapacidadSi";
+            this.rbtDiscapacidadSi.Size = new System.Drawing.Size(52, 29);
+            this.rbtDiscapacidadSi.TabIndex = 0;
+            this.rbtDiscapacidadSi.TabStop = true;
+            this.rbtDiscapacidadSi.Text = "SI";
+            this.rbtDiscapacidadSi.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.radioButton5);
-            this.groupBox4.Controls.Add(this.radioButton6);
+            this.groupBox4.Controls.Add(this.rbtVictimaConfictoNo);
+            this.groupBox4.Controls.Add(this.rbtVictimaConfictoSi);
             this.groupBox4.Location = new System.Drawing.Point(746, 421);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(305, 84);
@@ -546,53 +546,53 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Victima del conficto armado?";
             // 
-            // radioButton5
+            // rbtVictimaConfictoNo
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(104, 29);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(63, 29);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "NO";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rbtVictimaConfictoNo.AutoSize = true;
+            this.rbtVictimaConfictoNo.Location = new System.Drawing.Point(104, 29);
+            this.rbtVictimaConfictoNo.Name = "rbtVictimaConfictoNo";
+            this.rbtVictimaConfictoNo.Size = new System.Drawing.Size(63, 29);
+            this.rbtVictimaConfictoNo.TabIndex = 1;
+            this.rbtVictimaConfictoNo.TabStop = true;
+            this.rbtVictimaConfictoNo.Text = "NO";
+            this.rbtVictimaConfictoNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rbtVictimaConfictoSi
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(7, 30);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(52, 29);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "SI";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rbtVictimaConfictoSi.AutoSize = true;
+            this.rbtVictimaConfictoSi.Location = new System.Drawing.Point(7, 30);
+            this.rbtVictimaConfictoSi.Name = "rbtVictimaConfictoSi";
+            this.rbtVictimaConfictoSi.Size = new System.Drawing.Size(52, 29);
+            this.rbtVictimaConfictoSi.TabIndex = 0;
+            this.rbtVictimaConfictoSi.TabStop = true;
+            this.rbtVictimaConfictoSi.Text = "SI";
+            this.rbtVictimaConfictoSi.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label10.Location = new System.Drawing.Point(71, 329);
+            this.label10.Location = new System.Drawing.Point(57, 328);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 25);
             this.label10.TabIndex = 61;
             this.label10.Text = "Teléfono";
             // 
-            // textBox5
+            // txtTelefono
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox5.Location = new System.Drawing.Point(159, 331);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(192, 30);
-            this.textBox5.TabIndex = 62;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTelefono.Location = new System.Drawing.Point(154, 329);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(192, 30);
+            this.txtTelefono.TabIndex = 62;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label9.Location = new System.Drawing.Point(408, 329);
+            this.label9.Location = new System.Drawing.Point(417, 328);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 25);
@@ -602,18 +602,18 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.cmbMotivoVisita);
+            this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.txtTelefono);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtDireccion);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmbArea);
             this.groupBox1.Controls.Add(this.lblGeneros);
             this.groupBox1.Controls.Add(this.cmbGeneros);
             this.groupBox1.Controls.Add(this.txtApellidos);
@@ -625,7 +625,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.lblNombrePpal);
             this.groupBox1.Controls.Add(this.btnAprobar);
-            this.groupBox1.Controls.Add(this.btnLimpiar);
+            this.groupBox1.Controls.Add(this.btnGuardarVisita);
             this.groupBox1.Controls.Add(this.lblMensaje);
             this.groupBox1.Controls.Add(this.btnConsultarBarequero);
             this.groupBox1.Controls.Add(this.txtCedulaConsultar);
@@ -635,7 +635,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1627, 547);
+            this.groupBox1.Size = new System.Drawing.Size(1095, 656);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INFORMACIÓN USUARIO";
@@ -651,34 +651,34 @@
             this.label11.TabIndex = 65;
             this.label11.Text = "Motivo de Visita";
             // 
-            // comboBox2
+            // cmbMotivoVisita
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(272, 418);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 33);
-            this.comboBox2.TabIndex = 66;
+            this.cmbMotivoVisita.FormattingEnabled = true;
+            this.cmbMotivoVisita.Location = new System.Drawing.Point(272, 418);
+            this.cmbMotivoVisita.Name = "cmbMotivoVisita";
+            this.cmbMotivoVisita.Size = new System.Drawing.Size(405, 33);
+            this.cmbMotivoVisita.TabIndex = 66;
             // 
-            // textBox4
+            // txtEmail
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(473, 331);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(192, 30);
-            this.textBox4.TabIndex = 64;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtEmail.Location = new System.Drawing.Point(485, 325);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(192, 30);
+            this.txtEmail.TabIndex = 64;
             // 
-            // btnLimpiar
+            // btnGuardarVisita
             // 
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnLimpiar.Location = new System.Drawing.Point(301, 477);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(156, 37);
-            this.btnLimpiar.TabIndex = 39;
-            this.btnLimpiar.Text = "Guardar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
+            this.btnGuardarVisita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnGuardarVisita.Location = new System.Drawing.Point(521, 481);
+            this.btnGuardarVisita.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardarVisita.Name = "btnGuardarVisita";
+            this.btnGuardarVisita.Size = new System.Drawing.Size(156, 45);
+            this.btnGuardarVisita.TabIndex = 39;
+            this.btnGuardarVisita.Text = "Guardar";
+            this.btnGuardarVisita.UseVisualStyleBackColor = true;
+            this.btnGuardarVisita.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // FrmRegistrarVisita
             // 
@@ -686,7 +686,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1732, 752);
+            this.ClientSize = new System.Drawing.Size(1166, 752);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlVentasMes);
             this.Controls.Add(this.groupBox1);
@@ -696,7 +696,7 @@
             this.Text = "Consultar barequero";
             this.Load += new System.EventHandler(this.FrmValidarBarequero_Load);
             this.pnlVentasMes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVentasMes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisitasAnteriores)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -716,7 +716,7 @@
 
         #endregion
         private System.Windows.Forms.GroupBox pnlVentasMes;
-        private System.Windows.Forms.DataGridView dgvVentasMes;
+        private System.Windows.Forms.DataGridView dgvVisitasAnteriores;
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -734,37 +734,37 @@
         private System.Windows.Forms.ComboBox cmbAnio;
         private System.Windows.Forms.ComboBox cmbMes;
         private System.Windows.Forms.Label lblDia;
-        private System.Windows.Forms.ComboBox cmbDía;
+        private System.Windows.Forms.ComboBox cmbDia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.ComboBox cmbGeneros;
         private System.Windows.Forms.Label lblGeneros;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbArea;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCualEtnia;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbtEtniaNo;
+        private System.Windows.Forms.RadioButton rbtEtniaSi;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCualDiscapacidad;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton rbtDiscapacidadNo;
+        private System.Windows.Forms.RadioButton rbtDiscapacidadSi;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton rbtVictimaConfictoNo;
+        private System.Windows.Forms.RadioButton rbtVictimaConfictoSi;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.ComboBox cmbMotivoVisita;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Button btnGuardarVisita;
     }
 }
