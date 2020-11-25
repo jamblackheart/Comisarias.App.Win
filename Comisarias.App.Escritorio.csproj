@@ -241,10 +241,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\Generos.cs" />
+    <Compile Include="Controllers\Usuario_Controller.cs" />
     <Compile Include="Controllers\RelacionAgresor_Controller.cs" />
     <Compile Include="Controllers\MedidasProteccion_Controller.cs" />
-    <Compile Include="Controllers\Agresion_Controller.cs" />
+    <Compile Include="Controllers\Generos_Controller.cs" />
     <Compile Include="Controllers\MotivosVisita_Controller.cs" />
     <Compile Include="Controllers\Login_Controller.cs" />
     <Compile Include="dbComisariaDataSet.Designer.cs">
@@ -337,7 +337,6 @@
     </Compile>
     <Compile Include="Models\RespuestaGetDatos.cs" />
     <Compile Include="Models\Respuesta.cs" />
-    <Compile Include="Models\Agresion.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\EstadoCivil.cs" />
     <Compile Include="Models\Parametro.cs" />
