@@ -212,5 +212,45 @@ namespace Comisarias.App.Escritorio.Controllers
 
             return retorno;
         }
+
+        public Genero ObtenerGeneroPorNombre(string nombre)
+        {
+            Genero retorno = new Genero();
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+
+                using (SqlCommand command = new SqlCommand(@"SELECT *
+                                                        FROM Genero
+                                                   WHERE Nombre = @pNombre", con))
+                {
+                    SqlParameter pNombre = new SqlParameter("@pNombre", SqlDbType.VarChar);
+
+                    pNombre.Value = nombre;
+                    command.Parameters.Add(pNombre);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+
+                            retorno.Id = (int)reader["Id"];
+                            retorno.Nombre = reader["Nombre"].ToString();
+
+
+                        }
+                    }
+                }
+
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Dispose();
+
+                }
+            }
+
+            return retorno;
+        }
     }
 }

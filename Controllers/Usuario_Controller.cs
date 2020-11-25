@@ -113,14 +113,14 @@ namespace Comisarias.App.Escritorio.Controllers
                                                                                    @pGeneroId,@pArea,@pDireccion,
                                                                                    @pTelefono,@pCorreo,@pPerteneceEtnia,
                                                                                    @pCualEtnia,@pDiscapacidad,@pCualDiscapacidad,
-                                                                                   @pVictimaConflictoArmado,@pDocumento))", con))
+                                                                                   @pVictimaConflictoArmado,@pDocumento)", con))
                     {
 
 
                       
 
                         SqlParameter pNombreMotivo = new SqlParameter("@pNombreMotivo", SqlDbType.VarChar);
-                        SqlParameter pFechaNacimiento = new SqlParameter("@pFechaNacimiento", SqlDbType.VarChar);
+                        SqlParameter pFechaNacimiento = new SqlParameter("@pFechaNacimiento", SqlDbType.DateTime);
                         SqlParameter pNombres = new SqlParameter("@pNombres", SqlDbType.VarChar);
                         SqlParameter pApellidos = new SqlParameter("@pApellidos", SqlDbType.VarChar);
                         SqlParameter pGeneroId = new SqlParameter("@pGeneroId", SqlDbType.VarChar);
@@ -215,13 +215,13 @@ namespace Comisarias.App.Escritorio.Controllers
                                                                         CualEtnia=@pCualEtnia,
                                                                         Discapacidad=@pDiscapacidad,
                                                                         CualDiscapacidad=@pCualDiscapacidad,
-                                                                        VictimaConflictoArmado=@pVictimaConflictoArmado
+                                                                        VictimaConflictoArmado=@pVictimaConflictoArmado,
                                                                         Documento= @pDocumento
                                                                 WHERE Id = @pId", con))
                     {
                         SqlParameter pId = new SqlParameter("@pId", SqlDbType.VarChar);
                         SqlParameter pNombreMotivo = new SqlParameter("@pNombreMotivo", SqlDbType.VarChar);
-                        SqlParameter pFechaNacimiento = new SqlParameter("@pFechaNacimiento", SqlDbType.VarChar);
+                        SqlParameter pFechaNacimiento = new SqlParameter("@pFechaNacimiento", SqlDbType.DateTime);
                         SqlParameter pNombres = new SqlParameter("@pNombres", SqlDbType.VarChar);
                         SqlParameter pApellidos = new SqlParameter("@pApellidos", SqlDbType.VarChar);
                         SqlParameter pGeneroId = new SqlParameter("@pGeneroId", SqlDbType.VarChar);

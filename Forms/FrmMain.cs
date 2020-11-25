@@ -42,7 +42,7 @@ namespace Comisarias.App.Escritorio
 
             if (rol.Contains("Consultas"))
             {
-                registrarVisitaToolStripMenuItem.Visible = true;
+                consultasToolStripMenuItem.Visible = true;
             }
 
             if (rol.Contains("Procedimientos"))
@@ -156,6 +156,31 @@ namespace Comisarias.App.Escritorio
         {
             cerrarTodasLasVentanas();
             FrmEntrevista frmPantalla = new FrmEntrevista();
+            frmPantalla.MdiParent = this;
+            frmPantalla.Show();
+        }
+
+        private void funcionariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            cerrarTodasLasVentanas();
+            FrmFuncionario frmPantalla = new FrmFuncionario();
+            frmPantalla.MdiParent = this;
+            frmPantalla.Show();
+        }
+
+        private void rolFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cerrarTodasLasVentanas();
+            FrmRolFuncionario frmPantalla = new FrmRolFuncionario();
+            frmPantalla.MdiParent = this;
+            frmPantalla.Show();
+        }
+
+        private void historiaUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cerrarTodasLasVentanas();
+            FrmConsultaHistoriaUsuario frmPantalla = new FrmConsultaHistoriaUsuario();
             frmPantalla.MdiParent = this;
             frmPantalla.Show();
         }

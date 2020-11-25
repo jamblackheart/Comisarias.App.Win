@@ -36,6 +36,7 @@
             this.medidasProtecciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrosGeneralesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarVisitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historiaUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,6 +61,7 @@
             this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.acercadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolFuncionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,7 +88,9 @@
             this.relacionAgresorToolStripMenuItem,
             this.medidasProtecciónToolStripMenuItem,
             this.generosToolStripMenuItem,
-            this.parametrosGeneralesToolStripMenuItem});
+            this.parametrosGeneralesToolStripMenuItem,
+            this.funcionariosToolStripMenuItem,
+            this.rolFuncionarioToolStripMenuItem});
             this.parametrosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("parametrosToolStripMenuItem.Image")));
             this.parametrosToolStripMenuItem.Name = "parametrosToolStripMenuItem";
             this.parametrosToolStripMenuItem.Size = new System.Drawing.Size(156, 34);
@@ -129,6 +133,13 @@
             this.parametrosGeneralesToolStripMenuItem.Text = "Parámetros generales";
             this.parametrosGeneralesToolStripMenuItem.Click += new System.EventHandler(this.parametrosGeneralesToolStripMenuItem_Click);
             // 
+            // funcionariosToolStripMenuItem
+            // 
+            this.funcionariosToolStripMenuItem.Name = "funcionariosToolStripMenuItem";
+            this.funcionariosToolStripMenuItem.Size = new System.Drawing.Size(289, 30);
+            this.funcionariosToolStripMenuItem.Text = "Funcionarios";
+            this.funcionariosToolStripMenuItem.Click += new System.EventHandler(this.funcionariosToolStripMenuItem_Click);
+            // 
             // registrarVisitaToolStripMenuItem
             // 
             this.registrarVisitaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarVisitaToolStripMenuItem.Image")));
@@ -153,6 +164,7 @@
             this.historiaUsuarioToolStripMenuItem.Name = "historiaUsuarioToolStripMenuItem";
             this.historiaUsuarioToolStripMenuItem.Size = new System.Drawing.Size(232, 30);
             this.historiaUsuarioToolStripMenuItem.Text = "Historia usuario";
+            this.historiaUsuarioToolStripMenuItem.Click += new System.EventHandler(this.historiaUsuarioToolStripMenuItem_Click);
             // 
             // procedimientosToolStripMenuItem
             // 
@@ -285,6 +297,13 @@
             this.acercadeToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.acercadeToolStripMenuItem.Text = "&Acerca de...";
             // 
+            // rolFuncionarioToolStripMenuItem
+            // 
+            this.rolFuncionarioToolStripMenuItem.Name = "rolFuncionarioToolStripMenuItem";
+            this.rolFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(289, 30);
+            this.rolFuncionarioToolStripMenuItem.Text = "Rol funcionario";
+            this.rolFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.rolFuncionarioToolStripMenuItem_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -342,6 +361,8 @@
         private System.Windows.Forms.ToolStripMenuItem agresionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orientaciónALaVictimaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entrevistaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem funcionariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rolFuncionarioToolStripMenuItem;
     }
 }
 

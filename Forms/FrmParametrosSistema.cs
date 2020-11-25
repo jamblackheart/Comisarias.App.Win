@@ -1,4 +1,5 @@
-﻿using Comisarias.App.Escritorio.Models;
+﻿using Comisarias.App.Escritorio.Controllers;
+using Comisarias.App.Escritorio.Models;
 using Comisarias.App.Escritorio.Utilities;
 using System;
 using System.Collections.Generic;
@@ -18,17 +19,15 @@ namespace Comisarias.App.Escritorio.Forms
 {
     public partial class FrmParametrosSistema : Form
     {
-        private bool usuarioExiste = false;
 
-        Usuario usuario = new Usuario();
+        ParametroSistema_Controller controlador = new ParametroSistema_Controller();
 
-        private void ReiniciarPagina()
-        {
-            btnConsultarBarequero.Enabled = true;
-            usuario = new Usuario();
-            usuarioExiste = false;
-            txtCedulaConsultar.Text = "";
-        }
+        ParametroSistema parametros = new ParametroSistema();
+
+
+
+
+
 
         public FrmParametrosSistema()
         {
@@ -36,19 +35,35 @@ namespace Comisarias.App.Escritorio.Forms
 
             this.WindowState = FormWindowState.Maximized;
 
+            parametros = controlador.ObtenerParametrosSistema();
+
         }
 
-        private void FrmValidarBarequero_Load(object sender, EventArgs e)
+
+
+
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
-            usuario = new Usuario();
+
+            parametros.Nombre = txtNombre.Text;
+
+            try
+            {
+                controlador.ActualizarRegistro(parametros);
+                lblMensaje.Text = "Actualizado correctamente";
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = "Error del sistema: " + ex.Message;
+            }
+
+;
         }
 
-
-        private void BtnLimpiar_Click(object sender, EventArgs e)
+        private void FrmParametrosSistema_Load(object sender, EventArgs e)
         {
-            ReiniciarPagina();
+            txtNombre.Text = parametros.Nombre;
+            txtDepartamento.Text = parametros.Departamento;
         }
-
-
     }
 }

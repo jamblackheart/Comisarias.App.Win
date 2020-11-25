@@ -76,12 +76,12 @@
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRefrescar = new System.Windows.Forms.Button();
             this.pnlRegistro = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbMotivoVisita = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnRefrescar = new System.Windows.Forms.Button();
             label17 = new System.Windows.Forms.Label();
             this.pnlVisitasAnteriores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitasAnteriores)).BeginInit();
@@ -213,7 +213,7 @@
             this.lblMensaje.ForeColor = System.Drawing.Color.IndianRed;
             this.lblMensaje.Location = new System.Drawing.Point(385, 13);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(713, 32);
+            this.lblMensaje.Size = new System.Drawing.Size(713, 82);
             this.lblMensaje.TabIndex = 38;
             // 
             // lblNombrePpal
@@ -612,6 +612,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INFORMACIÓN USUARIO";
             // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnRefrescar.Location = new System.Drawing.Point(986, 99);
+            this.btnRefrescar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(109, 32);
+            this.btnRefrescar.TabIndex = 68;
+            this.btnRefrescar.Text = "Refrescar";
+            this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
+            // 
             // pnlRegistro
             // 
             this.pnlRegistro.Controls.Add(this.grbFechaNacimiento);
@@ -681,18 +693,6 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnRefrescar
-            // 
-            this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRefrescar.Location = new System.Drawing.Point(986, 99);
-            this.btnRefrescar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(109, 32);
-            this.btnRefrescar.TabIndex = 68;
-            this.btnRefrescar.Text = "Refrescar";
-            this.btnRefrescar.UseVisualStyleBackColor = true;
-            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // FrmRegistrarVisita
             // 

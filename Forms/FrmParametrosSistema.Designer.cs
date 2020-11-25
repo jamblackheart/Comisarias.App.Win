@@ -30,29 +30,34 @@
         {
             System.Windows.Forms.Label label17;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmParametrosSistema));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblNombrePpal = new System.Windows.Forms.Label();
-            this.btnAprobar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.lblMensaje = new System.Windows.Forms.Label();
-            this.btnConsultarBarequero = new System.Windows.Forms.Button();
-            this.txtCedulaConsultar = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlVentasMes = new System.Windows.Forms.GroupBox();
             this.dgvVentasMes = new System.Windows.Forms.DataGridView();
             this.pnlVentasAnio = new System.Windows.Forms.GroupBox();
             this.dgvVentasAno = new System.Windows.Forms.DataGridView();
             this.pnlTitulo = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtLogo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtRuta = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtMunicipio = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDepartamento = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblMensaje = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
             label17 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
             this.pnlVentasMes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentasMes)).BeginInit();
             this.pnlVentasAnio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentasAno)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label17
@@ -67,97 +72,6 @@
             label17.Size = new System.Drawing.Size(330, 31);
             label17.TabIndex = 2;
             label17.Text = "PARÁMETROS SISTEMA";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblNombrePpal);
-            this.groupBox1.Controls.Add(this.btnAprobar);
-            this.groupBox1.Controls.Add(this.btnLimpiar);
-            this.groupBox1.Controls.Add(this.lblMensaje);
-            this.groupBox1.Controls.Add(this.btnConsultarBarequero);
-            this.groupBox1.Controls.Add(this.txtCedulaConsultar);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(16, 188);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1627, 499);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "INFORMACIÓN USUARIO";
-            // 
-            // lblNombrePpal
-            // 
-            this.lblNombrePpal.AutoSize = true;
-            this.lblNombrePpal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblNombrePpal.Location = new System.Drawing.Point(429, 121);
-            this.lblNombrePpal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombrePpal.Name = "lblNombrePpal";
-            this.lblNombrePpal.Size = new System.Drawing.Size(0, 25);
-            this.lblNombrePpal.TabIndex = 40;
-            // 
-            // btnAprobar
-            // 
-            this.btnAprobar.Location = new System.Drawing.Point(796, 346);
-            this.btnAprobar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAprobar.Name = "btnAprobar";
-            this.btnAprobar.Size = new System.Drawing.Size(205, 58);
-            this.btnAprobar.TabIndex = 34;
-            this.btnAprobar.Text = "Aprobar";
-            this.btnAprobar.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnLimpiar.Location = new System.Drawing.Point(1459, 148);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(156, 37);
-            this.btnLimpiar.TabIndex = 39;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
-            // 
-            // lblMensaje
-            // 
-            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblMensaje.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblMensaje.Location = new System.Drawing.Point(385, 13);
-            this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(713, 32);
-            this.lblMensaje.TabIndex = 38;
-            // 
-            // btnConsultarBarequero
-            // 
-            this.btnConsultarBarequero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnConsultarBarequero.Location = new System.Drawing.Point(163, 113);
-            this.btnConsultarBarequero.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConsultarBarequero.Name = "btnConsultarBarequero";
-            this.btnConsultarBarequero.Size = new System.Drawing.Size(199, 48);
-            this.btnConsultarBarequero.TabIndex = 2;
-            this.btnConsultarBarequero.Text = "Consultar";
-            this.btnConsultarBarequero.UseVisualStyleBackColor = true;
-            // 
-            // txtCedulaConsultar
-            // 
-            this.txtCedulaConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCedulaConsultar.Location = new System.Drawing.Point(163, 70);
-            this.txtCedulaConsultar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCedulaConsultar.Name = "txtCedulaConsultar";
-            this.txtCedulaConsultar.Size = new System.Drawing.Size(192, 30);
-            this.txtCedulaConsultar.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(40, 70);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cédula";
             // 
             // pnlVentasMes
             // 
@@ -229,6 +143,17 @@
             this.pnlTitulo.Size = new System.Drawing.Size(1690, 147);
             this.pnlTitulo.TabIndex = 33;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(759, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -242,16 +167,150 @@
             this.label19.TabIndex = 1;
             this.label19.Text = "____________________________";
             // 
-            // pictureBox1
+            // groupBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(759, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.groupBox1.Controls.Add(this.txtLogo);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtRuta);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtMunicipio);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtDepartamento);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblMensaje);
+            this.groupBox1.Controls.Add(this.btnGuardar);
+            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Controls.Add(this.lblNombre);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox1.Location = new System.Drawing.Point(24, 187);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(1627, 498);
+            this.groupBox1.TabIndex = 34;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "PARÁMETROS GENERALES";
+            // 
+            // txtLogo
+            // 
+            this.txtLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtLogo.Location = new System.Drawing.Point(204, 238);
+            this.txtLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLogo.Name = "txtLogo";
+            this.txtLogo.Size = new System.Drawing.Size(413, 30);
+            this.txtLogo.TabIndex = 51;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(40, 238);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 25);
+            this.label4.TabIndex = 50;
+            this.label4.Text = "Ruta Logo";
+            // 
+            // txtRuta
+            // 
+            this.txtRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtRuta.Location = new System.Drawing.Point(204, 195);
+            this.txtRuta.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRuta.Name = "txtRuta";
+            this.txtRuta.Size = new System.Drawing.Size(413, 30);
+            this.txtRuta.TabIndex = 49;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Location = new System.Drawing.Point(40, 195);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(153, 25);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "Ruta BaseDatos";
+            // 
+            // txtMunicipio
+            // 
+            this.txtMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMunicipio.Location = new System.Drawing.Point(204, 150);
+            this.txtMunicipio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMunicipio.Name = "txtMunicipio";
+            this.txtMunicipio.Size = new System.Drawing.Size(413, 30);
+            this.txtMunicipio.TabIndex = 47;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(40, 150);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 25);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Municipio";
+            // 
+            // txtDepartamento
+            // 
+            this.txtDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtDepartamento.Location = new System.Drawing.Point(204, 109);
+            this.txtDepartamento.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDepartamento.Name = "txtDepartamento";
+            this.txtDepartamento.Size = new System.Drawing.Size(413, 30);
+            this.txtDepartamento.TabIndex = 45;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(40, 109);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 25);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Departamento";
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblMensaje.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblMensaje.Location = new System.Drawing.Point(385, 14);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(713, 32);
+            this.lblMensaje.TabIndex = 38;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnGuardar.Location = new System.Drawing.Point(418, 311);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(199, 34);
+            this.btnGuardar.TabIndex = 2;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNombre.Location = new System.Drawing.Point(204, 70);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(413, 30);
+            this.txtNombre.TabIndex = 1;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblNombre.Location = new System.Drawing.Point(40, 70);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(81, 25);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre";
             // 
             // FrmParametrosSistema
             // 
@@ -260,17 +319,15 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1711, 752);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlVentasAnio);
             this.Controls.Add(this.pnlVentasMes);
-            this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmParametrosSistema";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar barequero";
-            this.Load += new System.EventHandler(this.FrmValidarBarequero_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.FrmParametrosSistema_Load);
             this.pnlVentasMes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentasMes)).EndInit();
             this.pnlVentasAnio.ResumeLayout(false);
@@ -278,26 +335,32 @@
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnConsultarBarequero;
-        private System.Windows.Forms.TextBox txtCedulaConsultar;
         private System.Windows.Forms.GroupBox pnlVentasMes;
         private System.Windows.Forms.DataGridView dgvVentasMes;
         private System.Windows.Forms.GroupBox pnlVentasAnio;
         private System.Windows.Forms.DataGridView dgvVentasAno;
-        private System.Windows.Forms.Label lblMensaje;
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Label lblNombrePpal;
-        private System.Windows.Forms.Button btnAprobar;
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtLogo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtRuta;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtMunicipio;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtDepartamento;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

@@ -17,7 +17,7 @@
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\PublicacionEslopWindows\version1_13PROD\</PublishUrl>
+    <PublishUrl>D:\ComisariasPublicacion\version1\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,7 +27,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>66</ApplicationRevision>
+    <ApplicationRevision>67</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -241,6 +241,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ParametroSistema_Controller.cs" />
+    <Compile Include="Controllers\Visita_Controller.cs" />
     <Compile Include="Controllers\Usuario_Controller.cs" />
     <Compile Include="Controllers\RelacionAgresor_Controller.cs" />
     <Compile Include="Controllers\MedidasProteccion_Controller.cs" />
@@ -262,6 +264,24 @@
     </Compile>
     <Compile Include="Forms\FrmEntrevista.Designer.cs">
       <DependentUpon>FrmEntrevista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmConsultaHistoriaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmConsultaHistoriaUsuario.Designer.cs">
+      <DependentUpon>FrmConsultaHistoriaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRolFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRolFuncionario.Designer.cs">
+      <DependentUpon>FrmRolFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFuncionario.Designer.cs">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmRelacionAgresor.cs">
       <SubType>Form</SubType>
@@ -305,12 +325,6 @@
     <Compile Include="Forms\FrmOrientacion.Designer.cs">
       <DependentUpon>FrmOrientacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmConsultaHistoriaUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmConsultaHistoriaUsuario.Designer.cs">
-      <DependentUpon>FrmConsultaHistoriaUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FrmMotivoVisita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,8 +349,12 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Genero.cs" />
+    <Compile Include="Models\ParametroSistema.cs" />
     <Compile Include="Models\RespuestaGetDatos.cs" />
     <Compile Include="Models\Respuesta.cs" />
+    <Compile Include="Models\MotivoVisita.cs" />
+    <Compile Include="Models\Visita.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\EstadoCivil.cs" />
     <Compile Include="Models\Parametro.cs" />
@@ -352,6 +370,15 @@
     <Compile Include="Utilities\Helper.cs" />
     <EmbeddedResource Include="Forms\FrmEntrevista.resx">
       <DependentUpon>FrmEntrevista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmConsultaHistoriaUsuario.resx">
+      <DependentUpon>FrmConsultaHistoriaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRolFuncionario.resx">
+      <DependentUpon>FrmRolFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFuncionario.resx">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmRelacionAgresor.resx">
       <DependentUpon>FrmRelacionAgresor.cs</DependentUpon>
@@ -373,9 +400,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmOrientacion.resx">
       <DependentUpon>FrmOrientacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmConsultaHistoriaUsuario.resx">
-      <DependentUpon>FrmConsultaHistoriaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMotivoVisita.resx">
       <DependentUpon>FrmMotivoVisita.cs</DependentUpon>

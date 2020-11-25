@@ -175,30 +175,72 @@ namespace Comisarias.App.Escritorio.Controllers
 
         }
 
-        private List<string> ObtenerRolesUsuario(string funcionario)
+        public MotivoVisita ObtenerMotivoVisitaPorId(int idMotivoVisita)
         {
-            List<string> retorno = new List<string>();
+            MotivoVisita retorno = new MotivoVisita();
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
 
-                using (SqlCommand command = new SqlCommand(@"SELECT Rol.Nombre
-                                                        FROM Rol
-                                                  INNER JOIN FuncionarioRoles
-                                                          ON FuncionarioRoles.IdRol = Rol.Id
-                                                         AND FuncionarioRoles.IdFuncionario = @Funcionario", con))
+                using (SqlCommand command = new SqlCommand(@"SELECT *
+                                                        FROM MotivoVisita
+                                                   WHERE Id = @pId", con))
                 {
-                    SqlParameter pfuncionario = new SqlParameter("@Funcionario", SqlDbType.VarChar);
+                    SqlParameter pId = new SqlParameter("@pId", SqlDbType.VarChar);
 
-                    pfuncionario.Value = funcionario;
-                    command.Parameters.Add(pfuncionario);
+                    pId.Value = idMotivoVisita;
+                    command.Parameters.Add(pId);
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            retorno.Add(reader.GetString(0).ToString());
+
+                            retorno.Id = (int)reader["Id"];
+                            retorno.Nombre = reader["Nombre"].ToString();
+                           
+
+                        }
+                    }
+                }
+
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Dispose();
+
+                }
+            }
+
+            return retorno;
+        }
+
+        public MotivoVisita ObtenerMotivoVisitaPorNombre(string nombreMotivoVisita)
+        {
+            MotivoVisita retorno = new MotivoVisita();
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+
+                using (SqlCommand command = new SqlCommand(@"SELECT *
+                                                        FROM MotivoVisita
+                                                   WHERE Nombre = @pNombre", con))
+                {
+                    SqlParameter pNombre = new SqlParameter("@pNombre", SqlDbType.VarChar);
+
+                    pNombre.Value = nombreMotivoVisita;
+                    command.Parameters.Add(pNombre);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+
+                            retorno.Id = (int)reader["Id"];
+                            retorno.Nombre = reader["Nombre"].ToString();
+
+
                         }
                     }
                 }
