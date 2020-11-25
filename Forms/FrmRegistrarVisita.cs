@@ -44,7 +44,7 @@ namespace Comisarias.App.Escritorio.Forms
             lblFechaActual.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
 
 
-            cmbDia.add
+            //cmbDia.add
         }
 
 
@@ -58,7 +58,6 @@ namespace Comisarias.App.Escritorio.Forms
             {
                 cmbDia.Items.Add(i);
             }
-            comboBox1.Items.Add("Tokyo");
         }
 
 
