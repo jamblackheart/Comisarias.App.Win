@@ -38,7 +38,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnRefrescar = new System.Windows.Forms.Button();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -90,7 +89,6 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtPassword);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnRefrescar);
             this.groupBox1.Controls.Add(this.dgvDatos);
             this.groupBox1.Controls.Add(this.Eliminar);
             this.groupBox1.Controls.Add(this.btnActualizar);
@@ -169,17 +167,6 @@
             this.label1.Size = new System.Drawing.Size(98, 25);
             this.label1.TabIndex = 44;
             this.label1.Text = "Password";
-            // 
-            // btnRefrescar
-            // 
-            this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRefrescar.Location = new System.Drawing.Point(467, 457);
-            this.btnRefrescar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(199, 34);
-            this.btnRefrescar.TabIndex = 43;
-            this.btnRefrescar.Text = "Refrescar";
-            this.btnRefrescar.UseVisualStyleBackColor = true;
             // 
             // dgvDatos
             // 
@@ -328,7 +315,7 @@
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
             this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(1759, 147);
+            this.pnlTitulo.Size = new System.Drawing.Size(1780, 147);
             this.pnlTitulo.TabIndex = 33;
             // 
             // label19
@@ -375,7 +362,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1780, 750);
+            this.ClientSize = new System.Drawing.Size(1801, 750);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlVentasAnio);
             this.Controls.Add(this.pnlVentasMes);
@@ -420,7 +407,6 @@
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.Button Eliminar;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label1;

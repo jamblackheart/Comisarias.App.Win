@@ -32,18 +32,15 @@
             System.Windows.Forms.Label label17;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRolFuncionario));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnRefrescar = new System.Windows.Forms.Button();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.Eliminar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.chkConsultas = new System.Windows.Forms.CheckBox();
+            this.chkRegistrarVisita = new System.Windows.Forms.CheckBox();
+            this.chkProcedimientos = new System.Windows.Forms.CheckBox();
+            this.chkParametros = new System.Windows.Forms.CheckBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblMensaje = new System.Windows.Forms.Label();
-            this.btnInsertar = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.pnlVentasMes = new System.Windows.Forms.GroupBox();
-            this.dgvVentasMes = new System.Windows.Forms.DataGridView();
-            this.pnlVentasAnio = new System.Windows.Forms.GroupBox();
-            this.dgvVentasAno = new System.Windows.Forms.DataGridView();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -53,10 +50,7 @@
             label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
-            this.pnlVentasMes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVentasMes)).BeginInit();
-            this.pnlVentasAnio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVentasAno)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbComisariaDataSet1)).BeginInit();
@@ -72,79 +66,119 @@
             label17.Location = new System.Drawing.Point(309, 57);
             label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label17.Name = "label17";
-            label17.Size = new System.Drawing.Size(373, 31);
+            label17.Size = new System.Drawing.Size(202, 31);
             label17.TabIndex = 2;
-            label17.Text = "MEDIDAS DE PROTECCIÓN";
+            label17.Text = "ROL USUARIO";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnRefrescar);
             this.groupBox1.Controls.Add(this.dgvDatos);
-            this.groupBox1.Controls.Add(this.Eliminar);
-            this.groupBox1.Controls.Add(this.btnActualizar);
+            this.groupBox1.Controls.Add(this.groupBox5);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblMensaje);
-            this.groupBox1.Controls.Add(this.btnInsertar);
-            this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.lblNombre);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox1.Location = new System.Drawing.Point(16, 188);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1627, 498);
+            this.groupBox1.Size = new System.Drawing.Size(788, 680);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "MEDIDAS DE PROTECCIÓN";
-            // 
-            // btnRefrescar
-            // 
-            this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRefrescar.Location = new System.Drawing.Point(467, 457);
-            this.btnRefrescar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(199, 34);
-            this.btnRefrescar.TabIndex = 43;
-            this.btnRefrescar.Text = "Refrescar";
-            this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.groupBox1.Text = "ROL USUARIO";
             // 
             // dgvDatos
             // 
             this.dgvDatos.AllowUserToAddRows = false;
             this.dgvDatos.AllowUserToDeleteRows = false;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(45, 196);
+            this.dgvDatos.Location = new System.Drawing.Point(48, 89);
             this.dgvDatos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.RowHeadersWidth = 51;
             this.dgvDatos.RowTemplate.Height = 24;
-            this.dgvDatos.Size = new System.Drawing.Size(621, 254);
-            this.dgvDatos.TabIndex = 42;
-            this.dgvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellClick);
-            this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
+            this.dgvDatos.Size = new System.Drawing.Size(690, 265);
+            this.dgvDatos.TabIndex = 43;
+            this.dgvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
             // 
-            // Eliminar
+            // groupBox5
             // 
-            this.Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Eliminar.Location = new System.Drawing.Point(467, 130);
-            this.Eliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Size = new System.Drawing.Size(199, 34);
-            this.Eliminar.TabIndex = 41;
-            this.Eliminar.Text = "Eliminar";
-            this.Eliminar.UseVisualStyleBackColor = true;
-            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
+            this.groupBox5.Controls.Add(this.chkConsultas);
+            this.groupBox5.Controls.Add(this.chkRegistrarVisita);
+            this.groupBox5.Controls.Add(this.chkProcedimientos);
+            this.groupBox5.Controls.Add(this.chkParametros);
+            this.groupBox5.Controls.Add(this.btnGuardar);
+            this.groupBox5.Location = new System.Drawing.Point(48, 395);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(690, 242);
+            this.groupBox5.TabIndex = 75;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Roles";
             // 
-            // btnActualizar
+            // chkConsultas
             // 
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnActualizar.Location = new System.Drawing.Point(467, 89);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(199, 34);
-            this.btnActualizar.TabIndex = 40;
-            this.btnActualizar.Text = "Editar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.chkConsultas.AutoSize = true;
+            this.chkConsultas.Location = new System.Drawing.Point(74, 129);
+            this.chkConsultas.Name = "chkConsultas";
+            this.chkConsultas.Size = new System.Drawing.Size(122, 29);
+            this.chkConsultas.TabIndex = 4;
+            this.chkConsultas.Text = "Consultas";
+            this.chkConsultas.UseVisualStyleBackColor = true;
+            this.chkConsultas.CheckedChanged += new System.EventHandler(this.chkConsultas_CheckedChanged);
+            // 
+            // chkRegistrarVisita
+            // 
+            this.chkRegistrarVisita.AutoSize = true;
+            this.chkRegistrarVisita.Location = new System.Drawing.Point(74, 92);
+            this.chkRegistrarVisita.Name = "chkRegistrarVisita";
+            this.chkRegistrarVisita.Size = new System.Drawing.Size(159, 29);
+            this.chkRegistrarVisita.TabIndex = 2;
+            this.chkRegistrarVisita.Text = "RegistrarVisita";
+            this.chkRegistrarVisita.UseVisualStyleBackColor = true;
+            this.chkRegistrarVisita.CheckedChanged += new System.EventHandler(this.chkRegistrarVisita_CheckedChanged);
+            // 
+            // chkProcedimientos
+            // 
+            this.chkProcedimientos.AutoSize = true;
+            this.chkProcedimientos.Location = new System.Drawing.Point(74, 166);
+            this.chkProcedimientos.Name = "chkProcedimientos";
+            this.chkProcedimientos.Size = new System.Drawing.Size(168, 29);
+            this.chkProcedimientos.TabIndex = 1;
+            this.chkProcedimientos.Text = "Procedimientos";
+            this.chkProcedimientos.UseVisualStyleBackColor = true;
+            this.chkProcedimientos.CheckedChanged += new System.EventHandler(this.chkProcedimientos_CheckedChanged);
+            // 
+            // chkParametros
+            // 
+            this.chkParametros.AutoSize = true;
+            this.chkParametros.Location = new System.Drawing.Point(74, 55);
+            this.chkParametros.Name = "chkParametros";
+            this.chkParametros.Size = new System.Drawing.Size(134, 29);
+            this.chkParametros.TabIndex = 0;
+            this.chkParametros.Text = "Parametros";
+            this.chkParametros.UseVisualStyleBackColor = true;
+            this.chkParametros.CheckedChanged += new System.EventHandler(this.chkParametros_CheckedChanged);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnGuardar.Location = new System.Drawing.Point(458, 192);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(199, 34);
+            this.btnGuardar.TabIndex = 2;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(43, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 25);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Usuario";
             // 
             // lblMensaje
             // 
@@ -154,92 +188,6 @@
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(713, 32);
             this.lblMensaje.TabIndex = 38;
-            // 
-            // btnInsertar
-            // 
-            this.btnInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnInsertar.Location = new System.Drawing.Point(467, 47);
-            this.btnInsertar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(199, 34);
-            this.btnInsertar.TabIndex = 2;
-            this.btnInsertar.Text = "Insertar";
-            this.btnInsertar.UseVisualStyleBackColor = true;
-            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNombre.Location = new System.Drawing.Point(163, 70);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(192, 30);
-            this.txtNombre.TabIndex = 1;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblNombre.Location = new System.Drawing.Point(40, 70);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(81, 25);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre";
-            // 
-            // pnlVentasMes
-            // 
-            this.pnlVentasMes.Controls.Add(this.dgvVentasMes);
-            this.pnlVentasMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlVentasMes.Location = new System.Drawing.Point(16, 1158);
-            this.pnlVentasMes.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlVentasMes.Name = "pnlVentasMes";
-            this.pnlVentasMes.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlVentasMes.Size = new System.Drawing.Size(1627, 302);
-            this.pnlVentasMes.TabIndex = 25;
-            this.pnlVentasMes.TabStop = false;
-            this.pnlVentasMes.Text = "Ventas mes";
-            this.pnlVentasMes.Visible = false;
-            // 
-            // dgvVentasMes
-            // 
-            this.dgvVentasMes.AllowUserToAddRows = false;
-            this.dgvVentasMes.AllowUserToDeleteRows = false;
-            this.dgvVentasMes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVentasMes.Location = new System.Drawing.Point(8, 34);
-            this.dgvVentasMes.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvVentasMes.Name = "dgvVentasMes";
-            this.dgvVentasMes.ReadOnly = true;
-            this.dgvVentasMes.RowHeadersWidth = 51;
-            this.dgvVentasMes.Size = new System.Drawing.Size(1595, 254);
-            this.dgvVentasMes.TabIndex = 24;
-            // 
-            // pnlVentasAnio
-            // 
-            this.pnlVentasAnio.Controls.Add(this.dgvVentasAno);
-            this.pnlVentasAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlVentasAnio.Location = new System.Drawing.Point(16, 1481);
-            this.pnlVentasAnio.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlVentasAnio.Name = "pnlVentasAnio";
-            this.pnlVentasAnio.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlVentasAnio.Size = new System.Drawing.Size(1627, 305);
-            this.pnlVentasAnio.TabIndex = 26;
-            this.pnlVentasAnio.TabStop = false;
-            this.pnlVentasAnio.Text = "Ventas año";
-            this.pnlVentasAnio.Visible = false;
-            // 
-            // dgvVentasAno
-            // 
-            this.dgvVentasAno.AllowUserToAddRows = false;
-            this.dgvVentasAno.AllowUserToDeleteRows = false;
-            this.dgvVentasAno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVentasAno.Location = new System.Drawing.Point(8, 34);
-            this.dgvVentasAno.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvVentasAno.Name = "dgvVentasAno";
-            this.dgvVentasAno.ReadOnly = true;
-            this.dgvVentasAno.RowHeadersWidth = 51;
-            this.dgvVentasAno.Size = new System.Drawing.Size(1595, 263);
-            this.dgvVentasAno.TabIndex = 24;
             // 
             // pnlTitulo
             // 
@@ -254,7 +202,7 @@
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
             this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(1759, 147);
+            this.pnlTitulo.Size = new System.Drawing.Size(1000, 147);
             this.pnlTitulo.TabIndex = 33;
             // 
             // pictureBox1
@@ -301,23 +249,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1780, 750);
+            this.ClientSize = new System.Drawing.Size(1021, 525);
             this.Controls.Add(this.pnlTitulo);
-            this.Controls.Add(this.pnlVentasAnio);
-            this.Controls.Add(this.pnlVentasMes);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRolFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar barequero";
-            this.Load += new System.EventHandler(this.FrmMedidasProteccion_Load);
+            this.Load += new System.EventHandler(this.FrmRolFuncionario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
-            this.pnlVentasMes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVentasMes)).EndInit();
-            this.pnlVentasAnio.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVentasAno)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -330,23 +274,20 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Button btnInsertar;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.GroupBox pnlVentasMes;
-        private System.Windows.Forms.DataGridView dgvVentasMes;
-        private System.Windows.Forms.GroupBox pnlVentasAnio;
-        private System.Windows.Forms.DataGridView dgvVentasAno;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Label label19;
         private dbComisariaDataSet1 dbComisariaDataSet1;
         private System.Windows.Forms.BindingSource motivoVisitaBindingSource;
         private dbComisariaDataSet1TableAdapters.MotivoVisitaTableAdapter motivoVisitaTableAdapter;
-        private System.Windows.Forms.DataGridView dgvDatos;
-        private System.Windows.Forms.Button Eliminar;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.CheckBox chkConsultas;
+        private System.Windows.Forms.CheckBox chkRegistrarVisita;
+        private System.Windows.Forms.CheckBox chkProcedimientos;
+        private System.Windows.Forms.CheckBox chkParametros;
+        private System.Windows.Forms.DataGridView dgvDatos;
     }
 }

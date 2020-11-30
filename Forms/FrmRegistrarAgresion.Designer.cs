@@ -139,9 +139,9 @@
             label17.Location = new System.Drawing.Point(309, 57);
             label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label17.Name = "label17";
-            label17.Size = new System.Drawing.Size(268, 31);
+            label17.Size = new System.Drawing.Size(325, 31);
             label17.TabIndex = 2;
-            label17.Text = "REGISTRAR VISITA";
+            label17.Text = "REGISTRAR AGRESIÓN";
             // 
             // pnlVisitasAnteriores
             // 

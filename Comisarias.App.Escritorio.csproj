@@ -327,12 +327,6 @@
     <Compile Include="Forms\FrmHistoriaUsuario.Designer.cs">
       <DependentUpon>FrmHistoriaUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmAgresion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmAgresion.Designer.cs">
-      <DependentUpon>FrmAgresion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FrmMotivoVisita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -410,9 +404,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmHistoriaUsuario.resx">
       <DependentUpon>FrmHistoriaUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmAgresion.resx">
-      <DependentUpon>FrmAgresion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMotivoVisita.resx">
       <DependentUpon>FrmMotivoVisita.cs</DependentUpon>

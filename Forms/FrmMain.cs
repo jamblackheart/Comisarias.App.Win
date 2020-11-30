@@ -50,7 +50,9 @@ namespace Comisarias.App.Escritorio
                 procedimientosToolStripMenuItem.Visible = true;
             }
 
-           
+
+         
+
         }
 
         private void cerrarTodasLasVentanas()

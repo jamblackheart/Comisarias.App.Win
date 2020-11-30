@@ -240,7 +240,7 @@ namespace Comisarias.App.Escritorio.Controllers
                         while (reader.Read())
                         {
                             retorno.Add(new RolFuncionario{ 
-                                                    IdFuncionario = (int)reader["Id"],
+                                                    IdFuncionario = (int)reader["IdFuncionario"],
                                                     IdRol = (int)reader["IdRol"],
                                                     Rol = reader["Nombre"].ToString()
                             });
@@ -257,5 +257,134 @@ namespace Comisarias.App.Escritorio.Controllers
 
             return retorno;
         }
+
+
+        public int ObtenerRolUsuarioPorNombreRol(string rol)
+        {
+            int retorno = 0;
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+
+                using (SqlCommand command = new SqlCommand(@"SELECT Id
+                                                        FROM Rol
+                                                     WHERE Nombre = @pNombre", con))
+                {
+                    SqlParameter pNombre = new SqlParameter("@pNombre", SqlDbType.VarChar);
+
+                    pNombre.Value = rol;
+                    command.Parameters.Add(pNombre);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            retorno = (int)reader["Id"];                          
+                        }
+                    }
+                }
+
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Dispose();
+
+                }
+            }
+
+            return retorno;
+        }
+
+        public Respuesta EliminarRegistroRolFuncionario(int funcionarioId, int rolId)
+        {
+            Respuesta retorno = new Respuesta();
+            retorno.FueExitosa = false;
+            retorno.Mensaje = "validando...";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+                    using (SqlCommand command = new SqlCommand(@"DELETE FuncionarioRoles WHERE IdFuncionario = @pIdFuncionario and idRol = @pIdRol", con))
+                    {
+                        SqlParameter pIdFuncionario = new SqlParameter("@pIdFuncionario", SqlDbType.Int);
+                        SqlParameter pIdRol = new SqlParameter("@pIdRol", SqlDbType.Int);
+
+                        pIdFuncionario.Value = funcionarioId;
+                        pIdRol.Value = rolId;
+
+                        command.Parameters.Add(pIdFuncionario);
+                        command.Parameters.Add(pIdRol);
+
+                        command.ExecuteNonQuery();
+                        retorno.FueExitosa = true;
+                        retorno.Mensaje = "Registro eliminado correctamente";
+
+                    }
+                    if (con.State == ConnectionState.Open)
+                    {
+                        con.Dispose();
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                retorno.FueExitosa = false;
+                retorno.Mensaje = "Error en el servidor. Error: " + e.Message;
+            }
+
+            return retorno;
+
+        }
+
+        public Respuesta AgregarRegistroRolFuncionario(int funcionarioId, int rolId)
+        {
+            Respuesta retorno = new Respuesta();
+            retorno.FueExitosa = false;
+            retorno.Mensaje = "validando...";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+                    using (SqlCommand command = new SqlCommand(@"INSERT INTO FuncionarioRoles 
+                                VALUES (@pIdFuncionario, @pIdRol)", con))
+                    {
+                        SqlParameter pIdFuncionario = new SqlParameter("@pIdFuncionario", SqlDbType.Int);
+                        SqlParameter pIdRol = new SqlParameter("@pIdRol", SqlDbType.Int);
+
+                        pIdFuncionario.Value = funcionarioId;
+                        pIdRol.Value = rolId;
+
+                        command.Parameters.Add(pIdFuncionario);
+                        command.Parameters.Add(pIdRol);
+
+                        int rowsAfected = command.ExecuteNonQuery();
+                        retorno.FueExitosa = true;
+                        retorno.Mensaje = "Registro agregado correctamente";
+
+                    }
+                    if (con.State == ConnectionState.Open)
+                    {
+                        con.Dispose();
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                retorno.FueExitosa = false;
+                retorno.Mensaje = "Error en el servidor. Error: " + e.Message;
+            }
+
+            return retorno;
+
+        }
+
+
+
     }
 }
