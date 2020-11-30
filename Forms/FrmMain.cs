@@ -139,7 +139,7 @@ namespace Comisarias.App.Escritorio
         private void agresionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cerrarTodasLasVentanas();
-            FrmAgresion frmPantalla = new FrmAgresion();
+            FrmRegistrarAgresion frmPantalla = new FrmRegistrarAgresion();
             frmPantalla.MdiParent = this;
             frmPantalla.Show();
         }
@@ -147,7 +147,7 @@ namespace Comisarias.App.Escritorio
         private void orientaciónALaVictimaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cerrarTodasLasVentanas();
-            FrmOrientacion frmPantalla = new FrmOrientacion();
+            FrmRegistrarOrientacion frmPantalla = new FrmRegistrarOrientacion();
             frmPantalla.MdiParent = this;
             frmPantalla.Show();
         }
@@ -155,7 +155,7 @@ namespace Comisarias.App.Escritorio
         private void entrevistaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cerrarTodasLasVentanas();
-            FrmEntrevista frmPantalla = new FrmEntrevista();
+            FrmRegistrarEntrevista frmPantalla = new FrmRegistrarEntrevista();
             frmPantalla.MdiParent = this;
             frmPantalla.Show();
         }

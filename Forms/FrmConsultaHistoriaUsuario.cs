@@ -28,6 +28,7 @@ namespace Comisarias.App.Escritorio.Forms
         Generos_Controller controlador_generos = new Generos_Controller();
         Usuario_Controller controlador_usuario = new Usuario_Controller();
         Visita_Controller controlador_visita = new Visita_Controller();
+        Agresion_Controller controlador_agresion = new Agresion_Controller();
         private void ReiniciarPagina()
         {
             btnConsultar.Enabled = true;
@@ -103,7 +104,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         }
 
-        private void FrmValidarBarequero_Load(object sender, EventArgs e)
+        private void FrmConsultaHistoriaUsuario_Load(object sender, EventArgs e)
         {
             usuario = new Usuario();
             lblFechaActual.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
@@ -251,24 +252,24 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void ObtenerAgresiones()
         {
-            RespuestaGetDatos respuesta = controlador_visita.ObtenerVisitasPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_agresion.ObtenerAgresionesPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
-                dgvVisitasAnteriores.DataSource = respuesta.Datos;
+                dgvAgresiones.DataSource = respuesta.Datos;
 
-                foreach (DataGridViewColumn colum in dgvVisitasAnteriores.Columns)
+                foreach (DataGridViewColumn colum in dgvAgresiones.Columns)
                 {
                     if (colum.Name == "Id")
                         colum.Visible = false;
                 }
-                pnlVisitasAnteriores.Visible = true;
+                pnlAgresiones.Visible = true;
             }
             else
             {
-                dgvVisitasAnteriores.DataSource = null;
+                dgvAgresiones.DataSource = null;
                 lblMensaje.Text = respuesta.Mensaje;
-                pnlVisitasAnteriores.Visible = false;
+                pnlAgresiones.Visible = false;
             }
         }
         private void ActualizarUsuario()
@@ -476,6 +477,13 @@ namespace Comisarias.App.Escritorio.Forms
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             ReiniciarPagina();
+        }
+
+     
+
+        private void lblMensaje_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

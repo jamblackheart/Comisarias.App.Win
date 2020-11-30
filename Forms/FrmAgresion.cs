@@ -143,5 +143,10 @@ namespace Comisarias.App.Escritorio.Forms
 
             ControladorAgresion.AgregarRegistro(objAgresion);
         }
+
+        private void btnConsultarBarequero_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

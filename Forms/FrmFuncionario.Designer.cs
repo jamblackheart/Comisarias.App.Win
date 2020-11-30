@@ -32,24 +32,30 @@
             System.Windows.Forms.Label label17;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFuncionario));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.btnInsertar = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtNombres = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pnlVentasMes = new System.Windows.Forms.GroupBox();
             this.dgvVentasMes = new System.Windows.Forms.DataGridView();
             this.pnlVentasAnio = new System.Windows.Forms.GroupBox();
             this.dgvVentasAno = new System.Windows.Forms.DataGridView();
             this.pnlTitulo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.dbComisariaDataSet1 = new Comisarias.App.Escritorio.dbComisariaDataSet1();
             this.motivoVisitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.motivoVisitaTableAdapter = new Comisarias.App.Escritorio.dbComisariaDataSet1TableAdapters.MotivoVisitaTableAdapter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -58,9 +64,9 @@
             this.pnlVentasAnio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentasAno)).BeginInit();
             this.pnlTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbComisariaDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motivoVisitaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label17
@@ -72,19 +78,25 @@
             label17.Location = new System.Drawing.Point(309, 57);
             label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label17.Name = "label17";
-            label17.Size = new System.Drawing.Size(373, 31);
+            label17.Size = new System.Drawing.Size(225, 31);
             label17.TabIndex = 2;
-            label17.Text = "MEDIDAS DE PROTECCIÓN";
+            label17.Text = "FUNCIONARIOS";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtDocumento);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtApellidos);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtPassword);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnRefrescar);
             this.groupBox1.Controls.Add(this.dgvDatos);
             this.groupBox1.Controls.Add(this.Eliminar);
             this.groupBox1.Controls.Add(this.btnActualizar);
             this.groupBox1.Controls.Add(this.lblMensaje);
             this.groupBox1.Controls.Add(this.btnInsertar);
-            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Controls.Add(this.txtNombres);
             this.groupBox1.Controls.Add(this.lblNombre);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox1.Location = new System.Drawing.Point(16, 188);
@@ -94,7 +106,69 @@
             this.groupBox1.Size = new System.Drawing.Size(1627, 498);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "MEDIDAS DE PROTECCIÓN";
+            this.groupBox1.Text = "FUNCIONARIO";
+            // 
+            // txtDocumento
+            // 
+            this.txtDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtDocumento.Location = new System.Drawing.Point(163, 153);
+            this.txtDocumento.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(192, 30);
+            this.txtDocumento.TabIndex = 49;
+            this.txtDocumento.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Location = new System.Drawing.Point(40, 153);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 25);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "Documento";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // txtApellidos
+            // 
+            this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtApellidos.Location = new System.Drawing.Point(163, 107);
+            this.txtApellidos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(192, 30);
+            this.txtApellidos.TabIndex = 47;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(40, 107);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 25);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Apellidos";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPassword.Location = new System.Drawing.Point(163, 191);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(192, 30);
+            this.txtPassword.TabIndex = 45;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(40, 191);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 25);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Password";
             // 
             // btnRefrescar
             // 
@@ -112,12 +186,12 @@
             this.dgvDatos.AllowUserToAddRows = false;
             this.dgvDatos.AllowUserToDeleteRows = false;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(45, 196);
+            this.dgvDatos.Location = new System.Drawing.Point(45, 250);
             this.dgvDatos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.RowHeadersWidth = 51;
             this.dgvDatos.RowTemplate.Height = 24;
-            this.dgvDatos.Size = new System.Drawing.Size(621, 254);
+            this.dgvDatos.Size = new System.Drawing.Size(851, 265);
             this.dgvDatos.TabIndex = 42;
             this.dgvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellClick);
             this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
@@ -167,14 +241,14 @@
             this.btnInsertar.UseVisualStyleBackColor = true;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
-            // txtNombre
+            // txtNombres
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNombre.Location = new System.Drawing.Point(163, 70);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(192, 30);
-            this.txtNombre.TabIndex = 1;
+            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNombres.Location = new System.Drawing.Point(163, 70);
+            this.txtNombres.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(192, 30);
+            this.txtNombres.TabIndex = 1;
             // 
             // lblNombre
             // 
@@ -183,9 +257,9 @@
             this.lblNombre.Location = new System.Drawing.Point(40, 70);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(81, 25);
+            this.lblNombre.Size = new System.Drawing.Size(91, 25);
             this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombre.Text = "Nombres";
             // 
             // pnlVentasMes
             // 
@@ -257,17 +331,6 @@
             this.pnlTitulo.Size = new System.Drawing.Size(1759, 147);
             this.pnlTitulo.TabIndex = 33;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(783, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -295,6 +358,17 @@
             // 
             this.motivoVisitaTableAdapter.ClearBeforeFill = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(783, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -320,9 +394,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentasAno)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbComisariaDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motivoVisitaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,7 +406,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnInsertar;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.GroupBox pnlVentasMes;
         private System.Windows.Forms.DataGridView dgvVentasMes;
         private System.Windows.Forms.GroupBox pnlVentasAnio;
@@ -348,5 +422,11 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtApellidos;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtDocumento;
+        private System.Windows.Forms.Label label3;
     }
 }

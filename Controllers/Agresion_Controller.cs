@@ -104,7 +104,15 @@ namespace Comisarias.App.Escritorio.Controllers
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    using (SqlCommand command = new SqlCommand(@"INSERT INTO Agresion VALUES (@pUsuarioId,@pFecha,@pNombreAgresor,@pDocumentoAgresor,@pRelacionAgresorId,@pOtraRelacionAgresor,@pDireccionDomicilioAgresor,@pRadicado,@pCuentaMedidasProteccion,@pMedidaProteccionId,@pCualOtraMedidaProteccion)", con))
+                    using (SqlCommand command = new SqlCommand(@"INSERT INTO Agresion 
+                                                                    (UsuarioId,Fecha,NombreAgresor,
+                                                                    DocumentoAgresor,RelacionAgresorId,OtraRelacionAgresor,
+                                                                    DireccionDomicilioAgresor,Radicado,CuentaMedidasProteccion,
+                                                                    MedidaProteccionId,CualOtraMedidaProteccion)
+                                                            VALUES (@pUsuarioId,@pFecha,@pNombreAgresor,
+                                                                    @pDocumentoAgresor,@pRelacionAgresorId,@pOtraRelacionAgresor,
+                                                                    @pDireccionDomicilioAgresor,@pRadicado,@pCuentaMedidasProteccion,
+                                                                    @pMedidaProteccionId,@pCualOtraMedidaProteccion)", con))
                     {
                         SqlParameter pUsuarioId = new SqlParameter("@pUsuarioId", SqlDbType.Int);
                         SqlParameter pFecha = new SqlParameter("@pFecha", SqlDbType.Date);
@@ -209,42 +217,53 @@ namespace Comisarias.App.Escritorio.Controllers
 
         }
 
-        private List<string> ObtenerRolesUsuario(string funcionario)
+        public RespuestaGetDatos ObtenerAgresionesPorIdUsuario(int idUsuario)
         {
-            List<string> retorno = new List<string>();
+            RespuestaGetDatos retorno = new RespuestaGetDatos();
+            retorno.FueExitosa = false;
+            retorno.Mensaje = "validando...";
+            retorno.Datos = new DataTable();
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+
+            try
             {
-                con.Open();
-
-                using (SqlCommand command = new SqlCommand(@"SELECT Rol.Nombre
-                                                        FROM Rol
-                                                  INNER JOIN FuncionarioRoles
-                                                          ON FuncionarioRoles.IdRol = Rol.Id
-                                                         AND FuncionarioRoles.IdFuncionario = @Funcionario", con))
+                using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    SqlParameter pfuncionario = new SqlParameter("@Funcionario", SqlDbType.VarChar);
-
-                    pfuncionario.Value = funcionario;
-                    command.Parameters.Add(pfuncionario);
-
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    con.Open();
+                    using (SqlCommand command = new SqlCommand(@"SELECT *
+                                                        FROM Agresion
+                                                   WHERE UsuarioId = @pUsuarioId", con))
                     {
-                        while (reader.Read())
+                        SqlParameter pUsuarioId = new SqlParameter("@pUsuarioId", SqlDbType.VarChar);
+
+                        pUsuarioId.Value = idUsuario;
+                        command.Parameters.Add(pUsuarioId);
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                         {
-                            retorno.Add(reader.GetString(0).ToString());
+                            retorno.FueExitosa = true;
+                            retorno.Mensaje = "Datos consultados";
+                            adapter.Fill(retorno.Datos);
                         }
+                    }
+                    if (con.State == ConnectionState.Open)
+                    {
+                        con.Dispose();
                     }
                 }
 
-                if (con.State == ConnectionState.Open)
-                {
-                    con.Dispose();
-
-                }
+            }
+            catch (Exception e)
+            {
+                retorno.FueExitosa = false;
+                retorno.Mensaje = "Error en el servidor. Error: " + e.Message;
             }
 
             return retorno;
+
+
+
         }
+
     }
 }

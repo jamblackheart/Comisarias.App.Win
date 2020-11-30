@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace Comisarias.App.Escritorio.Models
 {
-    class User
+    public class User
     {
-        public int id { get; set; }
-        public String Name { get; set; }
-        
-        public byte[] Pawprint { get; set; }
-        public int Pawprint_length { get; set; }
+        public int Id { get; set; }
+        public String Nombres { get; set; }
+
+        public String Apellidos { get; set; }
+        public String Documento { get; set; }
+        public String Email { get; set; }
+        public String Password { get; set; }
+
     }
 }

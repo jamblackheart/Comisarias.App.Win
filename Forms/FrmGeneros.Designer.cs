@@ -254,7 +254,7 @@
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
             this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(1692, 147);
+            this.pnlTitulo.Size = new System.Drawing.Size(1713, 147);
             this.pnlTitulo.TabIndex = 33;
             // 
             // pictureBox1
@@ -301,7 +301,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1713, 750);
+            this.ClientSize = new System.Drawing.Size(1734, 750);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlVentasAnio);
             this.Controls.Add(this.pnlVentasMes);

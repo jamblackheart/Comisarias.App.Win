@@ -33,6 +33,7 @@
             this.pnlVisitasAnteriores = new System.Windows.Forms.GroupBox();
             this.dgvVisitasAnteriores = new System.Windows.Forms.DataGridView();
             this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCedulaConsultar = new System.Windows.Forms.TextBox();
@@ -81,21 +82,20 @@
             this.cmbMotivoVisita = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.pnlAgresiones = new System.Windows.Forms.GroupBox();
             this.dgvAgresiones = new System.Windows.Forms.DataGridView();
             label17 = new System.Windows.Forms.Label();
             this.pnlVisitasAnteriores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitasAnteriores)).BeginInit();
             this.pnlTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grbFechaNacimiento.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnlRegistro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox5.SuspendLayout();
+            this.pnlAgresiones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgresiones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,6 +155,17 @@
             this.pnlTitulo.Size = new System.Drawing.Size(1683, 147);
             this.pnlTitulo.TabIndex = 33;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(941, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -208,6 +219,7 @@
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(713, 82);
             this.lblMensaje.TabIndex = 38;
+            this.lblMensaje.Click += new System.EventHandler(this.lblMensaje_Click);
             // 
             // lblNombrePpal
             // 
@@ -687,30 +699,19 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // pictureBox1
+            // pnlAgresiones
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(941, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.dgvAgresiones);
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.groupBox5.Location = new System.Drawing.Point(1155, 481);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(528, 258);
-            this.groupBox5.TabIndex = 34;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Agresiones";
-            this.groupBox5.Visible = false;
+            this.pnlAgresiones.Controls.Add(this.dgvAgresiones);
+            this.pnlAgresiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlAgresiones.Location = new System.Drawing.Point(1155, 481);
+            this.pnlAgresiones.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlAgresiones.Name = "pnlAgresiones";
+            this.pnlAgresiones.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlAgresiones.Size = new System.Drawing.Size(528, 258);
+            this.pnlAgresiones.TabIndex = 34;
+            this.pnlAgresiones.TabStop = false;
+            this.pnlAgresiones.Text = "Agresiones";
+            this.pnlAgresiones.Visible = false;
             // 
             // dgvAgresiones
             // 
@@ -731,8 +732,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1187, 752);
-            this.Controls.Add(this.groupBox5);
+            this.ClientSize = new System.Drawing.Size(1646, 752);
+            this.Controls.Add(this.pnlAgresiones);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlVisitasAnteriores);
             this.Controls.Add(this.groupBox1);
@@ -740,11 +741,12 @@
             this.Name = "FrmConsultaHistoriaUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar barequero";
-            this.Load += new System.EventHandler(this.FrmValidarBarequero_Load);
+          
             this.pnlVisitasAnteriores.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitasAnteriores)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grbFechaNacimiento.ResumeLayout(false);
             this.grbFechaNacimiento.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -757,8 +759,7 @@
             this.groupBox1.PerformLayout();
             this.pnlRegistro.ResumeLayout(false);
             this.pnlRegistro.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox5.ResumeLayout(false);
+            this.pnlAgresiones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgresiones)).EndInit();
             this.ResumeLayout(false);
 
@@ -817,7 +818,7 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Panel pnlRegistro;
         private System.Windows.Forms.Button btnRefrescar;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox pnlAgresiones;
         private System.Windows.Forms.DataGridView dgvAgresiones;
     }
 }

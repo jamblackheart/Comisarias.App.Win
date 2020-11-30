@@ -18,11 +18,11 @@ namespace Comisarias.App.Escritorio.Forms
 {
     public partial class FrmFuncionario : Form
     {
-        MedidasProteccion_Controller Controlador = new MedidasProteccion_Controller();
-        Parametro parametro = new Parametro();
+        Funcionario_Controller Controlador = new Funcionario_Controller();
+        User user = new User();
         private void ReiniciarPagina()
         {
-            txtNombre.Text = "";
+            txtNombres.Text = "";
         }
 
         public FrmFuncionario()
@@ -46,6 +46,9 @@ namespace Comisarias.App.Escritorio.Forms
                 {
                     if (colum.Name == "Id")
                         colum.Visible = false;
+
+                    if (colum.Name == "Email")
+                        colum.Visible = false;
                 }
             }
             else
@@ -68,20 +71,33 @@ namespace Comisarias.App.Escritorio.Forms
             //InjectarValores();
         }
 
-        private void InjectarValores() {
-            txtNombre.Text = parametro.Nombre;
+        private void InjectarValores()
+        {
+            txtNombres.Text = user.Nombres;
+            txtApellidos.Text = user.Apellidos;
+            txtDocumento.Text = user.Documento;
+            txtPassword.Text = user.Password;
         }
+
+        private void LimpiarValores()
+        {
+            txtNombres.Text = "";
+            txtApellidos.Text = "";
+            txtDocumento.Text = "";
+            txtPassword.Text = "";
+        }
+
 
         private void Eliminar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Está seguro que desea eliminar el registro: " + parametro.Nombre + "?", "Borrado", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult dr = MessageBox.Show("Está seguro que desea eliminar el registro: " + user.Nombres + "?", "Borrado", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             if (dr == DialogResult.Yes)
             {
-                Respuesta respuesta = Controlador.EliminarRegistro(parametro.Id);
+                Respuesta respuesta = Controlador.EliminarRegistro(user.Id);
                 if (respuesta.FueExitosa)
                 {
-                    parametro = new Parametro();
+                    user = new User();
                     InjectarValores();
                     CargarDatos();
                 }
@@ -91,36 +107,61 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            string nombre = txtNombre.Text;
+            string nombres = txtNombres.Text;
+            string apellidos = txtApellidos.Text;
+            string documentos = txtDocumento.Text;
+            string password = txtPassword.Text;
 
-            if (nombre != "")
+            if (nombres != "" || apellidos != "" || documentos != "" || password != "" )
             {
-                Respuesta respuesta = Controlador.AgregarRegistro(nombre);
+
+                Respuesta respuesta = Controlador.AgregarRegistro(new User
+                {
+                    Nombres = nombres,
+                    Apellidos = apellidos,
+                    Documento = documentos,
+                    Password = password
+
+                });
                 if (respuesta.FueExitosa)
                 {
                     CargarDatos();
-                    txtNombre.Text = "";
+                    LimpiarValores();
+                    MessageBox.Show("Registro creado correctamente.");
+                }
+                else {
+                    MessageBox.Show("Error creando el registro: " + respuesta.Mensaje);
                 }
             }
             else
             {
-                MessageBox.Show("Debe indicar el nombre de la medida de protección.");
+                MessageBox.Show("Todos los valores son abligatorios.");
             }
-                
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            string nombre = txtNombre.Text;
+            
+           
 
-            if (nombre != "")
+            if (txtNombres.Text != "" || txtApellidos.Text != "" || txtDocumento.Text != "" || txtPassword.Text != "")
             {
-                Respuesta respuesta = Controlador.ActualizarRegistro(parametro.Id,nombre);
+                user.Nombres = txtNombres.Text;
+                user.Apellidos = txtApellidos.Text;
+                user.Documento = txtDocumento.Text;
+                user.Password = txtPassword.Text;
+
+                    Respuesta respuesta = Controlador.ActualizarRegistro(user);
                 if (respuesta.FueExitosa)
                 {
                     CargarDatos();
-                    txtNombre.Text = "";
+                    LimpiarValores();
                     MessageBox.Show("Registro actualizado correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("Error actualizando el registro: " + respuesta.Mensaje);
                 }
             }
             else
@@ -131,12 +172,28 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void dgvDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            parametro.Id = dgvDatos.Rows[e.RowIndex].Cells[0].Value.ToString();
-            parametro.Nombre = dgvDatos.Rows[e.RowIndex].Cells[1].Value.ToString();
+            LimpiarValores();
+            user.Id = (int)dgvDatos.Rows[e.RowIndex].Cells["Id"].Value;
+            user.Nombres = dgvDatos.Rows[e.RowIndex].Cells["Nombres"].Value.ToString();
+            user.Apellidos = dgvDatos.Rows[e.RowIndex].Cells["Apellidos"].Value.ToString();
+            user.Documento = dgvDatos.Rows[e.RowIndex].Cells["Documento"].Value.ToString();
+            user.Password = dgvDatos.Rows[e.RowIndex].Cells["Password"].Value.ToString();
+
+           
             InjectarValores();
         }
 
         private void FrmMedidasProteccion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
