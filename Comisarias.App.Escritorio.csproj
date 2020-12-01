@@ -273,6 +273,12 @@
     <Compile Include="Forms\FrmRegistrarEntrevista.Designer.cs">
       <DependentUpon>FrmRegistrarEntrevista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmRegistrarInicioProceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRegistrarInicioProceso.Designer.cs">
+      <DependentUpon>FrmRegistrarInicioProceso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmRegistrarOrientacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -377,6 +383,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmRegistrarEntrevista.resx">
       <DependentUpon>FrmRegistrarEntrevista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRegistrarInicioProceso.resx">
+      <DependentUpon>FrmRegistrarInicioProceso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmRegistrarOrientacion.resx">
       <DependentUpon>FrmRegistrarOrientacion.cs</DependentUpon>
