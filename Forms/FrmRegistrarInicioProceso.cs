@@ -273,7 +273,7 @@ namespace Comisarias.App.Escritorio.Forms
             agresion.UsuarioId = usuario.Id;
             agresion.Fecha = ObtenerFechaFormulario(cmbAnioAgresion.Text, cmbMesAgresion.Text, cmbDiaAgresion.Text);
             agresion.NombreAgresor = txtResponsable.Text;
-            agresion.DireccionDomicilioAgresor = txtDireccionAgresor.Text;
+           // agresion.DireccionDomicilioAgresor = txtDireccionAgresor.Text;
             //agresion.DocumentoAgresor = txtDocumentoAgresor.Text;
             //agresion.RelacionAgresorId = 1;
             //agresion.OtraRelacionAgresor = txtCualRelacion.Text;
