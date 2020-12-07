@@ -19,7 +19,7 @@ namespace Comisarias.App.Escritorio.Forms
 {
     public partial class FrmRegistrarInicioProceso : Form
     {
-        private bool usuarioExiste = false;
+       
         private string[] meses = { "Enero", "Febrero" , "Marzo", "Abril" ,
             "Mayo" , "Junio" , "Julio" , "Agosto" , "Septiembre" ,
             "Octubre" , "Noviembre" , "Diciembre"};
@@ -70,9 +70,47 @@ namespace Comisarias.App.Escritorio.Forms
         {
 
         }
+
+        private void CargarInfomacionEnControles()
+        {
+            
+        }
+
+
+        private void BloquearFormulario()
+        {
+            btnConsultar.Enabled = false;
+            btnConsultar.Visible = false;
+            txtCedulaConsultar.Enabled = false;
+            txtNombres.Enabled = false;
+            txtApellidos.Enabled = false;
+            cmbGeneros.Enabled = false;
+            cmbArea.Enabled = false;
+            txtTelefono.Enabled = false;
+            txtEmail.Enabled = false;
+            txtDireccion.Enabled = false;
+            cmbDia.Enabled = false;
+            cmbMes.Enabled = false;
+            cmbAnio.Enabled = false;
+            txtCualDiscapacidad.Enabled = false;
+            txtCualEtnia.Enabled = false;
+            rbtDiscapacidadSi.Enabled = false;
+            rbtDiscapacidadNo.Enabled = false;
+            rbtEtniaSi.Enabled = false;
+            rbtEtniaNo.Enabled = false;
+            rbtVictimaConfictoSi.Enabled = false;
+            rbtVictimaConfictoNo.Enabled = false;
+
+            pnlRegistro.Visible = true;
+
+
+        }
+
+
         private void FrmRegistrarAgresion_Load(object sender, EventArgs e)
         {
             usuario = new Usuario();
+            lblFechaActual.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
 
         }
         private void CargarHistoria()
@@ -232,8 +270,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LlenarCamposUsuario()
         {
-            usuarioExiste = true;
-
+            
             txtNombres.Text = usuario.Nombres;
             txtApellidos.Text = usuario.Apellidos;
             cmbGeneros.SelectedText = usuario.Genero;
@@ -253,65 +290,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         }
 
-        private void CargarInfomacionEnControles()
-        {
-
-            //if (respuestaRelacionAgresor.FueExitosa)
-            ////{
-            ////    cmbRelacionAgresor.DataSource = respuestaRelacionAgresor.Datos;
-            ////    cmbRelacionAgresor.DisplayMember = "Nombre";
-            ////    cmbRelacionAgresor.ValueMember = "Id";
-
-            //}
-            //else
-            //{
-            //    //cmbRelacionAgresor.DataSource = null;
-            //    //lblMensaje.Text = respuestaRelacionAgresor.Mensaje;
-            //}
-
-            //RespuestaGetDatos respuestaMedidasProteccion = ControladorMedidasProteccion.ObtenerTodos();
-
-            //if (respuestaMedidasProteccion.FueExitosa)
-            //{
-            //    cmbMedidasProteccion.DataSource = respuestaMedidasProteccion.Datos;
-            //    cmbMedidasProteccion.DisplayMember = "Nombre";
-            //    cmbMedidasProteccion.ValueMember = "Id";
-
-            //}
-            //else
-            //{
-            //    cmbMedidasProteccion.DataSource = null;
-            //    lblMensaje.Text = respuestaMedidasProteccion.Mensaje;
-            //}
-        }
-
-        private void BloquearFormulario()
-        {
-            btnConsultar.Enabled = false;
-            btnConsultar.Visible = false;
-            txtCedulaConsultar.Enabled = false;
-            txtNombres.Enabled = false;
-            txtApellidos.Enabled = false;
-            cmbGeneros.Enabled = false;
-            cmbArea.Enabled = false;
-            txtTelefono.Enabled = false;
-            txtEmail.Enabled = false;
-            txtDireccion.Enabled = false;
-
-            txtCualDiscapacidad.Enabled = false;
-            txtCualEtnia.Enabled = false;
-            rbtDiscapacidadSi.Enabled = false;
-            rbtDiscapacidadNo.Enabled = false;
-            rbtEtniaSi.Enabled = false;
-            rbtEtniaNo.Enabled = false;
-            rbtVictimaConfictoSi.Enabled = false;
-            rbtVictimaConfictoNo.Enabled = false;
-
-            pnlRegistro.Visible = true;
-
-
-        }
-
+       
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             ReiniciarPagina();

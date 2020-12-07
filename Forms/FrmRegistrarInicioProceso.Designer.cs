@@ -1011,6 +1011,7 @@
             // rdbAcompanamientoComisariaNO
             // 
             this.rdbAcompanamientoComisariaNO.AutoSize = true;
+            this.rdbAcompanamientoComisariaNO.Checked = true;
             this.rdbAcompanamientoComisariaNO.Location = new System.Drawing.Point(19, 70);
             this.rdbAcompanamientoComisariaNO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbAcompanamientoComisariaNO.Name = "rdbAcompanamientoComisariaNO";

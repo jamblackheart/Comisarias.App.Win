@@ -360,6 +360,7 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Orientacion.cs" />
     <Compile Include="Models\Entrevista.cs" />
     <Compile Include="Models\InicioProceso.cs" />
     <Compile Include="Models\Agresion.cs" />

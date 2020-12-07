@@ -91,7 +91,7 @@ namespace Comisarias.App.Escritorio.Controllers
 
         //}
 
-        public Respuesta AgregarRegistro(InicioProceso obj)
+        public Respuesta AgregarRegistro(Orientacion obj)
         {
             Respuesta retorno = new Respuesta();
             retorno.FueExitosa = false;
@@ -104,116 +104,33 @@ namespace Comisarias.App.Escritorio.Controllers
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    using (SqlCommand command = new SqlCommand(@"INSERT INTO InicioProceso 
+                    using (SqlCommand command = new SqlCommand(@"INSERT INTO Orientacion 
                                                                     (UsuarioId
                                                                        ,Fecha
-                                                                       ,AutoQueAvocaConocimiento
-                                                                       ,OpcionMedidasProteccion
-                                                                       ,MedidasProteccion
-                                                                       ,OtraRelacionMedidaProteccion
-                                                                       ,SolicitudAmpliacionMedidas
-                                                                       ,SolicitudAmpliacionMedidasFecha
-                                                                       ,SolicitudAmpliacionMedidasSeOtorgaron
-                                                                       ,RemisionFiscalia
-                                                                       ,RemisionFiscaliaFecha
-                                                                       ,RemisionFiscaliaNumeroNoticiaCriminal
-                                                                       ,RemisionMedicinaLegal
-                                                                       ,RemisionMedicinaLegalFecha
-                                                                       ,RemisionMedicinaLegalInforme
-                                                                       ,RemisionEps
-                                                                       ,RemisionEpsFecha
-                                                                       ,RemisionEpsTipo
-                                                                       ,AcompañamientoComisaria
-                                                                       ,AcompañamientoComisariaObservacion)
+                                                                       ,Responsable
+                                                                       ,TipoOrientacion
+                                                                      )
                                                             VALUES (@pUsuarioId
                                                                        ,@pFecha
-                                                                       ,@pAutoQueAvocaConocimiento
-                                                                       ,@pOpcionMedidasProteccion
-                                                                       ,@pMedidasProteccion
-                                                                       ,@pOtraRelacionMedidaProteccion
-                                                                       ,@pSolicitudAmpliacionMedidas
-                                                                       ,@pSolicitudAmpliacionMedidasFecha
-                                                                       ,@pSolicitudAmpliacionMedidasSeOtorgaron
-                                                                       ,@pRemisionFiscalia
-                                                                       ,@pRemisionFiscaliaFecha
-                                                                       ,@pRemisionFiscaliaNumeroNoticiaCriminal
-                                                                       ,@pRemisionMedicinaLegal
-                                                                       ,@pRemisionMedicinaLegalFecha
-                                                                       ,@pRemisionMedicinaLegalInforme
-                                                                       ,@pRemisionEps
-                                                                       ,@pRemisionEpsFecha
-                                                                       ,@pRemisionEpsTipo
-                                                                       ,@pAcompañamientoComisaria
-                                                                       ,@pAcompañamientoComisariaObservacion)", con))
+                                                                       ,@pResponsable
+                                                                       ,@pTipoOrientacion)", con))
                     {
                         SqlParameter pUsuarioId = new SqlParameter("@pUsuarioId", SqlDbType.Int);
                         SqlParameter pFecha = new SqlParameter("@pFecha", SqlDbType.Date);
-                        SqlParameter pAutoQueAvocaConocimiento = new SqlParameter("@pAutoQueAvocaConocimiento", SqlDbType.VarChar);
-                        SqlParameter pOpcionMedidasProteccion = new SqlParameter("@pOpcionMedidasProteccion", SqlDbType.VarChar);
-
-
-                        SqlParameter pMedidasProteccion = new SqlParameter("@pMedidasProteccion", SqlDbType.VarChar);
-                        SqlParameter pOtraRelacionMedidaProteccion = new SqlParameter("@pOtraRelacionMedidaProteccion", SqlDbType.VarChar);
-                        SqlParameter pSolicitudAmpliacionMedidas = new SqlParameter("@pSolicitudAmpliacionMedidas", SqlDbType.VarChar);
-                        SqlParameter pSolicitudAmpliacionMedidasFecha = new SqlParameter("@pSolicitudAmpliacionMedidasFecha", SqlDbType.VarChar);
-                        SqlParameter pSolicitudAmpliacionMedidasSeOtorgaron = new SqlParameter("@pSolicitudAmpliacionMedidasSeOtorgaron", SqlDbType.VarChar);
-                        SqlParameter pRemisionFiscalia = new SqlParameter("@pRemisionFiscalia", SqlDbType.VarChar);
-                        SqlParameter pRemisionFiscaliaFecha = new SqlParameter("@pRemisionFiscaliaFecha", SqlDbType.VarChar);
-                        SqlParameter pRemisionFiscaliaNumeroNoticiaCriminal = new SqlParameter("@pRemisionFiscaliaNumeroNoticiaCriminal", SqlDbType.VarChar);
-                        SqlParameter pRemisionMedicinaLegal = new SqlParameter("@pRemisionMedicinaLegal", SqlDbType.VarChar);
-                        SqlParameter pRemisionMedicinaLegalFecha = new SqlParameter("@pRemisionMedicinaLegalFecha", SqlDbType.VarChar);
-                        SqlParameter pRemisionMedicinaLegalInforme = new SqlParameter("@pRemisionMedicinaLegalInforme", SqlDbType.VarChar);
-                        SqlParameter pRemisionEps = new SqlParameter("@pRemisionEps", SqlDbType.VarChar);
-                        SqlParameter pRemisionEpsFecha = new SqlParameter("@pRemisionEpsFecha", SqlDbType.VarChar);
-                        SqlParameter pRemisionEpsTipo = new SqlParameter("@pRemisionEpsTipo", SqlDbType.VarChar);
-                        SqlParameter pAcompañamientoComisaria = new SqlParameter("@pAcompañamientoComisaria", SqlDbType.VarChar);
-                        SqlParameter pAcompañamientoComisariaObservacion = new SqlParameter("@pAcompañamientoComisariaObservacion", SqlDbType.VarChar);
-
+                        SqlParameter pResponsable = new SqlParameter("@pResponsable", SqlDbType.VarChar);
+                        SqlParameter pTipoOrientacion = new SqlParameter("@pTipoOrientacion", SqlDbType.VarChar);
 
 
                         pUsuarioId.Value = obj.UsuarioId;
                         pFecha.Value = obj.Fecha;
-                        pAutoQueAvocaConocimiento.Value = obj.AutoQueAvocaConocimiento;
-                        pOpcionMedidasProteccion.Value = obj.OpcionMedidasProteccion;
-                        pMedidasProteccion.Value = obj.MedidasProteccion;
-                        pOtraRelacionMedidaProteccion.Value = obj.OtraRelacionMedidaProteccion;
-                        pSolicitudAmpliacionMedidas.Value = obj.SolicitudAmpliacionMedidas;
-                        pSolicitudAmpliacionMedidasFecha.Value = obj.SolicitudAmpliacionMedidasFecha;
-                        pSolicitudAmpliacionMedidasSeOtorgaron.Value = obj.SolicitudAmpliacionMedidasSeOtorgaron;
-                        pRemisionFiscalia.Value = obj.RemisionFiscalia;
-                        pRemisionFiscaliaFecha.Value = obj.RemisionFiscaliaFecha;
-                        pRemisionFiscaliaNumeroNoticiaCriminal.Value = obj.RemisionFiscaliaNumeroNoticiaCriminal;
-                        pRemisionMedicinaLegal.Value = obj.RemisionMedicinaLegal;
-                        pRemisionMedicinaLegalFecha.Value = obj.RemisionMedicinaLegalFecha;
-                        pRemisionMedicinaLegalInforme.Value = obj.RemisionMedicinaLegalInforme;
-                        pRemisionEps.Value = obj.RemisionEps;
-                        pRemisionEpsFecha.Value = obj.RemisionEpsFecha;
-                        pRemisionEpsTipo.Value = obj.RemisionEpsTipo;
-                        pAcompañamientoComisaria.Value = obj.AcompañamientoComisaria;
-                        pAcompañamientoComisariaObservacion.Value = obj.AcompañamientoComisariaObservacion;
-
-
+                        pResponsable.Value = obj.Responsable;
+                        pTipoOrientacion.Value = obj.TipoOrientacion;
 
                         command.Parameters.Add(pUsuarioId);
                         command.Parameters.Add(pFecha);
-                        command.Parameters.Add(pAutoQueAvocaConocimiento);
-                        command.Parameters.Add(pOpcionMedidasProteccion);
-                        command.Parameters.Add(pMedidasProteccion);
-                        command.Parameters.Add(pOtraRelacionMedidaProteccion);
-                        command.Parameters.Add(pSolicitudAmpliacionMedidas);
-                        command.Parameters.Add(pSolicitudAmpliacionMedidasFecha);
-                        command.Parameters.Add(pSolicitudAmpliacionMedidasSeOtorgaron);
-                        command.Parameters.Add(pRemisionFiscalia);
-                        command.Parameters.Add(pRemisionFiscaliaFecha);
-                        command.Parameters.Add(pRemisionFiscaliaNumeroNoticiaCriminal);
-                        command.Parameters.Add(pRemisionMedicinaLegal);
-                        command.Parameters.Add(pRemisionMedicinaLegalFecha);
-                        command.Parameters.Add(pRemisionMedicinaLegalInforme);
-                        command.Parameters.Add(pRemisionEps);
-                        command.Parameters.Add(pRemisionEpsFecha);
-                        command.Parameters.Add(pRemisionEpsTipo);
-                        command.Parameters.Add(pAcompañamientoComisaria);
-                        command.Parameters.Add(pAcompañamientoComisariaObservacion);
+                        command.Parameters.Add(pResponsable);
+                        command.Parameters.Add(pTipoOrientacion);
+
 
                         int rowsAfected = command.ExecuteNonQuery();
                         retorno.FueExitosa = true;

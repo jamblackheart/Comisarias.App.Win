@@ -91,7 +91,7 @@ namespace Comisarias.App.Escritorio.Controllers
 
         }
 
-        public Respuesta AgregarRegistro(Agresion objAgresion)
+        public Respuesta AgregarRegistro(Entrevista obj)
         {
             Respuesta retorno = new Respuesta();
             retorno.FueExitosa = false;
@@ -104,52 +104,48 @@ namespace Comisarias.App.Escritorio.Controllers
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    using (SqlCommand command = new SqlCommand(@"INSERT INTO Agresion 
-                                                                    (UsuarioId,Fecha,NombreAgresor,
-                                                                    DocumentoAgresor,RelacionAgresorId,OtraRelacionAgresor,
-                                                                    DireccionDomicilioAgresor,Radicado,CuentaMedidasProteccion,
-                                                                    MedidaProteccionId,CualOtraMedidaProteccion)
-                                                            VALUES (@pUsuarioId,@pFecha,@pNombreAgresor,
-                                                                    @pDocumentoAgresor,@pRelacionAgresorId,@pOtraRelacionAgresor,
-                                                                    @pDireccionDomicilioAgresor,@pRadicado,@pCuentaMedidasProteccion,
-                                                                    @pMedidaProteccionId,@pCualOtraMedidaProteccion)", con))
+                    using (SqlCommand command = new SqlCommand(@"INSERT INTO Entrevista 
+                                                                    (UsuarioId
+                                                                      ,Fecha
+                                                                      ,Responsable
+                                                                      ,Resumen
+                                                                      ,TipoViolencia
+                                                                      ,IdentificacionViolencia
+                                                                      ,ValoracionRiesgo)
+                                                            VALUES (@pUsuarioId
+                                                                  ,@pFecha
+                                                                  ,@pResponsable
+                                                                  ,@pResumen
+                                                                  ,@pTipoViolencia
+                                                                  ,@pIdentificacionViolencia
+                                                                  ,@pValoracionRiesgo)", con))
                     {
                         SqlParameter pUsuarioId = new SqlParameter("@pUsuarioId", SqlDbType.Int);
                         SqlParameter pFecha = new SqlParameter("@pFecha", SqlDbType.Date);
-                        SqlParameter pNombreAgresor = new SqlParameter("@pNombreAgresor", SqlDbType.VarChar);
-                        SqlParameter pDocumentoAgresor = new SqlParameter("@pDocumentoAgresor", SqlDbType.VarChar);
-                        SqlParameter pRelacionAgresorId = new SqlParameter("@pRelacionAgresorId", SqlDbType.Int);
-                        SqlParameter pOtraRelacionAgresor = new SqlParameter("@pOtraRelacionAgresor", SqlDbType.VarChar);
-                        SqlParameter pDireccionDomicilioAgresor = new SqlParameter("@pDireccionDomicilioAgresor", SqlDbType.VarChar);
-                        SqlParameter pRadicado = new SqlParameter("@pRadicado", SqlDbType.VarChar);
-                        SqlParameter pCuentaMedidasProteccion = new SqlParameter("@pCuentaMedidasProteccion", SqlDbType.Bit);
-                        SqlParameter pMedidaProteccionId = new SqlParameter("@pMedidaProteccionId", SqlDbType.Int);
-                        SqlParameter pCualOtraMedidaProteccion = new SqlParameter("@pCualOtraMedidaProteccion", SqlDbType.VarChar);
+                        SqlParameter pResponsable = new SqlParameter("@pResponsable", SqlDbType.VarChar);
+                        SqlParameter pResumen = new SqlParameter("@pResumen", SqlDbType.VarChar);
+                        SqlParameter pTipoViolencia = new SqlParameter("@pTipoViolencia", SqlDbType.VarChar);
+                        SqlParameter pIdentificacionViolencia = new SqlParameter("@pIdentificacionViolencia", SqlDbType.VarChar);
+                        SqlParameter pValoracionRiesgo = new SqlParameter("@pValoracionRiesgo", SqlDbType.VarChar);
+                      
 
-                        pUsuarioId.Value = objAgresion.UsuarioId;
-                        pFecha.Value = objAgresion.Fecha;
-                        pNombreAgresor.Value = objAgresion.NombreAgresor;
-                        pDocumentoAgresor.Value = objAgresion.DocumentoAgresor;
-                       // pRelacionAgresorId.Value = objAgresion.RelacionAgresorId;
-                        pOtraRelacionAgresor.Value = objAgresion.OtraRelacionAgresor;
-                        pDireccionDomicilioAgresor.Value = objAgresion.DireccionDomicilioAgresor;
-                        pRadicado.Value = objAgresion.Radicado;
-                        pCuentaMedidasProteccion.Value = objAgresion.CuentaMedidasProteccion;
-                     //   pMedidaProteccionId.Value = objAgresion.MedidaProteccionId;
-                        pCualOtraMedidaProteccion.Value = objAgresion.CualOtraMedidaProteccion;
+                        pUsuarioId.Value = obj.UsuarioId;
+                        pFecha.Value = obj.Fecha;
+                        pResponsable.Value = obj.Responsable;
+                        pResumen.Value = obj.Resumen;
+                        pTipoViolencia.Value = obj.TipoViolencia;
+                        pIdentificacionViolencia.Value = obj.IdentificacionViolencia;
+                        pValoracionRiesgo.Value = obj.ValoracionRiesgo;
+                        
 
                         command.Parameters.Add(pUsuarioId);
                         command.Parameters.Add(pFecha);
-                        command.Parameters.Add(pNombreAgresor);
-                        command.Parameters.Add(pDocumentoAgresor);
-                        command.Parameters.Add(pRelacionAgresorId);
-                        command.Parameters.Add(pOtraRelacionAgresor);
-                        command.Parameters.Add(pDireccionDomicilioAgresor);
-                        command.Parameters.Add(pRadicado);
-                        command.Parameters.Add(pCuentaMedidasProteccion);
-                        command.Parameters.Add(pMedidaProteccionId);
-                        command.Parameters.Add(pCualOtraMedidaProteccion);
-
+                        command.Parameters.Add(pResponsable);
+                        command.Parameters.Add(pResumen);
+                        command.Parameters.Add(pTipoViolencia);
+                        command.Parameters.Add(pIdentificacionViolencia);
+                        command.Parameters.Add(pValoracionRiesgo);
+                       
 
                         int rowsAfected = command.ExecuteNonQuery();
                         retorno.FueExitosa = true;
