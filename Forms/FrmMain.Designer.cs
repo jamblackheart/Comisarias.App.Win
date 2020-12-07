@@ -37,6 +37,7 @@
             this.generosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrosGeneralesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolFuncionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarVisitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historiaUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +62,7 @@
             this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.acercadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rolFuncionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inicioDeProcesoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -140,6 +141,13 @@
             this.funcionariosToolStripMenuItem.Text = "Funcionarios";
             this.funcionariosToolStripMenuItem.Click += new System.EventHandler(this.funcionariosToolStripMenuItem_Click);
             // 
+            // rolFuncionarioToolStripMenuItem
+            // 
+            this.rolFuncionarioToolStripMenuItem.Name = "rolFuncionarioToolStripMenuItem";
+            this.rolFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(289, 30);
+            this.rolFuncionarioToolStripMenuItem.Text = "Rol funcionario";
+            this.rolFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.rolFuncionarioToolStripMenuItem_Click);
+            // 
             // registrarVisitaToolStripMenuItem
             // 
             this.registrarVisitaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarVisitaToolStripMenuItem.Image")));
@@ -171,7 +179,8 @@
             this.procedimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agresionToolStripMenuItem,
             this.orientaciónALaVictimaToolStripMenuItem,
-            this.entrevistaToolStripMenuItem});
+            this.entrevistaToolStripMenuItem,
+            this.inicioDeProcesoToolStripMenuItem});
             this.procedimientosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("procedimientosToolStripMenuItem.Image")));
             this.procedimientosToolStripMenuItem.Name = "procedimientosToolStripMenuItem";
             this.procedimientosToolStripMenuItem.Size = new System.Drawing.Size(190, 34);
@@ -297,12 +306,12 @@
             this.acercadeToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.acercadeToolStripMenuItem.Text = "&Acerca de...";
             // 
-            // rolFuncionarioToolStripMenuItem
+            // inicioDeProcesoToolStripMenuItem
             // 
-            this.rolFuncionarioToolStripMenuItem.Name = "rolFuncionarioToolStripMenuItem";
-            this.rolFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(289, 30);
-            this.rolFuncionarioToolStripMenuItem.Text = "Rol funcionario";
-            this.rolFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.rolFuncionarioToolStripMenuItem_Click);
+            this.inicioDeProcesoToolStripMenuItem.Name = "inicioDeProcesoToolStripMenuItem";
+            this.inicioDeProcesoToolStripMenuItem.Size = new System.Drawing.Size(299, 30);
+            this.inicioDeProcesoToolStripMenuItem.Text = "Inicio de proceso";
+            this.inicioDeProcesoToolStripMenuItem.Click += new System.EventHandler(this.inicioDeProcesoToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -363,6 +372,7 @@
         private System.Windows.Forms.ToolStripMenuItem entrevistaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem funcionariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rolFuncionarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inicioDeProcesoToolStripMenuItem;
     }
 }
 

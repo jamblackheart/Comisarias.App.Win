@@ -82,6 +82,8 @@
             this.pnlAgresiones = new System.Windows.Forms.GroupBox();
             this.dgvAgresiones = new System.Windows.Forms.DataGridView();
             this.pnlRegistrarAgresion = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.chkPatrimonial = new System.Windows.Forms.CheckBox();
             this.chkSexual = new System.Windows.Forms.CheckBox();
@@ -108,8 +110,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.cmbDiaAgresion = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             label17 = new System.Windows.Forms.Label();
             this.pnlVisitasAnteriores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitasAnteriores)).BeginInit();
@@ -750,6 +750,26 @@
             this.pnlRegistrarAgresion.Text = "INFORMACIÓN DE LA ENTREVISTA";
             this.pnlRegistrarAgresion.Visible = false;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label12.Location = new System.Drawing.Point(636, 214);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(163, 25);
+            this.label12.TabIndex = 75;
+            this.label12.Text = "Valoracion riesgo";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(896, 206);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(192, 33);
+            this.comboBox2.TabIndex = 76;
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.chkPatrimonial);
@@ -1035,26 +1055,6 @@
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(0, 25);
             this.label26.TabIndex = 40;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label12.Location = new System.Drawing.Point(636, 214);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(163, 25);
-            this.label12.TabIndex = 75;
-            this.label12.Text = "Valoracion riesgo";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(896, 206);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(192, 33);
-            this.comboBox2.TabIndex = 76;
             // 
             // FrmRegistrarEntrevista
             // 

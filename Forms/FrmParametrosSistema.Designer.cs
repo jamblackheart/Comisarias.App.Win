@@ -38,10 +38,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtLogo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtRuta = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtRutaArchivos = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtMunicipio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDepartamento = new System.Windows.Forms.TextBox();
@@ -169,10 +167,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtLogo);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtRuta);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtRutaArchivos);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtMunicipio);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtDepartamento);
@@ -191,45 +187,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PARÁMETROS GENERALES";
             // 
-            // txtLogo
+            // txtRutaArchivos
             // 
-            this.txtLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtLogo.Location = new System.Drawing.Point(204, 238);
-            this.txtLogo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLogo.Name = "txtLogo";
-            this.txtLogo.Size = new System.Drawing.Size(413, 30);
-            this.txtLogo.TabIndex = 51;
+            this.txtRutaArchivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtRutaArchivos.Location = new System.Drawing.Point(204, 188);
+            this.txtRutaArchivos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRutaArchivos.Name = "txtRutaArchivos";
+            this.txtRutaArchivos.Size = new System.Drawing.Size(1036, 30);
+            this.txtRutaArchivos.TabIndex = 53;
             // 
-            // label4
+            // label5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(40, 238);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 25);
-            this.label4.TabIndex = 50;
-            this.label4.Text = "Ruta Logo";
-            // 
-            // txtRuta
-            // 
-            this.txtRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtRuta.Location = new System.Drawing.Point(204, 195);
-            this.txtRuta.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRuta.Name = "txtRuta";
-            this.txtRuta.Size = new System.Drawing.Size(413, 30);
-            this.txtRuta.TabIndex = 49;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(40, 195);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 25);
-            this.label3.TabIndex = 48;
-            this.label3.Text = "Ruta BaseDatos";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label5.Location = new System.Drawing.Point(40, 188);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(130, 25);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "Ruta archivos";
             // 
             // txtMunicipio
             // 
@@ -237,7 +213,7 @@
             this.txtMunicipio.Location = new System.Drawing.Point(204, 150);
             this.txtMunicipio.Margin = new System.Windows.Forms.Padding(4);
             this.txtMunicipio.Name = "txtMunicipio";
-            this.txtMunicipio.Size = new System.Drawing.Size(413, 30);
+            this.txtMunicipio.Size = new System.Drawing.Size(1036, 30);
             this.txtMunicipio.TabIndex = 47;
             // 
             // label2
@@ -257,7 +233,7 @@
             this.txtDepartamento.Location = new System.Drawing.Point(204, 109);
             this.txtDepartamento.Margin = new System.Windows.Forms.Padding(4);
             this.txtDepartamento.Name = "txtDepartamento";
-            this.txtDepartamento.Size = new System.Drawing.Size(413, 30);
+            this.txtDepartamento.Size = new System.Drawing.Size(1036, 30);
             this.txtDepartamento.TabIndex = 45;
             // 
             // label1
@@ -283,7 +259,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnGuardar.Location = new System.Drawing.Point(418, 311);
+            this.btnGuardar.Location = new System.Drawing.Point(1041, 242);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(199, 34);
@@ -298,7 +274,7 @@
             this.txtNombre.Location = new System.Drawing.Point(204, 70);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(413, 30);
+            this.txtNombre.Size = new System.Drawing.Size(1036, 30);
             this.txtNombre.TabIndex = 1;
             // 
             // lblNombre
@@ -350,10 +326,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtLogo;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtRuta;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMunicipio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDepartamento;
@@ -362,5 +334,7 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtRutaArchivos;
+        private System.Windows.Forms.Label label5;
     }
 }

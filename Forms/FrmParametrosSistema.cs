@@ -46,6 +46,10 @@ namespace Comisarias.App.Escritorio.Forms
         {
 
             parametros.Nombre = txtNombre.Text;
+            parametros.Departamento = txtDepartamento.Text;
+            parametros.Municipio = txtMunicipio.Text;
+            
+            parametros.RutaDocumentos = txtRutaArchivos.Text;
 
             try
             {
@@ -64,6 +68,11 @@ namespace Comisarias.App.Escritorio.Forms
         {
             txtNombre.Text = parametros.Nombre;
             txtDepartamento.Text = parametros.Departamento;
+            txtMunicipio.Text = parametros.Municipio;
+           
+            txtRutaArchivos.Text = parametros.RutaDocumentos;
+           
+            
         }
     }
 }

@@ -22,17 +22,22 @@ namespace Comisarias.App.Escritorio
             this.WindowState = FormWindowState.Maximized;
             this.IsMdiContainer = true;
             InitializeComponent();
-            this.Text = "Sistema de gestión Comisarias: "+ Program.usuarioGlobal.Nombres + " " + Program.usuarioGlobal.Apellidos ;
+            this.Text = "Sistema de gestión Comisarias: " +
+                    Program.usuarioGlobal.Nombres + " " +
+                    Program.usuarioGlobal.Apellidos +
+                    " - " + Program.parametroSistema.Nombre +
+                    " - DEPARTAMENTO: " + Program.parametroSistema.Departamento +
+                    " - MUNICIPIO: " + Program.parametroSistema.Municipio;
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
             List<string> rol = Program.usuarioGlobal.Rol;
-           
-          
+
+
             if (rol.Contains("Parametros"))
             {
-                parametrosToolStripMenuItem.Visible = true;               
+                parametrosToolStripMenuItem.Visible = true;
             }
 
             if (rol.Contains("RegistrarVisita"))
@@ -51,7 +56,7 @@ namespace Comisarias.App.Escritorio
             }
 
 
-         
+
 
         }
 
@@ -59,19 +64,13 @@ namespace Comisarias.App.Escritorio
         {
             foreach (Form frm in this.MdiChildren)
             {
-              
-                    
-                    frm.Close();
+                frm.Close();
                 frm.Dispose();
-              
             }
         }
         private void ConsultarBarequeroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
         }
-
-       
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -80,15 +79,11 @@ namespace Comisarias.App.Escritorio
 
         private void EditarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
         private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-
         }
-
-      
 
         private void relacionAgresorToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -183,6 +178,14 @@ namespace Comisarias.App.Escritorio
         {
             cerrarTodasLasVentanas();
             FrmConsultaHistoriaUsuario frmPantalla = new FrmConsultaHistoriaUsuario();
+            frmPantalla.MdiParent = this;
+            frmPantalla.Show();
+        }
+
+        private void inicioDeProcesoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cerrarTodasLasVentanas();
+            FrmRegistrarInicioProceso frmPantalla = new FrmRegistrarInicioProceso();
             frmPantalla.MdiParent = this;
             frmPantalla.Show();
         }

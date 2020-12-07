@@ -235,17 +235,17 @@ namespace Comisarias.App.Escritorio.Forms
             //objAgresion.MedidaProteccionId = Convert.ToInt32(comboBoxMedidasProteccion.SelectedValue);
             //objAgresion.CualOtraMedidaProteccion = textBoxCualProteccion.Text.ToString();
 
-            objAgresion.UsuarioId = 1;
-            objAgresion.Fecha = Convert.ToDateTime("12/12/2020");
-            objAgresion.NombreAgresor = "Agresor Name";
-            objAgresion.DocumentoAgresor = "555";
-            objAgresion.RelacionAgresorId = 1;
-            objAgresion.OtraRelacionAgresor = "";
-            objAgresion.DireccionDomicilioAgresor = "Cra 45 CL 22";
-            objAgresion.Radicado = "RD-25";
-            objAgresion.CuentaMedidasProteccion = false;
-            objAgresion.MedidaProteccionId = 1;
-            objAgresion.CualOtraMedidaProteccion = "";
+            //objAgresion.UsuarioId = 1;
+            //objAgresion.Fecha = Convert.ToDateTime("12/12/2020");
+            //objAgresion.NombreAgresor = "Agresor Name";
+            //objAgresion.DocumentoAgresor = "555";
+            //objAgresion.RelacionAgresorId = 1;
+            //objAgresion.OtraRelacionAgresor = "";
+            //objAgresion.DireccionDomicilioAgresor = "Cra 45 CL 22";
+            //objAgresion.Radicado = "RD-25";
+            //objAgresion.CuentaMedidasProteccion = false;
+            //objAgresion.MedidaProteccionId = 1;
+            //objAgresion.CualOtraMedidaProteccion = "";
 
             controlador_agresion.AgregarRegistro(objAgresion);
 
@@ -275,9 +275,9 @@ namespace Comisarias.App.Escritorio.Forms
             agresion.NombreAgresor = txtNombreAgresor.Text;
             agresion.DireccionDomicilioAgresor = txtDireccionAgresor.Text;
             agresion.DocumentoAgresor = txtDocumentoAgresor.Text;
-            agresion.RelacionAgresorId = 1;
+            //agresion.RelacionAgresorId = 1;
             agresion.OtraRelacionAgresor = txtCualRelacion.Text;
-            agresion.MedidaProteccionId = 1;
+            //agresion.MedidaProteccionId = 1;
             agresion.CualOtraMedidaProteccion = txtCualMedidaProteccion.Text;
             agresion.Radicado = txtRadicado.Text;
 
@@ -301,7 +301,7 @@ namespace Comisarias.App.Escritorio.Forms
         }
         private void ObtenerVisitas()
         {
-            RespuestaGetDatos respuesta = controlador_visita.ObtenerVisitasPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_visita.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
@@ -324,7 +324,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void ObtenerAgresiones()
         {
-            RespuestaGetDatos respuesta = controlador_agresion.ObtenerAgresionesPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_agresion.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {

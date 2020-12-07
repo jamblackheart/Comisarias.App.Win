@@ -88,9 +88,9 @@
             this.groupBox1.Controls.Add(this.lblNombre);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox1.Location = new System.Drawing.Point(16, 188);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1627, 498);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -100,7 +100,7 @@
             // 
             this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnRefrescar.Location = new System.Drawing.Point(467, 457);
-            this.btnRefrescar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefrescar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefrescar.Name = "btnRefrescar";
             this.btnRefrescar.Size = new System.Drawing.Size(199, 34);
             this.btnRefrescar.TabIndex = 43;
@@ -126,7 +126,7 @@
             // 
             this.Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Eliminar.Location = new System.Drawing.Point(467, 130);
-            this.Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(199, 34);
             this.Eliminar.TabIndex = 41;
@@ -138,7 +138,7 @@
             // 
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnActualizar.Location = new System.Drawing.Point(467, 89);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(199, 34);
             this.btnActualizar.TabIndex = 40;
@@ -159,7 +159,7 @@
             // 
             this.btnInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnInsertar.Location = new System.Drawing.Point(467, 47);
-            this.btnInsertar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInsertar.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(199, 34);
             this.btnInsertar.TabIndex = 2;
@@ -171,7 +171,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNombre.Location = new System.Drawing.Point(163, 70);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(192, 30);
             this.txtNombre.TabIndex = 1;
@@ -192,9 +192,9 @@
             this.pnlVentasMes.Controls.Add(this.dgvVentasMes);
             this.pnlVentasMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.pnlVentasMes.Location = new System.Drawing.Point(16, 1158);
-            this.pnlVentasMes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlVentasMes.Margin = new System.Windows.Forms.Padding(4);
             this.pnlVentasMes.Name = "pnlVentasMes";
-            this.pnlVentasMes.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlVentasMes.Padding = new System.Windows.Forms.Padding(4);
             this.pnlVentasMes.Size = new System.Drawing.Size(1627, 302);
             this.pnlVentasMes.TabIndex = 25;
             this.pnlVentasMes.TabStop = false;
@@ -207,7 +207,7 @@
             this.dgvVentasMes.AllowUserToDeleteRows = false;
             this.dgvVentasMes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentasMes.Location = new System.Drawing.Point(8, 34);
-            this.dgvVentasMes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvVentasMes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVentasMes.Name = "dgvVentasMes";
             this.dgvVentasMes.ReadOnly = true;
             this.dgvVentasMes.RowHeadersWidth = 51;
@@ -219,9 +219,9 @@
             this.pnlVentasAnio.Controls.Add(this.dgvVentasAno);
             this.pnlVentasAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.pnlVentasAnio.Location = new System.Drawing.Point(16, 1481);
-            this.pnlVentasAnio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlVentasAnio.Margin = new System.Windows.Forms.Padding(4);
             this.pnlVentasAnio.Name = "pnlVentasAnio";
-            this.pnlVentasAnio.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlVentasAnio.Padding = new System.Windows.Forms.Padding(4);
             this.pnlVentasAnio.Size = new System.Drawing.Size(1627, 305);
             this.pnlVentasAnio.TabIndex = 26;
             this.pnlVentasAnio.TabStop = false;
@@ -234,7 +234,7 @@
             this.dgvVentasAno.AllowUserToDeleteRows = false;
             this.dgvVentasAno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentasAno.Location = new System.Drawing.Point(8, 34);
-            this.dgvVentasAno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvVentasAno.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVentasAno.Name = "dgvVentasAno";
             this.dgvVentasAno.ReadOnly = true;
             this.dgvVentasAno.RowHeadersWidth = 51;
@@ -252,7 +252,7 @@
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(200)))), ((int)(((byte)(176)))));
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(1759, 147);
             this.pnlTitulo.TabIndex = 33;
@@ -261,7 +261,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(783, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(168, 112);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -306,7 +306,7 @@
             this.Controls.Add(this.pnlVentasAnio);
             this.Controls.Add(this.pnlVentasMes);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMedidasProteccion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar barequero";

@@ -229,7 +229,7 @@ namespace Comisarias.App.Escritorio.Forms
         }
         private void ObtenerVisitas()
         {
-            RespuestaGetDatos respuesta = controlador_visita.ObtenerVisitasPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_visita.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
@@ -252,7 +252,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void ObtenerAgresiones()
         {
-            RespuestaGetDatos respuesta = controlador_agresion.ObtenerAgresionesPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_agresion.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {

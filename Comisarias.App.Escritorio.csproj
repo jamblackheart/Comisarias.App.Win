@@ -241,6 +241,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Orientacion_Controller.cs" />
+    <Compile Include="Controllers\InicioProceso_Controller.cs" />
+    <Compile Include="Controllers\Entrevista_Controller.cs" />
     <Compile Include="Controllers\Agresion_Controller.cs" />
     <Compile Include="Controllers\Generos_Controller.cs" />
     <Compile Include="Controllers\Funcionario_Controller.cs" />
@@ -357,8 +360,12 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entrevista.cs" />
+    <Compile Include="Models\InicioProceso.cs" />
     <Compile Include="Models\Agresion.cs" />
+    <Compile Include="Models\Archivo.cs" />
     <Compile Include="Models\Genero.cs" />
+    <Compile Include="Models\ViewModelParametroSistema.cs" />
     <Compile Include="Models\ParametroSistema.cs" />
     <Compile Include="Models\RespuestaGetDatos.cs" />
     <Compile Include="Models\Respuesta.cs" />

@@ -201,7 +201,7 @@ namespace Comisarias.App.Escritorio.Controllers
             return retorno;
         }
 
-        public RespuestaGetDatos ObtenerVisitasPorIdUsuario(int idUsuario)
+        public RespuestaGetDatos ObtenerPorIdUsuario(int idUsuario)
         {
             RespuestaGetDatos retorno = new RespuestaGetDatos();
             retorno.FueExitosa = false;
@@ -214,8 +214,8 @@ namespace Comisarias.App.Escritorio.Controllers
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    using (SqlCommand command = new SqlCommand(@"SELECT *
-                                                        FROM Visita
+                    using (SqlCommand command = new SqlCommand(@"SELECT Visita.Id, Visita.UsuarioId, Visita.Fecha, MotivoVisita.Nombre 'Motivo de visita'
+                                                        FROM Visita inner join MotivoVisita on MotivoVisita.Id = Visita.MotivoVisitaId
                                                    WHERE UsuarioId = @pUsuarioId", con))
                     {
                         SqlParameter pUsuarioId = new SqlParameter("@pUsuarioId", SqlDbType.VarChar);

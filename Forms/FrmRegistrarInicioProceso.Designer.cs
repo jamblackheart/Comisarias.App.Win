@@ -30,7 +30,7 @@
         {
             System.Windows.Forms.Label label17;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarInicioProceso));
-            this.pnlVisitasAnteriores = new System.Windows.Forms.GroupBox();
+            this.pnlVisitas = new System.Windows.Forms.GroupBox();
             this.dgvVisitasAnteriores = new System.Windows.Forms.DataGridView();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,12 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblFechaActual = new System.Windows.Forms.Label();
             this.grbFechaNacimiento = new System.Windows.Forms.GroupBox();
-            this.lblAnio = new System.Windows.Forms.Label();
-            this.lblMes = new System.Windows.Forms.Label();
-            this.cmbAnio = new System.Windows.Forms.ComboBox();
-            this.cmbMes = new System.Windows.Forms.ComboBox();
-            this.lblDia = new System.Windows.Forms.Label();
-            this.cmbDia = new System.Windows.Forms.ComboBox();
+            this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -81,80 +76,106 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.pnlAgresiones = new System.Windows.Forms.GroupBox();
             this.dgvAgresiones = new System.Windows.Forms.DataGridView();
-            this.pnlRegistrarAgresion = new System.Windows.Forms.GroupBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.pnlRegistroNuevo = new System.Windows.Forms.GroupBox();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.cmbAnioAmpliacionMedidas = new System.Windows.Forms.ComboBox();
+            this.cmbMesAmpliacionMedidas = new System.Windows.Forms.ComboBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.cmbSeOtorgaronAmpliacionMedidas = new System.Windows.Forms.ComboBox();
+            this.cmbDiaAmpliacionMedidas = new System.Windows.Forms.ComboBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.rdbAmpliacionMedidasNO = new System.Windows.Forms.RadioButton();
+            this.rdbAmpliacionMedidasSI = new System.Windows.Forms.RadioButton();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.txtObservacionAcompanamientoComisaria = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.rdbAcompanamientoComisariaNO = new System.Windows.Forms.RadioButton();
+            this.rdbAcompanamientoComisariaSI = new System.Windows.Forms.RadioButton();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.cmbTipoRemisionRemisionEPS = new System.Windows.Forms.ComboBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.cmbAnioRemisionEPS = new System.Windows.Forms.ComboBox();
+            this.cmbMesRemisionEPS = new System.Windows.Forms.ComboBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.cmbDiaRemisionEPS = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.rdbRemisionEPSNO = new System.Windows.Forms.RadioButton();
+            this.rdbRemisionEPSSI = new System.Windows.Forms.RadioButton();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lblInforme = new System.Windows.Forms.Label();
+            this.BtnInformeRemisionMedicinaLegal = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.cmbAnioRemisionMedicinaLegal = new System.Windows.Forms.ComboBox();
+            this.cmbMesRemisionMedicinaLegal = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.cmbDiaRemisionMedicinaLegal = new System.Windows.Forms.ComboBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.rdbRemisionMedicinaLegalNO = new System.Windows.Forms.RadioButton();
+            this.rdbRemisionMedicinaLegalSI = new System.Windows.Forms.RadioButton();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.lblRutaAutoAvoca = new System.Windows.Forms.Label();
+            this.btnSubirAutoAvocaConocimiento = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.txtNumeroNoticiaRemisionFiscalia = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.cmbAnioRemisionFiscalia = new System.Windows.Forms.ComboBox();
+            this.cmbMesRemisionFiscalia = new System.Windows.Forms.ComboBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.cmbDiaRemisionFiscalia = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.chkPatrimonial = new System.Windows.Forms.CheckBox();
-            this.chkSexual = new System.Windows.Forms.CheckBox();
-            this.chkPsicologica = new System.Windows.Forms.CheckBox();
-            this.chkVerbal = new System.Windows.Forms.CheckBox();
-            this.chkViolenciaFisica = new System.Windows.Forms.CheckBox();
+            this.rdbRemisionFiscaliaNO = new System.Windows.Forms.RadioButton();
+            this.rdbRemisionFiscaliaSI = new System.Windows.Forms.RadioButton();
+            this.chkOtra = new System.Windows.Forms.GroupBox();
+            this.txtOtraMedida = new System.Windows.Forms.TextBox();
+            this.chkOtraMedida = new System.Windows.Forms.CheckBox();
+            this.chkDevolucionObjetos = new System.Windows.Forms.CheckBox();
+            this.chkProhibicionVenta = new System.Windows.Forms.CheckBox();
+            this.chkUsoVivienda = new System.Windows.Forms.CheckBox();
+            this.chkPensionAlimentaria = new System.Windows.Forms.CheckBox();
+            this.chkAcompanamientoCasa = new System.Windows.Forms.CheckBox();
+            this.chkProteccionPoliciva = new System.Windows.Forms.CheckBox();
+            this.chkEsconderHijos = new System.Windows.Forms.CheckBox();
+            this.lblAbtenerseLugar = new System.Windows.Forms.Label();
+            this.chkAcudirTratamiento = new System.Windows.Forms.CheckBox();
+            this.chkSuspencionArmas = new System.Windows.Forms.CheckBox();
+            this.chkAbstenerseLugar = new System.Windows.Forms.CheckBox();
+            this.chkRegimenProvisional = new System.Windows.Forms.CheckBox();
+            this.chkDesalojo = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.lblMensajeAgresion = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtResponsable = new System.Windows.Forms.TextBox();
+            this.rdbMedidasProteccionNO = new System.Windows.Forms.RadioButton();
+            this.rdbMedidasProteccionSI = new System.Windows.Forms.RadioButton();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.cmbAnioAgresion = new System.Windows.Forms.ComboBox();
-            this.cmbMesAgresion = new System.Windows.Forms.ComboBox();
+            this.cmbAnio = new System.Windows.Forms.ComboBox();
+            this.cmbMes = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.cmbDiaAgresion = new System.Windows.Forms.ComboBox();
+            this.cmbDia = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.pnlOrientaciones = new System.Windows.Forms.GroupBox();
+            this.dgvOrientaciones = new System.Windows.Forms.DataGridView();
+            this.pnlEntrevistas = new System.Windows.Forms.GroupBox();
+            this.dgvEntrevistas = new System.Windows.Forms.DataGridView();
+            this.pnlInicioProceso = new System.Windows.Forms.GroupBox();
+            this.dgvIniciosProcesos = new System.Windows.Forms.DataGridView();
             label17 = new System.Windows.Forms.Label();
-            this.pnlVisitasAnteriores.SuspendLayout();
+            this.pnlVisitas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitasAnteriores)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -166,18 +187,21 @@
             this.pnlRegistro.SuspendLayout();
             this.pnlAgresiones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgresiones)).BeginInit();
-            this.pnlRegistrarAgresion.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            this.groupBox14.SuspendLayout();
+            this.pnlRegistroNuevo.SuspendLayout();
+            this.groupBox15.SuspendLayout();
             this.groupBox11.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.chkOtra.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            this.groupBox15.SuspendLayout();
+            this.pnlOrientaciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrientaciones)).BeginInit();
+            this.pnlEntrevistas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntrevistas)).BeginInit();
+            this.pnlInicioProceso.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIniciosProcesos)).BeginInit();
             this.SuspendLayout();
             // 
             // label17
@@ -189,23 +213,22 @@
             label17.Location = new System.Drawing.Point(309, 57);
             label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label17.Name = "label17";
-            label17.Size = new System.Drawing.Size(372, 31);
+            label17.Size = new System.Drawing.Size(454, 31);
             label17.TabIndex = 2;
-            label17.Text = "REGISTRAR ORIENTACIÓN";
+            label17.Text = "REGISTRAR INICIO DE PROCESO";
             // 
-            // pnlVisitasAnteriores
+            // pnlVisitas
             // 
-            this.pnlVisitasAnteriores.Controls.Add(this.dgvVisitasAnteriores);
-            this.pnlVisitasAnteriores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlVisitasAnteriores.Location = new System.Drawing.Point(1140, 854);
-            this.pnlVisitasAnteriores.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlVisitasAnteriores.Name = "pnlVisitasAnteriores";
-            this.pnlVisitasAnteriores.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlVisitasAnteriores.Size = new System.Drawing.Size(383, 302);
-            this.pnlVisitasAnteriores.TabIndex = 25;
-            this.pnlVisitasAnteriores.TabStop = false;
-            this.pnlVisitasAnteriores.Text = "Visitas Anteriores";
-            this.pnlVisitasAnteriores.Visible = false;
+            this.pnlVisitas.Controls.Add(this.dgvVisitasAnteriores);
+            this.pnlVisitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlVisitas.Location = new System.Drawing.Point(1137, 167);
+            this.pnlVisitas.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlVisitas.Name = "pnlVisitas";
+            this.pnlVisitas.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlVisitas.Size = new System.Drawing.Size(528, 302);
+            this.pnlVisitas.TabIndex = 25;
+            this.pnlVisitas.TabStop = false;
+            this.pnlVisitas.Text = "Visitas Anteriores";
             // 
             // dgvVisitasAnteriores
             // 
@@ -217,7 +240,7 @@
             this.dgvVisitasAnteriores.Name = "dgvVisitasAnteriores";
             this.dgvVisitasAnteriores.ReadOnly = true;
             this.dgvVisitasAnteriores.RowHeadersWidth = 51;
-            this.dgvVisitasAnteriores.Size = new System.Drawing.Size(341, 244);
+            this.dgvVisitasAnteriores.Size = new System.Drawing.Size(496, 244);
             this.dgvVisitasAnteriores.TabIndex = 24;
             // 
             // pnlTitulo
@@ -233,7 +256,7 @@
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
             this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(1715, 147);
+            this.pnlTitulo.Size = new System.Drawing.Size(1757, 147);
             this.pnlTitulo.TabIndex = 33;
             // 
             // pictureBox1
@@ -264,7 +287,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(65, 104);
+            this.label1.Location = new System.Drawing.Point(65, 103);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 25);
@@ -296,7 +319,7 @@
             // 
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblMensaje.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblMensaje.Location = new System.Drawing.Point(385, 13);
+            this.lblMensaje.Location = new System.Drawing.Point(385, 14);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(713, 82);
             this.lblMensaje.TabIndex = 38;
@@ -326,7 +349,7 @@
             // 
             this.lblFechaActual.AutoSize = true;
             this.lblFechaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblFechaActual.Location = new System.Drawing.Point(154, 53);
+            this.lblFechaActual.Location = new System.Drawing.Point(155, 53);
             this.lblFechaActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaActual.Name = "lblFechaActual";
             this.lblFechaActual.Size = new System.Drawing.Size(115, 25);
@@ -335,81 +358,32 @@
             // 
             // grbFechaNacimiento
             // 
-            this.grbFechaNacimiento.Controls.Add(this.lblAnio);
-            this.grbFechaNacimiento.Controls.Add(this.lblMes);
-            this.grbFechaNacimiento.Controls.Add(this.cmbAnio);
-            this.grbFechaNacimiento.Controls.Add(this.cmbMes);
-            this.grbFechaNacimiento.Controls.Add(this.lblDia);
-            this.grbFechaNacimiento.Controls.Add(this.cmbDia);
-            this.grbFechaNacimiento.Location = new System.Drawing.Point(452, 8);
+            this.grbFechaNacimiento.Controls.Add(this.lblFechaNacimiento);
+            this.grbFechaNacimiento.Location = new System.Drawing.Point(703, 4);
+            this.grbFechaNacimiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbFechaNacimiento.Name = "grbFechaNacimiento";
-            this.grbFechaNacimiento.Size = new System.Drawing.Size(462, 104);
+            this.grbFechaNacimiento.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbFechaNacimiento.Size = new System.Drawing.Size(372, 103);
             this.grbFechaNacimiento.TabIndex = 45;
             this.grbFechaNacimiento.TabStop = false;
             this.grbFechaNacimiento.Text = "Fecha nacimiento";
             // 
-            // lblAnio
+            // lblFechaNacimiento
             // 
-            this.lblAnio.AutoSize = true;
-            this.lblAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblAnio.Location = new System.Drawing.Point(287, 33);
-            this.lblAnio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAnio.Name = "lblAnio";
-            this.lblAnio.Size = new System.Drawing.Size(48, 25);
-            this.lblAnio.TabIndex = 47;
-            this.lblAnio.Text = "Año";
-            // 
-            // lblMes
-            // 
-            this.lblMes.AutoSize = true;
-            this.lblMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblMes.Location = new System.Drawing.Point(146, 33);
-            this.lblMes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMes.Name = "lblMes";
-            this.lblMes.Size = new System.Drawing.Size(50, 25);
-            this.lblMes.TabIndex = 45;
-            this.lblMes.Text = "Mes";
-            // 
-            // cmbAnio
-            // 
-            this.cmbAnio.FormattingEnabled = true;
-            this.cmbAnio.Location = new System.Drawing.Point(292, 61);
-            this.cmbAnio.Name = "cmbAnio";
-            this.cmbAnio.Size = new System.Drawing.Size(121, 33);
-            this.cmbAnio.TabIndex = 48;
-            // 
-            // cmbMes
-            // 
-            this.cmbMes.FormattingEnabled = true;
-            this.cmbMes.Location = new System.Drawing.Point(151, 61);
-            this.cmbMes.Name = "cmbMes";
-            this.cmbMes.Size = new System.Drawing.Size(121, 33);
-            this.cmbMes.TabIndex = 46;
-            // 
-            // lblDia
-            // 
-            this.lblDia.AutoSize = true;
-            this.lblDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblDia.Location = new System.Drawing.Point(11, 33);
-            this.lblDia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDia.Name = "lblDia";
-            this.lblDia.Size = new System.Drawing.Size(41, 25);
-            this.lblDia.TabIndex = 41;
-            this.lblDia.Text = "Día";
-            // 
-            // cmbDia
-            // 
-            this.cmbDia.FormattingEnabled = true;
-            this.cmbDia.Location = new System.Drawing.Point(16, 61);
-            this.cmbDia.Name = "cmbDia";
-            this.cmbDia.Size = new System.Drawing.Size(121, 33);
-            this.cmbDia.TabIndex = 44;
+            this.lblFechaNacimiento.AutoSize = true;
+            this.lblFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(37, 47);
+            this.lblFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(27, 25);
+            this.lblFechaNacimiento.TabIndex = 47;
+            this.lblFechaNacimiento.Text = "...";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(34, 29);
+            this.label2.Location = new System.Drawing.Point(5, 10);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 25);
@@ -419,17 +393,17 @@
             // txtNombres
             // 
             this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNombres.Location = new System.Drawing.Point(133, 26);
+            this.txtNombres.Location = new System.Drawing.Point(104, 6);
             this.txtNombres.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(192, 30);
+            this.txtNombres.Size = new System.Drawing.Size(267, 30);
             this.txtNombres.TabIndex = 47;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(33, 78);
+            this.label4.Location = new System.Drawing.Point(401, 10);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 25);
@@ -439,7 +413,7 @@
             // txtApellidos
             // 
             this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtApellidos.Location = new System.Drawing.Point(133, 75);
+            this.txtApellidos.Location = new System.Drawing.Point(499, 6);
             this.txtApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(192, 30);
@@ -448,16 +422,17 @@
             // cmbGeneros
             // 
             this.cmbGeneros.FormattingEnabled = true;
-            this.cmbGeneros.Location = new System.Drawing.Point(133, 124);
+            this.cmbGeneros.Location = new System.Drawing.Point(104, 43);
+            this.cmbGeneros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbGeneros.Name = "cmbGeneros";
-            this.cmbGeneros.Size = new System.Drawing.Size(192, 33);
+            this.cmbGeneros.Size = new System.Drawing.Size(267, 33);
             this.cmbGeneros.TabIndex = 51;
             // 
             // lblGeneros
             // 
             this.lblGeneros.AutoSize = true;
             this.lblGeneros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblGeneros.Location = new System.Drawing.Point(48, 128);
+            this.lblGeneros.Location = new System.Drawing.Point(20, 48);
             this.lblGeneros.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGeneros.Name = "lblGeneros";
             this.lblGeneros.Size = new System.Drawing.Size(77, 25);
@@ -467,16 +442,17 @@
             // cmbArea
             // 
             this.cmbArea.FormattingEnabled = true;
-            this.cmbArea.Location = new System.Drawing.Point(133, 176);
+            this.cmbArea.Location = new System.Drawing.Point(104, 81);
+            this.cmbArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbArea.Name = "cmbArea";
-            this.cmbArea.Size = new System.Drawing.Size(192, 33);
+            this.cmbArea.Size = new System.Drawing.Size(267, 33);
             this.cmbArea.TabIndex = 53;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(71, 180);
+            this.label5.Location = new System.Drawing.Point(43, 86);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 25);
@@ -487,7 +463,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.Location = new System.Drawing.Point(32, 329);
+            this.label6.Location = new System.Drawing.Point(399, 124);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 25);
@@ -497,7 +473,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtDireccion.Location = new System.Drawing.Point(133, 326);
+            this.txtDireccion.Location = new System.Drawing.Point(499, 121);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(288, 30);
@@ -509,9 +485,11 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.rbtEtniaNo);
             this.groupBox2.Controls.Add(this.rbtEtniaSi);
-            this.groupBox2.Location = new System.Drawing.Point(452, 123);
+            this.groupBox2.Location = new System.Drawing.Point(41, 180);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(284, 104);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(284, 103);
             this.groupBox2.TabIndex = 56;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pertenece a etnia?";
@@ -519,7 +497,7 @@
             // txtCualEtnia
             // 
             this.txtCualEtnia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCualEtnia.Location = new System.Drawing.Point(74, 60);
+            this.txtCualEtnia.Location = new System.Drawing.Point(75, 60);
             this.txtCualEtnia.Margin = new System.Windows.Forms.Padding(4);
             this.txtCualEtnia.Name = "txtCualEtnia";
             this.txtCualEtnia.Size = new System.Drawing.Size(192, 30);
@@ -529,7 +507,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label7.Location = new System.Drawing.Point(6, 63);
+            this.label7.Location = new System.Drawing.Point(5, 63);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 25);
@@ -539,7 +517,8 @@
             // rbtEtniaNo
             // 
             this.rbtEtniaNo.AutoSize = true;
-            this.rbtEtniaNo.Location = new System.Drawing.Point(160, 29);
+            this.rbtEtniaNo.Location = new System.Drawing.Point(160, 30);
+            this.rbtEtniaNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtEtniaNo.Name = "rbtEtniaNo";
             this.rbtEtniaNo.Size = new System.Drawing.Size(63, 29);
             this.rbtEtniaNo.TabIndex = 1;
@@ -550,7 +529,8 @@
             // rbtEtniaSi
             // 
             this.rbtEtniaSi.AutoSize = true;
-            this.rbtEtniaSi.Location = new System.Drawing.Point(62, 29);
+            this.rbtEtniaSi.Location = new System.Drawing.Point(61, 30);
+            this.rbtEtniaSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtEtniaSi.Name = "rbtEtniaSi";
             this.rbtEtniaSi.Size = new System.Drawing.Size(52, 29);
             this.rbtEtniaSi.TabIndex = 0;
@@ -564,9 +544,11 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.rbtDiscapacidadNo);
             this.groupBox3.Controls.Add(this.rbtDiscapacidadSi);
-            this.groupBox3.Location = new System.Drawing.Point(756, 123);
+            this.groupBox3.Location = new System.Drawing.Point(712, 180);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(305, 104);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(305, 103);
             this.groupBox3.TabIndex = 59;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Discapacidad?";
@@ -574,7 +556,7 @@
             // txtCualDiscapacidad
             // 
             this.txtCualDiscapacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCualDiscapacidad.Location = new System.Drawing.Point(74, 60);
+            this.txtCualDiscapacidad.Location = new System.Drawing.Point(75, 60);
             this.txtCualDiscapacidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtCualDiscapacidad.Name = "txtCualDiscapacidad";
             this.txtCualDiscapacidad.Size = new System.Drawing.Size(192, 30);
@@ -584,7 +566,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label8.Location = new System.Drawing.Point(6, 63);
+            this.label8.Location = new System.Drawing.Point(5, 63);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 25);
@@ -595,6 +577,7 @@
             // 
             this.rbtDiscapacidadNo.AutoSize = true;
             this.rbtDiscapacidadNo.Location = new System.Drawing.Point(173, 28);
+            this.rbtDiscapacidadNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtDiscapacidadNo.Name = "rbtDiscapacidadNo";
             this.rbtDiscapacidadNo.Size = new System.Drawing.Size(63, 29);
             this.rbtDiscapacidadNo.TabIndex = 1;
@@ -605,7 +588,8 @@
             // rbtDiscapacidadSi
             // 
             this.rbtDiscapacidadSi.AutoSize = true;
-            this.rbtDiscapacidadSi.Location = new System.Drawing.Point(76, 29);
+            this.rbtDiscapacidadSi.Location = new System.Drawing.Point(76, 30);
+            this.rbtDiscapacidadSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtDiscapacidadSi.Name = "rbtDiscapacidadSi";
             this.rbtDiscapacidadSi.Size = new System.Drawing.Size(52, 29);
             this.rbtDiscapacidadSi.TabIndex = 0;
@@ -617,9 +601,11 @@
             // 
             this.groupBox4.Controls.Add(this.rbtVictimaConfictoNo);
             this.groupBox4.Controls.Add(this.rbtVictimaConfictoSi);
-            this.groupBox4.Location = new System.Drawing.Point(756, 268);
+            this.groupBox4.Location = new System.Drawing.Point(367, 185);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(305, 84);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(305, 98);
             this.groupBox4.TabIndex = 60;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Victima del conficto armado?";
@@ -628,6 +614,7 @@
             // 
             this.rbtVictimaConfictoNo.AutoSize = true;
             this.rbtVictimaConfictoNo.Location = new System.Drawing.Point(173, 37);
+            this.rbtVictimaConfictoNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtVictimaConfictoNo.Name = "rbtVictimaConfictoNo";
             this.rbtVictimaConfictoNo.Size = new System.Drawing.Size(63, 29);
             this.rbtVictimaConfictoNo.TabIndex = 1;
@@ -639,6 +626,7 @@
             // 
             this.rbtVictimaConfictoSi.AutoSize = true;
             this.rbtVictimaConfictoSi.Location = new System.Drawing.Point(76, 37);
+            this.rbtVictimaConfictoSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtVictimaConfictoSi.Name = "rbtVictimaConfictoSi";
             this.rbtVictimaConfictoSi.Size = new System.Drawing.Size(52, 29);
             this.rbtVictimaConfictoSi.TabIndex = 0;
@@ -650,7 +638,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label10.Location = new System.Drawing.Point(36, 231);
+            this.label10.Location = new System.Drawing.Point(404, 86);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 25);
@@ -660,7 +648,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtTelefono.Location = new System.Drawing.Point(133, 228);
+            this.txtTelefono.Location = new System.Drawing.Point(499, 82);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(192, 30);
@@ -670,7 +658,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label9.Location = new System.Drawing.Point(56, 280);
+            this.label9.Location = new System.Drawing.Point(37, 124);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 25);
@@ -688,11 +676,11 @@
             this.groupBox1.Controls.Add(this.lblMensaje);
             this.groupBox1.Controls.Add(this.btnConsultar);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(16, 841);
+            this.groupBox1.Location = new System.Drawing.Point(13, 155);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1116, 583);
+            this.groupBox1.Size = new System.Drawing.Size(1116, 447);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INFORMACIÓN USUARIO";
@@ -700,7 +688,7 @@
             // btnRefrescar
             // 
             this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRefrescar.Location = new System.Drawing.Point(986, 99);
+            this.btnRefrescar.Location = new System.Drawing.Point(987, 98);
             this.btnRefrescar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefrescar.Name = "btnRefrescar";
             this.btnRefrescar.Size = new System.Drawing.Size(109, 32);
@@ -730,41 +718,41 @@
             this.pnlRegistro.Controls.Add(this.label6);
             this.pnlRegistro.Controls.Add(this.cmbArea);
             this.pnlRegistro.Controls.Add(this.label5);
-            this.pnlRegistro.Location = new System.Drawing.Point(24, 142);
+            this.pnlRegistro.Location = new System.Drawing.Point(24, 139);
+            this.pnlRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlRegistro.Name = "pnlRegistro";
-            this.pnlRegistro.Size = new System.Drawing.Size(1085, 409);
+            this.pnlRegistro.Size = new System.Drawing.Size(1085, 294);
             this.pnlRegistro.TabIndex = 67;
             this.pnlRegistro.Visible = false;
             // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtEmail.Location = new System.Drawing.Point(133, 277);
+            this.txtEmail.Location = new System.Drawing.Point(104, 121);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(288, 30);
+            this.txtEmail.Size = new System.Drawing.Size(267, 30);
             this.txtEmail.TabIndex = 64;
             // 
             // pnlAgresiones
             // 
             this.pnlAgresiones.Controls.Add(this.dgvAgresiones);
             this.pnlAgresiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlAgresiones.Location = new System.Drawing.Point(1140, 1134);
+            this.pnlAgresiones.Location = new System.Drawing.Point(1137, 478);
             this.pnlAgresiones.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAgresiones.Name = "pnlAgresiones";
             this.pnlAgresiones.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlAgresiones.Size = new System.Drawing.Size(528, 258);
+            this.pnlAgresiones.Size = new System.Drawing.Size(528, 233);
             this.pnlAgresiones.TabIndex = 35;
             this.pnlAgresiones.TabStop = false;
             this.pnlAgresiones.Text = "Agresiones";
-            this.pnlAgresiones.Visible = false;
             // 
             // dgvAgresiones
             // 
             this.dgvAgresiones.AllowUserToAddRows = false;
             this.dgvAgresiones.AllowUserToDeleteRows = false;
             this.dgvAgresiones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAgresiones.Location = new System.Drawing.Point(8, 50);
+            this.dgvAgresiones.Location = new System.Drawing.Point(8, 38);
             this.dgvAgresiones.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAgresiones.Name = "dgvAgresiones";
             this.dgvAgresiones.ReadOnly = true;
@@ -772,141 +760,90 @@
             this.dgvAgresiones.Size = new System.Drawing.Size(496, 181);
             this.dgvAgresiones.TabIndex = 24;
             // 
-            // pnlRegistrarAgresion
+            // pnlRegistroNuevo
             // 
-            this.pnlRegistrarAgresion.Controls.Add(this.groupBox13);
-            this.pnlRegistrarAgresion.Controls.Add(this.groupBox11);
-            this.pnlRegistrarAgresion.Controls.Add(this.groupBox9);
-            this.pnlRegistrarAgresion.Controls.Add(this.groupBox8);
-            this.pnlRegistrarAgresion.Controls.Add(this.textBox1);
-            this.pnlRegistrarAgresion.Controls.Add(this.label11);
-            this.pnlRegistrarAgresion.Controls.Add(this.groupBox6);
-            this.pnlRegistrarAgresion.Controls.Add(this.groupBox5);
-            this.pnlRegistrarAgresion.Controls.Add(this.lblMensajeAgresion);
-            this.pnlRegistrarAgresion.Controls.Add(this.btnGuardar);
-            this.pnlRegistrarAgresion.Controls.Add(this.txtResponsable);
-            this.pnlRegistrarAgresion.Controls.Add(this.label22);
-            this.pnlRegistrarAgresion.Controls.Add(this.groupBox7);
-            this.pnlRegistrarAgresion.Controls.Add(this.label26);
-            this.pnlRegistrarAgresion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlRegistrarAgresion.Location = new System.Drawing.Point(19, 1432);
-            this.pnlRegistrarAgresion.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlRegistrarAgresion.Name = "pnlRegistrarAgresion";
-            this.pnlRegistrarAgresion.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlRegistrarAgresion.Size = new System.Drawing.Size(1095, 929);
-            this.pnlRegistrarAgresion.TabIndex = 41;
-            this.pnlRegistrarAgresion.TabStop = false;
-            this.pnlRegistrarAgresion.Text = "INFORMACIÓN DE LA ORIENTACIÓN";
-            this.pnlRegistrarAgresion.Visible = false;
+            this.pnlRegistroNuevo.Controls.Add(this.groupBox15);
+            this.pnlRegistroNuevo.Controls.Add(this.groupBox11);
+            this.pnlRegistroNuevo.Controls.Add(this.groupBox10);
+            this.pnlRegistroNuevo.Controls.Add(this.groupBox8);
+            this.pnlRegistroNuevo.Controls.Add(this.btnGuardar);
+            this.pnlRegistroNuevo.Controls.Add(this.lblRutaAutoAvoca);
+            this.pnlRegistroNuevo.Controls.Add(this.btnSubirAutoAvocaConocimiento);
+            this.pnlRegistroNuevo.Controls.Add(this.groupBox9);
+            this.pnlRegistroNuevo.Controls.Add(this.chkOtra);
+            this.pnlRegistroNuevo.Controls.Add(this.groupBox5);
+            this.pnlRegistroNuevo.Controls.Add(this.label22);
+            this.pnlRegistroNuevo.Controls.Add(this.groupBox7);
+            this.pnlRegistroNuevo.Controls.Add(this.label26);
+            this.pnlRegistroNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlRegistroNuevo.Location = new System.Drawing.Point(13, 609);
+            this.pnlRegistroNuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlRegistroNuevo.Name = "pnlRegistroNuevo";
+            this.pnlRegistroNuevo.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlRegistroNuevo.Size = new System.Drawing.Size(1116, 929);
+            this.pnlRegistroNuevo.TabIndex = 41;
+            this.pnlRegistroNuevo.TabStop = false;
+            this.pnlRegistroNuevo.Text = "INICIO DE PROCESO";
+            this.pnlRegistroNuevo.Visible = false;
             // 
-            // groupBox13
+            // groupBox15
             // 
-            this.groupBox13.Controls.Add(this.label32);
-            this.groupBox13.Controls.Add(this.comboBox10);
-            this.groupBox13.Controls.Add(this.textBox5);
-            this.groupBox13.Controls.Add(this.label28);
-            this.groupBox13.Controls.Add(this.groupBox14);
-            this.groupBox13.Controls.Add(this.radioButton9);
-            this.groupBox13.Controls.Add(this.radioButton10);
-            this.groupBox13.Location = new System.Drawing.Point(48, 731);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(504, 297);
-            this.groupBox13.TabIndex = 82;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "remision a eps";
+            this.groupBox15.Controls.Add(this.label27);
+            this.groupBox15.Controls.Add(this.label28);
+            this.groupBox15.Controls.Add(this.cmbAnioAmpliacionMedidas);
+            this.groupBox15.Controls.Add(this.cmbMesAmpliacionMedidas);
+            this.groupBox15.Controls.Add(this.label42);
+            this.groupBox15.Controls.Add(this.label29);
+            this.groupBox15.Controls.Add(this.cmbSeOtorgaronAmpliacionMedidas);
+            this.groupBox15.Controls.Add(this.cmbDiaAmpliacionMedidas);
+            this.groupBox15.Controls.Add(this.textBox5);
+            this.groupBox15.Controls.Add(this.label30);
+            this.groupBox15.Controls.Add(this.rdbAmpliacionMedidasNO);
+            this.groupBox15.Controls.Add(this.rdbAmpliacionMedidasSI);
+            this.groupBox15.Location = new System.Drawing.Point(564, 29);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox15.Size = new System.Drawing.Size(504, 154);
+            this.groupBox15.TabIndex = 96;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Solicitud ampliacion medidas provisionales";
             // 
-            // label32
+            // label27
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label32.Location = new System.Drawing.Point(22, 196);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(129, 25);
-            this.label32.TabIndex = 85;
-            this.label32.Text = "Tipo remision";
-            // 
-            // comboBox10
-            // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(27, 225);
-            this.comboBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(121, 33);
-            this.comboBox10.TabIndex = 86;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox5.Location = new System.Drawing.Point(280, 246);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(144, 30);
-            this.textBox5.TabIndex = 84;
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label27.Location = new System.Drawing.Point(371, 37);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(48, 25);
+            this.label27.TabIndex = 89;
+            this.label27.Text = "Año";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label28.Location = new System.Drawing.Point(22, 249);
+            this.label28.Location = new System.Drawing.Point(207, 37);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(237, 25);
-            this.label28.TabIndex = 83;
-            this.label28.Text = "numero de noticia criminal";
+            this.label28.Size = new System.Drawing.Size(50, 25);
+            this.label28.TabIndex = 87;
+            this.label28.Text = "Mes";
             // 
-            // groupBox14
+            // cmbAnioAmpliacionMedidas
             // 
-            this.groupBox14.Controls.Add(this.label29);
-            this.groupBox14.Controls.Add(this.label30);
-            this.groupBox14.Controls.Add(this.comboBox7);
-            this.groupBox14.Controls.Add(this.comboBox8);
-            this.groupBox14.Controls.Add(this.label31);
-            this.groupBox14.Controls.Add(this.comboBox9);
-            this.groupBox14.Location = new System.Drawing.Point(11, 81);
-            this.groupBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox14.Size = new System.Drawing.Size(436, 113);
-            this.groupBox14.TabIndex = 82;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Fecha Orientación";
+            this.cmbAnioAmpliacionMedidas.FormattingEnabled = true;
+            this.cmbAnioAmpliacionMedidas.Location = new System.Drawing.Point(369, 66);
+            this.cmbAnioAmpliacionMedidas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbAnioAmpliacionMedidas.Name = "cmbAnioAmpliacionMedidas";
+            this.cmbAnioAmpliacionMedidas.Size = new System.Drawing.Size(121, 33);
+            this.cmbAnioAmpliacionMedidas.TabIndex = 90;
             // 
-            // label29
+            // cmbMesAmpliacionMedidas
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label29.Location = new System.Drawing.Point(287, 33);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(48, 25);
-            this.label29.TabIndex = 47;
-            this.label29.Text = "Año";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label30.Location = new System.Drawing.Point(147, 33);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(50, 25);
-            this.label30.TabIndex = 45;
-            this.label30.Text = "Mes";
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(292, 62);
-            this.comboBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(121, 33);
-            this.comboBox7.TabIndex = 48;
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
+            this.cmbMesAmpliacionMedidas.FormattingEnabled = true;
+            this.cmbMesAmpliacionMedidas.Items.AddRange(new object[] {
             "Enero",
             "Febrero",
             "Marzo",
@@ -919,90 +856,301 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.comboBox8.Location = new System.Drawing.Point(151, 62);
-            this.comboBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(121, 33);
-            this.comboBox8.TabIndex = 46;
+            this.cmbMesAmpliacionMedidas.Location = new System.Drawing.Point(211, 66);
+            this.cmbMesAmpliacionMedidas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbMesAmpliacionMedidas.Name = "cmbMesAmpliacionMedidas";
+            this.cmbMesAmpliacionMedidas.Size = new System.Drawing.Size(151, 33);
+            this.cmbMesAmpliacionMedidas.TabIndex = 88;
             // 
-            // label31
+            // label42
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label31.Location = new System.Drawing.Point(11, 33);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(41, 25);
-            this.label31.TabIndex = 41;
-            this.label31.Text = "Día";
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label42.Location = new System.Drawing.Point(112, 116);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(136, 25);
+            this.label42.TabIndex = 71;
+            this.label42.Text = "Se otorgaron?";
             // 
-            // comboBox9
+            // label29
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(16, 62);
-            this.comboBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(121, 33);
-            this.comboBox9.TabIndex = 44;
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label29.Location = new System.Drawing.Point(115, 37);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(41, 25);
+            this.label29.TabIndex = 85;
+            this.label29.Text = "Día";
             // 
-            // radioButton9
+            // cmbSeOtorgaronAmpliacionMedidas
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(173, 37);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(63, 29);
-            this.radioButton9.TabIndex = 1;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "NO";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.cmbSeOtorgaronAmpliacionMedidas.FormattingEnabled = true;
+            this.cmbSeOtorgaronAmpliacionMedidas.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
+            this.cmbSeOtorgaronAmpliacionMedidas.Location = new System.Drawing.Point(265, 110);
+            this.cmbSeOtorgaronAmpliacionMedidas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbSeOtorgaronAmpliacionMedidas.Name = "cmbSeOtorgaronAmpliacionMedidas";
+            this.cmbSeOtorgaronAmpliacionMedidas.Size = new System.Drawing.Size(76, 33);
+            this.cmbSeOtorgaronAmpliacionMedidas.TabIndex = 70;
             // 
-            // radioButton10
+            // cmbDiaAmpliacionMedidas
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(76, 37);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(52, 29);
-            this.radioButton10.TabIndex = 0;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "SI";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.cmbDiaAmpliacionMedidas.FormattingEnabled = true;
+            this.cmbDiaAmpliacionMedidas.Location = new System.Drawing.Point(120, 66);
+            this.cmbDiaAmpliacionMedidas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDiaAmpliacionMedidas.Name = "cmbDiaAmpliacionMedidas";
+            this.cmbDiaAmpliacionMedidas.Size = new System.Drawing.Size(76, 33);
+            this.cmbDiaAmpliacionMedidas.TabIndex = 86;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox5.Location = new System.Drawing.Point(319, 224);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(144, 30);
+            this.textBox5.TabIndex = 84;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label30.Location = new System.Drawing.Point(21, 226);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(237, 25);
+            this.label30.TabIndex = 83;
+            this.label30.Text = "numero de noticia criminal";
+            // 
+            // rdbAmpliacionMedidasNO
+            // 
+            this.rdbAmpliacionMedidasNO.AutoSize = true;
+            this.rdbAmpliacionMedidasNO.Checked = true;
+            this.rdbAmpliacionMedidasNO.Location = new System.Drawing.Point(19, 70);
+            this.rdbAmpliacionMedidasNO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbAmpliacionMedidasNO.Name = "rdbAmpliacionMedidasNO";
+            this.rdbAmpliacionMedidasNO.Size = new System.Drawing.Size(63, 29);
+            this.rdbAmpliacionMedidasNO.TabIndex = 1;
+            this.rdbAmpliacionMedidasNO.TabStop = true;
+            this.rdbAmpliacionMedidasNO.Text = "NO";
+            this.rdbAmpliacionMedidasNO.UseVisualStyleBackColor = true;
+            // 
+            // rdbAmpliacionMedidasSI
+            // 
+            this.rdbAmpliacionMedidasSI.AutoSize = true;
+            this.rdbAmpliacionMedidasSI.Location = new System.Drawing.Point(19, 37);
+            this.rdbAmpliacionMedidasSI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbAmpliacionMedidasSI.Name = "rdbAmpliacionMedidasSI";
+            this.rdbAmpliacionMedidasSI.Size = new System.Drawing.Size(52, 29);
+            this.rdbAmpliacionMedidasSI.TabIndex = 0;
+            this.rdbAmpliacionMedidasSI.Text = "SI";
+            this.rdbAmpliacionMedidasSI.UseVisualStyleBackColor = true;
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.textBox4);
-            this.groupBox11.Controls.Add(this.label27);
-            this.groupBox11.Controls.Add(this.textBox3);
-            this.groupBox11.Controls.Add(this.label16);
-            this.groupBox11.Controls.Add(this.groupBox12);
-            this.groupBox11.Controls.Add(this.radioButton7);
-            this.groupBox11.Controls.Add(this.radioButton8);
-            this.groupBox11.Location = new System.Drawing.Point(563, 339);
+            this.groupBox11.Controls.Add(this.txtObservacionAcompanamientoComisaria);
+            this.groupBox11.Controls.Add(this.textBox9);
+            this.groupBox11.Controls.Add(this.label33);
+            this.groupBox11.Controls.Add(this.label49);
+            this.groupBox11.Controls.Add(this.rdbAcompanamientoComisariaNO);
+            this.groupBox11.Controls.Add(this.rdbAcompanamientoComisariaSI);
+            this.groupBox11.Location = new System.Drawing.Point(564, 665);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(504, 411);
-            this.groupBox11.TabIndex = 85;
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox11.Size = new System.Drawing.Size(504, 158);
+            this.groupBox11.TabIndex = 95;
             this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "f.\tRemisión a Medicina Legal";
+            this.groupBox11.Text = "Acompañamiento de la comisaria";
             // 
-            // textBox4
+            // txtObservacionAcompanamientoComisaria
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(153, 287);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(310, 30);
-            this.textBox4.TabIndex = 86;
+            this.txtObservacionAcompanamientoComisaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtObservacionAcompanamientoComisaria.Location = new System.Drawing.Point(129, 70);
+            this.txtObservacionAcompanamientoComisaria.Margin = new System.Windows.Forms.Padding(4);
+            this.txtObservacionAcompanamientoComisaria.Multiline = true;
+            this.txtObservacionAcompanamientoComisaria.Name = "txtObservacionAcompanamientoComisaria";
+            this.txtObservacionAcompanamientoComisaria.Size = new System.Drawing.Size(359, 78);
+            this.txtObservacionAcompanamientoComisaria.TabIndex = 88;
             // 
-            // label27
+            // textBox9
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label27.Location = new System.Drawing.Point(22, 290);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(123, 25);
-            this.label27.TabIndex = 85;
-            this.label27.Text = "Observación";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox9.Location = new System.Drawing.Point(319, 224);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(144, 30);
+            this.textBox9.TabIndex = 84;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label33.Location = new System.Drawing.Point(124, 39);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(123, 25);
+            this.label33.TabIndex = 87;
+            this.label33.Text = "Observación";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label49.Location = new System.Drawing.Point(21, 226);
+            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(237, 25);
+            this.label49.TabIndex = 83;
+            this.label49.Text = "numero de noticia criminal";
+            // 
+            // rdbAcompanamientoComisariaNO
+            // 
+            this.rdbAcompanamientoComisariaNO.AutoSize = true;
+            this.rdbAcompanamientoComisariaNO.Location = new System.Drawing.Point(19, 70);
+            this.rdbAcompanamientoComisariaNO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbAcompanamientoComisariaNO.Name = "rdbAcompanamientoComisariaNO";
+            this.rdbAcompanamientoComisariaNO.Size = new System.Drawing.Size(63, 29);
+            this.rdbAcompanamientoComisariaNO.TabIndex = 1;
+            this.rdbAcompanamientoComisariaNO.TabStop = true;
+            this.rdbAcompanamientoComisariaNO.Text = "NO";
+            this.rdbAcompanamientoComisariaNO.UseVisualStyleBackColor = true;
+            // 
+            // rdbAcompanamientoComisariaSI
+            // 
+            this.rdbAcompanamientoComisariaSI.AutoSize = true;
+            this.rdbAcompanamientoComisariaSI.Location = new System.Drawing.Point(19, 37);
+            this.rdbAcompanamientoComisariaSI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbAcompanamientoComisariaSI.Name = "rdbAcompanamientoComisariaSI";
+            this.rdbAcompanamientoComisariaSI.Size = new System.Drawing.Size(52, 29);
+            this.rdbAcompanamientoComisariaSI.TabIndex = 0;
+            this.rdbAcompanamientoComisariaSI.TabStop = true;
+            this.rdbAcompanamientoComisariaSI.Text = "SI";
+            this.rdbAcompanamientoComisariaSI.UseVisualStyleBackColor = true;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.label32);
+            this.groupBox10.Controls.Add(this.cmbTipoRemisionRemisionEPS);
+            this.groupBox10.Controls.Add(this.label38);
+            this.groupBox10.Controls.Add(this.label40);
+            this.groupBox10.Controls.Add(this.cmbAnioRemisionEPS);
+            this.groupBox10.Controls.Add(this.cmbMesRemisionEPS);
+            this.groupBox10.Controls.Add(this.label41);
+            this.groupBox10.Controls.Add(this.cmbDiaRemisionEPS);
+            this.groupBox10.Controls.Add(this.textBox3);
+            this.groupBox10.Controls.Add(this.label46);
+            this.groupBox10.Controls.Add(this.rdbRemisionEPSNO);
+            this.groupBox10.Controls.Add(this.rdbRemisionEPSSI);
+            this.groupBox10.Location = new System.Drawing.Point(564, 507);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox10.Size = new System.Drawing.Size(504, 154);
+            this.groupBox10.TabIndex = 94;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Remisión a EPS";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label32.Location = new System.Drawing.Point(65, 112);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(129, 25);
+            this.label32.TabIndex = 85;
+            this.label32.Text = "Tipo remisión";
+            // 
+            // cmbTipoRemisionRemisionEPS
+            // 
+            this.cmbTipoRemisionRemisionEPS.FormattingEnabled = true;
+            this.cmbTipoRemisionRemisionEPS.Items.AddRange(new object[] {
+            "Psicológico",
+            "Físico",
+            "Psicológico y Físico"});
+            this.cmbTipoRemisionRemisionEPS.Location = new System.Drawing.Point(212, 108);
+            this.cmbTipoRemisionRemisionEPS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbTipoRemisionRemisionEPS.Name = "cmbTipoRemisionRemisionEPS";
+            this.cmbTipoRemisionRemisionEPS.Size = new System.Drawing.Size(278, 33);
+            this.cmbTipoRemisionRemisionEPS.TabIndex = 86;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label38.Location = new System.Drawing.Point(371, 37);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(48, 25);
+            this.label38.TabIndex = 89;
+            this.label38.Text = "Año";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label40.Location = new System.Drawing.Point(207, 37);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(50, 25);
+            this.label40.TabIndex = 87;
+            this.label40.Text = "Mes";
+            // 
+            // cmbAnioRemisionEPS
+            // 
+            this.cmbAnioRemisionEPS.FormattingEnabled = true;
+            this.cmbAnioRemisionEPS.Location = new System.Drawing.Point(369, 66);
+            this.cmbAnioRemisionEPS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbAnioRemisionEPS.Name = "cmbAnioRemisionEPS";
+            this.cmbAnioRemisionEPS.Size = new System.Drawing.Size(121, 33);
+            this.cmbAnioRemisionEPS.TabIndex = 90;
+            // 
+            // cmbMesRemisionEPS
+            // 
+            this.cmbMesRemisionEPS.FormattingEnabled = true;
+            this.cmbMesRemisionEPS.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cmbMesRemisionEPS.Location = new System.Drawing.Point(211, 66);
+            this.cmbMesRemisionEPS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbMesRemisionEPS.Name = "cmbMesRemisionEPS";
+            this.cmbMesRemisionEPS.Size = new System.Drawing.Size(151, 33);
+            this.cmbMesRemisionEPS.TabIndex = 88;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label41.Location = new System.Drawing.Point(115, 37);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(41, 25);
+            this.label41.TabIndex = 85;
+            this.label41.Text = "Día";
+            // 
+            // cmbDiaRemisionEPS
+            // 
+            this.cmbDiaRemisionEPS.FormattingEnabled = true;
+            this.cmbDiaRemisionEPS.Location = new System.Drawing.Point(120, 66);
+            this.cmbDiaRemisionEPS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDiaRemisionEPS.Name = "cmbDiaRemisionEPS";
+            this.cmbDiaRemisionEPS.Size = new System.Drawing.Size(76, 33);
+            this.cmbDiaRemisionEPS.TabIndex = 86;
             // 
             // textBox3
             // 
@@ -1013,71 +1161,133 @@
             this.textBox3.Size = new System.Drawing.Size(144, 30);
             this.textBox3.TabIndex = 84;
             // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label46.Location = new System.Drawing.Point(21, 226);
+            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(237, 25);
+            this.label46.TabIndex = 83;
+            this.label46.Text = "numero de noticia criminal";
+            // 
+            // rdbRemisionEPSNO
+            // 
+            this.rdbRemisionEPSNO.AutoSize = true;
+            this.rdbRemisionEPSNO.Checked = true;
+            this.rdbRemisionEPSNO.Location = new System.Drawing.Point(19, 70);
+            this.rdbRemisionEPSNO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbRemisionEPSNO.Name = "rdbRemisionEPSNO";
+            this.rdbRemisionEPSNO.Size = new System.Drawing.Size(63, 29);
+            this.rdbRemisionEPSNO.TabIndex = 1;
+            this.rdbRemisionEPSNO.TabStop = true;
+            this.rdbRemisionEPSNO.Text = "NO";
+            this.rdbRemisionEPSNO.UseVisualStyleBackColor = true;
+            // 
+            // rdbRemisionEPSSI
+            // 
+            this.rdbRemisionEPSSI.AutoSize = true;
+            this.rdbRemisionEPSSI.Location = new System.Drawing.Point(19, 37);
+            this.rdbRemisionEPSSI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbRemisionEPSSI.Name = "rdbRemisionEPSSI";
+            this.rdbRemisionEPSSI.Size = new System.Drawing.Size(52, 29);
+            this.rdbRemisionEPSSI.TabIndex = 0;
+            this.rdbRemisionEPSSI.TabStop = true;
+            this.rdbRemisionEPSSI.Text = "SI";
+            this.rdbRemisionEPSSI.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.lblInforme);
+            this.groupBox8.Controls.Add(this.BtnInformeRemisionMedicinaLegal);
+            this.groupBox8.Controls.Add(this.label13);
+            this.groupBox8.Controls.Add(this.label14);
+            this.groupBox8.Controls.Add(this.label16);
+            this.groupBox8.Controls.Add(this.cmbAnioRemisionMedicinaLegal);
+            this.groupBox8.Controls.Add(this.cmbMesRemisionMedicinaLegal);
+            this.groupBox8.Controls.Add(this.label18);
+            this.groupBox8.Controls.Add(this.cmbDiaRemisionMedicinaLegal);
+            this.groupBox8.Controls.Add(this.textBox4);
+            this.groupBox8.Controls.Add(this.label20);
+            this.groupBox8.Controls.Add(this.rdbRemisionMedicinaLegalNO);
+            this.groupBox8.Controls.Add(this.rdbRemisionMedicinaLegalSI);
+            this.groupBox8.Location = new System.Drawing.Point(564, 349);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Size = new System.Drawing.Size(504, 154);
+            this.groupBox8.TabIndex = 93;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Remisión a medicina legal";
+            // 
+            // lblInforme
+            // 
+            this.lblInforme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblInforme.Location = new System.Drawing.Point(296, 116);
+            this.lblInforme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInforme.Name = "lblInforme";
+            this.lblInforme.Size = new System.Drawing.Size(201, 25);
+            this.lblInforme.TabIndex = 94;
+            this.lblInforme.Text = "...";
+            // 
+            // BtnInformeRemisionMedicinaLegal
+            // 
+            this.BtnInformeRemisionMedicinaLegal.Location = new System.Drawing.Point(117, 111);
+            this.BtnInformeRemisionMedicinaLegal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnInformeRemisionMedicinaLegal.Name = "BtnInformeRemisionMedicinaLegal";
+            this.BtnInformeRemisionMedicinaLegal.Size = new System.Drawing.Size(172, 34);
+            this.BtnInformeRemisionMedicinaLegal.TabIndex = 94;
+            this.BtnInformeRemisionMedicinaLegal.Text = "Examinar...";
+            this.BtnInformeRemisionMedicinaLegal.UseVisualStyleBackColor = true;
+            this.BtnInformeRemisionMedicinaLegal.Click += new System.EventHandler(this.BtnInformeRemisionMedicinaLegal_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label13.Location = new System.Drawing.Point(21, 116);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 25);
+            this.label13.TabIndex = 91;
+            this.label13.Text = "Informe";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label14.Location = new System.Drawing.Point(371, 37);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(48, 25);
+            this.label14.TabIndex = 89;
+            this.label14.Text = "Año";
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label16.Location = new System.Drawing.Point(22, 227);
+            this.label16.Location = new System.Drawing.Point(207, 37);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(154, 25);
-            this.label16.TabIndex = 83;
-            this.label16.Text = "informe(adjunto)";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label16.Click += new System.EventHandler(this.label16_Click);
+            this.label16.Size = new System.Drawing.Size(50, 25);
+            this.label16.TabIndex = 87;
+            this.label16.Text = "Mes";
             // 
-            // groupBox12
+            // cmbAnioRemisionMedicinaLegal
             // 
-            this.groupBox12.Controls.Add(this.label18);
-            this.groupBox12.Controls.Add(this.label20);
-            this.groupBox12.Controls.Add(this.comboBox4);
-            this.groupBox12.Controls.Add(this.comboBox5);
-            this.groupBox12.Controls.Add(this.label21);
-            this.groupBox12.Controls.Add(this.comboBox6);
-            this.groupBox12.Location = new System.Drawing.Point(11, 81);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox12.Size = new System.Drawing.Size(436, 113);
-            this.groupBox12.TabIndex = 82;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Fecha Orientación";
+            this.cmbAnioRemisionMedicinaLegal.FormattingEnabled = true;
+            this.cmbAnioRemisionMedicinaLegal.Location = new System.Drawing.Point(369, 66);
+            this.cmbAnioRemisionMedicinaLegal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbAnioRemisionMedicinaLegal.Name = "cmbAnioRemisionMedicinaLegal";
+            this.cmbAnioRemisionMedicinaLegal.Size = new System.Drawing.Size(121, 33);
+            this.cmbAnioRemisionMedicinaLegal.TabIndex = 90;
             // 
-            // label18
+            // cmbMesRemisionMedicinaLegal
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label18.Location = new System.Drawing.Point(287, 33);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(48, 25);
-            this.label18.TabIndex = 47;
-            this.label18.Text = "Año";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label20.Location = new System.Drawing.Point(147, 33);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(50, 25);
-            this.label20.TabIndex = 45;
-            this.label20.Text = "Mes";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(292, 62);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 33);
-            this.comboBox4.TabIndex = 48;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.cmbMesRemisionMedicinaLegal.FormattingEnabled = true;
+            this.cmbMesRemisionMedicinaLegal.Items.AddRange(new object[] {
             "Enero",
             "Febrero",
             "Marzo",
@@ -1090,67 +1300,225 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.comboBox5.Location = new System.Drawing.Point(151, 62);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 33);
-            this.comboBox5.TabIndex = 46;
+            this.cmbMesRemisionMedicinaLegal.Location = new System.Drawing.Point(211, 66);
+            this.cmbMesRemisionMedicinaLegal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbMesRemisionMedicinaLegal.Name = "cmbMesRemisionMedicinaLegal";
+            this.cmbMesRemisionMedicinaLegal.Size = new System.Drawing.Size(151, 33);
+            this.cmbMesRemisionMedicinaLegal.TabIndex = 88;
             // 
-            // label21
+            // label18
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label21.Location = new System.Drawing.Point(11, 33);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(41, 25);
-            this.label21.TabIndex = 41;
-            this.label21.Text = "Día";
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label18.Location = new System.Drawing.Point(115, 37);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 25);
+            this.label18.TabIndex = 85;
+            this.label18.Text = "Día";
             // 
-            // comboBox6
+            // cmbDiaRemisionMedicinaLegal
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(16, 62);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 33);
-            this.comboBox6.TabIndex = 44;
+            this.cmbDiaRemisionMedicinaLegal.FormattingEnabled = true;
+            this.cmbDiaRemisionMedicinaLegal.Location = new System.Drawing.Point(120, 66);
+            this.cmbDiaRemisionMedicinaLegal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDiaRemisionMedicinaLegal.Name = "cmbDiaRemisionMedicinaLegal";
+            this.cmbDiaRemisionMedicinaLegal.Size = new System.Drawing.Size(76, 33);
+            this.cmbDiaRemisionMedicinaLegal.TabIndex = 86;
             // 
-            // radioButton7
+            // textBox4
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(173, 37);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(63, 29);
-            this.radioButton7.TabIndex = 1;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "NO";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox4.Location = new System.Drawing.Point(319, 224);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(144, 30);
+            this.textBox4.TabIndex = 84;
             // 
-            // radioButton8
+            // label20
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(76, 37);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(52, 29);
-            this.radioButton8.TabIndex = 0;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "SI";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label20.Location = new System.Drawing.Point(21, 226);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(237, 25);
+            this.label20.TabIndex = 83;
+            this.label20.Text = "numero de noticia criminal";
+            // 
+            // rdbRemisionMedicinaLegalNO
+            // 
+            this.rdbRemisionMedicinaLegalNO.AutoSize = true;
+            this.rdbRemisionMedicinaLegalNO.Checked = true;
+            this.rdbRemisionMedicinaLegalNO.Location = new System.Drawing.Point(19, 70);
+            this.rdbRemisionMedicinaLegalNO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbRemisionMedicinaLegalNO.Name = "rdbRemisionMedicinaLegalNO";
+            this.rdbRemisionMedicinaLegalNO.Size = new System.Drawing.Size(63, 29);
+            this.rdbRemisionMedicinaLegalNO.TabIndex = 1;
+            this.rdbRemisionMedicinaLegalNO.TabStop = true;
+            this.rdbRemisionMedicinaLegalNO.Text = "NO";
+            this.rdbRemisionMedicinaLegalNO.UseVisualStyleBackColor = true;
+            // 
+            // rdbRemisionMedicinaLegalSI
+            // 
+            this.rdbRemisionMedicinaLegalSI.AutoSize = true;
+            this.rdbRemisionMedicinaLegalSI.Location = new System.Drawing.Point(19, 37);
+            this.rdbRemisionMedicinaLegalSI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbRemisionMedicinaLegalSI.Name = "rdbRemisionMedicinaLegalSI";
+            this.rdbRemisionMedicinaLegalSI.Size = new System.Drawing.Size(52, 29);
+            this.rdbRemisionMedicinaLegalSI.TabIndex = 0;
+            this.rdbRemisionMedicinaLegalSI.TabStop = true;
+            this.rdbRemisionMedicinaLegalSI.Text = "SI";
+            this.rdbRemisionMedicinaLegalSI.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnGuardar.Location = new System.Drawing.Point(903, 847);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(156, 46);
+            this.btnGuardar.TabIndex = 69;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // lblRutaAutoAvoca
+            // 
+            this.lblRutaAutoAvoca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblRutaAutoAvoca.Location = new System.Drawing.Point(29, 226);
+            this.lblRutaAutoAvoca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRutaAutoAvoca.Name = "lblRutaAutoAvoca";
+            this.lblRutaAutoAvoca.Size = new System.Drawing.Size(528, 25);
+            this.lblRutaAutoAvoca.TabIndex = 87;
+            this.lblRutaAutoAvoca.Text = "...";
+            // 
+            // btnSubirAutoAvocaConocimiento
+            // 
+            this.btnSubirAutoAvocaConocimiento.Location = new System.Drawing.Point(340, 188);
+            this.btnSubirAutoAvocaConocimiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSubirAutoAvocaConocimiento.Name = "btnSubirAutoAvocaConocimiento";
+            this.btnSubirAutoAvocaConocimiento.Size = new System.Drawing.Size(172, 34);
+            this.btnSubirAutoAvocaConocimiento.TabIndex = 86;
+            this.btnSubirAutoAvocaConocimiento.Text = "Examinar...";
+            this.btnSubirAutoAvocaConocimiento.UseVisualStyleBackColor = true;
+            this.btnSubirAutoAvocaConocimiento.Click += new System.EventHandler(this.btnSubirAutoAvocaConocimiento_Click);
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.txtNumeroNoticiaRemisionFiscalia);
+            this.groupBox9.Controls.Add(this.label12);
+            this.groupBox9.Controls.Add(this.label43);
+            this.groupBox9.Controls.Add(this.label44);
+            this.groupBox9.Controls.Add(this.cmbAnioRemisionFiscalia);
+            this.groupBox9.Controls.Add(this.cmbMesRemisionFiscalia);
+            this.groupBox9.Controls.Add(this.label45);
+            this.groupBox9.Controls.Add(this.cmbDiaRemisionFiscalia);
             this.groupBox9.Controls.Add(this.textBox2);
             this.groupBox9.Controls.Add(this.label15);
-            this.groupBox9.Controls.Add(this.groupBox10);
-            this.groupBox9.Controls.Add(this.radioButton5);
-            this.groupBox9.Controls.Add(this.radioButton6);
-            this.groupBox9.Location = new System.Drawing.Point(21, 428);
+            this.groupBox9.Controls.Add(this.rdbRemisionFiscaliaNO);
+            this.groupBox9.Controls.Add(this.rdbRemisionFiscaliaSI);
+            this.groupBox9.Location = new System.Drawing.Point(564, 188);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(504, 297);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox9.Size = new System.Drawing.Size(504, 154);
             this.groupBox9.TabIndex = 81;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "e.\tRemisión a Fiscalía";
+            this.groupBox9.Text = "Remisión a Fiscalía";
+            // 
+            // txtNumeroNoticiaRemisionFiscalia
+            // 
+            this.txtNumeroNoticiaRemisionFiscalia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNumeroNoticiaRemisionFiscalia.Location = new System.Drawing.Point(317, 111);
+            this.txtNumeroNoticiaRemisionFiscalia.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumeroNoticiaRemisionFiscalia.Name = "txtNumeroNoticiaRemisionFiscalia";
+            this.txtNumeroNoticiaRemisionFiscalia.Size = new System.Drawing.Size(170, 30);
+            this.txtNumeroNoticiaRemisionFiscalia.TabIndex = 92;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label12.Location = new System.Drawing.Point(49, 116);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(240, 25);
+            this.label12.TabIndex = 91;
+            this.label12.Text = "Número de noticia criminal";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label43.Location = new System.Drawing.Point(371, 37);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(48, 25);
+            this.label43.TabIndex = 89;
+            this.label43.Text = "Año";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label44.Location = new System.Drawing.Point(207, 37);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(50, 25);
+            this.label44.TabIndex = 87;
+            this.label44.Text = "Mes";
+            // 
+            // cmbAnioRemisionFiscalia
+            // 
+            this.cmbAnioRemisionFiscalia.FormattingEnabled = true;
+            this.cmbAnioRemisionFiscalia.Location = new System.Drawing.Point(369, 66);
+            this.cmbAnioRemisionFiscalia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbAnioRemisionFiscalia.Name = "cmbAnioRemisionFiscalia";
+            this.cmbAnioRemisionFiscalia.Size = new System.Drawing.Size(121, 33);
+            this.cmbAnioRemisionFiscalia.TabIndex = 90;
+            // 
+            // cmbMesRemisionFiscalia
+            // 
+            this.cmbMesRemisionFiscalia.FormattingEnabled = true;
+            this.cmbMesRemisionFiscalia.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cmbMesRemisionFiscalia.Location = new System.Drawing.Point(211, 66);
+            this.cmbMesRemisionFiscalia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbMesRemisionFiscalia.Name = "cmbMesRemisionFiscalia";
+            this.cmbMesRemisionFiscalia.Size = new System.Drawing.Size(151, 33);
+            this.cmbMesRemisionFiscalia.TabIndex = 88;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label45.Location = new System.Drawing.Point(115, 37);
+            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(41, 25);
+            this.label45.TabIndex = 85;
+            this.label45.Text = "Día";
+            // 
+            // cmbDiaRemisionFiscalia
+            // 
+            this.cmbDiaRemisionFiscalia.FormattingEnabled = true;
+            this.cmbDiaRemisionFiscalia.Location = new System.Drawing.Point(120, 66);
+            this.cmbDiaRemisionFiscalia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDiaRemisionFiscalia.Name = "cmbDiaRemisionFiscalia";
+            this.cmbDiaRemisionFiscalia.Size = new System.Drawing.Size(76, 33);
+            this.cmbDiaRemisionFiscalia.TabIndex = 86;
             // 
             // textBox2
             // 
@@ -1165,338 +1533,294 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label15.Location = new System.Drawing.Point(22, 227);
+            this.label15.Location = new System.Drawing.Point(21, 226);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(237, 25);
             this.label15.TabIndex = 83;
             this.label15.Text = "numero de noticia criminal";
             // 
-            // groupBox10
+            // rdbRemisionFiscaliaNO
             // 
-            this.groupBox10.Controls.Add(this.label12);
-            this.groupBox10.Controls.Add(this.label13);
-            this.groupBox10.Controls.Add(this.comboBox1);
-            this.groupBox10.Controls.Add(this.comboBox2);
-            this.groupBox10.Controls.Add(this.label14);
-            this.groupBox10.Controls.Add(this.comboBox3);
-            this.groupBox10.Location = new System.Drawing.Point(11, 81);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox10.Size = new System.Drawing.Size(436, 113);
-            this.groupBox10.TabIndex = 82;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Fecha Orientación";
+            this.rdbRemisionFiscaliaNO.AutoSize = true;
+            this.rdbRemisionFiscaliaNO.Checked = true;
+            this.rdbRemisionFiscaliaNO.Location = new System.Drawing.Point(19, 70);
+            this.rdbRemisionFiscaliaNO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbRemisionFiscaliaNO.Name = "rdbRemisionFiscaliaNO";
+            this.rdbRemisionFiscaliaNO.Size = new System.Drawing.Size(63, 29);
+            this.rdbRemisionFiscaliaNO.TabIndex = 1;
+            this.rdbRemisionFiscaliaNO.TabStop = true;
+            this.rdbRemisionFiscaliaNO.Text = "NO";
+            this.rdbRemisionFiscaliaNO.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // rdbRemisionFiscaliaSI
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label12.Location = new System.Drawing.Point(287, 33);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 25);
-            this.label12.TabIndex = 47;
-            this.label12.Text = "Año";
+            this.rdbRemisionFiscaliaSI.AutoSize = true;
+            this.rdbRemisionFiscaliaSI.Location = new System.Drawing.Point(19, 37);
+            this.rdbRemisionFiscaliaSI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbRemisionFiscaliaSI.Name = "rdbRemisionFiscaliaSI";
+            this.rdbRemisionFiscaliaSI.Size = new System.Drawing.Size(52, 29);
+            this.rdbRemisionFiscaliaSI.TabIndex = 0;
+            this.rdbRemisionFiscaliaSI.Text = "SI";
+            this.rdbRemisionFiscaliaSI.UseVisualStyleBackColor = true;
             // 
-            // label13
+            // chkOtra
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label13.Location = new System.Drawing.Point(147, 33);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(50, 25);
-            this.label13.TabIndex = 45;
-            this.label13.Text = "Mes";
+            this.chkOtra.Controls.Add(this.txtOtraMedida);
+            this.chkOtra.Controls.Add(this.chkOtraMedida);
+            this.chkOtra.Controls.Add(this.chkDevolucionObjetos);
+            this.chkOtra.Controls.Add(this.chkProhibicionVenta);
+            this.chkOtra.Controls.Add(this.chkUsoVivienda);
+            this.chkOtra.Controls.Add(this.chkPensionAlimentaria);
+            this.chkOtra.Controls.Add(this.chkAcompanamientoCasa);
+            this.chkOtra.Controls.Add(this.chkProteccionPoliciva);
+            this.chkOtra.Controls.Add(this.chkEsconderHijos);
+            this.chkOtra.Controls.Add(this.lblAbtenerseLugar);
+            this.chkOtra.Controls.Add(this.chkAcudirTratamiento);
+            this.chkOtra.Controls.Add(this.chkSuspencionArmas);
+            this.chkOtra.Controls.Add(this.chkAbstenerseLugar);
+            this.chkOtra.Controls.Add(this.chkRegimenProvisional);
+            this.chkOtra.Controls.Add(this.chkDesalojo);
+            this.chkOtra.Location = new System.Drawing.Point(32, 349);
+            this.chkOtra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkOtra.Name = "chkOtra";
+            this.chkOtra.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkOtra.Size = new System.Drawing.Size(487, 530);
+            this.chkOtra.TabIndex = 77;
+            this.chkOtra.TabStop = false;
+            this.chkOtra.Text = "Medidas de proteccion";
             // 
-            // comboBox1
+            // txtOtraMedida
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(292, 62);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 33);
-            this.comboBox1.TabIndex = 48;
+            this.txtOtraMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtOtraMedida.Location = new System.Drawing.Point(78, 458);
+            this.txtOtraMedida.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOtraMedida.Name = "txtOtraMedida";
+            this.txtOtraMedida.Size = new System.Drawing.Size(383, 30);
+            this.txtOtraMedida.TabIndex = 89;
             // 
-            // comboBox2
+            // chkOtraMedida
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.comboBox2.Location = new System.Drawing.Point(151, 62);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 33);
-            this.comboBox2.TabIndex = 46;
+            this.chkOtraMedida.AutoSize = true;
+            this.chkOtraMedida.Location = new System.Drawing.Point(7, 423);
+            this.chkOtraMedida.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkOtraMedida.Name = "chkOtraMedida";
+            this.chkOtraMedida.Size = new System.Drawing.Size(151, 29);
+            this.chkOtraMedida.TabIndex = 59;
+            this.chkOtraMedida.Text = "Otra. ¿Cuál? ";
+            this.chkOtraMedida.UseVisualStyleBackColor = true;
             // 
-            // label14
+            // chkDevolucionObjetos
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label14.Location = new System.Drawing.Point(11, 33);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 25);
-            this.label14.TabIndex = 41;
-            this.label14.Text = "Día";
+            this.chkDevolucionObjetos.AutoSize = true;
+            this.chkDevolucionObjetos.Location = new System.Drawing.Point(7, 390);
+            this.chkDevolucionObjetos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkDevolucionObjetos.Name = "chkDevolucionObjetos";
+            this.chkDevolucionObjetos.Size = new System.Drawing.Size(378, 29);
+            this.chkDevolucionObjetos.TabIndex = 58;
+            this.chkDevolucionObjetos.Text = "Devolución de los objetos de las víctima";
+            this.chkDevolucionObjetos.UseVisualStyleBackColor = true;
             // 
-            // comboBox3
+            // chkProhibicionVenta
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(16, 62);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 33);
-            this.comboBox3.TabIndex = 44;
+            this.chkProhibicionVenta.AutoSize = true;
+            this.chkProhibicionVenta.Location = new System.Drawing.Point(7, 361);
+            this.chkProhibicionVenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkProhibicionVenta.Name = "chkProhibicionVenta";
+            this.chkProhibicionVenta.Size = new System.Drawing.Size(427, 29);
+            this.chkProhibicionVenta.TabIndex = 57;
+            this.chkProhibicionVenta.Text = "Prohibición de venta o enajenación de bienes";
+            this.chkProhibicionVenta.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // chkUsoVivienda
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(173, 37);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(63, 29);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "NO";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.chkUsoVivienda.AutoSize = true;
+            this.chkUsoVivienda.Location = new System.Drawing.Point(7, 332);
+            this.chkUsoVivienda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkUsoVivienda.Name = "chkUsoVivienda";
+            this.chkUsoVivienda.Size = new System.Drawing.Size(256, 29);
+            this.chkUsoVivienda.TabIndex = 56;
+            this.chkUsoVivienda.Text = "Uso y disfrute de vivienda";
+            this.chkUsoVivienda.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // chkPensionAlimentaria
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(76, 37);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(52, 29);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "SI";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.chkPensionAlimentaria.AutoSize = true;
+            this.chkPensionAlimentaria.Location = new System.Drawing.Point(7, 303);
+            this.chkPensionAlimentaria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkPensionAlimentaria.Name = "chkPensionAlimentaria";
+            this.chkPensionAlimentaria.Size = new System.Drawing.Size(235, 29);
+            this.chkPensionAlimentaria.TabIndex = 55;
+            this.chkPensionAlimentaria.Text = "Pensiones alimentarias";
+            this.chkPensionAlimentaria.UseVisualStyleBackColor = true;
             // 
-            // groupBox8
+            // chkAcompanamientoCasa
             // 
-            this.groupBox8.Controls.Add(this.radioButton3);
-            this.groupBox8.Controls.Add(this.radioButton4);
-            this.groupBox8.Location = new System.Drawing.Point(21, 324);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(504, 78);
-            this.groupBox8.TabIndex = 80;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Solicitud ampliacion medidas provisionales";
+            this.chkAcompanamientoCasa.AutoSize = true;
+            this.chkAcompanamientoCasa.Location = new System.Drawing.Point(7, 215);
+            this.chkAcompanamientoCasa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkAcompanamientoCasa.Name = "chkAcompanamientoCasa";
+            this.chkAcompanamientoCasa.Size = new System.Drawing.Size(417, 29);
+            this.chkAcompanamientoCasa.TabIndex = 53;
+            this.chkAcompanamientoCasa.Text = "Acompañamiento para reingreso al domicilio";
+            this.chkAcompanamientoCasa.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // chkProteccionPoliciva
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(173, 37);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(63, 29);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "NO";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.chkProteccionPoliciva.AutoSize = true;
+            this.chkProteccionPoliciva.Location = new System.Drawing.Point(7, 187);
+            this.chkProteccionPoliciva.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkProteccionPoliciva.Name = "chkProteccionPoliciva";
+            this.chkProteccionPoliciva.Size = new System.Drawing.Size(196, 29);
+            this.chkProteccionPoliciva.TabIndex = 52;
+            this.chkProteccionPoliciva.Text = "Protección policiva";
+            this.chkProteccionPoliciva.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // chkEsconderHijos
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(76, 37);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(52, 29);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "SI";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.chkEsconderHijos.AutoSize = true;
+            this.chkEsconderHijos.Location = new System.Drawing.Point(7, 128);
+            this.chkEsconderHijos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkEsconderHijos.Name = "chkEsconderHijos";
+            this.chkEsconderHijos.Size = new System.Drawing.Size(451, 29);
+            this.chkEsconderHijos.TabIndex = 50;
+            this.chkEsconderHijos.Text = "Prohibición de trasladar o esconder a hijas/hijos ";
+            this.chkEsconderHijos.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // lblAbtenerseLugar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(855, 286);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 30);
-            this.textBox1.TabIndex = 79;
+            this.lblAbtenerseLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblAbtenerseLugar.Location = new System.Drawing.Point(29, 76);
+            this.lblAbtenerseLugar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAbtenerseLugar.Name = "lblAbtenerseLugar";
+            this.lblAbtenerseLugar.Size = new System.Drawing.Size(448, 54);
+            this.lblAbtenerseLugar.TabIndex = 49;
+            this.lblAbtenerseLugar.Text = "Abstenerse de penetrar en cualquier lugar donde esté la víctima";
             // 
-            // label11
+            // chkAcudirTratamiento
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label11.Location = new System.Drawing.Point(558, 289);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 25);
-            this.label11.TabIndex = 78;
-            this.label11.Text = "otra cual";
+            this.chkAcudirTratamiento.AutoSize = true;
+            this.chkAcudirTratamiento.Location = new System.Drawing.Point(7, 158);
+            this.chkAcudirTratamiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkAcudirTratamiento.Name = "chkAcudirTratamiento";
+            this.chkAcudirTratamiento.Size = new System.Drawing.Size(207, 29);
+            this.chkAcudirTratamiento.TabIndex = 4;
+            this.chkAcudirTratamiento.Text = "Acudir a tratamiento";
+            this.chkAcudirTratamiento.UseVisualStyleBackColor = true;
             // 
-            // groupBox6
+            // chkSuspencionArmas
             // 
-            this.groupBox6.Controls.Add(this.chkPatrimonial);
-            this.groupBox6.Controls.Add(this.chkSexual);
-            this.groupBox6.Controls.Add(this.chkPsicologica);
-            this.groupBox6.Controls.Add(this.chkVerbal);
-            this.groupBox6.Controls.Add(this.chkViolenciaFisica);
-            this.groupBox6.Location = new System.Drawing.Point(535, 120);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(447, 166);
-            this.groupBox6.TabIndex = 77;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Medidas de proteccion";
+            this.chkSuspencionArmas.AutoSize = true;
+            this.chkSuspencionArmas.Location = new System.Drawing.Point(7, 274);
+            this.chkSuspencionArmas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkSuspencionArmas.Name = "chkSuspencionArmas";
+            this.chkSuspencionArmas.Size = new System.Drawing.Size(350, 29);
+            this.chkSuspencionArmas.TabIndex = 3;
+            this.chkSuspencionArmas.Text = "Suspensión de la tenencia de armas";
+            this.chkSuspencionArmas.UseVisualStyleBackColor = true;
             // 
-            // chkPatrimonial
+            // chkAbstenerseLugar
             // 
-            this.chkPatrimonial.AutoSize = true;
-            this.chkPatrimonial.Location = new System.Drawing.Point(43, 106);
-            this.chkPatrimonial.Name = "chkPatrimonial";
-            this.chkPatrimonial.Size = new System.Drawing.Size(248, 29);
-            this.chkPatrimonial.TabIndex = 4;
-            this.chkPatrimonial.Text = "Patrimonial o Enocómica";
-            this.chkPatrimonial.UseVisualStyleBackColor = true;
+            this.chkAbstenerseLugar.AutoSize = true;
+            this.chkAbstenerseLugar.Location = new System.Drawing.Point(7, 90);
+            this.chkAbstenerseLugar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkAbstenerseLugar.Name = "chkAbstenerseLugar";
+            this.chkAbstenerseLugar.Size = new System.Drawing.Size(18, 17);
+            this.chkAbstenerseLugar.TabIndex = 2;
+            this.chkAbstenerseLugar.UseVisualStyleBackColor = true;
             // 
-            // chkSexual
+            // chkRegimenProvisional
             // 
-            this.chkSexual.AutoSize = true;
-            this.chkSexual.Location = new System.Drawing.Point(255, 71);
-            this.chkSexual.Name = "chkSexual";
-            this.chkSexual.Size = new System.Drawing.Size(95, 29);
-            this.chkSexual.TabIndex = 3;
-            this.chkSexual.Text = "Sexual";
-            this.chkSexual.UseVisualStyleBackColor = true;
+            this.chkRegimenProvisional.AutoSize = true;
+            this.chkRegimenProvisional.Location = new System.Drawing.Point(7, 245);
+            this.chkRegimenProvisional.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkRegimenProvisional.Name = "chkRegimenProvisional";
+            this.chkRegimenProvisional.Size = new System.Drawing.Size(459, 29);
+            this.chkRegimenProvisional.TabIndex = 1;
+            this.chkRegimenProvisional.Text = "Régimen provisional de visitas, guarda y custodia";
+            this.chkRegimenProvisional.UseVisualStyleBackColor = true;
             // 
-            // chkPsicologica
+            // chkDesalojo
             // 
-            this.chkPsicologica.AutoSize = true;
-            this.chkPsicologica.Location = new System.Drawing.Point(43, 71);
-            this.chkPsicologica.Name = "chkPsicologica";
-            this.chkPsicologica.Size = new System.Drawing.Size(133, 29);
-            this.chkPsicologica.TabIndex = 2;
-            this.chkPsicologica.Text = "Psicológica";
-            this.chkPsicologica.UseVisualStyleBackColor = true;
-            // 
-            // chkVerbal
-            // 
-            this.chkVerbal.AutoSize = true;
-            this.chkVerbal.Location = new System.Drawing.Point(255, 29);
-            this.chkVerbal.Name = "chkVerbal";
-            this.chkVerbal.Size = new System.Drawing.Size(91, 29);
-            this.chkVerbal.TabIndex = 1;
-            this.chkVerbal.Text = "Verbal";
-            this.chkVerbal.UseVisualStyleBackColor = true;
-            // 
-            // chkViolenciaFisica
-            // 
-            this.chkViolenciaFisica.AutoSize = true;
-            this.chkViolenciaFisica.Location = new System.Drawing.Point(43, 30);
-            this.chkViolenciaFisica.Name = "chkViolenciaFisica";
-            this.chkViolenciaFisica.Size = new System.Drawing.Size(85, 29);
-            this.chkViolenciaFisica.TabIndex = 0;
-            this.chkViolenciaFisica.Text = "Física";
-            this.chkViolenciaFisica.UseVisualStyleBackColor = true;
+            this.chkDesalojo.AutoSize = true;
+            this.chkDesalojo.Location = new System.Drawing.Point(7, 46);
+            this.chkDesalojo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkDesalojo.Name = "chkDesalojo";
+            this.chkDesalojo.Size = new System.Drawing.Size(110, 29);
+            this.chkDesalojo.TabIndex = 0;
+            this.chkDesalojo.Text = "Desalojo";
+            this.chkDesalojo.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.radioButton1);
-            this.groupBox5.Controls.Add(this.radioButton2);
-            this.groupBox5.Location = new System.Drawing.Point(531, 30);
+            this.groupBox5.Controls.Add(this.rdbMedidasProteccionNO);
+            this.groupBox5.Controls.Add(this.rdbMedidasProteccionSI);
+            this.groupBox5.Location = new System.Drawing.Point(34, 267);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(374, 84);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Size = new System.Drawing.Size(411, 72);
             this.groupBox5.TabIndex = 76;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Opcion de medidas de proteccion";
+            this.groupBox5.Text = "Opción de medidas de proteccion";
             // 
-            // radioButton1
+            // rdbMedidasProteccionNO
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(173, 37);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(63, 29);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "NO";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdbMedidasProteccionNO.AutoSize = true;
+            this.rdbMedidasProteccionNO.Checked = true;
+            this.rdbMedidasProteccionNO.Location = new System.Drawing.Point(173, 37);
+            this.rdbMedidasProteccionNO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbMedidasProteccionNO.Name = "rdbMedidasProteccionNO";
+            this.rdbMedidasProteccionNO.Size = new System.Drawing.Size(63, 29);
+            this.rdbMedidasProteccionNO.TabIndex = 1;
+            this.rdbMedidasProteccionNO.TabStop = true;
+            this.rdbMedidasProteccionNO.Text = "NO";
+            this.rdbMedidasProteccionNO.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdbMedidasProteccionSI
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(76, 37);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(52, 29);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "SI";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // lblMensajeAgresion
-            // 
-            this.lblMensajeAgresion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblMensajeAgresion.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblMensajeAgresion.Location = new System.Drawing.Point(484, 20);
-            this.lblMensajeAgresion.Name = "lblMensajeAgresion";
-            this.lblMensajeAgresion.Size = new System.Drawing.Size(578, 82);
-            this.lblMensajeAgresion.TabIndex = 71;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnGuardar.Location = new System.Drawing.Point(906, 20);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(156, 46);
-            this.btnGuardar.TabIndex = 69;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // txtResponsable
-            // 
-            this.txtResponsable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtResponsable.Location = new System.Drawing.Point(324, 189);
-            this.txtResponsable.Margin = new System.Windows.Forms.Padding(4);
-            this.txtResponsable.Name = "txtResponsable";
-            this.txtResponsable.Size = new System.Drawing.Size(144, 30);
-            this.txtResponsable.TabIndex = 47;
+            this.rdbMedidasProteccionSI.AutoSize = true;
+            this.rdbMedidasProteccionSI.Location = new System.Drawing.Point(76, 37);
+            this.rdbMedidasProteccionSI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbMedidasProteccionSI.Name = "rdbMedidasProteccionSI";
+            this.rdbMedidasProteccionSI.Size = new System.Drawing.Size(52, 29);
+            this.rdbMedidasProteccionSI.TabIndex = 0;
+            this.rdbMedidasProteccionSI.Text = "SI";
+            this.rdbMedidasProteccionSI.UseVisualStyleBackColor = true;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label22.Location = new System.Drawing.Point(27, 192);
+            this.label22.Location = new System.Drawing.Point(29, 192);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(289, 25);
+            this.label22.Size = new System.Drawing.Size(274, 25);
             this.label22.TabIndex = 46;
-            this.label22.Text = "c.\tAuto que avoca conocimiento ";
+            this.label22.Text = "Auto que avoca conocimiento ";
             // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.label23);
             this.groupBox7.Controls.Add(this.label24);
-            this.groupBox7.Controls.Add(this.cmbAnioAgresion);
-            this.groupBox7.Controls.Add(this.cmbMesAgresion);
+            this.groupBox7.Controls.Add(this.cmbAnio);
+            this.groupBox7.Controls.Add(this.cmbMes);
             this.groupBox7.Controls.Add(this.label25);
-            this.groupBox7.Controls.Add(this.cmbDiaAgresion);
+            this.groupBox7.Controls.Add(this.cmbDia);
             this.groupBox7.Location = new System.Drawing.Point(32, 44);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox7.Size = new System.Drawing.Size(436, 113);
+            this.groupBox7.Size = new System.Drawing.Size(413, 113);
             this.groupBox7.TabIndex = 45;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Fecha Orientación";
+            this.groupBox7.Text = "Fecha";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label23.Location = new System.Drawing.Point(287, 33);
+            this.label23.Location = new System.Drawing.Point(267, 33);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(48, 25);
@@ -1507,26 +1831,26 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label24.Location = new System.Drawing.Point(147, 33);
+            this.label24.Location = new System.Drawing.Point(103, 33);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(50, 25);
             this.label24.TabIndex = 45;
             this.label24.Text = "Mes";
             // 
-            // cmbAnioAgresion
+            // cmbAnio
             // 
-            this.cmbAnioAgresion.FormattingEnabled = true;
-            this.cmbAnioAgresion.Location = new System.Drawing.Point(292, 62);
-            this.cmbAnioAgresion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbAnioAgresion.Name = "cmbAnioAgresion";
-            this.cmbAnioAgresion.Size = new System.Drawing.Size(121, 33);
-            this.cmbAnioAgresion.TabIndex = 48;
+            this.cmbAnio.FormattingEnabled = true;
+            this.cmbAnio.Location = new System.Drawing.Point(265, 62);
+            this.cmbAnio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbAnio.Name = "cmbAnio";
+            this.cmbAnio.Size = new System.Drawing.Size(121, 33);
+            this.cmbAnio.TabIndex = 48;
             // 
-            // cmbMesAgresion
+            // cmbMes
             // 
-            this.cmbMesAgresion.FormattingEnabled = true;
-            this.cmbMesAgresion.Items.AddRange(new object[] {
+            this.cmbMes.FormattingEnabled = true;
+            this.cmbMes.Items.AddRange(new object[] {
             "Enero",
             "Febrero",
             "Marzo",
@@ -1539,11 +1863,11 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cmbMesAgresion.Location = new System.Drawing.Point(151, 62);
-            this.cmbMesAgresion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbMesAgresion.Name = "cmbMesAgresion";
-            this.cmbMesAgresion.Size = new System.Drawing.Size(121, 33);
-            this.cmbMesAgresion.TabIndex = 46;
+            this.cmbMes.Location = new System.Drawing.Point(107, 62);
+            this.cmbMes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbMes.Name = "cmbMes";
+            this.cmbMes.Size = new System.Drawing.Size(151, 33);
+            this.cmbMes.TabIndex = 46;
             // 
             // label25
             // 
@@ -1556,14 +1880,14 @@
             this.label25.TabIndex = 41;
             this.label25.Text = "Día";
             // 
-            // cmbDiaAgresion
+            // cmbDia
             // 
-            this.cmbDiaAgresion.FormattingEnabled = true;
-            this.cmbDiaAgresion.Location = new System.Drawing.Point(16, 62);
-            this.cmbDiaAgresion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbDiaAgresion.Name = "cmbDiaAgresion";
-            this.cmbDiaAgresion.Size = new System.Drawing.Size(121, 33);
-            this.cmbDiaAgresion.TabIndex = 44;
+            this.cmbDia.FormattingEnabled = true;
+            this.cmbDia.Location = new System.Drawing.Point(16, 62);
+            this.cmbDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDia.Name = "cmbDia";
+            this.cmbDia.Size = new System.Drawing.Size(76, 33);
+            this.cmbDia.TabIndex = 44;
             // 
             // label26
             // 
@@ -1575,61 +1899,83 @@
             this.label26.Size = new System.Drawing.Size(0, 25);
             this.label26.TabIndex = 40;
             // 
-            // groupBox15
+            // pnlOrientaciones
             // 
-            this.groupBox15.Controls.Add(this.textBox6);
-            this.groupBox15.Controls.Add(this.label33);
-            this.groupBox15.Controls.Add(this.radioButton11);
-            this.groupBox15.Controls.Add(this.radioButton12);
-            this.groupBox15.Location = new System.Drawing.Point(1148, 1452);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(374, 199);
-            this.groupBox15.TabIndex = 77;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "Acompañamiento de la comisaria";
+            this.pnlOrientaciones.Controls.Add(this.dgvOrientaciones);
+            this.pnlOrientaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlOrientaciones.Location = new System.Drawing.Point(1137, 724);
+            this.pnlOrientaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlOrientaciones.Name = "pnlOrientaciones";
+            this.pnlOrientaciones.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlOrientaciones.Size = new System.Drawing.Size(528, 233);
+            this.pnlOrientaciones.TabIndex = 36;
+            this.pnlOrientaciones.TabStop = false;
+            this.pnlOrientaciones.Text = "Orientaciones";
             // 
-            // textBox6
+            // dgvOrientaciones
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox6.Location = new System.Drawing.Point(21, 140);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(310, 30);
-            this.textBox6.TabIndex = 88;
+            this.dgvOrientaciones.AllowUserToAddRows = false;
+            this.dgvOrientaciones.AllowUserToDeleteRows = false;
+            this.dgvOrientaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrientaciones.Location = new System.Drawing.Point(8, 38);
+            this.dgvOrientaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvOrientaciones.Name = "dgvOrientaciones";
+            this.dgvOrientaciones.ReadOnly = true;
+            this.dgvOrientaciones.RowHeadersWidth = 51;
+            this.dgvOrientaciones.Size = new System.Drawing.Size(496, 181);
+            this.dgvOrientaciones.TabIndex = 24;
             // 
-            // label33
+            // pnlEntrevistas
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label33.Location = new System.Drawing.Point(34, 89);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(123, 25);
-            this.label33.TabIndex = 87;
-            this.label33.Text = "Observación";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pnlEntrevistas.Controls.Add(this.dgvEntrevistas);
+            this.pnlEntrevistas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlEntrevistas.Location = new System.Drawing.Point(1137, 965);
+            this.pnlEntrevistas.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlEntrevistas.Name = "pnlEntrevistas";
+            this.pnlEntrevistas.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlEntrevistas.Size = new System.Drawing.Size(528, 233);
+            this.pnlEntrevistas.TabIndex = 42;
+            this.pnlEntrevistas.TabStop = false;
+            this.pnlEntrevistas.Text = "Entrevistas";
             // 
-            // radioButton11
+            // dgvEntrevistas
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(173, 37);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(50, 21);
-            this.radioButton11.TabIndex = 1;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "NO";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.dgvEntrevistas.AllowUserToAddRows = false;
+            this.dgvEntrevistas.AllowUserToDeleteRows = false;
+            this.dgvEntrevistas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEntrevistas.Location = new System.Drawing.Point(8, 38);
+            this.dgvEntrevistas.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEntrevistas.Name = "dgvEntrevistas";
+            this.dgvEntrevistas.ReadOnly = true;
+            this.dgvEntrevistas.RowHeadersWidth = 51;
+            this.dgvEntrevistas.Size = new System.Drawing.Size(496, 181);
+            this.dgvEntrevistas.TabIndex = 24;
             // 
-            // radioButton12
+            // pnlInicioProceso
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(76, 37);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(41, 21);
-            this.radioButton12.TabIndex = 0;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "SI";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.pnlInicioProceso.Controls.Add(this.dgvIniciosProcesos);
+            this.pnlInicioProceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlInicioProceso.Location = new System.Drawing.Point(1137, 1213);
+            this.pnlInicioProceso.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlInicioProceso.Name = "pnlInicioProceso";
+            this.pnlInicioProceso.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlInicioProceso.Size = new System.Drawing.Size(528, 233);
+            this.pnlInicioProceso.TabIndex = 43;
+            this.pnlInicioProceso.TabStop = false;
+            this.pnlInicioProceso.Text = "Inicios proceso";
+            // 
+            // dgvIniciosProcesos
+            // 
+            this.dgvIniciosProcesos.AllowUserToAddRows = false;
+            this.dgvIniciosProcesos.AllowUserToDeleteRows = false;
+            this.dgvIniciosProcesos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIniciosProcesos.Location = new System.Drawing.Point(8, 38);
+            this.dgvIniciosProcesos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvIniciosProcesos.Name = "dgvIniciosProcesos";
+            this.dgvIniciosProcesos.ReadOnly = true;
+            this.dgvIniciosProcesos.RowHeadersWidth = 51;
+            this.dgvIniciosProcesos.Size = new System.Drawing.Size(496, 181);
+            this.dgvIniciosProcesos.TabIndex = 24;
             // 
             // FrmRegistrarInicioProceso
             // 
@@ -1637,19 +1983,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1736, 1055);
-            this.Controls.Add(this.groupBox15);
-            this.Controls.Add(this.pnlRegistrarAgresion);
+            this.ClientSize = new System.Drawing.Size(1778, 846);
+            this.Controls.Add(this.pnlInicioProceso);
+            this.Controls.Add(this.pnlEntrevistas);
+            this.Controls.Add(this.pnlOrientaciones);
+            this.Controls.Add(this.pnlRegistroNuevo);
             this.Controls.Add(this.pnlAgresiones);
             this.Controls.Add(this.pnlTitulo);
-            this.Controls.Add(this.pnlVisitasAnteriores);
+            this.Controls.Add(this.pnlVisitas);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRegistrarInicioProceso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar barequero";
             this.Load += new System.EventHandler(this.FrmRegistrarAgresion_Load);
-            this.pnlVisitasAnteriores.ResumeLayout(false);
+            this.pnlVisitas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitasAnteriores)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
@@ -1668,36 +2016,36 @@
             this.pnlRegistro.PerformLayout();
             this.pnlAgresiones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgresiones)).EndInit();
-            this.pnlRegistrarAgresion.ResumeLayout(false);
-            this.pnlRegistrarAgresion.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
+            this.pnlRegistroNuevo.ResumeLayout(false);
+            this.pnlRegistroNuevo.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.chkOtra.ResumeLayout(false);
+            this.chkOtra.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            this.groupBox15.ResumeLayout(false);
-            this.groupBox15.PerformLayout();
+            this.pnlOrientaciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrientaciones)).EndInit();
+            this.pnlEntrevistas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntrevistas)).EndInit();
+            this.pnlInicioProceso.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIniciosProcesos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox pnlVisitasAnteriores;
+        private System.Windows.Forms.GroupBox pnlVisitas;
         private System.Windows.Forms.DataGridView dgvVisitasAnteriores;
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Label label19;
@@ -1710,12 +2058,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblFechaActual;
         private System.Windows.Forms.GroupBox grbFechaNacimiento;
-        private System.Windows.Forms.Label lblAnio;
-        private System.Windows.Forms.Label lblMes;
-        private System.Windows.Forms.ComboBox cmbAnio;
-        private System.Windows.Forms.ComboBox cmbMes;
-        private System.Windows.Forms.Label lblDia;
-        private System.Windows.Forms.ComboBox cmbDia;
+        private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label label4;
@@ -1748,77 +2091,103 @@
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.GroupBox pnlAgresiones;
         private System.Windows.Forms.DataGridView dgvAgresiones;
-        private System.Windows.Forms.GroupBox pnlRegistrarAgresion;
-        private System.Windows.Forms.TextBox txtResponsable;
+        private System.Windows.Forms.GroupBox pnlRegistroNuevo;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ComboBox cmbAnioAgresion;
-        private System.Windows.Forms.ComboBox cmbMesAgresion;
+        private System.Windows.Forms.ComboBox cmbAnio;
+        private System.Windows.Forms.ComboBox cmbMes;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.ComboBox cmbDiaAgresion;
+        private System.Windows.Forms.ComboBox cmbDia;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Label lblMensajeAgresion;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.RadioButton rdbMedidasProteccionNO;
+        private System.Windows.Forms.RadioButton rdbMedidasProteccionSI;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.CheckBox chkPatrimonial;
-        private System.Windows.Forms.CheckBox chkSexual;
-        private System.Windows.Forms.CheckBox chkPsicologica;
-        private System.Windows.Forms.CheckBox chkVerbal;
-        private System.Windows.Forms.CheckBox chkViolenciaFisica;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton rdbRemisionFiscaliaNO;
+        private System.Windows.Forms.RadioButton rdbRemisionFiscaliaSI;
+        private System.Windows.Forms.GroupBox chkOtra;
+        private System.Windows.Forms.CheckBox chkAcudirTratamiento;
+        private System.Windows.Forms.CheckBox chkSuspencionArmas;
+        private System.Windows.Forms.CheckBox chkAbstenerseLugar;
+        private System.Windows.Forms.CheckBox chkRegimenProvisional;
+        private System.Windows.Forms.CheckBox chkDesalojo;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ComboBox cmbTipoRemisionRemisionEPS;
+        private System.Windows.Forms.Button btnSubirAutoAvocaConocimiento;
+        private System.Windows.Forms.Label lblRutaAutoAvoca;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.TextBox txtObservacionAcompanamientoComisaria;
+        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.RadioButton rdbAcompanamientoComisariaNO;
+        private System.Windows.Forms.RadioButton rdbAcompanamientoComisariaSI;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.ComboBox cmbAnioRemisionEPS;
+        private System.Windows.Forms.ComboBox cmbMesRemisionEPS;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.ComboBox cmbDiaRemisionEPS;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.RadioButton rdbRemisionEPSNO;
+        private System.Windows.Forms.RadioButton rdbRemisionEPSSI;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label lblInforme;
+        private System.Windows.Forms.Button BtnInformeRemisionMedicinaLegal;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox cmbAnioRemisionMedicinaLegal;
+        private System.Windows.Forms.ComboBox cmbMesRemisionMedicinaLegal;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox cmbDiaRemisionMedicinaLegal;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.RadioButton rdbRemisionMedicinaLegalNO;
+        private System.Windows.Forms.RadioButton rdbRemisionMedicinaLegalSI;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.ComboBox cmbSeOtorgaronAmpliacionMedidas;
+        private System.Windows.Forms.TextBox txtNumeroNoticiaRemisionFiscalia;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.ComboBox cmbAnioRemisionFiscalia;
+        private System.Windows.Forms.ComboBox cmbMesRemisionFiscalia;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.ComboBox cmbDiaRemisionFiscalia;
+        private System.Windows.Forms.TextBox txtOtraMedida;
+        private System.Windows.Forms.CheckBox chkOtraMedida;
+        private System.Windows.Forms.CheckBox chkDevolucionObjetos;
+        private System.Windows.Forms.CheckBox chkProhibicionVenta;
+        private System.Windows.Forms.CheckBox chkUsoVivienda;
+        private System.Windows.Forms.CheckBox chkPensionAlimentaria;
+        private System.Windows.Forms.CheckBox chkAcompanamientoCasa;
+        private System.Windows.Forms.CheckBox chkProteccionPoliciva;
+        private System.Windows.Forms.CheckBox chkEsconderHijos;
+        private System.Windows.Forms.Label lblAbtenerseLugar;
+        private System.Windows.Forms.GroupBox pnlOrientaciones;
+        private System.Windows.Forms.DataGridView dgvOrientaciones;
+        private System.Windows.Forms.GroupBox pnlEntrevistas;
+        private System.Windows.Forms.DataGridView dgvEntrevistas;
+        private System.Windows.Forms.GroupBox pnlInicioProceso;
+        private System.Windows.Forms.DataGridView dgvIniciosProcesos;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox cmbAnioAmpliacionMedidas;
+        private System.Windows.Forms.ComboBox cmbMesAmpliacionMedidas;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.ComboBox cmbDiaAmpliacionMedidas;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.RadioButton rdbAmpliacionMedidasNO;
+        private System.Windows.Forms.RadioButton rdbAmpliacionMedidasSI;
     }
 }

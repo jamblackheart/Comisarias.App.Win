@@ -149,9 +149,6 @@ namespace Comisarias.App.Escritorio.Forms
 
             ObtenerGeneros();
             ObtenerAreas();
-
-
-
         }
 
 
@@ -239,19 +236,19 @@ namespace Comisarias.App.Escritorio.Forms
             objAgresion.Fecha = Convert.ToDateTime("12/12/2020");
             objAgresion.NombreAgresor = "Agresor Name";
             objAgresion.DocumentoAgresor = "555";
-            objAgresion.RelacionAgresorId = 1;
+            //objAgresion.RelacionAgresorId = 1;
             objAgresion.OtraRelacionAgresor = "";
             objAgresion.DireccionDomicilioAgresor = "Cra 45 CL 22";
             objAgresion.Radicado = "RD-25";
             objAgresion.CuentaMedidasProteccion = false;
-            objAgresion.MedidaProteccionId = 1;
+           // objAgresion.MedidaProteccionId = 1;
             objAgresion.CualOtraMedidaProteccion = "";
 
             controlador_agresion.AgregarRegistro(objAgresion);
 
             if (ValidarDatosAgresion())
             {
-                
+
                 if (usuario.Id > 0)
                 {
                     RegistrarAgresion();
@@ -260,7 +257,7 @@ namespace Comisarias.App.Escritorio.Forms
                 {
                     lblMensajeAgresion.Text = "Problema con el usuario consultado no pudo agregarse la agresion";
                 }
-                
+
 
             }
 
@@ -301,7 +298,7 @@ namespace Comisarias.App.Escritorio.Forms
         }
         private void ObtenerVisitas()
         {
-            RespuestaGetDatos respuesta = controlador_visita.ObtenerVisitasPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_visita.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
@@ -324,7 +321,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void ObtenerAgresiones()
         {
-            RespuestaGetDatos respuesta = controlador_agresion.ObtenerAgresionesPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_agresion.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
@@ -344,7 +341,7 @@ namespace Comisarias.App.Escritorio.Forms
                 pnlAgresiones.Visible = false;
             }
         }
-      
+
         private bool ValidarDatosUsuario()
         {
             bool valido = true;
@@ -445,7 +442,7 @@ namespace Comisarias.App.Escritorio.Forms
             //    valido = false;
             //    mensaje += " Genero,";
             //}
-            
+
 
             if (!valido)
             {

@@ -130,12 +130,12 @@ namespace Comisarias.App.Escritorio.Controllers
                         pFecha.Value = objAgresion.Fecha;
                         pNombreAgresor.Value = objAgresion.NombreAgresor;
                         pDocumentoAgresor.Value = objAgresion.DocumentoAgresor;
-                        pRelacionAgresorId.Value = objAgresion.RelacionAgresorId;
+                      //  pRelacionAgresorId.Value = objAgresion.RelacionAgresorId;
                         pOtraRelacionAgresor.Value = objAgresion.OtraRelacionAgresor;
                         pDireccionDomicilioAgresor.Value = objAgresion.DireccionDomicilioAgresor;
                         pRadicado.Value = objAgresion.Radicado;
                         pCuentaMedidasProteccion.Value = objAgresion.CuentaMedidasProteccion;
-                        pMedidaProteccionId.Value = objAgresion.MedidaProteccionId;
+//pMedidaProteccionId.Value = objAgresion.MedidaProteccionId;
                         pCualOtraMedidaProteccion.Value = objAgresion.CualOtraMedidaProteccion;
 
                         command.Parameters.Add(pUsuarioId);
@@ -217,7 +217,7 @@ namespace Comisarias.App.Escritorio.Controllers
 
         }
 
-        public RespuestaGetDatos ObtenerAgresionesPorIdUsuario(int idUsuario)
+        public RespuestaGetDatos ObtenerPorIdUsuario(int idUsuario)
         {
             RespuestaGetDatos retorno = new RespuestaGetDatos();
             retorno.FueExitosa = false;
@@ -230,7 +230,18 @@ namespace Comisarias.App.Escritorio.Controllers
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    using (SqlCommand command = new SqlCommand(@"SELECT *
+                    using (SqlCommand command = new SqlCommand(@"SELECT Id
+      ,UsuarioId
+      ,Fecha
+      ,NombreAgresor 'Agresor'
+      ,DocumentoAgresor 'Documento'
+      ,RelacionAgresor 'Relación'
+      ,OtraRelacionAgresor 'Otra'
+      ,DireccionDomicilioAgresor 'Dirección'
+      ,Radicado
+      ,CuentaMedidasProteccion 'Medidas de proteccion?'
+      ,MedidasProteccion 'Medidas de proteccion'
+      ,CualOtraMedidaProteccion 'Otra medida'
                                                         FROM Agresion
                                                    WHERE UsuarioId = @pUsuarioId", con))
                     {

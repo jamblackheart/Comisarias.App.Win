@@ -13,12 +13,12 @@ namespace Comisarias.App.Escritorio.Models
         public DateTime Fecha { get; set; }
         public string NombreAgresor { get; set; }
         public string DocumentoAgresor { get; set; }
-        public int RelacionAgresorId { get; set; }
+        public string RelacionAgresor { get; set; }
         public string OtraRelacionAgresor { get; set; }
         public string DireccionDomicilioAgresor { get; set; }
         public string Radicado { get; set; }
         public bool CuentaMedidasProteccion { get; set; }
-        public int MedidaProteccionId { get; set; }
+        public string MedidasProteccion { get; set; }
         public string CualOtraMedidaProteccion { get; set; }
        
     }

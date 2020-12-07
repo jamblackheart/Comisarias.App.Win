@@ -220,10 +220,10 @@
             // btnConsultar
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnConsultar.Location = new System.Drawing.Point(348, 100);
+            this.btnConsultar.Location = new System.Drawing.Point(348, 99);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(109, 32);
+            this.btnConsultar.Size = new System.Drawing.Size(109, 33);
             this.btnConsultar.TabIndex = 2;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -637,10 +637,10 @@
             // btnRefrescar
             // 
             this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRefrescar.Location = new System.Drawing.Point(986, 99);
+            this.btnRefrescar.Location = new System.Drawing.Point(953, 99);
             this.btnRefrescar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(109, 32);
+            this.btnRefrescar.Size = new System.Drawing.Size(142, 30);
             this.btnRefrescar.TabIndex = 68;
             this.btnRefrescar.Text = "Refrescar";
             this.btnRefrescar.UseVisualStyleBackColor = true;
