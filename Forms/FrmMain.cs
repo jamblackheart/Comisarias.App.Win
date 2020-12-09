@@ -189,5 +189,21 @@ namespace Comisarias.App.Escritorio
             frmPantalla.MdiParent = this;
             frmPantalla.Show();
         }
+
+        private void audienciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cerrarTodasLasVentanas();
+            FrmRegistrarAudiencia frmPantalla = new FrmRegistrarAudiencia();
+            frmPantalla.MdiParent = this;
+            frmPantalla.Show();
+        }
+
+        private void actualizaciónCasoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cerrarTodasLasVentanas();
+            FrmRegistrarActualizacionIncumplimiento frmPantalla = new FrmRegistrarActualizacionIncumplimiento();
+            frmPantalla.MdiParent = this;
+            frmPantalla.Show();
+        }
     }
 }

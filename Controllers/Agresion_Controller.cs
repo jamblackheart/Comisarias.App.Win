@@ -91,7 +91,7 @@ namespace Comisarias.App.Escritorio.Controllers
 
         }
 
-        public Respuesta AgregarRegistro(Agresion objAgresion)
+        public Respuesta AgregarRegistro(Agresion obj)
         {
             Respuesta retorno = new Respuesta();
             retorno.FueExitosa = false;
@@ -106,48 +106,45 @@ namespace Comisarias.App.Escritorio.Controllers
                     con.Open();
                     using (SqlCommand command = new SqlCommand(@"INSERT INTO Agresion 
                                                                     (UsuarioId,Fecha,NombreAgresor,
-                                                                    DocumentoAgresor,RelacionAgresorId,OtraRelacionAgresor,
+                                                                    DocumentoAgresor,RelacionAgresor,OtraRelacionAgresor,
                                                                     DireccionDomicilioAgresor,Radicado,CuentaMedidasProteccion,
-                                                                    MedidaProteccionId,CualOtraMedidaProteccion)
+                                                                    CualOtraMedidaProteccion)
                                                             VALUES (@pUsuarioId,@pFecha,@pNombreAgresor,
-                                                                    @pDocumentoAgresor,@pRelacionAgresorId,@pOtraRelacionAgresor,
+                                                                    @pDocumentoAgresor,@pRelacionAgresor,@pOtraRelacionAgresor,
                                                                     @pDireccionDomicilioAgresor,@pRadicado,@pCuentaMedidasProteccion,
-                                                                    @pMedidaProteccionId,@pCualOtraMedidaProteccion)", con))
+                                                                    @pCualOtraMedidaProteccion)", con))
                     {
                         SqlParameter pUsuarioId = new SqlParameter("@pUsuarioId", SqlDbType.Int);
                         SqlParameter pFecha = new SqlParameter("@pFecha", SqlDbType.Date);
                         SqlParameter pNombreAgresor = new SqlParameter("@pNombreAgresor", SqlDbType.VarChar);
                         SqlParameter pDocumentoAgresor = new SqlParameter("@pDocumentoAgresor", SqlDbType.VarChar);
-                        SqlParameter pRelacionAgresorId = new SqlParameter("@pRelacionAgresorId", SqlDbType.Int);
+                        SqlParameter pRelacionAgresor = new SqlParameter("@pRelacionAgresor", SqlDbType.VarChar);
                         SqlParameter pOtraRelacionAgresor = new SqlParameter("@pOtraRelacionAgresor", SqlDbType.VarChar);
                         SqlParameter pDireccionDomicilioAgresor = new SqlParameter("@pDireccionDomicilioAgresor", SqlDbType.VarChar);
                         SqlParameter pRadicado = new SqlParameter("@pRadicado", SqlDbType.VarChar);
-                        SqlParameter pCuentaMedidasProteccion = new SqlParameter("@pCuentaMedidasProteccion", SqlDbType.Bit);
-                        SqlParameter pMedidaProteccionId = new SqlParameter("@pMedidaProteccionId", SqlDbType.Int);
+                        SqlParameter pCuentaMedidasProteccion = new SqlParameter("@pCuentaMedidasProteccion", SqlDbType.VarChar);                     
                         SqlParameter pCualOtraMedidaProteccion = new SqlParameter("@pCualOtraMedidaProteccion", SqlDbType.VarChar);
 
-                        pUsuarioId.Value = objAgresion.UsuarioId;
-                        pFecha.Value = objAgresion.Fecha;
-                        pNombreAgresor.Value = objAgresion.NombreAgresor;
-                        pDocumentoAgresor.Value = objAgresion.DocumentoAgresor;
-                      //  pRelacionAgresorId.Value = objAgresion.RelacionAgresorId;
-                        pOtraRelacionAgresor.Value = objAgresion.OtraRelacionAgresor;
-                        pDireccionDomicilioAgresor.Value = objAgresion.DireccionDomicilioAgresor;
-                        pRadicado.Value = objAgresion.Radicado;
-                        pCuentaMedidasProteccion.Value = objAgresion.CuentaMedidasProteccion;
-//pMedidaProteccionId.Value = objAgresion.MedidaProteccionId;
-                        pCualOtraMedidaProteccion.Value = objAgresion.CualOtraMedidaProteccion;
+                        pUsuarioId.Value = obj.UsuarioId;
+                        pFecha.Value = obj.Fecha;
+                        pNombreAgresor.Value = obj.NombreAgresor;
+                        pDocumentoAgresor.Value = obj.DocumentoAgresor;
+                        pRelacionAgresor.Value = obj.RelacionAgresor;
+                        pOtraRelacionAgresor.Value = obj.OtraRelacionAgresor;
+                        pDireccionDomicilioAgresor.Value = obj.DireccionDomicilioAgresor;
+                        pRadicado.Value = obj.Radicado;
+                        pCuentaMedidasProteccion.Value = obj.CuentaMedidasProteccion;
+                        pCualOtraMedidaProteccion.Value = obj.CualOtraMedidaProteccion;
 
                         command.Parameters.Add(pUsuarioId);
                         command.Parameters.Add(pFecha);
                         command.Parameters.Add(pNombreAgresor);
                         command.Parameters.Add(pDocumentoAgresor);
-                        command.Parameters.Add(pRelacionAgresorId);
+                        command.Parameters.Add(pRelacionAgresor);
                         command.Parameters.Add(pOtraRelacionAgresor);
                         command.Parameters.Add(pDireccionDomicilioAgresor);
                         command.Parameters.Add(pRadicado);
                         command.Parameters.Add(pCuentaMedidasProteccion);
-                        command.Parameters.Add(pMedidaProteccionId);
                         command.Parameters.Add(pCualOtraMedidaProteccion);
 
 
@@ -240,7 +237,6 @@ namespace Comisarias.App.Escritorio.Controllers
       ,DireccionDomicilioAgresor 'Dirección'
       ,Radicado
       ,CuentaMedidasProteccion 'Medidas de proteccion?'
-      ,MedidasProteccion 'Medidas de proteccion'
       ,CualOtraMedidaProteccion 'Otra medida'
                                                         FROM Agresion
                                                    WHERE UsuarioId = @pUsuarioId", con))

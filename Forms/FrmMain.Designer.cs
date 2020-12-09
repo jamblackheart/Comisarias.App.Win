@@ -45,6 +45,7 @@
             this.agresionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orientaciónALaVictimaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entrevistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inicioDeProcesoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personalizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deshacerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +63,8 @@
             this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.acercadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inicioDeProcesoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.audienciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizaciónCasoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -180,7 +182,9 @@
             this.agresionToolStripMenuItem,
             this.orientaciónALaVictimaToolStripMenuItem,
             this.entrevistaToolStripMenuItem,
-            this.inicioDeProcesoToolStripMenuItem});
+            this.inicioDeProcesoToolStripMenuItem,
+            this.audienciaToolStripMenuItem,
+            this.actualizaciónCasoToolStripMenuItem});
             this.procedimientosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("procedimientosToolStripMenuItem.Image")));
             this.procedimientosToolStripMenuItem.Name = "procedimientosToolStripMenuItem";
             this.procedimientosToolStripMenuItem.Size = new System.Drawing.Size(190, 34);
@@ -207,6 +211,13 @@
             this.entrevistaToolStripMenuItem.Size = new System.Drawing.Size(299, 30);
             this.entrevistaToolStripMenuItem.Text = "Entrevista";
             this.entrevistaToolStripMenuItem.Click += new System.EventHandler(this.entrevistaToolStripMenuItem_Click);
+            // 
+            // inicioDeProcesoToolStripMenuItem
+            // 
+            this.inicioDeProcesoToolStripMenuItem.Name = "inicioDeProcesoToolStripMenuItem";
+            this.inicioDeProcesoToolStripMenuItem.Size = new System.Drawing.Size(299, 30);
+            this.inicioDeProcesoToolStripMenuItem.Text = "Inicio de proceso";
+            this.inicioDeProcesoToolStripMenuItem.Click += new System.EventHandler(this.inicioDeProcesoToolStripMenuItem_Click);
             // 
             // personalizarToolStripMenuItem
             // 
@@ -306,12 +317,19 @@
             this.acercadeToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.acercadeToolStripMenuItem.Text = "&Acerca de...";
             // 
-            // inicioDeProcesoToolStripMenuItem
+            // audienciaToolStripMenuItem
             // 
-            this.inicioDeProcesoToolStripMenuItem.Name = "inicioDeProcesoToolStripMenuItem";
-            this.inicioDeProcesoToolStripMenuItem.Size = new System.Drawing.Size(299, 30);
-            this.inicioDeProcesoToolStripMenuItem.Text = "Inicio de proceso";
-            this.inicioDeProcesoToolStripMenuItem.Click += new System.EventHandler(this.inicioDeProcesoToolStripMenuItem_Click);
+            this.audienciaToolStripMenuItem.Name = "audienciaToolStripMenuItem";
+            this.audienciaToolStripMenuItem.Size = new System.Drawing.Size(299, 30);
+            this.audienciaToolStripMenuItem.Text = "Audiencia";
+            this.audienciaToolStripMenuItem.Click += new System.EventHandler(this.audienciaToolStripMenuItem_Click);
+            // 
+            // actualizaciónCasoToolStripMenuItem
+            // 
+            this.actualizaciónCasoToolStripMenuItem.Name = "actualizaciónCasoToolStripMenuItem";
+            this.actualizaciónCasoToolStripMenuItem.Size = new System.Drawing.Size(299, 30);
+            this.actualizaciónCasoToolStripMenuItem.Text = "Actualización Caso";
+            this.actualizaciónCasoToolStripMenuItem.Click += new System.EventHandler(this.actualizaciónCasoToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -373,6 +391,8 @@
         private System.Windows.Forms.ToolStripMenuItem funcionariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rolFuncionarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inicioDeProcesoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem audienciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actualizaciónCasoToolStripMenuItem;
     }
 }
 

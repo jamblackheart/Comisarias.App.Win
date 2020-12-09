@@ -34,6 +34,9 @@ namespace Comisarias.App.Escritorio.Forms
         Entrevista_Controller controlador_entrevista = new Entrevista_Controller();
         InicioProceso_Controller controlador_inicioProceso = new InicioProceso_Controller();
 
+        Audiencia_Controller controlador_audiencia = new Audiencia_Controller();
+        Actualizacion_Controller controlador_actualizacion = new Actualizacion_Controller();
+
 
         InicioProceso objRegistro = new InicioProceso();
         string AutoQueAvocaConocimiento = "";
@@ -89,9 +92,7 @@ namespace Comisarias.App.Escritorio.Forms
             txtTelefono.Enabled = false;
             txtEmail.Enabled = false;
             txtDireccion.Enabled = false;
-            cmbDia.Enabled = false;
-            cmbMes.Enabled = false;
-            cmbAnio.Enabled = false;
+           
             txtCualDiscapacidad.Enabled = false;
             txtCualEtnia.Enabled = false;
             rbtDiscapacidadSi.Enabled = false;
@@ -120,6 +121,8 @@ namespace Comisarias.App.Escritorio.Forms
             ObtenerOrientaciones();
             ObtenerEntrevistas();
             ObtenerIniciosProceso();
+            ObtenerAudiencias();
+            ObtenerActualizacionesProceso();
         }
 
         private void ObtenerVisitas()
@@ -236,6 +239,50 @@ namespace Comisarias.App.Escritorio.Forms
             else
             {
                 dgvIniciosProcesos.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerAudiencias()
+        {
+            RespuestaGetDatos respuesta = controlador_audiencia.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvAudiencias.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvAudiencias.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvAudiencias.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerActualizacionesProceso()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacion.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacion.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacion.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacion.DataSource = null;
                 lblMensaje.Text = respuesta.Mensaje;
             }
         }

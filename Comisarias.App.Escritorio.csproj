@@ -17,7 +17,7 @@
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\ComisariasPublicacion\version2\</PublishUrl>
+    <PublishUrl>D:\ComisariasPublicacion\version3\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,7 +27,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>68</ApplicationRevision>
+    <ApplicationRevision>69</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -241,6 +241,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Actualizacion_Controller.cs" />
+    <Compile Include="Controllers\Audiencia_Controller.cs" />
     <Compile Include="Controllers\Orientacion_Controller.cs" />
     <Compile Include="Controllers\InicioProceso_Controller.cs" />
     <Compile Include="Controllers\Entrevista_Controller.cs" />
@@ -270,11 +272,29 @@
     <Compile Include="Forms\FrmConsultaHistoriaUsuario.Designer.cs">
       <DependentUpon>FrmConsultaHistoriaUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmRegistrarActualizacionMedidasProteccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRegistrarActualizacionMedidasProteccion.Designer.cs">
+      <DependentUpon>FrmRegistrarActualizacionMedidasProteccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmRegistrarEntrevista.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmRegistrarEntrevista.Designer.cs">
       <DependentUpon>FrmRegistrarEntrevista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRegistrarActualizacionIncumplimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRegistrarActualizacionIncumplimiento.Designer.cs">
+      <DependentUpon>FrmRegistrarActualizacionIncumplimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRegistrarAudiencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRegistrarAudiencia.Designer.cs">
+      <DependentUpon>FrmRegistrarAudiencia.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmRegistrarInicioProceso.cs">
       <SubType>Form</SubType>
@@ -360,6 +380,9 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InicioProceso_Controller.cs" />
+    <Compile Include="Models\Audiencia.cs" />
+    <Compile Include="Models\Actualizacion.cs" />
     <Compile Include="Models\Orientacion.cs" />
     <Compile Include="Models\Entrevista.cs" />
     <Compile Include="Models\InicioProceso.cs" />
@@ -389,8 +412,17 @@
     <EmbeddedResource Include="Forms\FrmConsultaHistoriaUsuario.resx">
       <DependentUpon>FrmConsultaHistoriaUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRegistrarActualizacionMedidasProteccion.resx">
+      <DependentUpon>FrmRegistrarActualizacionMedidasProteccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmRegistrarEntrevista.resx">
       <DependentUpon>FrmRegistrarEntrevista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRegistrarActualizacionIncumplimiento.resx">
+      <DependentUpon>FrmRegistrarActualizacionIncumplimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRegistrarAudiencia.resx">
+      <DependentUpon>FrmRegistrarAudiencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmRegistrarInicioProceso.resx">
       <DependentUpon>FrmRegistrarInicioProceso.cs</DependentUpon>
