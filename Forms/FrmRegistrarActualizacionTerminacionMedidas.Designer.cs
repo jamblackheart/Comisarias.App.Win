@@ -1,6 +1,6 @@
 ﻿namespace Comisarias.App.Escritorio.Forms
 {
-    partial class FrmRegistrarActualizacionIncumplimiento
+    partial class FrmRegistrarActualizacionTerminacionMedidas
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label label17;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarActualizacionIncumplimiento));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarActualizacionTerminacionMedidas));
             this.pnlVisitas = new System.Windows.Forms.GroupBox();
             this.dgvVisitasAnteriores = new System.Windows.Forms.DataGridView();
             this.pnlTitulo = new System.Windows.Forms.Panel();
@@ -733,7 +733,7 @@
             this.pnlRegistroNuevo.Size = new System.Drawing.Size(1116, 682);
             this.pnlRegistroNuevo.TabIndex = 41;
             this.pnlRegistroNuevo.TabStop = false;
-            this.pnlRegistroNuevo.Text = "ACTUALIZACIÓN INCUMPLIMIENTO";
+            this.pnlRegistroNuevo.Text = "ACTUALIZACIÓN TERMINACIÓN DE MEDIDAS";
             this.pnlRegistroNuevo.Visible = false;
             // 
             // groupBox14
@@ -1322,7 +1322,7 @@
             this.dgvActualizacion.Size = new System.Drawing.Size(591, 270);
             this.dgvActualizacion.TabIndex = 24;
             // 
-            // FrmRegistrarActualizacionIncumplimiento
+            // FrmRegistrarActualizacionTerminacionMedidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1340,7 +1340,7 @@
             this.Controls.Add(this.pnlVisitas);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FrmRegistrarActualizacionIncumplimiento";
+            this.Name = "FrmRegistrarActualizacionTerminacionMedidas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar barequero";
             this.Load += new System.EventHandler(this.FrmRegistrarAgresion_Load);

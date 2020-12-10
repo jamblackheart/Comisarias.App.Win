@@ -46,6 +46,11 @@
             this.orientaciónALaVictimaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entrevistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inicioDeProcesoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.audienciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizacionIncumplimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizacionMedidasProtecciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizacionTerminaciónMedidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actializacionCasoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personalizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deshacerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,8 +68,6 @@
             this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.acercadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.audienciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizaciónCasoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -184,7 +187,10 @@
             this.entrevistaToolStripMenuItem,
             this.inicioDeProcesoToolStripMenuItem,
             this.audienciaToolStripMenuItem,
-            this.actualizaciónCasoToolStripMenuItem});
+            this.actualizacionIncumplimientoToolStripMenuItem,
+            this.actualizacionMedidasProtecciónToolStripMenuItem,
+            this.actualizacionTerminaciónMedidasToolStripMenuItem,
+            this.actializacionCasoToolStripMenuItem});
             this.procedimientosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("procedimientosToolStripMenuItem.Image")));
             this.procedimientosToolStripMenuItem.Name = "procedimientosToolStripMenuItem";
             this.procedimientosToolStripMenuItem.Size = new System.Drawing.Size(190, 34);
@@ -194,30 +200,65 @@
             // agresionToolStripMenuItem
             // 
             this.agresionToolStripMenuItem.Name = "agresionToolStripMenuItem";
-            this.agresionToolStripMenuItem.Size = new System.Drawing.Size(299, 30);
+            this.agresionToolStripMenuItem.Size = new System.Drawing.Size(402, 30);
             this.agresionToolStripMenuItem.Text = "Agresión";
             this.agresionToolStripMenuItem.Click += new System.EventHandler(this.agresionToolStripMenuItem_Click);
             // 
             // orientaciónALaVictimaToolStripMenuItem
             // 
             this.orientaciónALaVictimaToolStripMenuItem.Name = "orientaciónALaVictimaToolStripMenuItem";
-            this.orientaciónALaVictimaToolStripMenuItem.Size = new System.Drawing.Size(299, 30);
+            this.orientaciónALaVictimaToolStripMenuItem.Size = new System.Drawing.Size(402, 30);
             this.orientaciónALaVictimaToolStripMenuItem.Text = "Orientación a la víctima";
             this.orientaciónALaVictimaToolStripMenuItem.Click += new System.EventHandler(this.orientaciónALaVictimaToolStripMenuItem_Click);
             // 
             // entrevistaToolStripMenuItem
             // 
             this.entrevistaToolStripMenuItem.Name = "entrevistaToolStripMenuItem";
-            this.entrevistaToolStripMenuItem.Size = new System.Drawing.Size(299, 30);
+            this.entrevistaToolStripMenuItem.Size = new System.Drawing.Size(402, 30);
             this.entrevistaToolStripMenuItem.Text = "Entrevista";
             this.entrevistaToolStripMenuItem.Click += new System.EventHandler(this.entrevistaToolStripMenuItem_Click);
             // 
             // inicioDeProcesoToolStripMenuItem
             // 
             this.inicioDeProcesoToolStripMenuItem.Name = "inicioDeProcesoToolStripMenuItem";
-            this.inicioDeProcesoToolStripMenuItem.Size = new System.Drawing.Size(299, 30);
+            this.inicioDeProcesoToolStripMenuItem.Size = new System.Drawing.Size(402, 30);
             this.inicioDeProcesoToolStripMenuItem.Text = "Inicio de proceso";
             this.inicioDeProcesoToolStripMenuItem.Click += new System.EventHandler(this.inicioDeProcesoToolStripMenuItem_Click);
+            // 
+            // audienciaToolStripMenuItem
+            // 
+            this.audienciaToolStripMenuItem.Name = "audienciaToolStripMenuItem";
+            this.audienciaToolStripMenuItem.Size = new System.Drawing.Size(402, 30);
+            this.audienciaToolStripMenuItem.Text = "Audiencia";
+            this.audienciaToolStripMenuItem.Click += new System.EventHandler(this.audienciaToolStripMenuItem_Click);
+            // 
+            // actualizacionIncumplimientoToolStripMenuItem
+            // 
+            this.actualizacionIncumplimientoToolStripMenuItem.Name = "actualizacionIncumplimientoToolStripMenuItem";
+            this.actualizacionIncumplimientoToolStripMenuItem.Size = new System.Drawing.Size(402, 30);
+            this.actualizacionIncumplimientoToolStripMenuItem.Text = "Actualización Incumplimiento";
+            this.actualizacionIncumplimientoToolStripMenuItem.Click += new System.EventHandler(this.actualizacionIncumplimientoToolStripMenuItem_Click);
+            // 
+            // actualizacionMedidasProtecciónToolStripMenuItem
+            // 
+            this.actualizacionMedidasProtecciónToolStripMenuItem.Name = "actualizacionMedidasProtecciónToolStripMenuItem";
+            this.actualizacionMedidasProtecciónToolStripMenuItem.Size = new System.Drawing.Size(402, 30);
+            this.actualizacionMedidasProtecciónToolStripMenuItem.Text = "Actualización Medidas Protección";
+            this.actualizacionMedidasProtecciónToolStripMenuItem.Click += new System.EventHandler(this.actualizacionMedidasProtecciónToolStripMenuItem_Click);
+            // 
+            // actualizacionTerminaciónMedidasToolStripMenuItem
+            // 
+            this.actualizacionTerminaciónMedidasToolStripMenuItem.Name = "actualizacionTerminaciónMedidasToolStripMenuItem";
+            this.actualizacionTerminaciónMedidasToolStripMenuItem.Size = new System.Drawing.Size(402, 30);
+            this.actualizacionTerminaciónMedidasToolStripMenuItem.Text = "ActualizaciónTerminación Medidas";
+            this.actualizacionTerminaciónMedidasToolStripMenuItem.Click += new System.EventHandler(this.actualizacionTerminaciónMedidasToolStripMenuItem_Click);
+            // 
+            // actializacionCasoToolStripMenuItem
+            // 
+            this.actializacionCasoToolStripMenuItem.Name = "actializacionCasoToolStripMenuItem";
+            this.actializacionCasoToolStripMenuItem.Size = new System.Drawing.Size(402, 30);
+            this.actializacionCasoToolStripMenuItem.Text = "Actualización Caso";
+            this.actializacionCasoToolStripMenuItem.Click += new System.EventHandler(this.actializacionCasoToolStripMenuItem_Click);
             // 
             // personalizarToolStripMenuItem
             // 
@@ -317,20 +358,6 @@
             this.acercadeToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.acercadeToolStripMenuItem.Text = "&Acerca de...";
             // 
-            // audienciaToolStripMenuItem
-            // 
-            this.audienciaToolStripMenuItem.Name = "audienciaToolStripMenuItem";
-            this.audienciaToolStripMenuItem.Size = new System.Drawing.Size(299, 30);
-            this.audienciaToolStripMenuItem.Text = "Audiencia";
-            this.audienciaToolStripMenuItem.Click += new System.EventHandler(this.audienciaToolStripMenuItem_Click);
-            // 
-            // actualizaciónCasoToolStripMenuItem
-            // 
-            this.actualizaciónCasoToolStripMenuItem.Name = "actualizaciónCasoToolStripMenuItem";
-            this.actualizaciónCasoToolStripMenuItem.Size = new System.Drawing.Size(299, 30);
-            this.actualizaciónCasoToolStripMenuItem.Text = "Actualización Caso";
-            this.actualizaciónCasoToolStripMenuItem.Click += new System.EventHandler(this.actualizaciónCasoToolStripMenuItem_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -392,7 +419,10 @@
         private System.Windows.Forms.ToolStripMenuItem rolFuncionarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inicioDeProcesoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem audienciaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem actualizaciónCasoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actualizacionIncumplimientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actualizacionMedidasProtecciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actualizacionTerminaciónMedidasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actializacionCasoToolStripMenuItem;
     }
 }
 

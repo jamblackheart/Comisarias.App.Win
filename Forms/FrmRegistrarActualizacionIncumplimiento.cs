@@ -17,7 +17,7 @@ using System.Windows.Forms;
 
 namespace Comisarias.App.Escritorio.Forms
 {
-    public partial class FrmRegistrarActualizacionMedidasProteccion : Form
+    public partial class FrmRegistrarActualizacionIncumplimiento : Form
     {
        
         private string[] meses = { "Enero", "Febrero" , "Marzo", "Abril" ,
@@ -41,7 +41,7 @@ namespace Comisarias.App.Escritorio.Forms
         Actualizacion objRegistro = new Actualizacion();
        
 
-        public FrmRegistrarActualizacionMedidasProteccion()
+        public FrmRegistrarActualizacionIncumplimiento()
         {
             InitializeComponent();
 

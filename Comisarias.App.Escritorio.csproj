@@ -272,6 +272,18 @@
     <Compile Include="Forms\FrmConsultaHistoriaUsuario.Designer.cs">
       <DependentUpon>FrmConsultaHistoriaUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmRegistrarActualizacionCaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRegistrarActualizacionCaso.Designer.cs">
+      <DependentUpon>FrmRegistrarActualizacionCaso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRegistrarActualizacionTerminacionMedidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRegistrarActualizacionTerminacionMedidas.Designer.cs">
+      <DependentUpon>FrmRegistrarActualizacionTerminacionMedidas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmRegistrarActualizacionMedidasProteccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -411,6 +423,12 @@
     <Compile Include="Utilities\Helper.cs" />
     <EmbeddedResource Include="Forms\FrmConsultaHistoriaUsuario.resx">
       <DependentUpon>FrmConsultaHistoriaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRegistrarActualizacionCaso.resx">
+      <DependentUpon>FrmRegistrarActualizacionCaso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRegistrarActualizacionTerminacionMedidas.resx">
+      <DependentUpon>FrmRegistrarActualizacionTerminacionMedidas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmRegistrarActualizacionMedidasProteccion.resx">
       <DependentUpon>FrmRegistrarActualizacionMedidasProteccion.cs</DependentUpon>

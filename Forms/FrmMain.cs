@@ -198,10 +198,34 @@ namespace Comisarias.App.Escritorio
             frmPantalla.Show();
         }
 
-        private void actualizaciónCasoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void actualizacionIncumplimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cerrarTodasLasVentanas();
             FrmRegistrarActualizacionIncumplimiento frmPantalla = new FrmRegistrarActualizacionIncumplimiento();
+            frmPantalla.MdiParent = this;
+            frmPantalla.Show();
+        }
+
+        private void actualizacionMedidasProtecciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cerrarTodasLasVentanas();
+            FrmRegistrarActualizacionMedidasProteccion frmPantalla = new FrmRegistrarActualizacionMedidasProteccion();
+            frmPantalla.MdiParent = this;
+            frmPantalla.Show();
+        }
+
+        private void actualizacionTerminaciónMedidasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cerrarTodasLasVentanas();
+            FrmRegistrarActualizacionTerminacionMedidas frmPantalla = new FrmRegistrarActualizacionTerminacionMedidas();
+            frmPantalla.MdiParent = this;
+            frmPantalla.Show();
+        }
+
+        private void actializacionCasoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cerrarTodasLasVentanas();
+            FrmRegistrarActualizacionCaso frmPantalla = new FrmRegistrarActualizacionCaso();
             frmPantalla.MdiParent = this;
             frmPantalla.Show();
         }
