@@ -1,17 +1,6 @@
 ﻿using Comisarias.App.Escritorio.Controllers;
 using Comisarias.App.Escritorio.Models;
-using Comisarias.App.Escritorio.Utilities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -35,10 +24,13 @@ namespace Comisarias.App.Escritorio.Forms
         InicioProceso_Controller controlador_inicioProceso = new InicioProceso_Controller();
 
         Audiencia_Controller controlador_audiencia = new Audiencia_Controller();
-        Actualizacion_Controller controlador_actualizacion = new Actualizacion_Controller();
+        ActualizacionMedidasProteccion_Controller controlador_actualizacionMedidasProteccion = new ActualizacionMedidasProteccion_Controller();
+        ActualizacionIncumplimiento_Controller controlador_actualizacionIncumplimiento = new ActualizacionIncumplimiento_Controller();
+        ActualizacionTerminacionMedidas_Controller controlador_actualizacionTerminacionMedidas = new ActualizacionTerminacionMedidas_Controller();
+        ActualizacionCaso_Controller controlador_actualizacionCaso = new ActualizacionCaso_Controller();
 
 
-        Actualizacion objRegistro = new Actualizacion();
+        ActualizacionTerminacionMedidas objRegistro = new ActualizacionTerminacionMedidas();
        
 
         public FrmRegistrarActualizacionTerminacionMedidas()
@@ -222,7 +214,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void ObtenerIniciosProceso()
         {
-            RespuestaGetDatos respuesta = controlador_actualizacion.ObtenerPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_actualizacionTerminacionMedidas.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
@@ -266,7 +258,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void ObtenerActualizacionesProceso()
         {
-            RespuestaGetDatos respuesta = controlador_actualizacion.ObtenerPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_actualizacionTerminacionMedidas.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
@@ -347,29 +339,20 @@ namespace Comisarias.App.Escritorio.Forms
             for (int i = 1; i <= 31; i++)
             {
                 cmbDia.Items.Add(i);
-                cmbDiaAmpliacionMedidas.Items.Add(i);
-                cmbDiaRemisionFiscalia.Items.Add(i);
-                cmbDiaRemisionMedicinaLegal.Items.Add(i);
-                cmbDiaRemisionEPS.Items.Add(i);
+               
 
             }
             for (int i = System.DateTime.Now.Year; i >= System.DateTime.Now.Year - 100; i--)
             {
                 cmbAnio.Items.Add(i);
-                cmbAnioAmpliacionMedidas.Items.Add(i);
-                cmbAnioRemisionFiscalia.Items.Add(i);
-                cmbAnioRemisionMedicinaLegal.Items.Add(i);
-                cmbAnioRemisionEPS.Items.Add(i);
+             
 
 
             }
             foreach (string item in meses)
             {
                 cmbMes.Items.Add(item);
-                cmbMesAmpliacionMedidas.Items.Add(item);
-                cmbMesRemisionFiscalia.Items.Add(item);
-                cmbMesRemisionMedicinaLegal.Items.Add(item);
-                cmbMesRemisionEPS.Items.Add(item);
+               
             }
 
         }
@@ -386,7 +369,7 @@ namespace Comisarias.App.Escritorio.Forms
 
                 if (usuario.Id > 0)
                 {
-                    Respuesta respuesta = controlador_actualizacion.AgregarRegistro(objRegistro);
+                    Respuesta respuesta = controlador_actualizacionTerminacionMedidas.AgregarRegistro(objRegistro);
                     if (respuesta.FueExitosa)
                     {
                         MessageBox.Show("Registro exitoso");
@@ -408,70 +391,7 @@ namespace Comisarias.App.Escritorio.Forms
         private string MedidasDeProteccion()
         {
             string retorno = "";
-            if (chkDesalojo.Checked)
-            {
-                retorno += chkDesalojo.Text + ",";
-            }
-
-            if (chkAbstenerseLugar.Checked)
-            {
-                retorno += lblAbtenerseLugar.Text + ",";
-            }
-
-            if (chkEsconderHijos.Checked)
-            {
-                retorno += chkEsconderHijos.Text + ",";
-            }
-
-            if (chkAcudirTratamiento.Checked)
-            {
-                retorno += chkAcudirTratamiento.Text + ",";
-            }
-
-            if (chkProteccionPoliciva.Checked)
-            {
-                retorno += chkProteccionPoliciva.Text + ",";
-            }
-
-            if (chkAcompanamientoCasa.Checked)
-            {
-                retorno += chkAcompanamientoCasa.Text + ",";
-            }
-
-            if (chkRegimenProvisional.Checked)
-            {
-                retorno += chkRegimenProvisional.Text + ",";
-            }
-
-            if (chkSuspencionArmas.Checked)
-            {
-                retorno += chkSuspencionArmas.Text + ",";
-            }
-
-            if (chkPensionAlimentaria.Checked)
-            {
-                retorno += chkPensionAlimentaria.Text + ",";
-            }
-
-            if (chkUsoVivienda.Checked)
-            {
-                retorno += chkUsoVivienda.Text + ",";
-            }
-
-            if (chkProhibicionVenta.Checked)
-            {
-                retorno += chkProhibicionVenta.Text + ",";
-            }
-
-            if (chkDevolucionObjetos.Checked)
-            {
-                retorno += chkDevolucionObjetos.Text + ",";
-            }
-
-            if (chkOtraMedida.Checked)
-            {
-                retorno += chkOtraMedida.Text + ",";
-            }
+         
 
             return retorno;
         }
@@ -573,7 +493,7 @@ namespace Comisarias.App.Escritorio.Forms
             {
                 Archivo archivo = showDialog();
 
-                lblRutaAutoAvoca.Text = archivo.Nombre;
+                //lblRutaAutoAvoca.Text = archivo.Nombre;
 
                 string nombreArchivo = archivo.Nombre.Split('.')[0] + "_" + System.DateTime.Now.ToString("dd_MM_yyyy HH_mm_ss") + "." + archivo.Nombre.Split('.')[archivo.Nombre.Split('.').Length - 1];
                 string rutaArchivoOrigen = archivo.Ruta;
@@ -635,12 +555,12 @@ namespace Comisarias.App.Escritorio.Forms
             {
                // AutoQueAvocaConocimiento = respuesta.Mensaje;
                 string[] tdatosRuta = respuesta.Mensaje.Split('\\');
-                lblRutaAutoAvoca.Text = tdatosRuta[tdatosRuta.Length - 1];
+                //lblRutaAutoAvoca.Text = tdatosRuta[tdatosRuta.Length - 1];
             }
             else
             {
                 MessageBox.Show(respuesta.Mensaje);
-                lblInforme.Text = "Error";
+                //lblInforme.Text = "Error";
             }
         }
 
@@ -651,12 +571,12 @@ namespace Comisarias.App.Escritorio.Forms
             {
                 //RemisionMedicinaLegalInforme = respuesta.Mensaje;
                 string[] tdatosRuta = respuesta.Mensaje.Split('\\');
-                lblInforme.Text = tdatosRuta[tdatosRuta.Length - 1];
+                //lblInforme.Text = tdatosRuta[tdatosRuta.Length - 1];
             }
             else
             {
                 MessageBox.Show(respuesta.Mensaje);
-                lblInforme.Text = "Error";
+                //lblInforme.Text = "Error";
             }
         }
     }

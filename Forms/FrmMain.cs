@@ -101,13 +101,7 @@ namespace Comisarias.App.Escritorio
             frmPantalla.Show();
         }
 
-        private void medidasProtecciónToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            cerrarTodasLasVentanas();
-            FrmMedidasProteccion frmPantalla = new FrmMedidasProteccion();
-            frmPantalla.MdiParent = this;
-            frmPantalla.Show();
-        }
+        
 
         private void generosToolStripMenuItem_Click(object sender, EventArgs e)
         {

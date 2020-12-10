@@ -1,17 +1,6 @@
 ﻿using Comisarias.App.Escritorio.Controllers;
 using Comisarias.App.Escritorio.Models;
-using Comisarias.App.Escritorio.Utilities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -35,8 +24,10 @@ namespace Comisarias.App.Escritorio.Forms
         InicioProceso_Controller controlador_inicioProceso = new InicioProceso_Controller();
 
         Audiencia_Controller controlador_audiencia = new Audiencia_Controller();
-        Actualizacion_Controller controlador_actualizacion = new Actualizacion_Controller();
-
+        ActualizacionMedidasProteccion_Controller controlador_actualizacionMedidasProteccion = new ActualizacionMedidasProteccion_Controller();
+        ActualizacionIncumplimiento_Controller controlador_actualizacionIncumplimiento = new ActualizacionIncumplimiento_Controller();
+        ActualizacionTerminacionMedidas_Controller controlador_actualizacionTerminacionMedidas = new ActualizacionTerminacionMedidas_Controller();
+        ActualizacionCaso_Controller controlador_actualizacionCaso = new ActualizacionCaso_Controller();
 
         InicioProceso objRegistro = new InicioProceso();
         string AutoQueAvocaConocimiento = "";
@@ -267,7 +258,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void ObtenerActualizacionesProceso()
         {
-            RespuestaGetDatos respuesta = controlador_actualizacion.ObtenerPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_actualizacionCaso.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {

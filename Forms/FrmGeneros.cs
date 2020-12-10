@@ -1,18 +1,7 @@
-﻿using Comisarias.App.Escritorio.Models;
-using Comisarias.App.Escritorio.Utilities;
+﻿using Comisarias.App.Escritorio.Controllers;
+using Comisarias.App.Escritorio.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Comisarias.App.Escritorio.Controllers;
 
 namespace Comisarias.App.Escritorio.Forms
 {

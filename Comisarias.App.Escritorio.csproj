@@ -241,7 +241,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\Actualizacion_Controller.cs" />
+    <Compile Include="Controllers\ActualizacionTerminacionMedidas_Controller.cs" />
+    <Compile Include="Controllers\ActualizacionIncumplimiento_Controller.cs" />
+    <Compile Include="Controllers\ActualizacionMedidasProteccion_Controller.cs" />
+    <Compile Include="Controllers\ActualizacionCaso_Controller.cs" />
     <Compile Include="Controllers\Audiencia_Controller.cs" />
     <Compile Include="Controllers\Orientacion_Controller.cs" />
     <Compile Include="Controllers\InicioProceso_Controller.cs" />
@@ -344,12 +347,6 @@
     <Compile Include="Forms\FrmRelacionAgresor.Designer.cs">
       <DependentUpon>FrmRelacionAgresor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmMedidasProteccion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmMedidasProteccion.Designer.cs">
-      <DependentUpon>FrmMedidasProteccion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FrmGeneros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -392,9 +389,11 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\InicioProceso_Controller.cs" />
+    <Compile Include="Models\ActualizacionTerminacionMedidas.cs" />
+    <Compile Include="Models\ActualizacionIncumplimiento.cs" />
+    <Compile Include="Models\ActualizacionMedidasProteccion.cs" />
     <Compile Include="Models\Audiencia.cs" />
-    <Compile Include="Models\Actualizacion.cs" />
+    <Compile Include="Models\ActualizacionCaso.cs" />
     <Compile Include="Models\Orientacion.cs" />
     <Compile Include="Models\Entrevista.cs" />
     <Compile Include="Models\InicioProceso.cs" />
@@ -416,11 +415,6 @@
     <Compile Include="Models\ViewModelUserRole.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\AppPointer.cs" />
-    <Compile Include="Utilities\AppRoles.cs" />
-    <Compile Include="Utilities\Estados.cs" />
-    <Compile Include="Utilities\FormUpload.cs" />
-    <Compile Include="Utilities\Helper.cs" />
     <EmbeddedResource Include="Forms\FrmConsultaHistoriaUsuario.resx">
       <DependentUpon>FrmConsultaHistoriaUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -459,9 +453,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmRelacionAgresor.resx">
       <DependentUpon>FrmRelacionAgresor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmMedidasProteccion.resx">
-      <DependentUpon>FrmMedidasProteccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmGeneros.resx">
       <DependentUpon>FrmGeneros.cs</DependentUpon>
@@ -553,7 +544,6 @@
     <Content Include="Resources\Reporte.png" />
     <Content Include="Resources\transaction.png" />
     <Content Include="Resources\ValidarBarequero.png" />
-    <Content Include="videos\Videos.txt" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -597,10 +587,8 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Docs\" />
     <Folder Include="Forms\Reports\" />
     <Folder Include="Properties\DataSources\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

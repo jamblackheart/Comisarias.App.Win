@@ -123,7 +123,7 @@
             this.medidasProtecciónToolStripMenuItem.Name = "medidasProtecciónToolStripMenuItem";
             this.medidasProtecciónToolStripMenuItem.Size = new System.Drawing.Size(289, 30);
             this.medidasProtecciónToolStripMenuItem.Text = "Medidas protección";
-            this.medidasProtecciónToolStripMenuItem.Click += new System.EventHandler(this.medidasProtecciónToolStripMenuItem_Click);
+           
             // 
             // generosToolStripMenuItem
             // 

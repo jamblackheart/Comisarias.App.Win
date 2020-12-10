@@ -1,17 +1,6 @@
 ﻿using Comisarias.App.Escritorio.Controllers;
 using Comisarias.App.Escritorio.Models;
-using Comisarias.App.Escritorio.Utilities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -32,6 +21,10 @@ namespace Comisarias.App.Escritorio.Forms
         Orientacion_Controller controlador_orientacion = new Orientacion_Controller();
         Entrevista_Controller controlador_entrevista = new Entrevista_Controller();
         InicioProceso_Controller controlador_inicioProceso = new InicioProceso_Controller();
+        ActualizacionMedidasProteccion_Controller controlador_actualizacionMedidasProteccion = new ActualizacionMedidasProteccion_Controller();
+        ActualizacionIncumplimiento_Controller controlador_actualizacionIncumplimiento = new ActualizacionIncumplimiento_Controller();
+        ActualizacionTerminacionMedidas_Controller controlador_actualizacionTerminacionMedidas = new ActualizacionTerminacionMedidas_Controller();
+        ActualizacionCaso_Controller controlador_actualizacionCaso = new ActualizacionCaso_Controller();
 
 
         Orientacion objRegistro = new Orientacion();
