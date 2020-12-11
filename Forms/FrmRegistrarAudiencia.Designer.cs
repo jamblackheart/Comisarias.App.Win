@@ -30,8 +30,6 @@
         {
             System.Windows.Forms.Label label17;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarAudiencia));
-            this.pnlVisitas = new System.Windows.Forms.GroupBox();
-            this.dgvVisitasAnteriores = new System.Windows.Forms.DataGridView();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -74,9 +72,31 @@
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.pnlRegistro = new System.Windows.Forms.Panel();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.pnlAgresiones = new System.Windows.Forms.GroupBox();
-            this.dgvAgresiones = new System.Windows.Forms.DataGridView();
             this.pnlRegistroNuevo = new System.Windows.Forms.GroupBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.checkBox15 = new System.Windows.Forms.CheckBox();
+            this.checkBox16 = new System.Windows.Forms.CheckBox();
+            this.checkBox17 = new System.Windows.Forms.CheckBox();
+            this.checkBox18 = new System.Windows.Forms.CheckBox();
+            this.checkBox19 = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label36 = new System.Windows.Forms.Label();
             this.cmbFalloRevision = new System.Windows.Forms.ComboBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
@@ -114,6 +134,8 @@
             this.chkDesalojo = new System.Windows.Forms.CheckBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.txtAcuerdosOtraCual = new System.Windows.Forms.TextBox();
             this.chkAcuerdosOtra = new System.Windows.Forms.CheckBox();
             this.chkManejoBienes = new System.Windows.Forms.CheckBox();
@@ -144,45 +166,27 @@
             this.label25 = new System.Windows.Forms.Label();
             this.cmbDia = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.pnlOrientaciones = new System.Windows.Forms.GroupBox();
-            this.dgvOrientaciones = new System.Windows.Forms.DataGridView();
-            this.pnlEntrevistas = new System.Windows.Forms.GroupBox();
-            this.dgvEntrevistas = new System.Windows.Forms.DataGridView();
-            this.pnlInicioProceso = new System.Windows.Forms.GroupBox();
-            this.dgvIniciosProcesos = new System.Windows.Forms.DataGridView();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.dgvActualizacionIncumplimiento = new System.Windows.Forms.DataGridView();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.dgvActualizacionTerminacionMedidas = new System.Windows.Forms.DataGridView();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.dgvActualizacionMedidasProteccion = new System.Windows.Forms.DataGridView();
+            this.pnlActualizacionCaso = new System.Windows.Forms.GroupBox();
+            this.dgvActualizacionCaso = new System.Windows.Forms.DataGridView();
             this.pnlAudienciasMedidasProteccion = new System.Windows.Forms.GroupBox();
             this.dgvAudiencias = new System.Windows.Forms.DataGridView();
-            this.pnlFichasActualizacion = new System.Windows.Forms.GroupBox();
-            this.dgvActualizacion = new System.Windows.Forms.DataGridView();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.label12 = new System.Windows.Forms.Label();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pnlInicioProceso = new System.Windows.Forms.GroupBox();
+            this.dgvIniciosProcesos = new System.Windows.Forms.DataGridView();
+            this.pnlEntrevistas = new System.Windows.Forms.GroupBox();
+            this.dgvEntrevistas = new System.Windows.Forms.DataGridView();
+            this.pnlOrientaciones = new System.Windows.Forms.GroupBox();
+            this.dgvOrientaciones = new System.Windows.Forms.DataGridView();
+            this.pnlAgresiones = new System.Windows.Forms.GroupBox();
+            this.dgvAgresiones = new System.Windows.Forms.DataGridView();
+            this.pnlVisitas = new System.Windows.Forms.GroupBox();
+            this.dgvVisitasAnteriores = new System.Windows.Forms.DataGridView();
             label17 = new System.Windows.Forms.Label();
-            this.pnlVisitas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVisitasAnteriores)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grbFechaNacimiento.SuspendLayout();
@@ -191,9 +195,9 @@
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnlRegistro.SuspendLayout();
-            this.pnlAgresiones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAgresiones)).BeginInit();
             this.pnlRegistroNuevo.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -202,18 +206,26 @@
             this.groupBox11.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            this.pnlOrientaciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrientaciones)).BeginInit();
-            this.pnlEntrevistas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEntrevistas)).BeginInit();
-            this.pnlInicioProceso.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIniciosProcesos)).BeginInit();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionIncumplimiento)).BeginInit();
+            this.groupBox15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionTerminacionMedidas)).BeginInit();
+            this.groupBox16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionMedidasProteccion)).BeginInit();
+            this.pnlActualizacionCaso.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionCaso)).BeginInit();
             this.pnlAudienciasMedidasProteccion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAudiencias)).BeginInit();
-            this.pnlFichasActualizacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacion)).BeginInit();
-            this.groupBox8.SuspendLayout();
-            this.groupBox9.SuspendLayout();
+            this.pnlInicioProceso.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIniciosProcesos)).BeginInit();
+            this.pnlEntrevistas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntrevistas)).BeginInit();
+            this.pnlOrientaciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrientaciones)).BeginInit();
+            this.pnlAgresiones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgresiones)).BeginInit();
+            this.pnlVisitas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisitasAnteriores)).BeginInit();
             this.SuspendLayout();
             // 
             // label17
@@ -229,32 +241,6 @@
             label17.TabIndex = 2;
             label17.Text = "REGISTRAR INICIO DE PROCESO";
             // 
-            // pnlVisitas
-            // 
-            this.pnlVisitas.Controls.Add(this.dgvVisitasAnteriores);
-            this.pnlVisitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlVisitas.Location = new System.Drawing.Point(1137, 158);
-            this.pnlVisitas.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlVisitas.Name = "pnlVisitas";
-            this.pnlVisitas.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlVisitas.Size = new System.Drawing.Size(623, 328);
-            this.pnlVisitas.TabIndex = 25;
-            this.pnlVisitas.TabStop = false;
-            this.pnlVisitas.Text = "Visitas Anteriores";
-            // 
-            // dgvVisitasAnteriores
-            // 
-            this.dgvVisitasAnteriores.AllowUserToAddRows = false;
-            this.dgvVisitasAnteriores.AllowUserToDeleteRows = false;
-            this.dgvVisitasAnteriores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVisitasAnteriores.Location = new System.Drawing.Point(8, 50);
-            this.dgvVisitasAnteriores.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvVisitasAnteriores.Name = "dgvVisitasAnteriores";
-            this.dgvVisitasAnteriores.ReadOnly = true;
-            this.dgvVisitasAnteriores.RowHeadersWidth = 51;
-            this.dgvVisitasAnteriores.Size = new System.Drawing.Size(591, 270);
-            this.dgvVisitasAnteriores.TabIndex = 24;
-            // 
             // pnlTitulo
             // 
             this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(64)))), ((int)(((byte)(58)))));
@@ -268,7 +254,7 @@
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
             this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(1760, 147);
+            this.pnlTitulo.Size = new System.Drawing.Size(1768, 147);
             this.pnlTitulo.TabIndex = 33;
             // 
             // pictureBox1
@@ -746,32 +732,6 @@
             this.txtEmail.Size = new System.Drawing.Size(267, 30);
             this.txtEmail.TabIndex = 64;
             // 
-            // pnlAgresiones
-            // 
-            this.pnlAgresiones.Controls.Add(this.dgvAgresiones);
-            this.pnlAgresiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlAgresiones.Location = new System.Drawing.Point(1137, 486);
-            this.pnlAgresiones.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlAgresiones.Name = "pnlAgresiones";
-            this.pnlAgresiones.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlAgresiones.Size = new System.Drawing.Size(623, 328);
-            this.pnlAgresiones.TabIndex = 35;
-            this.pnlAgresiones.TabStop = false;
-            this.pnlAgresiones.Text = "Agresiones";
-            // 
-            // dgvAgresiones
-            // 
-            this.dgvAgresiones.AllowUserToAddRows = false;
-            this.dgvAgresiones.AllowUserToDeleteRows = false;
-            this.dgvAgresiones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAgresiones.Location = new System.Drawing.Point(8, 38);
-            this.dgvAgresiones.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvAgresiones.Name = "dgvAgresiones";
-            this.dgvAgresiones.ReadOnly = true;
-            this.dgvAgresiones.RowHeadersWidth = 51;
-            this.dgvAgresiones.Size = new System.Drawing.Size(591, 270);
-            this.dgvAgresiones.TabIndex = 24;
-            // 
             // pnlRegistroNuevo
             // 
             this.pnlRegistroNuevo.Controls.Add(this.groupBox9);
@@ -805,6 +765,291 @@
             this.pnlRegistroNuevo.TabStop = false;
             this.pnlRegistroNuevo.Text = "AUDIENCIA";
             this.pnlRegistroNuevo.Visible = false;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.radioButton7);
+            this.groupBox9.Controls.Add(this.textBox2);
+            this.groupBox9.Controls.Add(this.radioButton8);
+            this.groupBox9.Controls.Add(this.checkBox7);
+            this.groupBox9.Controls.Add(this.checkBox8);
+            this.groupBox9.Controls.Add(this.checkBox9);
+            this.groupBox9.Controls.Add(this.checkBox10);
+            this.groupBox9.Controls.Add(this.checkBox11);
+            this.groupBox9.Controls.Add(this.checkBox12);
+            this.groupBox9.Controls.Add(this.checkBox13);
+            this.groupBox9.Controls.Add(this.checkBox14);
+            this.groupBox9.Controls.Add(this.label13);
+            this.groupBox9.Controls.Add(this.checkBox15);
+            this.groupBox9.Controls.Add(this.checkBox16);
+            this.groupBox9.Controls.Add(this.checkBox17);
+            this.groupBox9.Controls.Add(this.checkBox18);
+            this.groupBox9.Controls.Add(this.checkBox19);
+            this.groupBox9.Location = new System.Drawing.Point(590, 678);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox9.Size = new System.Drawing.Size(506, 491);
+            this.groupBox9.TabIndex = 100;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Otorga Medidas de atención";
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Checked = true;
+            this.radioButton7.Location = new System.Drawing.Point(107, 33);
+            this.radioButton7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(63, 29);
+            this.radioButton7.TabIndex = 86;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "NO";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox2.Location = new System.Drawing.Point(68, 502);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(383, 30);
+            this.textBox2.TabIndex = 89;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(20, 33);
+            this.radioButton8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(52, 29);
+            this.radioButton8.TabIndex = 85;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "SI";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(7, 467);
+            this.checkBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(151, 29);
+            this.checkBox7.TabIndex = 59;
+            this.checkBox7.Text = "Otra. ¿Cuál? ";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Location = new System.Drawing.Point(7, 434);
+            this.checkBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(378, 29);
+            this.checkBox8.TabIndex = 58;
+            this.checkBox8.Text = "Devolución de los objetos de las víctima";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(7, 405);
+            this.checkBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(427, 29);
+            this.checkBox9.TabIndex = 57;
+            this.checkBox9.Text = "Prohibición de venta o enajenación de bienes";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(7, 376);
+            this.checkBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(256, 29);
+            this.checkBox10.TabIndex = 56;
+            this.checkBox10.Text = "Uso y disfrute de vivienda";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.Location = new System.Drawing.Point(7, 347);
+            this.checkBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(235, 29);
+            this.checkBox11.TabIndex = 55;
+            this.checkBox11.Text = "Pensiones alimentarias";
+            this.checkBox11.UseVisualStyleBackColor = true;
+            // 
+            // checkBox12
+            // 
+            this.checkBox12.AutoSize = true;
+            this.checkBox12.Location = new System.Drawing.Point(7, 259);
+            this.checkBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(417, 29);
+            this.checkBox12.TabIndex = 53;
+            this.checkBox12.Text = "Acompañamiento para reingreso al domicilio";
+            this.checkBox12.UseVisualStyleBackColor = true;
+            // 
+            // checkBox13
+            // 
+            this.checkBox13.AutoSize = true;
+            this.checkBox13.Location = new System.Drawing.Point(7, 231);
+            this.checkBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(196, 29);
+            this.checkBox13.TabIndex = 52;
+            this.checkBox13.Text = "Protección policiva";
+            this.checkBox13.UseVisualStyleBackColor = true;
+            // 
+            // checkBox14
+            // 
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.Location = new System.Drawing.Point(7, 172);
+            this.checkBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(451, 29);
+            this.checkBox14.TabIndex = 50;
+            this.checkBox14.Text = "Prohibición de trasladar o esconder a hijas/hijos ";
+            this.checkBox14.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label13.Location = new System.Drawing.Point(29, 120);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(448, 54);
+            this.label13.TabIndex = 49;
+            this.label13.Text = "Abstenerse de penetrar en cualquier lugar donde esté la víctima";
+            // 
+            // checkBox15
+            // 
+            this.checkBox15.AutoSize = true;
+            this.checkBox15.Location = new System.Drawing.Point(7, 202);
+            this.checkBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox15.Name = "checkBox15";
+            this.checkBox15.Size = new System.Drawing.Size(207, 29);
+            this.checkBox15.TabIndex = 4;
+            this.checkBox15.Text = "Acudir a tratamiento";
+            this.checkBox15.UseVisualStyleBackColor = true;
+            // 
+            // checkBox16
+            // 
+            this.checkBox16.AutoSize = true;
+            this.checkBox16.Location = new System.Drawing.Point(7, 318);
+            this.checkBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox16.Name = "checkBox16";
+            this.checkBox16.Size = new System.Drawing.Size(350, 29);
+            this.checkBox16.TabIndex = 3;
+            this.checkBox16.Text = "Suspensión de la tenencia de armas";
+            this.checkBox16.UseVisualStyleBackColor = true;
+            // 
+            // checkBox17
+            // 
+            this.checkBox17.AutoSize = true;
+            this.checkBox17.Location = new System.Drawing.Point(7, 134);
+            this.checkBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox17.Name = "checkBox17";
+            this.checkBox17.Size = new System.Drawing.Size(18, 17);
+            this.checkBox17.TabIndex = 2;
+            this.checkBox17.UseVisualStyleBackColor = true;
+            // 
+            // checkBox18
+            // 
+            this.checkBox18.AutoSize = true;
+            this.checkBox18.Location = new System.Drawing.Point(7, 289);
+            this.checkBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox18.Name = "checkBox18";
+            this.checkBox18.Size = new System.Drawing.Size(459, 29);
+            this.checkBox18.TabIndex = 1;
+            this.checkBox18.Text = "Régimen provisional de visitas, guarda y custodia";
+            this.checkBox18.UseVisualStyleBackColor = true;
+            // 
+            // checkBox19
+            // 
+            this.checkBox19.AutoSize = true;
+            this.checkBox19.Location = new System.Drawing.Point(7, 90);
+            this.checkBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox19.Name = "checkBox19";
+            this.checkBox19.Size = new System.Drawing.Size(110, 29);
+            this.checkBox19.TabIndex = 0;
+            this.checkBox19.Text = "Desalojo";
+            this.checkBox19.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label12.Location = new System.Drawing.Point(586, 27);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(76, 25);
+            this.label12.TabIndex = 97;
+            this.label12.Text = "FALLO";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.label14);
+            this.groupBox8.Controls.Add(this.comboBox1);
+            this.groupBox8.Controls.Add(this.checkBox1);
+            this.groupBox8.Controls.Add(this.checkBox2);
+            this.groupBox8.Location = new System.Drawing.Point(24, 274);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Size = new System.Drawing.Size(227, 191);
+            this.groupBox8.TabIndex = 99;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Notificacion agresor?";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label14.Location = new System.Drawing.Point(11, 49);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(133, 25);
+            this.label14.TabIndex = 51;
+            this.label14.Text = "Notificaciones";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Personal",
+            "Por estado"});
+            this.comboBox1.Location = new System.Drawing.Point(15, 78);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(184, 33);
+            this.comboBox1.TabIndex = 52;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(16, 163);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(121, 29);
+            this.checkBox1.TabIndex = 2;
+            this.checkBox1.Text = "Verificada";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(15, 130);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(105, 29);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "Enviada";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // label36
             // 
@@ -1249,6 +1494,28 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Acuerdos previos";
             // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(81, 86);
+            this.radioButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(63, 29);
+            this.radioButton5.TabIndex = 97;
+            this.radioButton5.Text = "NO";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(13, 86);
+            this.radioButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(52, 29);
+            this.radioButton6.TabIndex = 96;
+            this.radioButton6.Text = "SI";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
             // txtAcuerdosOtraCual
             // 
             this.txtAcuerdosOtraCual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -1600,94 +1867,120 @@
             this.label26.Size = new System.Drawing.Size(0, 25);
             this.label26.TabIndex = 40;
             // 
-            // pnlOrientaciones
+            // groupBox10
             // 
-            this.pnlOrientaciones.Controls.Add(this.dgvOrientaciones);
-            this.pnlOrientaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlOrientaciones.Location = new System.Drawing.Point(1137, 814);
-            this.pnlOrientaciones.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlOrientaciones.Name = "pnlOrientaciones";
-            this.pnlOrientaciones.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlOrientaciones.Size = new System.Drawing.Size(623, 328);
-            this.pnlOrientaciones.TabIndex = 36;
-            this.pnlOrientaciones.TabStop = false;
-            this.pnlOrientaciones.Text = "Orientaciones";
+            this.groupBox10.Controls.Add(this.dgvActualizacionIncumplimiento);
+            this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox10.Location = new System.Drawing.Point(1145, 2221);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox10.Size = new System.Drawing.Size(623, 223);
+            this.groupBox10.TabIndex = 58;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Actualizaciones incumplimiento";
             // 
-            // dgvOrientaciones
+            // dgvActualizacionIncumplimiento
             // 
-            this.dgvOrientaciones.AllowUserToAddRows = false;
-            this.dgvOrientaciones.AllowUserToDeleteRows = false;
-            this.dgvOrientaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrientaciones.Location = new System.Drawing.Point(8, 38);
-            this.dgvOrientaciones.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvOrientaciones.Name = "dgvOrientaciones";
-            this.dgvOrientaciones.ReadOnly = true;
-            this.dgvOrientaciones.RowHeadersWidth = 51;
-            this.dgvOrientaciones.Size = new System.Drawing.Size(591, 270);
-            this.dgvOrientaciones.TabIndex = 24;
+            this.dgvActualizacionIncumplimiento.AllowUserToAddRows = false;
+            this.dgvActualizacionIncumplimiento.AllowUserToDeleteRows = false;
+            this.dgvActualizacionIncumplimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActualizacionIncumplimiento.Location = new System.Drawing.Point(8, 38);
+            this.dgvActualizacionIncumplimiento.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvActualizacionIncumplimiento.Name = "dgvActualizacionIncumplimiento";
+            this.dgvActualizacionIncumplimiento.ReadOnly = true;
+            this.dgvActualizacionIncumplimiento.RowHeadersWidth = 51;
+            this.dgvActualizacionIncumplimiento.Size = new System.Drawing.Size(591, 179);
+            this.dgvActualizacionIncumplimiento.TabIndex = 24;
             // 
-            // pnlEntrevistas
+            // groupBox15
             // 
-            this.pnlEntrevistas.Controls.Add(this.dgvEntrevistas);
-            this.pnlEntrevistas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlEntrevistas.Location = new System.Drawing.Point(1137, 1142);
-            this.pnlEntrevistas.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlEntrevistas.Name = "pnlEntrevistas";
-            this.pnlEntrevistas.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlEntrevistas.Size = new System.Drawing.Size(623, 328);
-            this.pnlEntrevistas.TabIndex = 42;
-            this.pnlEntrevistas.TabStop = false;
-            this.pnlEntrevistas.Text = "Entrevistas";
+            this.groupBox15.Controls.Add(this.dgvActualizacionTerminacionMedidas);
+            this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox15.Location = new System.Drawing.Point(1145, 1990);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox15.Size = new System.Drawing.Size(623, 223);
+            this.groupBox15.TabIndex = 57;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Actualizaciones Terminación de medidas";
             // 
-            // dgvEntrevistas
+            // dgvActualizacionTerminacionMedidas
             // 
-            this.dgvEntrevistas.AllowUserToAddRows = false;
-            this.dgvEntrevistas.AllowUserToDeleteRows = false;
-            this.dgvEntrevistas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEntrevistas.Location = new System.Drawing.Point(8, 38);
-            this.dgvEntrevistas.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvEntrevistas.Name = "dgvEntrevistas";
-            this.dgvEntrevistas.ReadOnly = true;
-            this.dgvEntrevistas.RowHeadersWidth = 51;
-            this.dgvEntrevistas.Size = new System.Drawing.Size(591, 270);
-            this.dgvEntrevistas.TabIndex = 24;
+            this.dgvActualizacionTerminacionMedidas.AllowUserToAddRows = false;
+            this.dgvActualizacionTerminacionMedidas.AllowUserToDeleteRows = false;
+            this.dgvActualizacionTerminacionMedidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActualizacionTerminacionMedidas.Location = new System.Drawing.Point(8, 38);
+            this.dgvActualizacionTerminacionMedidas.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvActualizacionTerminacionMedidas.Name = "dgvActualizacionTerminacionMedidas";
+            this.dgvActualizacionTerminacionMedidas.ReadOnly = true;
+            this.dgvActualizacionTerminacionMedidas.RowHeadersWidth = 51;
+            this.dgvActualizacionTerminacionMedidas.Size = new System.Drawing.Size(591, 179);
+            this.dgvActualizacionTerminacionMedidas.TabIndex = 24;
             // 
-            // pnlInicioProceso
+            // groupBox16
             // 
-            this.pnlInicioProceso.Controls.Add(this.dgvIniciosProcesos);
-            this.pnlInicioProceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlInicioProceso.Location = new System.Drawing.Point(1137, 1470);
-            this.pnlInicioProceso.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlInicioProceso.Name = "pnlInicioProceso";
-            this.pnlInicioProceso.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlInicioProceso.Size = new System.Drawing.Size(623, 328);
-            this.pnlInicioProceso.TabIndex = 43;
-            this.pnlInicioProceso.TabStop = false;
-            this.pnlInicioProceso.Text = "Inicios proceso";
+            this.groupBox16.Controls.Add(this.dgvActualizacionMedidasProteccion);
+            this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox16.Location = new System.Drawing.Point(1137, 1759);
+            this.groupBox16.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox16.Size = new System.Drawing.Size(623, 223);
+            this.groupBox16.TabIndex = 56;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Actualizaciones medidas de protección";
             // 
-            // dgvIniciosProcesos
+            // dgvActualizacionMedidasProteccion
             // 
-            this.dgvIniciosProcesos.AllowUserToAddRows = false;
-            this.dgvIniciosProcesos.AllowUserToDeleteRows = false;
-            this.dgvIniciosProcesos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIniciosProcesos.Location = new System.Drawing.Point(8, 38);
-            this.dgvIniciosProcesos.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvIniciosProcesos.Name = "dgvIniciosProcesos";
-            this.dgvIniciosProcesos.ReadOnly = true;
-            this.dgvIniciosProcesos.RowHeadersWidth = 51;
-            this.dgvIniciosProcesos.Size = new System.Drawing.Size(591, 270);
-            this.dgvIniciosProcesos.TabIndex = 24;
+            this.dgvActualizacionMedidasProteccion.AllowUserToAddRows = false;
+            this.dgvActualizacionMedidasProteccion.AllowUserToDeleteRows = false;
+            this.dgvActualizacionMedidasProteccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActualizacionMedidasProteccion.Location = new System.Drawing.Point(8, 38);
+            this.dgvActualizacionMedidasProteccion.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvActualizacionMedidasProteccion.Name = "dgvActualizacionMedidasProteccion";
+            this.dgvActualizacionMedidasProteccion.ReadOnly = true;
+            this.dgvActualizacionMedidasProteccion.RowHeadersWidth = 51;
+            this.dgvActualizacionMedidasProteccion.Size = new System.Drawing.Size(591, 179);
+            this.dgvActualizacionMedidasProteccion.TabIndex = 24;
+            // 
+            // pnlActualizacionCaso
+            // 
+            this.pnlActualizacionCaso.Controls.Add(this.dgvActualizacionCaso);
+            this.pnlActualizacionCaso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlActualizacionCaso.Location = new System.Drawing.Point(1137, 1528);
+            this.pnlActualizacionCaso.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlActualizacionCaso.Name = "pnlActualizacionCaso";
+            this.pnlActualizacionCaso.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlActualizacionCaso.Size = new System.Drawing.Size(623, 223);
+            this.pnlActualizacionCaso.TabIndex = 55;
+            this.pnlActualizacionCaso.TabStop = false;
+            this.pnlActualizacionCaso.Text = "Actualizaciones del caso";
+            // 
+            // dgvActualizacionCaso
+            // 
+            this.dgvActualizacionCaso.AllowUserToAddRows = false;
+            this.dgvActualizacionCaso.AllowUserToDeleteRows = false;
+            this.dgvActualizacionCaso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActualizacionCaso.Location = new System.Drawing.Point(8, 38);
+            this.dgvActualizacionCaso.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvActualizacionCaso.Name = "dgvActualizacionCaso";
+            this.dgvActualizacionCaso.ReadOnly = true;
+            this.dgvActualizacionCaso.RowHeadersWidth = 51;
+            this.dgvActualizacionCaso.Size = new System.Drawing.Size(591, 179);
+            this.dgvActualizacionCaso.TabIndex = 24;
             // 
             // pnlAudienciasMedidasProteccion
             // 
             this.pnlAudienciasMedidasProteccion.Controls.Add(this.dgvAudiencias);
             this.pnlAudienciasMedidasProteccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlAudienciasMedidasProteccion.Location = new System.Drawing.Point(1137, 1798);
+            this.pnlAudienciasMedidasProteccion.Location = new System.Drawing.Point(1137, 1297);
             this.pnlAudienciasMedidasProteccion.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAudienciasMedidasProteccion.Name = "pnlAudienciasMedidasProteccion";
             this.pnlAudienciasMedidasProteccion.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlAudienciasMedidasProteccion.Size = new System.Drawing.Size(623, 328);
-            this.pnlAudienciasMedidasProteccion.TabIndex = 44;
+            this.pnlAudienciasMedidasProteccion.Size = new System.Drawing.Size(623, 223);
+            this.pnlAudienciasMedidasProteccion.TabIndex = 54;
             this.pnlAudienciasMedidasProteccion.TabStop = false;
             this.pnlAudienciasMedidasProteccion.Text = "Audiencias medidas de protección";
             // 
@@ -1701,341 +1994,138 @@
             this.dgvAudiencias.Name = "dgvAudiencias";
             this.dgvAudiencias.ReadOnly = true;
             this.dgvAudiencias.RowHeadersWidth = 51;
-            this.dgvAudiencias.Size = new System.Drawing.Size(591, 270);
+            this.dgvAudiencias.Size = new System.Drawing.Size(591, 179);
             this.dgvAudiencias.TabIndex = 24;
             // 
-            // pnlFichasActualizacion
+            // pnlInicioProceso
             // 
-            this.pnlFichasActualizacion.Controls.Add(this.dgvActualizacion);
-            this.pnlFichasActualizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlFichasActualizacion.Location = new System.Drawing.Point(1137, 2126);
-            this.pnlFichasActualizacion.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlFichasActualizacion.Name = "pnlFichasActualizacion";
-            this.pnlFichasActualizacion.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlFichasActualizacion.Size = new System.Drawing.Size(623, 328);
-            this.pnlFichasActualizacion.TabIndex = 45;
-            this.pnlFichasActualizacion.TabStop = false;
-            this.pnlFichasActualizacion.Text = "Fichas de actualización del caso";
+            this.pnlInicioProceso.Controls.Add(this.dgvIniciosProcesos);
+            this.pnlInicioProceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlInicioProceso.Location = new System.Drawing.Point(1137, 1070);
+            this.pnlInicioProceso.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlInicioProceso.Name = "pnlInicioProceso";
+            this.pnlInicioProceso.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlInicioProceso.Size = new System.Drawing.Size(623, 223);
+            this.pnlInicioProceso.TabIndex = 53;
+            this.pnlInicioProceso.TabStop = false;
+            this.pnlInicioProceso.Text = "Inicios proceso";
             // 
-            // dgvActualizacion
+            // dgvIniciosProcesos
             // 
-            this.dgvActualizacion.AllowUserToAddRows = false;
-            this.dgvActualizacion.AllowUserToDeleteRows = false;
-            this.dgvActualizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvActualizacion.Location = new System.Drawing.Point(8, 38);
-            this.dgvActualizacion.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvActualizacion.Name = "dgvActualizacion";
-            this.dgvActualizacion.ReadOnly = true;
-            this.dgvActualizacion.RowHeadersWidth = 51;
-            this.dgvActualizacion.Size = new System.Drawing.Size(591, 270);
-            this.dgvActualizacion.TabIndex = 24;
+            this.dgvIniciosProcesos.AllowUserToAddRows = false;
+            this.dgvIniciosProcesos.AllowUserToDeleteRows = false;
+            this.dgvIniciosProcesos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIniciosProcesos.Location = new System.Drawing.Point(8, 38);
+            this.dgvIniciosProcesos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvIniciosProcesos.Name = "dgvIniciosProcesos";
+            this.dgvIniciosProcesos.ReadOnly = true;
+            this.dgvIniciosProcesos.RowHeadersWidth = 51;
+            this.dgvIniciosProcesos.Size = new System.Drawing.Size(591, 179);
+            this.dgvIniciosProcesos.TabIndex = 24;
             // 
-            // groupBox8
+            // pnlEntrevistas
             // 
-            this.groupBox8.Controls.Add(this.label14);
-            this.groupBox8.Controls.Add(this.comboBox1);
-            this.groupBox8.Controls.Add(this.checkBox1);
-            this.groupBox8.Controls.Add(this.checkBox2);
-            this.groupBox8.Location = new System.Drawing.Point(24, 274);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Size = new System.Drawing.Size(227, 191);
-            this.groupBox8.TabIndex = 99;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Notificacion agresor?";
+            this.pnlEntrevistas.Controls.Add(this.dgvEntrevistas);
+            this.pnlEntrevistas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlEntrevistas.Location = new System.Drawing.Point(1137, 839);
+            this.pnlEntrevistas.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlEntrevistas.Name = "pnlEntrevistas";
+            this.pnlEntrevistas.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlEntrevistas.Size = new System.Drawing.Size(623, 223);
+            this.pnlEntrevistas.TabIndex = 52;
+            this.pnlEntrevistas.TabStop = false;
+            this.pnlEntrevistas.Text = "Entrevistas";
             // 
-            // checkBox1
+            // dgvEntrevistas
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(16, 163);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(121, 29);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Verificada";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.dgvEntrevistas.AllowUserToAddRows = false;
+            this.dgvEntrevistas.AllowUserToDeleteRows = false;
+            this.dgvEntrevistas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEntrevistas.Location = new System.Drawing.Point(8, 38);
+            this.dgvEntrevistas.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEntrevistas.Name = "dgvEntrevistas";
+            this.dgvEntrevistas.ReadOnly = true;
+            this.dgvEntrevistas.RowHeadersWidth = 51;
+            this.dgvEntrevistas.Size = new System.Drawing.Size(591, 179);
+            this.dgvEntrevistas.TabIndex = 24;
             // 
-            // checkBox2
+            // pnlOrientaciones
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(15, 130);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(105, 29);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Enviada";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.pnlOrientaciones.Controls.Add(this.dgvOrientaciones);
+            this.pnlOrientaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlOrientaciones.Location = new System.Drawing.Point(1137, 613);
+            this.pnlOrientaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlOrientaciones.Name = "pnlOrientaciones";
+            this.pnlOrientaciones.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlOrientaciones.Size = new System.Drawing.Size(623, 223);
+            this.pnlOrientaciones.TabIndex = 51;
+            this.pnlOrientaciones.TabStop = false;
+            this.pnlOrientaciones.Text = "Orientaciones";
             // 
-            // radioButton5
+            // dgvOrientaciones
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(81, 86);
-            this.radioButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(63, 29);
-            this.radioButton5.TabIndex = 97;
-            this.radioButton5.Text = "NO";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.dgvOrientaciones.AllowUserToAddRows = false;
+            this.dgvOrientaciones.AllowUserToDeleteRows = false;
+            this.dgvOrientaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrientaciones.Location = new System.Drawing.Point(8, 38);
+            this.dgvOrientaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvOrientaciones.Name = "dgvOrientaciones";
+            this.dgvOrientaciones.ReadOnly = true;
+            this.dgvOrientaciones.RowHeadersWidth = 51;
+            this.dgvOrientaciones.Size = new System.Drawing.Size(591, 179);
+            this.dgvOrientaciones.TabIndex = 24;
             // 
-            // radioButton6
+            // pnlAgresiones
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(13, 86);
-            this.radioButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(52, 29);
-            this.radioButton6.TabIndex = 96;
-            this.radioButton6.Text = "SI";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.pnlAgresiones.Controls.Add(this.dgvAgresiones);
+            this.pnlAgresiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlAgresiones.Location = new System.Drawing.Point(1137, 390);
+            this.pnlAgresiones.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlAgresiones.Name = "pnlAgresiones";
+            this.pnlAgresiones.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlAgresiones.Size = new System.Drawing.Size(623, 223);
+            this.pnlAgresiones.TabIndex = 50;
+            this.pnlAgresiones.TabStop = false;
+            this.pnlAgresiones.Text = "Agresiones";
             // 
-            // label12
+            // dgvAgresiones
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label12.Location = new System.Drawing.Point(586, 27);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 25);
-            this.label12.TabIndex = 97;
-            this.label12.Text = "FALLO";
+            this.dgvAgresiones.AllowUserToAddRows = false;
+            this.dgvAgresiones.AllowUserToDeleteRows = false;
+            this.dgvAgresiones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAgresiones.Location = new System.Drawing.Point(8, 38);
+            this.dgvAgresiones.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvAgresiones.Name = "dgvAgresiones";
+            this.dgvAgresiones.ReadOnly = true;
+            this.dgvAgresiones.RowHeadersWidth = 51;
+            this.dgvAgresiones.Size = new System.Drawing.Size(591, 179);
+            this.dgvAgresiones.TabIndex = 24;
             // 
-            // groupBox9
+            // pnlVisitas
             // 
-            this.groupBox9.Controls.Add(this.radioButton7);
-            this.groupBox9.Controls.Add(this.textBox2);
-            this.groupBox9.Controls.Add(this.radioButton8);
-            this.groupBox9.Controls.Add(this.checkBox7);
-            this.groupBox9.Controls.Add(this.checkBox8);
-            this.groupBox9.Controls.Add(this.checkBox9);
-            this.groupBox9.Controls.Add(this.checkBox10);
-            this.groupBox9.Controls.Add(this.checkBox11);
-            this.groupBox9.Controls.Add(this.checkBox12);
-            this.groupBox9.Controls.Add(this.checkBox13);
-            this.groupBox9.Controls.Add(this.checkBox14);
-            this.groupBox9.Controls.Add(this.label13);
-            this.groupBox9.Controls.Add(this.checkBox15);
-            this.groupBox9.Controls.Add(this.checkBox16);
-            this.groupBox9.Controls.Add(this.checkBox17);
-            this.groupBox9.Controls.Add(this.checkBox18);
-            this.groupBox9.Controls.Add(this.checkBox19);
-            this.groupBox9.Location = new System.Drawing.Point(590, 678);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Size = new System.Drawing.Size(506, 491);
-            this.groupBox9.TabIndex = 100;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Otorga Medidas de atención";
+            this.pnlVisitas.Controls.Add(this.dgvVisitasAnteriores);
+            this.pnlVisitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlVisitas.Location = new System.Drawing.Point(1137, 155);
+            this.pnlVisitas.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlVisitas.Name = "pnlVisitas";
+            this.pnlVisitas.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlVisitas.Size = new System.Drawing.Size(623, 223);
+            this.pnlVisitas.TabIndex = 49;
+            this.pnlVisitas.TabStop = false;
+            this.pnlVisitas.Text = "Visitas Anteriores";
             // 
-            // radioButton7
+            // dgvVisitasAnteriores
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Checked = true;
-            this.radioButton7.Location = new System.Drawing.Point(107, 33);
-            this.radioButton7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(63, 29);
-            this.radioButton7.TabIndex = 86;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "NO";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(68, 502);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(383, 30);
-            this.textBox2.TabIndex = 89;
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(20, 33);
-            this.radioButton8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(52, 29);
-            this.radioButton8.TabIndex = 85;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "SI";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(7, 467);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(151, 29);
-            this.checkBox7.TabIndex = 59;
-            this.checkBox7.Text = "Otra. ¿Cuál? ";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(7, 434);
-            this.checkBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(378, 29);
-            this.checkBox8.TabIndex = 58;
-            this.checkBox8.Text = "Devolución de los objetos de las víctima";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(7, 405);
-            this.checkBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(427, 29);
-            this.checkBox9.TabIndex = 57;
-            this.checkBox9.Text = "Prohibición de venta o enajenación de bienes";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(7, 376);
-            this.checkBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(256, 29);
-            this.checkBox10.TabIndex = 56;
-            this.checkBox10.Text = "Uso y disfrute de vivienda";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(7, 347);
-            this.checkBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(235, 29);
-            this.checkBox11.TabIndex = 55;
-            this.checkBox11.Text = "Pensiones alimentarias";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(7, 259);
-            this.checkBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(417, 29);
-            this.checkBox12.TabIndex = 53;
-            this.checkBox12.Text = "Acompañamiento para reingreso al domicilio";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(7, 231);
-            this.checkBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(196, 29);
-            this.checkBox13.TabIndex = 52;
-            this.checkBox13.Text = "Protección policiva";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(7, 172);
-            this.checkBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(451, 29);
-            this.checkBox14.TabIndex = 50;
-            this.checkBox14.Text = "Prohibición de trasladar o esconder a hijas/hijos ";
-            this.checkBox14.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label13.Location = new System.Drawing.Point(29, 120);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(448, 54);
-            this.label13.TabIndex = 49;
-            this.label13.Text = "Abstenerse de penetrar en cualquier lugar donde esté la víctima";
-            // 
-            // checkBox15
-            // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(7, 202);
-            this.checkBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(207, 29);
-            this.checkBox15.TabIndex = 4;
-            this.checkBox15.Text = "Acudir a tratamiento";
-            this.checkBox15.UseVisualStyleBackColor = true;
-            // 
-            // checkBox16
-            // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(7, 318);
-            this.checkBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(350, 29);
-            this.checkBox16.TabIndex = 3;
-            this.checkBox16.Text = "Suspensión de la tenencia de armas";
-            this.checkBox16.UseVisualStyleBackColor = true;
-            // 
-            // checkBox17
-            // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(7, 134);
-            this.checkBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(18, 17);
-            this.checkBox17.TabIndex = 2;
-            this.checkBox17.UseVisualStyleBackColor = true;
-            // 
-            // checkBox18
-            // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(7, 289);
-            this.checkBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(459, 29);
-            this.checkBox18.TabIndex = 1;
-            this.checkBox18.Text = "Régimen provisional de visitas, guarda y custodia";
-            this.checkBox18.UseVisualStyleBackColor = true;
-            // 
-            // checkBox19
-            // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(7, 90);
-            this.checkBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(110, 29);
-            this.checkBox19.TabIndex = 0;
-            this.checkBox19.Text = "Desalojo";
-            this.checkBox19.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label14.Location = new System.Drawing.Point(11, 49);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(133, 25);
-            this.label14.TabIndex = 51;
-            this.label14.Text = "Notificaciones";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Personal",
-            "Por estado"});
-            this.comboBox1.Location = new System.Drawing.Point(15, 78);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(184, 33);
-            this.comboBox1.TabIndex = 52;
+            this.dgvVisitasAnteriores.AllowUserToAddRows = false;
+            this.dgvVisitasAnteriores.AllowUserToDeleteRows = false;
+            this.dgvVisitasAnteriores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVisitasAnteriores.Location = new System.Drawing.Point(8, 50);
+            this.dgvVisitasAnteriores.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvVisitasAnteriores.Name = "dgvVisitasAnteriores";
+            this.dgvVisitasAnteriores.ReadOnly = true;
+            this.dgvVisitasAnteriores.RowHeadersWidth = 51;
+            this.dgvVisitasAnteriores.Size = new System.Drawing.Size(591, 179);
+            this.dgvVisitasAnteriores.TabIndex = 24;
             // 
             // FrmRegistrarAudiencia
             // 
@@ -2044,23 +2134,24 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1778, 1055);
-            this.Controls.Add(this.pnlFichasActualizacion);
+            this.Controls.Add(this.groupBox10);
+            this.Controls.Add(this.groupBox15);
+            this.Controls.Add(this.groupBox16);
+            this.Controls.Add(this.pnlActualizacionCaso);
             this.Controls.Add(this.pnlAudienciasMedidasProteccion);
             this.Controls.Add(this.pnlInicioProceso);
             this.Controls.Add(this.pnlEntrevistas);
             this.Controls.Add(this.pnlOrientaciones);
-            this.Controls.Add(this.pnlRegistroNuevo);
             this.Controls.Add(this.pnlAgresiones);
-            this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlVisitas);
+            this.Controls.Add(this.pnlRegistroNuevo);
+            this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRegistrarAudiencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar barequero";
             this.Load += new System.EventHandler(this.FrmRegistrarAgresion_Load);
-            this.pnlVisitas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVisitasAnteriores)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -2076,10 +2167,12 @@
             this.groupBox1.PerformLayout();
             this.pnlRegistro.ResumeLayout(false);
             this.pnlRegistro.PerformLayout();
-            this.pnlAgresiones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAgresiones)).EndInit();
             this.pnlRegistroNuevo.ResumeLayout(false);
             this.pnlRegistroNuevo.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
             this.groupBox13.ResumeLayout(false);
@@ -2096,27 +2189,31 @@
             this.groupBox5.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            this.pnlOrientaciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrientaciones)).EndInit();
-            this.pnlEntrevistas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEntrevistas)).EndInit();
-            this.pnlInicioProceso.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIniciosProcesos)).EndInit();
+            this.groupBox10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionIncumplimiento)).EndInit();
+            this.groupBox15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionTerminacionMedidas)).EndInit();
+            this.groupBox16.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionMedidasProteccion)).EndInit();
+            this.pnlActualizacionCaso.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionCaso)).EndInit();
             this.pnlAudienciasMedidasProteccion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAudiencias)).EndInit();
-            this.pnlFichasActualizacion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacion)).EndInit();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
+            this.pnlInicioProceso.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIniciosProcesos)).EndInit();
+            this.pnlEntrevistas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntrevistas)).EndInit();
+            this.pnlOrientaciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrientaciones)).EndInit();
+            this.pnlAgresiones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgresiones)).EndInit();
+            this.pnlVisitas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisitasAnteriores)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox pnlVisitas;
-        private System.Windows.Forms.DataGridView dgvVisitasAnteriores;
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -2159,8 +2256,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Panel pnlRegistro;
         private System.Windows.Forms.Button btnRefrescar;
-        private System.Windows.Forms.GroupBox pnlAgresiones;
-        private System.Windows.Forms.DataGridView dgvAgresiones;
         private System.Windows.Forms.GroupBox pnlRegistroNuevo;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label23;
@@ -2197,16 +2292,6 @@
         private System.Windows.Forms.CheckBox chkProteccionPoliciva;
         private System.Windows.Forms.CheckBox chkEsconderHijos;
         private System.Windows.Forms.Label lblAbtenerseLugar;
-        private System.Windows.Forms.GroupBox pnlOrientaciones;
-        private System.Windows.Forms.DataGridView dgvOrientaciones;
-        private System.Windows.Forms.GroupBox pnlEntrevistas;
-        private System.Windows.Forms.DataGridView dgvEntrevistas;
-        private System.Windows.Forms.GroupBox pnlInicioProceso;
-        private System.Windows.Forms.DataGridView dgvIniciosProcesos;
-        private System.Windows.Forms.GroupBox pnlAudienciasMedidasProteccion;
-        private System.Windows.Forms.DataGridView dgvAudiencias;
-        private System.Windows.Forms.GroupBox pnlFichasActualizacion;
-        private System.Windows.Forms.DataGridView dgvActualizacion;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox6;
@@ -2265,5 +2350,25 @@
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.DataGridView dgvActualizacionIncumplimiento;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.DataGridView dgvActualizacionTerminacionMedidas;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.DataGridView dgvActualizacionMedidasProteccion;
+        private System.Windows.Forms.GroupBox pnlActualizacionCaso;
+        private System.Windows.Forms.DataGridView dgvActualizacionCaso;
+        private System.Windows.Forms.GroupBox pnlAudienciasMedidasProteccion;
+        private System.Windows.Forms.DataGridView dgvAudiencias;
+        private System.Windows.Forms.GroupBox pnlInicioProceso;
+        private System.Windows.Forms.DataGridView dgvIniciosProcesos;
+        private System.Windows.Forms.GroupBox pnlEntrevistas;
+        private System.Windows.Forms.DataGridView dgvEntrevistas;
+        private System.Windows.Forms.GroupBox pnlOrientaciones;
+        private System.Windows.Forms.DataGridView dgvOrientaciones;
+        private System.Windows.Forms.GroupBox pnlAgresiones;
+        private System.Windows.Forms.DataGridView dgvAgresiones;
+        private System.Windows.Forms.GroupBox pnlVisitas;
+        private System.Windows.Forms.DataGridView dgvVisitasAnteriores;
     }
 }

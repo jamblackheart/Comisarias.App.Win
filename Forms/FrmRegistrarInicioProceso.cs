@@ -8,7 +8,7 @@ namespace Comisarias.App.Escritorio.Forms
 {
     public partial class FrmRegistrarInicioProceso : Form
     {
-       
+
         private string[] meses = { "Enero", "Febrero" , "Marzo", "Abril" ,
             "Mayo" , "Junio" , "Julio" , "Agosto" , "Septiembre" ,
             "Octubre" , "Noviembre" , "Diciembre"};
@@ -33,6 +33,7 @@ namespace Comisarias.App.Escritorio.Forms
         string AutoQueAvocaConocimiento = "";
         string RemisionMedicinaLegalInforme = "";
 
+        
         public FrmRegistrarInicioProceso()
         {
             InitializeComponent();
@@ -62,12 +63,78 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LimpiarRegistro()
         {
+            pnlRegistroNuevo.Enabled = true;
+
+            lblMensaje.Text = "";
+            cmbDia.Text = "";
+            cmbAnio.Text = "";
+            cmbMes.Text = "";
+            
+
+            usuario = new Usuario();
+
+
+            AutoQueAvocaConocimiento = "";
+            RemisionMedicinaLegalInforme = "";
+            lblRutaAutoAvoca.Text = "";
+            lblInforme.Text = "";
+
+            txtOtraMedida.Text = "";
+
+            chkDesalojo.Checked = false;
+            chkAbstenerseLugar.Checked = false;
+            chkEsconderHijos.Checked = false;
+            chkAcudirTratamiento.Checked = false;
+            chkProteccionPoliciva.Checked = false;
+            chkAcompanamientoCasa.Checked = false;
+            chkRegimenProvisional.Checked = false;
+            chkSuspencionArmas.Checked = false;
+            chkPensionAlimentaria.Checked = false;
+            chkUsoVivienda.Checked = false;
+            chkProhibicionVenta.Checked = false;
+            chkDevolucionObjetos.Checked = false;
+            chkOtraMedida.Checked = false;
+
+            rdbAmpliacionMedidasSI.Checked = false;
+            rdbAmpliacionMedidasNO.Checked = true;
+            
+            cmbDiaAmpliacionMedidas.Text = "";
+            cmbMesAmpliacionMedidas.Text = "";
+            cmbAnioAmpliacionMedidas.Text = "";
+            cmbSeOtorgaronAmpliacionMedidas.Text = "";
+
+            rdbRemisionFiscaliaSI.Checked = false;
+            rdbRemisionFiscaliaNO.Checked = true;
+            cmbDiaRemisionFiscalia.Text = "";
+            cmbMesRemisionFiscalia.Text = "";
+            cmbAnioRemisionFiscalia.Text = "";
+            txtNumeroNoticiaRemisionFiscalia.Text = "";
+
+
+            rdbRemisionMedicinaLegalSI.Checked = false;
+            rdbRemisionMedicinaLegalNO.Checked = true;
+            cmbDiaRemisionMedicinaLegal.Text = "";
+            cmbMesRemisionMedicinaLegal.Text = "";
+            cmbAnioRemisionMedicinaLegal.Text = "";
+
+
+
+            rdbRemisionEPSSI.Checked = false;
+            rdbRemisionEPSNO.Checked = true;
+            cmbDiaRemisionEPS.Text = "";
+            cmbMesRemisionEPS.Text = "";
+            cmbAnioRemisionEPS.Text = "";
+            cmbTipoRemisionRemisionEPS.Text = "";
+
+            rdbAcompanamientoComisariaSI.Checked = false;
+            rdbAcompanamientoComisariaNO.Checked = true;
+            txtObservacionAcompanamientoComisaria.Text = "";
 
         }
 
         private void CargarInfomacionEnControles()
         {
-            
+
         }
 
 
@@ -83,7 +150,7 @@ namespace Comisarias.App.Escritorio.Forms
             txtTelefono.Enabled = false;
             txtEmail.Enabled = false;
             txtDireccion.Enabled = false;
-           
+
             txtCualDiscapacidad.Enabled = false;
             txtCualEtnia.Enabled = false;
             rbtDiscapacidadSi.Enabled = false;
@@ -113,7 +180,11 @@ namespace Comisarias.App.Escritorio.Forms
             ObtenerEntrevistas();
             ObtenerIniciosProceso();
             ObtenerAudiencias();
-            ObtenerActualizacionesProceso();
+
+            ObtenerActualizacionesMedidasProteccion();
+            ObtenerActualizacionesTerminacionMedidas();
+            ObtenerActualizacionesIncumplimiento();
+            ObtenerActualizacionesCaso();
         }
 
         private void ObtenerVisitas()
@@ -256,15 +327,15 @@ namespace Comisarias.App.Escritorio.Forms
             }
         }
 
-        private void ObtenerActualizacionesProceso()
+        private void ObtenerActualizacionesCaso()
         {
             RespuestaGetDatos respuesta = controlador_actualizacionCaso.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
-                dgvActualizacion.DataSource = respuesta.Datos;
+                dgvActualizacionCaso.DataSource = respuesta.Datos;
 
-                foreach (DataGridViewColumn colum in dgvActualizacion.Columns)
+                foreach (DataGridViewColumn colum in dgvActualizacionCaso.Columns)
                 {
                     if (colum.Name == "Id" || colum.Name == "UsuarioId")
                         colum.Visible = false;
@@ -273,7 +344,73 @@ namespace Comisarias.App.Escritorio.Forms
             }
             else
             {
-                dgvActualizacion.DataSource = null;
+                dgvActualizacionCaso.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerActualizacionesIncumplimiento()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacionIncumplimiento.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacionIncumplimiento.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacionIncumplimiento.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacionIncumplimiento.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerActualizacionesMedidasProteccion()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacionMedidasProteccion.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacionMedidasProteccion.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacionMedidasProteccion.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacionMedidasProteccion.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerActualizacionesTerminacionMedidas()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacionTerminacionMedidas.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacionTerminacionMedidas.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacionTerminacionMedidas.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacionTerminacionMedidas.DataSource = null;
                 lblMensaje.Text = respuesta.Mensaje;
             }
         }
@@ -308,7 +445,11 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LlenarCamposUsuario()
         {
-            
+            cmbGeneros.Text = "";
+            cmbArea.Text = "";
+
+            lblMensaje.Text = "";
+
             txtNombres.Text = usuario.Nombres;
             txtApellidos.Text = usuario.Apellidos;
             cmbGeneros.SelectedText = usuario.Genero;
@@ -328,7 +469,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         }
 
-       
+
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             ReiniciarPagina();
@@ -336,6 +477,13 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LlenarCamposFecha()
         {
+
+
+            cmbDia.Items.Clear();
+            cmbAnio.Items.Clear();
+            cmbMes.Items.Clear();
+
+
             for (int i = 1; i <= 31; i++)
             {
                 cmbDia.Items.Add(i);
@@ -395,6 +543,31 @@ namespace Comisarias.App.Escritorio.Forms
 
             }
 
+        }
+
+    
+        private void Registrar()
+        {
+            objRegistro.UsuarioId = usuario.Id;
+            objRegistro.Fecha = ObtenerFechaFormulario(cmbAnio.Text, cmbMes.Text, cmbDia.Text);
+            objRegistro.AutoQueAvocaConocimiento = AutoQueAvocaConocimiento;
+            objRegistro.OpcionMedidasProteccion = rdbMedidasProteccionSI.Checked ? "SI" : "NO";
+            objRegistro.MedidasProteccion = MedidasDeProteccion();
+            objRegistro.OtraRelacionMedidaProteccion = txtOtraMedida.Text;
+            objRegistro.SolicitudAmpliacionMedidas = rdbAmpliacionMedidasSI.Checked ? "SI" : "NO";
+            objRegistro.SolicitudAmpliacionMedidasFecha = ObtenerFechaFormulario(cmbAnioAmpliacionMedidas.Text, cmbMesAmpliacionMedidas.Text, cmbDiaAmpliacionMedidas.Text);
+            objRegistro.SolicitudAmpliacionMedidasSeOtorgaron = cmbSeOtorgaronAmpliacionMedidas.SelectedText;
+            objRegistro.RemisionFiscalia = rdbRemisionFiscaliaSI.Checked ? "SI" : "NO";
+            objRegistro.RemisionFiscaliaFecha = ObtenerFechaFormulario(cmbAnioRemisionFiscalia.Text, cmbMesRemisionFiscalia.Text, cmbDiaRemisionFiscalia.Text);
+            objRegistro.RemisionFiscaliaNumeroNoticiaCriminal = txtNumeroNoticiaRemisionFiscalia.Text;
+            objRegistro.RemisionMedicinaLegal = rdbRemisionMedicinaLegalSI.Checked ? "SI" : "NO";
+            objRegistro.RemisionMedicinaLegalFecha = ObtenerFechaFormulario(cmbAnioRemisionMedicinaLegal.Text, cmbMesRemisionMedicinaLegal.Text, cmbDiaRemisionMedicinaLegal.Text);
+            objRegistro.RemisionMedicinaLegalInforme = RemisionMedicinaLegalInforme;
+            objRegistro.RemisionEps = rdbRemisionEPSSI.Checked ? "SI" : "NO";
+            objRegistro.RemisionEpsFecha = ObtenerFechaFormulario(cmbAnioRemisionEPS.Text, cmbMesRemisionEPS.Text, cmbDiaRemisionEPS.Text);
+            objRegistro.RemisionEpsTipo = cmbTipoRemisionRemisionEPS.SelectedText;
+            objRegistro.AcompañamientoComisaria = rdbAcompanamientoComisariaSI.Checked ? "SI" : "NO";
+            objRegistro.AcompañamientoComisariaObservacion = txtObservacionAcompanamientoComisaria.Text;
         }
 
         private string MedidasDeProteccion()
@@ -468,65 +641,25 @@ namespace Comisarias.App.Escritorio.Forms
             return retorno;
         }
 
-        private void Registrar()
-        {
-            objRegistro.UsuarioId = usuario.Id;
-            objRegistro.Fecha = ObtenerFechaFormulario(cmbAnio.Text, cmbMes.Text, cmbDia.Text);
-            objRegistro.AutoQueAvocaConocimiento = AutoQueAvocaConocimiento;
-            objRegistro.OpcionMedidasProteccion = rdbMedidasProteccionSI.Checked ? "SI" : "NO";
-            objRegistro.MedidasProteccion = MedidasDeProteccion();
-            objRegistro.OtraRelacionMedidaProteccion = txtOtraMedida.Text;
-            objRegistro.SolicitudAmpliacionMedidas = rdbAmpliacionMedidasSI.Checked ? "SI" : "NO";
-            objRegistro.SolicitudAmpliacionMedidasFecha = ObtenerFechaFormulario(cmbAnioAmpliacionMedidas.Text, cmbMesAmpliacionMedidas.Text, cmbDiaAmpliacionMedidas.Text);
-            objRegistro.SolicitudAmpliacionMedidasSeOtorgaron = cmbSeOtorgaronAmpliacionMedidas.SelectedText;
-            objRegistro.RemisionFiscalia = rdbRemisionFiscaliaSI.Checked ? "SI" : "NO";
-            objRegistro.RemisionFiscaliaFecha = ObtenerFechaFormulario(cmbAnioRemisionFiscalia.Text, cmbMesRemisionFiscalia.Text, cmbDiaRemisionFiscalia.Text);
-            objRegistro.RemisionFiscaliaNumeroNoticiaCriminal = txtNumeroNoticiaRemisionFiscalia.Text;
-            objRegistro.RemisionMedicinaLegal = rdbRemisionMedicinaLegalSI.Checked ? "SI" : "NO";
-            objRegistro.RemisionMedicinaLegalFecha = ObtenerFechaFormulario(cmbAnioRemisionMedicinaLegal.Text, cmbMesRemisionMedicinaLegal.Text, cmbDiaRemisionMedicinaLegal.Text);
-            objRegistro.RemisionMedicinaLegalInforme = RemisionMedicinaLegalInforme;
-            objRegistro.RemisionEps = rdbRemisionEPSSI.Checked ? "SI" : "NO";
-            objRegistro.RemisionEpsFecha = ObtenerFechaFormulario(cmbAnioRemisionEPS.Text, cmbMesRemisionEPS.Text, cmbDiaRemisionEPS.Text);
-            objRegistro.RemisionEpsTipo = cmbTipoRemisionRemisionEPS.SelectedText;
-            objRegistro.AcompañamientoComisaria = rdbAcompanamientoComisariaSI.Checked ? "SI" : "NO";
-            objRegistro.AcompañamientoComisariaObservacion = txtObservacionAcompanamientoComisaria.Text;
-        }
-
         private bool ValidarDatos()
         {
             bool valido = true;
             string mensaje = "Todos los campos son requeridos, por favor valide: ";
 
-            //if (txtResponsable.Text == "")
-            //{
-            //    valido = false;
-            //    mensaje += " Nombre agresor,";
-            //}
-            //if (txtRadicado.Text == "")
-            //{
-            //    valido = false;
-            //    mensaje += " Nombres,";
-            //}
-            //if (cmbRelacionAgresor.Text == "")
-            //{
-            //    valido = false;
-            //    mensaje += " Apellidos,";
-            //}
-            //if (cmbMedidasProteccion.Text == "")
-            //{
-            //    valido = false;
-            //    mensaje += " Genero,";
-            //}
-
+            if (objRegistro.Fecha == null) {
+                valido = false;
+                mensaje += " Fecha,";
+            }
 
             if (!valido)
             {
                 mensaje = mensaje.TrimEnd(',');
+                lblMensaje.Text = mensaje;
 
             }
             return valido;
         }
-        private DateTime ObtenerFechaFormulario(string panio, string pmes, string pdia)
+        private DateTime? ObtenerFechaFormulario(string panio, string pmes, string pdia)
         {
             try
             {
@@ -543,7 +676,7 @@ namespace Comisarias.App.Escritorio.Forms
             }
             catch (Exception)
             {
-
+                return null;
                 throw;
             }
 

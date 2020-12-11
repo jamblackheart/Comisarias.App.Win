@@ -21,10 +21,13 @@ namespace Comisarias.App.Escritorio.Forms
         Orientacion_Controller controlador_orientacion = new Orientacion_Controller();
         Entrevista_Controller controlador_entrevista = new Entrevista_Controller();
         InicioProceso_Controller controlador_inicioProceso = new InicioProceso_Controller();
+
+        Audiencia_Controller controlador_audiencia = new Audiencia_Controller();
         ActualizacionMedidasProteccion_Controller controlador_actualizacionMedidasProteccion = new ActualizacionMedidasProteccion_Controller();
         ActualizacionIncumplimiento_Controller controlador_actualizacionIncumplimiento = new ActualizacionIncumplimiento_Controller();
         ActualizacionTerminacionMedidas_Controller controlador_actualizacionTerminacionMedidas = new ActualizacionTerminacionMedidas_Controller();
         ActualizacionCaso_Controller controlador_actualizacionCaso = new ActualizacionCaso_Controller();
+
 
         Entrevista objRegistro = new Entrevista();
 
@@ -59,8 +62,57 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LimpiarRegistro()
         {
+            pnlRegistroNuevo.Enabled = true;
+
+            lblMensaje.Text = "";
+            cmbDia.Text = "";
+            cmbAnio.Text = "";
+            cmbMes.Text = "";
+
+            txtResponsable.Text = "";
+            txtResumen.Text = "";
+            cmbValoracionDelRiesgo.Text = "";
+            cmbIdentificacionViolencia.Text = "";
+
+            chkViolenciaFisica.Checked = false;
+            chkPsicologica.Checked = false; 
+            chkPatrimonial.Checked = false; 
+            chkVerbal.Checked = false; 
+            chkSexual.Checked = false;
 
         }
+
+        private void CargarInfomacionEnControles()
+        {
+        }
+
+        private void BloquearFormulario()
+        {
+            btnConsultar.Enabled = false;
+            btnConsultar.Visible = false;
+            txtCedulaConsultar.Enabled = false;
+            txtNombres.Enabled = false;
+            txtApellidos.Enabled = false;
+            cmbGeneros.Enabled = false;
+            cmbArea.Enabled = false;
+            txtTelefono.Enabled = false;
+            txtEmail.Enabled = false;
+            txtDireccion.Enabled = false;
+
+            txtCualDiscapacidad.Enabled = false;
+            txtCualEtnia.Enabled = false;
+            rbtDiscapacidadSi.Enabled = false;
+            rbtDiscapacidadNo.Enabled = false;
+            rbtEtniaSi.Enabled = false;
+            rbtEtniaNo.Enabled = false;
+            rbtVictimaConfictoSi.Enabled = false;
+            rbtVictimaConfictoNo.Enabled = false;
+
+            pnlRegistro.Visible = true;
+
+
+        }
+
 
 
         private void FrmRegistrarAgresion_Load(object sender, EventArgs e)
@@ -68,7 +120,7 @@ namespace Comisarias.App.Escritorio.Forms
             usuario = new Usuario();
             lblFechaActual.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
 
-
+            CargarInfomacionEnControles();
         }
 
 
@@ -79,6 +131,13 @@ namespace Comisarias.App.Escritorio.Forms
             ObtenerOrientaciones();
             ObtenerEntrevistas();
             ObtenerIniciosProceso();
+            ObtenerAudiencias();
+
+            ObtenerActualizacionesMedidasProteccion();
+            ObtenerActualizacionesTerminacionMedidas();
+            ObtenerActualizacionesIncumplimiento();
+            ObtenerActualizacionesCaso();
+
         }
 
         private void ObtenerVisitas()
@@ -179,7 +238,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void ObtenerIniciosProceso()
         {
-            RespuestaGetDatos respuesta = controlador_inicioProceso.ObtenerPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_actualizacionCaso.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
@@ -195,6 +254,116 @@ namespace Comisarias.App.Escritorio.Forms
             else
             {
                 dgvIniciosProcesos.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerAudiencias()
+        {
+            RespuestaGetDatos respuesta = controlador_audiencia.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvAudiencias.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvAudiencias.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvAudiencias.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerActualizacionesCaso()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacionCaso.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacionCaso.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacionCaso.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacionCaso.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerActualizacionesIncumplimiento()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacionIncumplimiento.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacionIncumplimiento.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacionIncumplimiento.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacionMedidasProteccion.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerActualizacionesMedidasProteccion()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacionMedidasProteccion.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacionMedidasProteccion.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacionMedidasProteccion.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacionMedidasProteccion.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerActualizacionesTerminacionMedidas()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacionTerminacionMedidas.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacionTerminacionMedidas.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacionTerminacionMedidas.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacionTerminacionMedidas.DataSource = null;
                 lblMensaje.Text = respuesta.Mensaje;
             }
         }
@@ -235,6 +404,12 @@ namespace Comisarias.App.Escritorio.Forms
         private void LlenarCamposUsuario()
         {
 
+            cmbGeneros.Text = "";
+            cmbArea.Text = "";
+
+            lblMensaje.Text = "";
+
+
             txtNombres.Text = usuario.Nombres;
             txtApellidos.Text = usuario.Apellidos;
             cmbGeneros.SelectedText = usuario.Genero;
@@ -254,37 +429,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         }
 
-        private void CargarInfomacionEnControles()
-        {
-        }
-
-        private void BloquearFormulario()
-        {
-            btnConsultar.Enabled = false;
-            btnConsultar.Visible = false;
-            txtCedulaConsultar.Enabled = false;
-            txtNombres.Enabled = false;
-            txtApellidos.Enabled = false;
-            cmbGeneros.Enabled = false;
-            cmbArea.Enabled = false;
-            txtTelefono.Enabled = false;
-            txtEmail.Enabled = false;
-            txtDireccion.Enabled = false;
-
-            txtCualDiscapacidad.Enabled = false;
-            txtCualEtnia.Enabled = false;
-            rbtDiscapacidadSi.Enabled = false;
-            rbtDiscapacidadNo.Enabled = false;
-            rbtEtniaSi.Enabled = false;
-            rbtEtniaNo.Enabled = false;
-            rbtVictimaConfictoSi.Enabled = false;
-            rbtVictimaConfictoNo.Enabled = false;
-
-            pnlRegistro.Visible = true;
-
-
-        }
-
+       
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
@@ -294,17 +439,22 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LlenarCamposFecha()
         {
+
+            cmbDia.Items.Clear();
+            cmbAnio.Items.Clear();
+            cmbMes.Items.Clear();
+
             for (int i = 1; i <= 31; i++)
             {
-                cmbDiaAgresion.Items.Add(i);
+                cmbDia.Items.Add(i);
             }
             for (int i = System.DateTime.Now.Year; i >= System.DateTime.Now.Year - 100; i--)
             {
-                cmbAnioAgresion.Items.Add(i);
+                cmbAnio.Items.Add(i);
             }
             foreach (string item in meses)
             {
-                cmbMesAgresion.Items.Add(item);
+                cmbMes.Items.Add(item);
             }
 
         }
@@ -345,12 +495,12 @@ namespace Comisarias.App.Escritorio.Forms
         private void Registrar()
         {
             objRegistro.UsuarioId = usuario.Id;
-            objRegistro.Fecha = ObtenerFechaFormulario(cmbAnioAgresion.Text, cmbMesAgresion.Text, cmbDiaAgresion.Text);
+            objRegistro.Fecha = ObtenerFechaFormulario(cmbAnio.Text, cmbMes.Text, cmbDia.Text);
             objRegistro.Responsable = txtResponsable.Text;
             objRegistro.Resumen = txtResumen.Text;
             objRegistro.TipoViolencia = TipoViolencia();
-            objRegistro.IdentificacionViolencia = cmbIdentificacionViolencia.SelectedText;
-            objRegistro.ValoracionRiesgo = cmbValoracionDelRiesgo.SelectedText;
+            objRegistro.IdentificacionViolencia = cmbIdentificacionViolencia.Text;
+            objRegistro.ValoracionRiesgo = cmbValoracionDelRiesgo.Text;
            
         }
 
@@ -392,11 +542,48 @@ namespace Comisarias.App.Escritorio.Forms
         {
             bool valido = true;
             string mensaje = "Todos los campos son requeridos, por favor valide: ";
-            
+
+            if (objRegistro.Fecha == null)
+            {
+                valido = false;
+                mensaje += " Fecha,";
+            }
+
+           
+
+            if (txtResponsable.Text == "")
+            {
+                valido = false;
+                mensaje += " Responsable,";
+            }
+            if (txtResumen.Text == "")
+            {
+                valido = false;
+                mensaje += " Resumen,";
+            }
+            if (cmbValoracionDelRiesgo.Text == "")
+            {
+                valido = false;
+                mensaje += " Valoración del riesgo,";
+            }
+
+            if (cmbIdentificacionViolencia.Text == "")
+            {
+                valido = false;
+                mensaje += " Identificación de la violencia,";
+            }
+
+            if (!valido)
+            {
+                mensaje = mensaje.TrimEnd(',');
+                lblMensaje.Text = mensaje;
+
+            }
+
             return valido;
         }
 
-        private DateTime ObtenerFechaFormulario(string panio, string pmes, string pdia)
+        private DateTime? ObtenerFechaFormulario(string panio, string pmes, string pdia)
         {
             try
             {
@@ -413,12 +600,11 @@ namespace Comisarias.App.Escritorio.Forms
             }
             catch (Exception)
             {
-
+                return null;
                 throw;
             }
 
         }
-
 
         private void btnRefrescar_Click(object sender, EventArgs e)
         {

@@ -150,25 +150,65 @@ namespace Comisarias.App.Escritorio.Controllers
                         SqlParameter pFecha = new SqlParameter("@pFecha", SqlDbType.Date);
                         SqlParameter pAutoQueAvocaConocimiento = new SqlParameter("@pAutoQueAvocaConocimiento", SqlDbType.VarChar);
                         SqlParameter pOpcionMedidasProteccion = new SqlParameter("@pOpcionMedidasProteccion", SqlDbType.VarChar);
-
-
                         SqlParameter pMedidasProteccion = new SqlParameter("@pMedidasProteccion", SqlDbType.VarChar);
                         SqlParameter pOtraRelacionMedidaProteccion = new SqlParameter("@pOtraRelacionMedidaProteccion", SqlDbType.VarChar);
                         SqlParameter pSolicitudAmpliacionMedidas = new SqlParameter("@pSolicitudAmpliacionMedidas", SqlDbType.VarChar);
-                        SqlParameter pSolicitudAmpliacionMedidasFecha = new SqlParameter("@pSolicitudAmpliacionMedidasFecha", SqlDbType.Date);
                         SqlParameter pSolicitudAmpliacionMedidasSeOtorgaron = new SqlParameter("@pSolicitudAmpliacionMedidasSeOtorgaron", SqlDbType.VarChar);
                         SqlParameter pRemisionFiscalia = new SqlParameter("@pRemisionFiscalia", SqlDbType.VarChar);
-                        SqlParameter pRemisionFiscaliaFecha = new SqlParameter("@pRemisionFiscaliaFecha", SqlDbType.Date);
                         SqlParameter pRemisionFiscaliaNumeroNoticiaCriminal = new SqlParameter("@pRemisionFiscaliaNumeroNoticiaCriminal", SqlDbType.VarChar);
                         SqlParameter pRemisionMedicinaLegal = new SqlParameter("@pRemisionMedicinaLegal", SqlDbType.VarChar);
-                        SqlParameter pRemisionMedicinaLegalFecha = new SqlParameter("@pRemisionMedicinaLegalFecha", SqlDbType.Date);
                         SqlParameter pRemisionMedicinaLegalInforme = new SqlParameter("@pRemisionMedicinaLegalInforme", SqlDbType.VarChar);
                         SqlParameter pRemisionEps = new SqlParameter("@pRemisionEps", SqlDbType.VarChar);
-                        SqlParameter pRemisionEpsFecha = new SqlParameter("@pRemisionEpsFecha", SqlDbType.Date);
                         SqlParameter pRemisionEpsTipo = new SqlParameter("@pRemisionEpsTipo", SqlDbType.VarChar);
                         SqlParameter pAcompañamientoComisaria = new SqlParameter("@pAcompañamientoComisaria", SqlDbType.VarChar);
                         SqlParameter pAcompañamientoComisariaObservacion = new SqlParameter("@pAcompañamientoComisariaObservacion", SqlDbType.VarChar);
 
+
+                        SqlParameter pSolicitudAmpliacionMedidasFecha;
+                        if (obj.SolicitudAmpliacionMedidasFecha == null)
+                        {
+                            pSolicitudAmpliacionMedidasFecha = new SqlParameter("@pSolicitudAmpliacionMedidasFecha", DBNull.Value);
+                        }
+                        else
+                        {
+                            pSolicitudAmpliacionMedidasFecha = new SqlParameter("@pSolicitudAmpliacionMedidasFecha", SqlDbType.Date);
+                            pSolicitudAmpliacionMedidasFecha.Value = obj.SolicitudAmpliacionMedidasFecha;
+                        }
+
+                        SqlParameter pRemisionFiscaliaFecha;
+                        if (obj.RemisionFiscaliaFecha == null)
+                        {
+                            pRemisionFiscaliaFecha = new SqlParameter("@pRemisionFiscaliaFecha", DBNull.Value);
+                        }
+                        else
+                        {
+                            pRemisionFiscaliaFecha = new SqlParameter("@pRemisionFiscaliaFecha", SqlDbType.Date);
+                            pRemisionFiscaliaFecha.Value = obj.RemisionFiscaliaFecha;
+                        }
+                       
+                        SqlParameter pRemisionMedicinaLegalFecha;
+                        if (obj.RemisionFiscaliaFecha == null)
+                        {
+                            pRemisionMedicinaLegalFecha = new SqlParameter("@pRemisionMedicinaLegalFecha", DBNull.Value);
+                        }
+                        else
+                        {
+                            pRemisionMedicinaLegalFecha = new SqlParameter("@pRemisionMedicinaLegalFecha", SqlDbType.Date);
+                            pRemisionMedicinaLegalFecha.Value = obj.RemisionMedicinaLegalFecha;
+                        }
+                        
+                        SqlParameter pRemisionEpsFecha;
+                        if (obj.RemisionEpsFecha == null)
+                        {
+                            pRemisionEpsFecha = new SqlParameter("@pRemisionEpsFecha", DBNull.Value);
+                        }
+                        else
+                        {
+                            pRemisionEpsFecha = new SqlParameter("@pRemisionEpsFecha", SqlDbType.Date);
+                            pRemisionEpsFecha.Value = obj.RemisionEpsFecha;
+                        }
+
+                        
 
 
                         pUsuarioId.Value = obj.UsuarioId;
@@ -178,16 +218,12 @@ namespace Comisarias.App.Escritorio.Controllers
                         pMedidasProteccion.Value = obj.MedidasProteccion;
                         pOtraRelacionMedidaProteccion.Value = obj.OtraRelacionMedidaProteccion;
                         pSolicitudAmpliacionMedidas.Value = obj.SolicitudAmpliacionMedidas;
-                        pSolicitudAmpliacionMedidasFecha.Value = obj.SolicitudAmpliacionMedidasFecha;
                         pSolicitudAmpliacionMedidasSeOtorgaron.Value = obj.SolicitudAmpliacionMedidasSeOtorgaron;
-                        pRemisionFiscalia.Value = obj.RemisionFiscalia;
-                        pRemisionFiscaliaFecha.Value = obj.RemisionFiscaliaFecha;
+                        pRemisionFiscalia.Value = obj.RemisionFiscalia;                       
                         pRemisionFiscaliaNumeroNoticiaCriminal.Value = obj.RemisionFiscaliaNumeroNoticiaCriminal;
-                        pRemisionMedicinaLegal.Value = obj.RemisionMedicinaLegal;
-                        pRemisionMedicinaLegalFecha.Value = obj.RemisionMedicinaLegalFecha;
+                        pRemisionMedicinaLegal.Value = obj.RemisionMedicinaLegal;                        
                         pRemisionMedicinaLegalInforme.Value = obj.RemisionMedicinaLegalInforme;
-                        pRemisionEps.Value = obj.RemisionEps;
-                        pRemisionEpsFecha.Value = obj.RemisionEpsFecha;
+                        pRemisionEps.Value = obj.RemisionEps;                        
                         pRemisionEpsTipo.Value = obj.RemisionEpsTipo;
                         pAcompañamientoComisaria.Value = obj.AcompañamientoComisaria;
                         pAcompañamientoComisariaObservacion.Value = obj.AcompañamientoComisariaObservacion;
@@ -236,6 +272,8 @@ namespace Comisarias.App.Escritorio.Controllers
             return retorno;
 
         }
+
+
 
         //  public Respuesta ActualizarRegistro(InicioProceso obj)
         //  {
@@ -406,7 +444,7 @@ namespace Comisarias.App.Escritorio.Controllers
                                 retorno.MedidasProteccion = reader["MedidasProteccion"].ToString();
                                 retorno.OtraRelacionMedidaProteccion = reader["OtraRelacionMedidaProteccion"].ToString();
                                 retorno.SolicitudAmpliacionMedidas = reader["SolicitudAmpliacionMedidas"].ToString();
-                               
+
                                 tFecha = DateTime.MinValue;
                                 ttFecha = reader["SolicitudAmpliacionMedidasFecha"].ToString();
                                 DateTime.TryParse(ttFecha, out tFecha);
@@ -427,8 +465,8 @@ namespace Comisarias.App.Escritorio.Controllers
                                 ttFecha = reader["RemisionMedicinaLegalFecha"].ToString();
                                 DateTime.TryParse(ttFecha, out tFecha);
                                 retorno.RemisionMedicinaLegalFecha = tFecha;
-                               
-                                
+
+
                                 retorno.RemisionMedicinaLegalInforme = reader["RemisionMedicinaLegalInforme"].ToString();
                                 retorno.RemisionEps = reader["RemisionEps"].ToString();
 

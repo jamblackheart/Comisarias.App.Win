@@ -108,11 +108,11 @@ namespace Comisarias.App.Escritorio.Controllers
                                                                     (UsuarioId,Fecha,NombreAgresor,
                                                                     DocumentoAgresor,RelacionAgresor,OtraRelacionAgresor,
                                                                     DireccionDomicilioAgresor,Radicado,CuentaMedidasProteccion,
-                                                                    CualOtraMedidaProteccion)
+                                                                    CualOtraMedidaProteccion, MedidasProteccion)
                                                             VALUES (@pUsuarioId,@pFecha,@pNombreAgresor,
                                                                     @pDocumentoAgresor,@pRelacionAgresor,@pOtraRelacionAgresor,
                                                                     @pDireccionDomicilioAgresor,@pRadicado,@pCuentaMedidasProteccion,
-                                                                    @pCualOtraMedidaProteccion)", con))
+                                                                    @pCualOtraMedidaProteccion, @pMedidasProteccion)", con))
                     {
                         SqlParameter pUsuarioId = new SqlParameter("@pUsuarioId", SqlDbType.Int);
                         SqlParameter pFecha = new SqlParameter("@pFecha", SqlDbType.Date);
@@ -124,6 +124,7 @@ namespace Comisarias.App.Escritorio.Controllers
                         SqlParameter pRadicado = new SqlParameter("@pRadicado", SqlDbType.VarChar);
                         SqlParameter pCuentaMedidasProteccion = new SqlParameter("@pCuentaMedidasProteccion", SqlDbType.VarChar);                     
                         SqlParameter pCualOtraMedidaProteccion = new SqlParameter("@pCualOtraMedidaProteccion", SqlDbType.VarChar);
+                        SqlParameter pMedidasProteccion = new SqlParameter("@pMedidasProteccion", SqlDbType.VarChar);
 
                         pUsuarioId.Value = obj.UsuarioId;
                         pFecha.Value = obj.Fecha;
@@ -135,6 +136,7 @@ namespace Comisarias.App.Escritorio.Controllers
                         pRadicado.Value = obj.Radicado;
                         pCuentaMedidasProteccion.Value = obj.CuentaMedidasProteccion;
                         pCualOtraMedidaProteccion.Value = obj.CualOtraMedidaProteccion;
+                        pMedidasProteccion.Value = obj.MedidasProteccion;
 
                         command.Parameters.Add(pUsuarioId);
                         command.Parameters.Add(pFecha);
@@ -146,6 +148,7 @@ namespace Comisarias.App.Escritorio.Controllers
                         command.Parameters.Add(pRadicado);
                         command.Parameters.Add(pCuentaMedidasProteccion);
                         command.Parameters.Add(pCualOtraMedidaProteccion);
+                        command.Parameters.Add(pMedidasProteccion);
 
 
                         int rowsAfected = command.ExecuteNonQuery();
@@ -237,6 +240,7 @@ namespace Comisarias.App.Escritorio.Controllers
       ,DireccionDomicilioAgresor 'Dirección'
       ,Radicado
       ,CuentaMedidasProteccion 'Medidas de proteccion?'
+      ,MedidasProteccion 'Medidas Protección'
       ,CualOtraMedidaProteccion 'Otra medida'
                                                         FROM Agresion
                                                    WHERE UsuarioId = @pUsuarioId", con))

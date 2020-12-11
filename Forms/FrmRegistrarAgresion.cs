@@ -21,6 +21,8 @@ namespace Comisarias.App.Escritorio.Forms
         Orientacion_Controller controlador_orientacion = new Orientacion_Controller();
         Entrevista_Controller controlador_entrevista = new Entrevista_Controller();
         InicioProceso_Controller controlador_inicioProceso = new InicioProceso_Controller();
+
+        Audiencia_Controller controlador_audiencia = new Audiencia_Controller();
         ActualizacionMedidasProteccion_Controller controlador_actualizacionMedidasProteccion = new ActualizacionMedidasProteccion_Controller();
         ActualizacionIncumplimiento_Controller controlador_actualizacionIncumplimiento = new ActualizacionIncumplimiento_Controller();
         ActualizacionTerminacionMedidas_Controller controlador_actualizacionTerminacionMedidas = new ActualizacionTerminacionMedidas_Controller();
@@ -39,7 +41,6 @@ namespace Comisarias.App.Escritorio.Forms
 
         }
 
-
         private void ReiniciarPagina()
         {
             usuario = new Usuario();
@@ -56,11 +57,46 @@ namespace Comisarias.App.Escritorio.Forms
             pnlRegistroNuevo.Visible = false;
 
             LimpiarRegistro();
+            
 
         }
 
         private void LimpiarRegistro()
         {
+            pnlRegistroNuevo.Enabled = true;
+
+            lblMensaje.Text = "";
+            cmbDia.Text = "";
+            cmbAnio.Text = "";
+            cmbMes.Text = "";
+            txtNombreAgresor.Text = "";
+
+            usuario = new Usuario();
+
+            txtNombreAgresor.Text = "";
+           txtDocumentoAgresor.Text = "";
+            cmbRelacionAgresor.Text  = "";
+            txtCualRelacion.Text = "";
+            txtDireccionAgresor.Text = ""; 
+            txtRadicado.Text = "";
+            rdbCuentaConMedidasPreventivasSI.Checked = false;
+            rdbCuentaConMedidasPreventivasNO.Checked = true ;
+           
+           txtOtraMedida.Text =  "";
+
+           chkDesalojo.Checked = false;
+            chkAbstenerseLugar.Checked = false; 
+            chkEsconderHijos.Checked = false; 
+            chkAcudirTratamiento.Checked = false; 
+            chkProteccionPoliciva.Checked = false; 
+            chkAcompanamientoCasa.Checked = false;
+            chkRegimenProvisional.Checked = false; 
+            chkSuspencionArmas.Checked = false; 
+            chkPensionAlimentaria.Checked = false; 
+            chkUsoVivienda.Checked = false; 
+            chkProhibicionVenta.Checked = false; 
+            chkDevolucionObjetos.Checked = false; 
+            chkOtraMedida.Checked = false;
 
         }
 
@@ -81,22 +117,9 @@ namespace Comisarias.App.Escritorio.Forms
                 lblMensaje.Text = respuestaRelacionAgresor.Mensaje;
             }
 
-            RespuestaGetDatos respuestaMedidasProteccion = ControladorMedidasProteccion.ObtenerTodos();
-
-            if (respuestaMedidasProteccion.FueExitosa)
-            {
-                cmbMedidasProteccion.DataSource = respuestaMedidasProteccion.Datos;
-                cmbMedidasProteccion.DisplayMember = "Nombre";
-                cmbMedidasProteccion.ValueMember = "Id";
-
-            }
-            else
-            {
-                cmbMedidasProteccion.DataSource = null;
-                lblMensaje.Text = respuestaMedidasProteccion.Mensaje;
-            }
+           
+           
         }
-
 
         private void BloquearFormulario()
         {
@@ -124,16 +147,12 @@ namespace Comisarias.App.Escritorio.Forms
 
         }
 
-
-
-
         private void FrmRegistrarAgresion_Load(object sender, EventArgs e)
         {
             usuario = new Usuario();
             lblFechaActual.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
             CargarInfomacionEnControles();
         }
-
 
         private void CargarHistoria()
         {
@@ -142,6 +161,13 @@ namespace Comisarias.App.Escritorio.Forms
             ObtenerOrientaciones();
             ObtenerEntrevistas();
             ObtenerIniciosProceso();
+            ObtenerAudiencias();
+
+            ObtenerActualizacionesMedidasProteccion();
+            ObtenerActualizacionesTerminacionMedidas();
+            ObtenerActualizacionesIncumplimiento();
+            ObtenerActualizacionesCaso();
+
         }
 
         private void ObtenerVisitas()
@@ -242,7 +268,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void ObtenerIniciosProceso()
         {
-            RespuestaGetDatos respuesta = controlador_inicioProceso.ObtenerPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_actualizacionCaso.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
@@ -262,6 +288,115 @@ namespace Comisarias.App.Escritorio.Forms
             }
         }
 
+        private void ObtenerAudiencias()
+        {
+            RespuestaGetDatos respuesta = controlador_audiencia.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvAudiencias.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvAudiencias.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvAudiencias.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerActualizacionesCaso()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacionCaso.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacionCaso.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacionCaso.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacionCaso.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerActualizacionesIncumplimiento()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacionIncumplimiento.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacionIncumplimiento.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacionIncumplimiento.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacionMedidasProteccion.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerActualizacionesMedidasProteccion()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacionMedidasProteccion.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacionMedidasProteccion.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacionMedidasProteccion.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacionMedidasProteccion.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerActualizacionesTerminacionMedidas()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacionTerminacionMedidas.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacionTerminacionMedidas.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacionTerminacionMedidas.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacionTerminacionMedidas.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
@@ -294,6 +429,11 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LlenarCamposUsuario()
         {
+            
+            cmbGeneros.Text = "";
+            cmbArea.Text = "";
+
+            lblMensaje.Text = "";
 
             txtNombres.Text = usuario.Nombres;
             txtApellidos.Text = usuario.Apellidos;
@@ -314,7 +454,6 @@ namespace Comisarias.App.Escritorio.Forms
 
         }
 
-
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             ReiniciarPagina();
@@ -322,6 +461,11 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LlenarCamposFecha()
         {
+
+            cmbDia.Items.Clear();
+            cmbAnio.Items.Clear();
+            cmbMes.Items.Clear();
+
             for (int i = 1; i <= 31; i++)
             {
                 cmbDia.Items.Add(i);
@@ -342,7 +486,6 @@ namespace Comisarias.App.Escritorio.Forms
             }
 
         }
-
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -383,9 +526,81 @@ namespace Comisarias.App.Escritorio.Forms
             objRegistro.OtraRelacionAgresor = txtCualRelacion.Text;
             objRegistro.DireccionDomicilioAgresor = txtDireccionAgresor.Text;
             objRegistro.Radicado = txtRadicado.Text;
-            objRegistro.CuentaMedidasProteccion = cmbMedidasProteccion.Text;
-            objRegistro.CualOtraMedidaProteccion = txtCualMedidaProteccion.Text;
+            objRegistro.CuentaMedidasProteccion = rdbCuentaConMedidasPreventivasSI.Checked ? "SI" : "NO";
+            objRegistro.MedidasProteccion = MedidasDeProteccion();
+            objRegistro.CualOtraMedidaProteccion = txtOtraMedida.Text;
 
+        }
+
+        private string MedidasDeProteccion()
+        {
+            string retorno = "";
+            if (chkDesalojo.Checked)
+            {
+                retorno += chkDesalojo.Text + ",";
+            }
+
+            if (chkAbstenerseLugar.Checked)
+            {
+                retorno += lblAbtenerseLugar.Text + ",";
+            }
+
+            if (chkEsconderHijos.Checked)
+            {
+                retorno += chkEsconderHijos.Text + ",";
+            }
+
+            if (chkAcudirTratamiento.Checked)
+            {
+                retorno += chkAcudirTratamiento.Text + ",";
+            }
+
+            if (chkProteccionPoliciva.Checked)
+            {
+                retorno += chkProteccionPoliciva.Text + ",";
+            }
+
+            if (chkAcompanamientoCasa.Checked)
+            {
+                retorno += chkAcompanamientoCasa.Text + ",";
+            }
+
+            if (chkRegimenProvisional.Checked)
+            {
+                retorno += chkRegimenProvisional.Text + ",";
+            }
+
+            if (chkSuspencionArmas.Checked)
+            {
+                retorno += chkSuspencionArmas.Text + ",";
+            }
+
+            if (chkPensionAlimentaria.Checked)
+            {
+                retorno += chkPensionAlimentaria.Text + ",";
+            }
+
+            if (chkUsoVivienda.Checked)
+            {
+                retorno += chkUsoVivienda.Text + ",";
+            }
+
+            if (chkProhibicionVenta.Checked)
+            {
+                retorno += chkProhibicionVenta.Text + ",";
+            }
+
+            if (chkDevolucionObjetos.Checked)
+            {
+                retorno += chkDevolucionObjetos.Text + ",";
+            }
+
+            if (chkOtraMedida.Checked)
+            {
+                retorno += chkOtraMedida.Text + ",";
+            }
+
+            return retorno;
         }
 
         private bool ValidarDatos()
@@ -393,37 +608,54 @@ namespace Comisarias.App.Escritorio.Forms
             bool valido = true;
             string mensaje = "Todos los campos son requeridos, por favor valide: ";
 
-            //if (txtResponsable.Text == "")
-            //{
-            //    valido = false;
-            //    mensaje += " Nombre agresor,";
-            //}
-            //if (txtRadicado.Text == "")
-            //{
-            //    valido = false;
-            //    mensaje += " Nombres,";
-            //}
-            //if (cmbRelacionAgresor.Text == "")
-            //{
-            //    valido = false;
-            //    mensaje += " Apellidos,";
-            //}
-            //if (cmbMedidasProteccion.Text == "")
-            //{
-            //    valido = false;
-            //    mensaje += " Genero,";
-            //}
+            if (objRegistro.Fecha == null)
+            {
+                valido = false;
+                mensaje += " Fecha,";
+            }
+
+           
+
+           
+
+            if (txtNombreAgresor.Text == "")
+            {
+                valido = false;
+                mensaje += " Nombre agresor,";
+            }
+            if (txtDocumentoAgresor.Text == "")
+            {
+                valido = false;
+                mensaje += " Documento agresor,";
+            }
+            if (txtDireccionAgresor.Text == "")
+            {
+                valido = false;
+                mensaje += " Dirección agresor,";
+            }
+
+            if (cmbRelacionAgresor.Text == "")
+            {
+                valido = false;
+                mensaje += " Relación con el agresor,";
+            }
+            if (txtRadicado.Text == "")
+            {
+                valido = false;
+                mensaje += " Radicado,";
+            }
 
 
             if (!valido)
             {
                 mensaje = mensaje.TrimEnd(',');
+                lblMensaje.Text = mensaje;
 
             }
             return valido;
         }
 
-        private DateTime ObtenerFechaFormulario(string panio, string pmes, string pdia)
+        private DateTime? ObtenerFechaFormulario(string panio, string pmes, string pdia)
         {
             try
             {
@@ -440,16 +672,15 @@ namespace Comisarias.App.Escritorio.Forms
             }
             catch (Exception)
             {
-
+                return null;
                 throw;
             }
 
         }
-
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             ReiniciarPagina();
         }
-
+                
     }
 }

@@ -394,6 +394,7 @@
     <Compile Include="Models\ActualizacionMedidasProteccion.cs" />
     <Compile Include="Models\Audiencia.cs" />
     <Compile Include="Models\ActualizacionCaso.cs" />
+    <Compile Include="Models\Ayudante.cs" />
     <Compile Include="Models\Orientacion.cs" />
     <Compile Include="Models\Entrevista.cs" />
     <Compile Include="Models\InicioProceso.cs" />

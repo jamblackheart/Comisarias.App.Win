@@ -12,14 +12,14 @@ namespace Comisarias.App.Escritorio.Models
 
         public int Id { get; set; }
         public int UsuarioId { get; set; }
-        public DateTime Fecha { get; set; }
+        public DateTime? Fecha { get; set; }
 
         public string Responsable { get; set; }
 
-        public DateTime IncumplimientoFecha { get; set; }
+        public DateTime? IncumplimientoFecha { get; set; }
         public string IncumplimientoNotificaciones { get; set; }
         public string IncumplimientoAudiencia { get; set; }
-        public DateTime IncumplimientoAudienciaFecha { get; set; }
+        public DateTime? IncumplimientoAudienciaFecha { get; set; }
         public string IncumplimientoPruebas { get; set; }
         public string IncumplimientoFallo { get; set; }
         public string IncumplimientoSancion { get; set; }

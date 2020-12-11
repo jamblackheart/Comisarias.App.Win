@@ -113,7 +113,12 @@ namespace Comisarias.App.Escritorio.Forms
             ObtenerEntrevistas();
             ObtenerIniciosProceso();
             ObtenerAudiencias();
-            ObtenerActualizacionesProceso();
+
+            ObtenerActualizacionesMedidasProteccion();
+            ObtenerActualizacionesTerminacionMedidas();
+            ObtenerActualizacionesIncumplimiento();
+            ObtenerActualizacionesCaso();
+
         }
 
         private void ObtenerVisitas()
@@ -214,7 +219,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void ObtenerIniciosProceso()
         {
-            RespuestaGetDatos respuesta = controlador_actualizacionTerminacionMedidas.ObtenerPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_actualizacionCaso.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
@@ -256,15 +261,15 @@ namespace Comisarias.App.Escritorio.Forms
             }
         }
 
-        private void ObtenerActualizacionesProceso()
+        private void ObtenerActualizacionesCaso()
         {
-            RespuestaGetDatos respuesta = controlador_actualizacionTerminacionMedidas.ObtenerPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_actualizacionCaso.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
-                dgvActualizacion.DataSource = respuesta.Datos;
+                dgvActualizacionCaso.DataSource = respuesta.Datos;
 
-                foreach (DataGridViewColumn colum in dgvActualizacion.Columns)
+                foreach (DataGridViewColumn colum in dgvActualizacionCaso.Columns)
                 {
                     if (colum.Name == "Id" || colum.Name == "UsuarioId")
                         colum.Visible = false;
@@ -273,10 +278,77 @@ namespace Comisarias.App.Escritorio.Forms
             }
             else
             {
-                dgvActualizacion.DataSource = null;
+                dgvActualizacionCaso.DataSource = null;
                 lblMensaje.Text = respuesta.Mensaje;
             }
         }
+
+        private void ObtenerActualizacionesIncumplimiento()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacionIncumplimiento.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacionIncumplimiento.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacionIncumplimiento.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacionMedidasProteccion.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerActualizacionesMedidasProteccion()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacionMedidasProteccion.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacionMedidasProteccion.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacionMedidasProteccion.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacionMedidasProteccion.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
+        private void ObtenerActualizacionesTerminacionMedidas()
+        {
+            RespuestaGetDatos respuesta = controlador_actualizacionTerminacionMedidas.ObtenerPorIdUsuario(usuario.Id);
+
+            if (respuesta.FueExitosa)
+            {
+                dgvActualizacionTerminacionMedidas.DataSource = respuesta.Datos;
+
+                foreach (DataGridViewColumn colum in dgvActualizacionTerminacionMedidas.Columns)
+                {
+                    if (colum.Name == "Id" || colum.Name == "UsuarioId")
+                        colum.Visible = false;
+                }
+
+            }
+            else
+            {
+                dgvActualizacionTerminacionMedidas.DataSource = null;
+                lblMensaje.Text = respuesta.Mensaje;
+            }
+        }
+
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
@@ -425,36 +497,21 @@ namespace Comisarias.App.Escritorio.Forms
             bool valido = true;
             string mensaje = "Todos los campos son requeridos, por favor valide: ";
 
-            //if (txtResponsable.Text == "")
-            //{
-            //    valido = false;
-            //    mensaje += " Nombre agresor,";
-            //}
-            //if (txtRadicado.Text == "")
-            //{
-            //    valido = false;
-            //    mensaje += " Nombres,";
-            //}
-            //if (cmbRelacionAgresor.Text == "")
-            //{
-            //    valido = false;
-            //    mensaje += " Apellidos,";
-            //}
-            //if (cmbMedidasProteccion.Text == "")
-            //{
-            //    valido = false;
-            //    mensaje += " Genero,";
-            //}
-
+            if (objRegistro.Fecha == null)
+            {
+                valido = false;
+                mensaje += " Fecha,";
+            }
 
             if (!valido)
             {
                 mensaje = mensaje.TrimEnd(',');
+                lblMensaje.Text = mensaje;
 
             }
             return valido;
         }
-        private DateTime ObtenerFechaFormulario(string panio, string pmes, string pdia)
+        private DateTime? ObtenerFechaFormulario(string panio, string pmes, string pdia)
         {
             try
             {
@@ -471,12 +528,11 @@ namespace Comisarias.App.Escritorio.Forms
             }
             catch (Exception)
             {
-
+                return null;
                 throw;
             }
 
         }
-
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             ReiniciarPagina();

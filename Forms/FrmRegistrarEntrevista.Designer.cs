@@ -92,11 +92,21 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.cmbAnioAgresion = new System.Windows.Forms.ComboBox();
-            this.cmbMesAgresion = new System.Windows.Forms.ComboBox();
+            this.cmbAnio = new System.Windows.Forms.ComboBox();
+            this.cmbMes = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.cmbDiaAgresion = new System.Windows.Forms.ComboBox();
+            this.cmbDia = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.dgvActualizacionIncumplimiento = new System.Windows.Forms.DataGridView();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dgvActualizacionTerminacionMedidas = new System.Windows.Forms.DataGridView();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.dgvActualizacionMedidasProteccion = new System.Windows.Forms.DataGridView();
+            this.pnlActualizacionCaso = new System.Windows.Forms.GroupBox();
+            this.dgvActualizacionCaso = new System.Windows.Forms.DataGridView();
+            this.pnlAudienciasMedidasProteccion = new System.Windows.Forms.GroupBox();
+            this.dgvAudiencias = new System.Windows.Forms.DataGridView();
             this.pnlInicioProceso = new System.Windows.Forms.GroupBox();
             this.dgvIniciosProcesos = new System.Windows.Forms.DataGridView();
             this.pnlEntrevistas = new System.Windows.Forms.GroupBox();
@@ -119,6 +129,16 @@
             this.pnlRegistroNuevo.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionIncumplimiento)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionTerminacionMedidas)).BeginInit();
+            this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionMedidasProteccion)).BeginInit();
+            this.pnlActualizacionCaso.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionCaso)).BeginInit();
+            this.pnlAudienciasMedidasProteccion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAudiencias)).BeginInit();
             this.pnlInicioProceso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIniciosProcesos)).BeginInit();
             this.pnlEntrevistas.SuspendLayout();
@@ -157,7 +177,7 @@
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
             this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(1715, 147);
+            this.pnlTitulo.Size = new System.Drawing.Size(1771, 147);
             this.pnlTitulo.TabIndex = 33;
             // 
             // pictureBox1
@@ -655,7 +675,7 @@
             this.pnlRegistroNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRegistroNuevo.Name = "pnlRegistroNuevo";
             this.pnlRegistroNuevo.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlRegistroNuevo.Size = new System.Drawing.Size(1109, 696);
+            this.pnlRegistroNuevo.Size = new System.Drawing.Size(1109, 863);
             this.pnlRegistroNuevo.TabIndex = 41;
             this.pnlRegistroNuevo.TabStop = false;
             this.pnlRegistroNuevo.Text = "INFORMACIÓN DE LA ENTREVISTA";
@@ -680,10 +700,10 @@
             "Alto",
             "Medio",
             "Bajo"});
-            this.cmbValoracionDelRiesgo.Location = new System.Drawing.Point(893, 212);
+            this.cmbValoracionDelRiesgo.Location = new System.Drawing.Point(908, 212);
             this.cmbValoracionDelRiesgo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbValoracionDelRiesgo.Name = "cmbValoracionDelRiesgo";
-            this.cmbValoracionDelRiesgo.Size = new System.Drawing.Size(192, 33);
+            this.cmbValoracionDelRiesgo.Size = new System.Drawing.Size(177, 33);
             this.cmbValoracionDelRiesgo.TabIndex = 76;
             // 
             // groupBox5
@@ -767,10 +787,10 @@
             this.cmbIdentificacionViolencia.Items.AddRange(new object[] {
             "Identificación de la violencia",
             "Violencia intrafamiliar"});
-            this.cmbIdentificacionViolencia.Location = new System.Drawing.Point(895, 282);
+            this.cmbIdentificacionViolencia.Location = new System.Drawing.Point(908, 282);
             this.cmbIdentificacionViolencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbIdentificacionViolencia.Name = "cmbIdentificacionViolencia";
-            this.cmbIdentificacionViolencia.Size = new System.Drawing.Size(192, 33);
+            this.cmbIdentificacionViolencia.Size = new System.Drawing.Size(179, 33);
             this.cmbIdentificacionViolencia.TabIndex = 73;
             // 
             // lblMensajeAgresion
@@ -797,7 +817,7 @@
             // txtResumen
             // 
             this.txtResumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtResumen.Location = new System.Drawing.Point(58, 217);
+            this.txtResumen.Location = new System.Drawing.Point(58, 341);
             this.txtResumen.Margin = new System.Windows.Forms.Padding(4);
             this.txtResumen.Multiline = true;
             this.txtResumen.Name = "txtResumen";
@@ -808,7 +828,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label21.Location = new System.Drawing.Point(27, 182);
+            this.label21.Location = new System.Drawing.Point(27, 306);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(95, 25);
@@ -818,7 +838,7 @@
             // txtResponsable
             // 
             this.txtResponsable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtResponsable.Location = new System.Drawing.Point(631, 109);
+            this.txtResponsable.Location = new System.Drawing.Point(161, 212);
             this.txtResponsable.Margin = new System.Windows.Forms.Padding(4);
             this.txtResponsable.Name = "txtResponsable";
             this.txtResponsable.Size = new System.Drawing.Size(457, 30);
@@ -828,7 +848,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label22.Location = new System.Drawing.Point(497, 112);
+            this.label22.Location = new System.Drawing.Point(27, 215);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(126, 25);
@@ -839,10 +859,10 @@
             // 
             this.groupBox7.Controls.Add(this.label23);
             this.groupBox7.Controls.Add(this.label24);
-            this.groupBox7.Controls.Add(this.cmbAnioAgresion);
-            this.groupBox7.Controls.Add(this.cmbMesAgresion);
+            this.groupBox7.Controls.Add(this.cmbAnio);
+            this.groupBox7.Controls.Add(this.cmbMes);
             this.groupBox7.Controls.Add(this.label25);
-            this.groupBox7.Controls.Add(this.cmbDiaAgresion);
+            this.groupBox7.Controls.Add(this.cmbDia);
             this.groupBox7.Location = new System.Drawing.Point(32, 44);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox7.Name = "groupBox7";
@@ -874,19 +894,19 @@
             this.label24.TabIndex = 45;
             this.label24.Text = "Mes";
             // 
-            // cmbAnioAgresion
+            // cmbAnio
             // 
-            this.cmbAnioAgresion.FormattingEnabled = true;
-            this.cmbAnioAgresion.Location = new System.Drawing.Point(292, 62);
-            this.cmbAnioAgresion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbAnioAgresion.Name = "cmbAnioAgresion";
-            this.cmbAnioAgresion.Size = new System.Drawing.Size(121, 33);
-            this.cmbAnioAgresion.TabIndex = 48;
+            this.cmbAnio.FormattingEnabled = true;
+            this.cmbAnio.Location = new System.Drawing.Point(292, 62);
+            this.cmbAnio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbAnio.Name = "cmbAnio";
+            this.cmbAnio.Size = new System.Drawing.Size(121, 33);
+            this.cmbAnio.TabIndex = 48;
             // 
-            // cmbMesAgresion
+            // cmbMes
             // 
-            this.cmbMesAgresion.FormattingEnabled = true;
-            this.cmbMesAgresion.Items.AddRange(new object[] {
+            this.cmbMes.FormattingEnabled = true;
+            this.cmbMes.Items.AddRange(new object[] {
             "Enero",
             "Febrero",
             "Marzo",
@@ -899,11 +919,11 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cmbMesAgresion.Location = new System.Drawing.Point(151, 62);
-            this.cmbMesAgresion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbMesAgresion.Name = "cmbMesAgresion";
-            this.cmbMesAgresion.Size = new System.Drawing.Size(121, 33);
-            this.cmbMesAgresion.TabIndex = 46;
+            this.cmbMes.Location = new System.Drawing.Point(151, 62);
+            this.cmbMes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbMes.Name = "cmbMes";
+            this.cmbMes.Size = new System.Drawing.Size(121, 33);
+            this.cmbMes.TabIndex = 46;
             // 
             // label25
             // 
@@ -916,14 +936,14 @@
             this.label25.TabIndex = 41;
             this.label25.Text = "Día";
             // 
-            // cmbDiaAgresion
+            // cmbDia
             // 
-            this.cmbDiaAgresion.FormattingEnabled = true;
-            this.cmbDiaAgresion.Location = new System.Drawing.Point(16, 62);
-            this.cmbDiaAgresion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbDiaAgresion.Name = "cmbDiaAgresion";
-            this.cmbDiaAgresion.Size = new System.Drawing.Size(121, 33);
-            this.cmbDiaAgresion.TabIndex = 44;
+            this.cmbDia.FormattingEnabled = true;
+            this.cmbDia.Location = new System.Drawing.Point(16, 62);
+            this.cmbDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDia.Name = "cmbDia";
+            this.cmbDia.Size = new System.Drawing.Size(121, 33);
+            this.cmbDia.TabIndex = 44;
             // 
             // label26
             // 
@@ -935,16 +955,146 @@
             this.label26.Size = new System.Drawing.Size(0, 25);
             this.label26.TabIndex = 40;
             // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.dgvActualizacionIncumplimiento);
+            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox8.Location = new System.Drawing.Point(1148, 2254);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox8.Size = new System.Drawing.Size(623, 223);
+            this.groupBox8.TabIndex = 86;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Actualizaciones incumplimiento";
+            // 
+            // dgvActualizacionIncumplimiento
+            // 
+            this.dgvActualizacionIncumplimiento.AllowUserToAddRows = false;
+            this.dgvActualizacionIncumplimiento.AllowUserToDeleteRows = false;
+            this.dgvActualizacionIncumplimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActualizacionIncumplimiento.Location = new System.Drawing.Point(8, 38);
+            this.dgvActualizacionIncumplimiento.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvActualizacionIncumplimiento.Name = "dgvActualizacionIncumplimiento";
+            this.dgvActualizacionIncumplimiento.ReadOnly = true;
+            this.dgvActualizacionIncumplimiento.RowHeadersWidth = 51;
+            this.dgvActualizacionIncumplimiento.Size = new System.Drawing.Size(591, 179);
+            this.dgvActualizacionIncumplimiento.TabIndex = 24;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.dgvActualizacionTerminacionMedidas);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox6.Location = new System.Drawing.Point(1148, 2023);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Size = new System.Drawing.Size(623, 223);
+            this.groupBox6.TabIndex = 85;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Actualizaciones Terminación de medidas";
+            // 
+            // dgvActualizacionTerminacionMedidas
+            // 
+            this.dgvActualizacionTerminacionMedidas.AllowUserToAddRows = false;
+            this.dgvActualizacionTerminacionMedidas.AllowUserToDeleteRows = false;
+            this.dgvActualizacionTerminacionMedidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActualizacionTerminacionMedidas.Location = new System.Drawing.Point(8, 38);
+            this.dgvActualizacionTerminacionMedidas.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvActualizacionTerminacionMedidas.Name = "dgvActualizacionTerminacionMedidas";
+            this.dgvActualizacionTerminacionMedidas.ReadOnly = true;
+            this.dgvActualizacionTerminacionMedidas.RowHeadersWidth = 51;
+            this.dgvActualizacionTerminacionMedidas.Size = new System.Drawing.Size(591, 179);
+            this.dgvActualizacionTerminacionMedidas.TabIndex = 24;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.dgvActualizacionMedidasProteccion);
+            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox9.Location = new System.Drawing.Point(1140, 1792);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox9.Size = new System.Drawing.Size(623, 223);
+            this.groupBox9.TabIndex = 84;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Actualizaciones medidas de protección";
+            // 
+            // dgvActualizacionMedidasProteccion
+            // 
+            this.dgvActualizacionMedidasProteccion.AllowUserToAddRows = false;
+            this.dgvActualizacionMedidasProteccion.AllowUserToDeleteRows = false;
+            this.dgvActualizacionMedidasProteccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActualizacionMedidasProteccion.Location = new System.Drawing.Point(8, 38);
+            this.dgvActualizacionMedidasProteccion.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvActualizacionMedidasProteccion.Name = "dgvActualizacionMedidasProteccion";
+            this.dgvActualizacionMedidasProteccion.ReadOnly = true;
+            this.dgvActualizacionMedidasProteccion.RowHeadersWidth = 51;
+            this.dgvActualizacionMedidasProteccion.Size = new System.Drawing.Size(591, 179);
+            this.dgvActualizacionMedidasProteccion.TabIndex = 24;
+            // 
+            // pnlActualizacionCaso
+            // 
+            this.pnlActualizacionCaso.Controls.Add(this.dgvActualizacionCaso);
+            this.pnlActualizacionCaso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlActualizacionCaso.Location = new System.Drawing.Point(1140, 1561);
+            this.pnlActualizacionCaso.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlActualizacionCaso.Name = "pnlActualizacionCaso";
+            this.pnlActualizacionCaso.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlActualizacionCaso.Size = new System.Drawing.Size(623, 223);
+            this.pnlActualizacionCaso.TabIndex = 83;
+            this.pnlActualizacionCaso.TabStop = false;
+            this.pnlActualizacionCaso.Text = "Actualizaciones del caso";
+            // 
+            // dgvActualizacionCaso
+            // 
+            this.dgvActualizacionCaso.AllowUserToAddRows = false;
+            this.dgvActualizacionCaso.AllowUserToDeleteRows = false;
+            this.dgvActualizacionCaso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActualizacionCaso.Location = new System.Drawing.Point(8, 38);
+            this.dgvActualizacionCaso.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvActualizacionCaso.Name = "dgvActualizacionCaso";
+            this.dgvActualizacionCaso.ReadOnly = true;
+            this.dgvActualizacionCaso.RowHeadersWidth = 51;
+            this.dgvActualizacionCaso.Size = new System.Drawing.Size(591, 179);
+            this.dgvActualizacionCaso.TabIndex = 24;
+            // 
+            // pnlAudienciasMedidasProteccion
+            // 
+            this.pnlAudienciasMedidasProteccion.Controls.Add(this.dgvAudiencias);
+            this.pnlAudienciasMedidasProteccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlAudienciasMedidasProteccion.Location = new System.Drawing.Point(1140, 1330);
+            this.pnlAudienciasMedidasProteccion.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlAudienciasMedidasProteccion.Name = "pnlAudienciasMedidasProteccion";
+            this.pnlAudienciasMedidasProteccion.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlAudienciasMedidasProteccion.Size = new System.Drawing.Size(623, 223);
+            this.pnlAudienciasMedidasProteccion.TabIndex = 82;
+            this.pnlAudienciasMedidasProteccion.TabStop = false;
+            this.pnlAudienciasMedidasProteccion.Text = "Audiencias medidas de protección";
+            // 
+            // dgvAudiencias
+            // 
+            this.dgvAudiencias.AllowUserToAddRows = false;
+            this.dgvAudiencias.AllowUserToDeleteRows = false;
+            this.dgvAudiencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAudiencias.Location = new System.Drawing.Point(8, 38);
+            this.dgvAudiencias.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvAudiencias.Name = "dgvAudiencias";
+            this.dgvAudiencias.ReadOnly = true;
+            this.dgvAudiencias.RowHeadersWidth = 51;
+            this.dgvAudiencias.Size = new System.Drawing.Size(591, 179);
+            this.dgvAudiencias.TabIndex = 24;
+            // 
             // pnlInicioProceso
             // 
             this.pnlInicioProceso.Controls.Add(this.dgvIniciosProcesos);
             this.pnlInicioProceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlInicioProceso.Location = new System.Drawing.Point(1161, 1223);
+            this.pnlInicioProceso.Location = new System.Drawing.Point(1140, 1103);
             this.pnlInicioProceso.Margin = new System.Windows.Forms.Padding(4);
             this.pnlInicioProceso.Name = "pnlInicioProceso";
             this.pnlInicioProceso.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlInicioProceso.Size = new System.Drawing.Size(528, 233);
-            this.pnlInicioProceso.TabIndex = 48;
+            this.pnlInicioProceso.Size = new System.Drawing.Size(623, 223);
+            this.pnlInicioProceso.TabIndex = 81;
             this.pnlInicioProceso.TabStop = false;
             this.pnlInicioProceso.Text = "Inicios proceso";
             // 
@@ -958,19 +1108,19 @@
             this.dgvIniciosProcesos.Name = "dgvIniciosProcesos";
             this.dgvIniciosProcesos.ReadOnly = true;
             this.dgvIniciosProcesos.RowHeadersWidth = 51;
-            this.dgvIniciosProcesos.Size = new System.Drawing.Size(496, 181);
+            this.dgvIniciosProcesos.Size = new System.Drawing.Size(591, 179);
             this.dgvIniciosProcesos.TabIndex = 24;
             // 
             // pnlEntrevistas
             // 
             this.pnlEntrevistas.Controls.Add(this.dgvEntrevistas);
             this.pnlEntrevistas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlEntrevistas.Location = new System.Drawing.Point(1161, 975);
+            this.pnlEntrevistas.Location = new System.Drawing.Point(1140, 872);
             this.pnlEntrevistas.Margin = new System.Windows.Forms.Padding(4);
             this.pnlEntrevistas.Name = "pnlEntrevistas";
             this.pnlEntrevistas.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlEntrevistas.Size = new System.Drawing.Size(528, 233);
-            this.pnlEntrevistas.TabIndex = 47;
+            this.pnlEntrevistas.Size = new System.Drawing.Size(623, 223);
+            this.pnlEntrevistas.TabIndex = 80;
             this.pnlEntrevistas.TabStop = false;
             this.pnlEntrevistas.Text = "Entrevistas";
             // 
@@ -984,19 +1134,19 @@
             this.dgvEntrevistas.Name = "dgvEntrevistas";
             this.dgvEntrevistas.ReadOnly = true;
             this.dgvEntrevistas.RowHeadersWidth = 51;
-            this.dgvEntrevistas.Size = new System.Drawing.Size(496, 181);
+            this.dgvEntrevistas.Size = new System.Drawing.Size(591, 179);
             this.dgvEntrevistas.TabIndex = 24;
             // 
             // pnlOrientaciones
             // 
             this.pnlOrientaciones.Controls.Add(this.dgvOrientaciones);
             this.pnlOrientaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlOrientaciones.Location = new System.Drawing.Point(1161, 734);
+            this.pnlOrientaciones.Location = new System.Drawing.Point(1140, 646);
             this.pnlOrientaciones.Margin = new System.Windows.Forms.Padding(4);
             this.pnlOrientaciones.Name = "pnlOrientaciones";
             this.pnlOrientaciones.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlOrientaciones.Size = new System.Drawing.Size(528, 233);
-            this.pnlOrientaciones.TabIndex = 46;
+            this.pnlOrientaciones.Size = new System.Drawing.Size(623, 223);
+            this.pnlOrientaciones.TabIndex = 79;
             this.pnlOrientaciones.TabStop = false;
             this.pnlOrientaciones.Text = "Orientaciones";
             // 
@@ -1010,19 +1160,19 @@
             this.dgvOrientaciones.Name = "dgvOrientaciones";
             this.dgvOrientaciones.ReadOnly = true;
             this.dgvOrientaciones.RowHeadersWidth = 51;
-            this.dgvOrientaciones.Size = new System.Drawing.Size(496, 181);
+            this.dgvOrientaciones.Size = new System.Drawing.Size(591, 179);
             this.dgvOrientaciones.TabIndex = 24;
             // 
             // pnlAgresiones
             // 
             this.pnlAgresiones.Controls.Add(this.dgvAgresiones);
             this.pnlAgresiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlAgresiones.Location = new System.Drawing.Point(1161, 488);
+            this.pnlAgresiones.Location = new System.Drawing.Point(1140, 423);
             this.pnlAgresiones.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAgresiones.Name = "pnlAgresiones";
             this.pnlAgresiones.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlAgresiones.Size = new System.Drawing.Size(528, 233);
-            this.pnlAgresiones.TabIndex = 45;
+            this.pnlAgresiones.Size = new System.Drawing.Size(623, 223);
+            this.pnlAgresiones.TabIndex = 78;
             this.pnlAgresiones.TabStop = false;
             this.pnlAgresiones.Text = "Agresiones";
             // 
@@ -1036,19 +1186,19 @@
             this.dgvAgresiones.Name = "dgvAgresiones";
             this.dgvAgresiones.ReadOnly = true;
             this.dgvAgresiones.RowHeadersWidth = 51;
-            this.dgvAgresiones.Size = new System.Drawing.Size(496, 181);
+            this.dgvAgresiones.Size = new System.Drawing.Size(591, 179);
             this.dgvAgresiones.TabIndex = 24;
             // 
             // pnlVisitas
             // 
             this.pnlVisitas.Controls.Add(this.dgvVisitasAnteriores);
             this.pnlVisitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlVisitas.Location = new System.Drawing.Point(1161, 177);
+            this.pnlVisitas.Location = new System.Drawing.Point(1140, 188);
             this.pnlVisitas.Margin = new System.Windows.Forms.Padding(4);
             this.pnlVisitas.Name = "pnlVisitas";
             this.pnlVisitas.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlVisitas.Size = new System.Drawing.Size(528, 302);
-            this.pnlVisitas.TabIndex = 44;
+            this.pnlVisitas.Size = new System.Drawing.Size(623, 223);
+            this.pnlVisitas.TabIndex = 77;
             this.pnlVisitas.TabStop = false;
             this.pnlVisitas.Text = "Visitas Anteriores";
             // 
@@ -1062,7 +1212,7 @@
             this.dgvVisitasAnteriores.Name = "dgvVisitasAnteriores";
             this.dgvVisitasAnteriores.ReadOnly = true;
             this.dgvVisitasAnteriores.RowHeadersWidth = 51;
-            this.dgvVisitasAnteriores.Size = new System.Drawing.Size(496, 244);
+            this.dgvVisitasAnteriores.Size = new System.Drawing.Size(591, 179);
             this.dgvVisitasAnteriores.TabIndex = 24;
             // 
             // FrmRegistrarEntrevista
@@ -1072,14 +1222,19 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1736, 1055);
-            this.Controls.Add(this.pnlInicioProceso);
-            this.Controls.Add(this.pnlEntrevistas);
-            this.Controls.Add(this.pnlOrientaciones);
-            this.Controls.Add(this.pnlAgresiones);
-            this.Controls.Add(this.pnlVisitas);
+            this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.pnlRegistroNuevo);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.pnlTitulo);
+            this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pnlActualizacionCaso);
+            this.Controls.Add(this.pnlAgresiones);
+            this.Controls.Add(this.pnlAudienciasMedidasProteccion);
+            this.Controls.Add(this.pnlVisitas);
+            this.Controls.Add(this.pnlInicioProceso);
+            this.Controls.Add(this.pnlOrientaciones);
+            this.Controls.Add(this.pnlEntrevistas);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRegistrarEntrevista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1106,6 +1261,16 @@
             this.groupBox5.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionIncumplimiento)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionTerminacionMedidas)).EndInit();
+            this.groupBox9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionMedidasProteccion)).EndInit();
+            this.pnlActualizacionCaso.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActualizacionCaso)).EndInit();
+            this.pnlAudienciasMedidasProteccion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAudiencias)).EndInit();
             this.pnlInicioProceso.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIniciosProcesos)).EndInit();
             this.pnlEntrevistas.ResumeLayout(false);
@@ -1140,10 +1305,10 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ComboBox cmbAnioAgresion;
-        private System.Windows.Forms.ComboBox cmbMesAgresion;
+        private System.Windows.Forms.ComboBox cmbAnio;
+        private System.Windows.Forms.ComboBox cmbMes;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.ComboBox cmbDiaAgresion;
+        private System.Windows.Forms.ComboBox cmbDia;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lblMensajeAgresion;
@@ -1188,6 +1353,16 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbArea;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.DataGridView dgvActualizacionIncumplimiento;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.DataGridView dgvActualizacionTerminacionMedidas;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.DataGridView dgvActualizacionMedidasProteccion;
+        private System.Windows.Forms.GroupBox pnlActualizacionCaso;
+        private System.Windows.Forms.DataGridView dgvActualizacionCaso;
+        private System.Windows.Forms.GroupBox pnlAudienciasMedidasProteccion;
+        private System.Windows.Forms.DataGridView dgvAudiencias;
         private System.Windows.Forms.GroupBox pnlInicioProceso;
         private System.Windows.Forms.DataGridView dgvIniciosProcesos;
         private System.Windows.Forms.GroupBox pnlEntrevistas;

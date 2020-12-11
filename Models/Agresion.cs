@@ -10,7 +10,7 @@ namespace Comisarias.App.Escritorio.Models
     {
         public int Id { get; set; }
         public int UsuarioId { get; set; }
-        public DateTime Fecha { get; set; }
+        public DateTime? Fecha { get; set; }
         public string NombreAgresor { get; set; }
         public string DocumentoAgresor { get; set; }
         public string RelacionAgresor { get; set; }
@@ -18,7 +18,8 @@ namespace Comisarias.App.Escritorio.Models
         public string DireccionDomicilioAgresor { get; set; }
         public string Radicado { get; set; }
         public string CuentaMedidasProteccion { get; set; }
-       
+        public string  MedidasProteccion { get; set; }
+
         public string CualOtraMedidaProteccion { get; set; }
        
     }
