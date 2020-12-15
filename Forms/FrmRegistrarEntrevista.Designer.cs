@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label label17;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarEntrevista));
             this.pnlTitulo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCedulaConsultar = new System.Windows.Forms.TextBox();
@@ -117,9 +115,13 @@
             this.dgvAgresiones = new System.Windows.Forms.DataGridView();
             this.pnlVisitas = new System.Windows.Forms.GroupBox();
             this.dgvVisitasAnteriores = new System.Windows.Forms.DataGridView();
+            this.cmbHijosMenores = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblAdjunto = new System.Windows.Forms.Label();
+            this.btnSubirAdjunto = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             label17 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.pnlRegistro.SuspendLayout();
             this.grbFechaNacimiento.SuspendLayout();
@@ -169,7 +171,6 @@
             this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(64)))), ((int)(((byte)(58)))));
             this.pnlTitulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlTitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlTitulo.Controls.Add(this.pictureBox1);
             this.pnlTitulo.Controls.Add(label17);
             this.pnlTitulo.Controls.Add(this.label19);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -179,17 +180,6 @@
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(1771, 147);
             this.pnlTitulo.TabIndex = 33;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(941, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // label19
             // 
@@ -289,6 +279,8 @@
             // 
             // pnlRegistro
             // 
+            this.pnlRegistro.Controls.Add(this.cmbHijosMenores);
+            this.pnlRegistro.Controls.Add(this.label13);
             this.pnlRegistro.Controls.Add(this.grbFechaNacimiento);
             this.pnlRegistro.Controls.Add(this.txtEmail);
             this.pnlRegistro.Controls.Add(this.label9);
@@ -657,6 +649,9 @@
             // 
             // pnlRegistroNuevo
             // 
+            this.pnlRegistroNuevo.Controls.Add(this.lblAdjunto);
+            this.pnlRegistroNuevo.Controls.Add(this.btnSubirAdjunto);
+            this.pnlRegistroNuevo.Controls.Add(this.label14);
             this.pnlRegistroNuevo.Controls.Add(this.label12);
             this.pnlRegistroNuevo.Controls.Add(this.cmbValoracionDelRiesgo);
             this.pnlRegistroNuevo.Controls.Add(this.groupBox5);
@@ -685,7 +680,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label12.Location = new System.Drawing.Point(714, 217);
+            this.label12.Location = new System.Drawing.Point(636, 244);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(163, 25);
@@ -700,10 +695,10 @@
             "Alto",
             "Medio",
             "Bajo"});
-            this.cmbValoracionDelRiesgo.Location = new System.Drawing.Point(908, 212);
+            this.cmbValoracionDelRiesgo.Location = new System.Drawing.Point(641, 283);
             this.cmbValoracionDelRiesgo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbValoracionDelRiesgo.Name = "cmbValoracionDelRiesgo";
-            this.cmbValoracionDelRiesgo.Size = new System.Drawing.Size(177, 33);
+            this.cmbValoracionDelRiesgo.Size = new System.Drawing.Size(441, 33);
             this.cmbValoracionDelRiesgo.TabIndex = 76;
             // 
             // groupBox5
@@ -713,9 +708,9 @@
             this.groupBox5.Controls.Add(this.chkPsicologica);
             this.groupBox5.Controls.Add(this.chkVerbal);
             this.groupBox5.Controls.Add(this.chkViolenciaFisica);
-            this.groupBox5.Location = new System.Drawing.Point(641, 341);
+            this.groupBox5.Location = new System.Drawing.Point(641, 426);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(447, 248);
+            this.groupBox5.Size = new System.Drawing.Size(447, 287);
             this.groupBox5.TabIndex = 74;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Tipo de violencia";
@@ -774,7 +769,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label11.Location = new System.Drawing.Point(624, 290);
+            this.label11.Location = new System.Drawing.Point(636, 338);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(253, 25);
@@ -785,12 +780,12 @@
             // 
             this.cmbIdentificacionViolencia.FormattingEnabled = true;
             this.cmbIdentificacionViolencia.Items.AddRange(new object[] {
-            "Identificación de la violencia",
+            "Violencia fuera del ámbito doméstico",
             "Violencia intrafamiliar"});
-            this.cmbIdentificacionViolencia.Location = new System.Drawing.Point(908, 282);
+            this.cmbIdentificacionViolencia.Location = new System.Drawing.Point(641, 371);
             this.cmbIdentificacionViolencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbIdentificacionViolencia.Name = "cmbIdentificacionViolencia";
-            this.cmbIdentificacionViolencia.Size = new System.Drawing.Size(179, 33);
+            this.cmbIdentificacionViolencia.Size = new System.Drawing.Size(444, 33);
             this.cmbIdentificacionViolencia.TabIndex = 73;
             // 
             // lblMensajeAgresion
@@ -805,7 +800,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnGuardar.Location = new System.Drawing.Point(932, 626);
+            this.btnGuardar.Location = new System.Drawing.Point(929, 779);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(156, 46);
@@ -838,7 +833,7 @@
             // txtResponsable
             // 
             this.txtResponsable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtResponsable.Location = new System.Drawing.Point(161, 212);
+            this.txtResponsable.Location = new System.Drawing.Point(58, 224);
             this.txtResponsable.Margin = new System.Windows.Forms.Padding(4);
             this.txtResponsable.Name = "txtResponsable";
             this.txtResponsable.Size = new System.Drawing.Size(457, 30);
@@ -848,7 +843,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label22.Location = new System.Drawing.Point(27, 215);
+            this.label22.Location = new System.Drawing.Point(30, 185);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(126, 25);
@@ -1215,6 +1210,69 @@
             this.dgvVisitasAnteriores.Size = new System.Drawing.Size(591, 179);
             this.dgvVisitasAnteriores.TabIndex = 24;
             // 
+            // cmbHijosMenores
+            // 
+            this.cmbHijosMenores.FormattingEnabled = true;
+            this.cmbHijosMenores.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cmbHijosMenores.Location = new System.Drawing.Point(985, 125);
+            this.cmbHijosMenores.Name = "cmbHijosMenores";
+            this.cmbHijosMenores.Size = new System.Drawing.Size(90, 33);
+            this.cmbHijosMenores.TabIndex = 73;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label13.Location = new System.Drawing.Point(823, 125);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(137, 25);
+            this.label13.TabIndex = 72;
+            this.label13.Text = "Hijos Menores";
+            // 
+            // lblAdjunto
+            // 
+            this.lblAdjunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblAdjunto.Location = new System.Drawing.Point(641, 188);
+            this.lblAdjunto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAdjunto.Name = "lblAdjunto";
+            this.lblAdjunto.Size = new System.Drawing.Size(449, 22);
+            this.lblAdjunto.TabIndex = 90;
+            this.lblAdjunto.Text = "...";
+            // 
+            // btnSubirAdjunto
+            // 
+            this.btnSubirAdjunto.Location = new System.Drawing.Point(873, 150);
+            this.btnSubirAdjunto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSubirAdjunto.Name = "btnSubirAdjunto";
+            this.btnSubirAdjunto.Size = new System.Drawing.Size(172, 34);
+            this.btnSubirAdjunto.TabIndex = 89;
+            this.btnSubirAdjunto.Text = "Examinar...";
+            this.btnSubirAdjunto.UseVisualStyleBackColor = true;
+            this.btnSubirAdjunto.Click += new System.EventHandler(this.btnSubirAdjunto_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label14.Location = new System.Drawing.Point(641, 155);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 25);
+            this.label14.TabIndex = 88;
+            this.label14.Text = "Adjunto";
+            // 
             // FrmRegistrarEntrevista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1242,7 +1300,6 @@
             this.Load += new System.EventHandler(this.FrmRegistrarAgresion_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.pnlRegistro.ResumeLayout(false);
@@ -1288,7 +1345,6 @@
         #endregion
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCedulaConsultar;
         private System.Windows.Forms.Button btnConsultar;
@@ -1373,5 +1429,10 @@
         private System.Windows.Forms.DataGridView dgvAgresiones;
         private System.Windows.Forms.GroupBox pnlVisitas;
         private System.Windows.Forms.DataGridView dgvVisitasAnteriores;
+        private System.Windows.Forms.ComboBox cmbHijosMenores;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblAdjunto;
+        private System.Windows.Forms.Button btnSubirAdjunto;
+        private System.Windows.Forms.Label label14;
     }
 }

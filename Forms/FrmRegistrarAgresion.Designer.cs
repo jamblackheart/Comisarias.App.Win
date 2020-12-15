@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label label17;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarAgresion));
             this.pnlTitulo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCedulaConsultar = new System.Windows.Forms.TextBox();
@@ -135,9 +133,10 @@
             this.dgvAgresiones = new System.Windows.Forms.DataGridView();
             this.pnlVisitas = new System.Windows.Forms.GroupBox();
             this.dgvVisitasAnteriores = new System.Windows.Forms.DataGridView();
+            this.cmbHijosMenores = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             label17 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.pnlRegistro.SuspendLayout();
             this.grbFechaNacimiento.SuspendLayout();
@@ -188,7 +187,6 @@
             this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(64)))), ((int)(((byte)(58)))));
             this.pnlTitulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlTitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlTitulo.Controls.Add(this.pictureBox1);
             this.pnlTitulo.Controls.Add(label17);
             this.pnlTitulo.Controls.Add(this.label19);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -198,17 +196,6 @@
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(1766, 147);
             this.pnlTitulo.TabIndex = 33;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(941, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // label19
             // 
@@ -308,6 +295,8 @@
             // 
             // pnlRegistro
             // 
+            this.pnlRegistro.Controls.Add(this.cmbHijosMenores);
+            this.pnlRegistro.Controls.Add(this.label13);
             this.pnlRegistro.Controls.Add(this.grbFechaNacimiento);
             this.pnlRegistro.Controls.Add(this.txtEmail);
             this.pnlRegistro.Controls.Add(this.label9);
@@ -1444,13 +1433,44 @@
             this.dgvVisitasAnteriores.Size = new System.Drawing.Size(591, 179);
             this.dgvVisitasAnteriores.TabIndex = 24;
             // 
+            // cmbHijosMenores
+            // 
+            this.cmbHijosMenores.FormattingEnabled = true;
+            this.cmbHijosMenores.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cmbHijosMenores.Location = new System.Drawing.Point(985, 121);
+            this.cmbHijosMenores.Name = "cmbHijosMenores";
+            this.cmbHijosMenores.Size = new System.Drawing.Size(90, 33);
+            this.cmbHijosMenores.TabIndex = 73;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label13.Location = new System.Drawing.Point(823, 121);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(137, 25);
+            this.label13.TabIndex = 72;
+            this.label13.Text = "Hijos Menores";
+            // 
             // FrmRegistrarAgresion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1757, 1076);
+            this.ClientSize = new System.Drawing.Size(1778, 1055);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.pnlRegistroNuevo);
             this.Controls.Add(this.groupBox6);
@@ -1471,7 +1491,6 @@
             this.Load += new System.EventHandler(this.FrmRegistrarAgresion_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.pnlRegistro.ResumeLayout(false);
@@ -1519,7 +1538,6 @@
         #endregion
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCedulaConsultar;
         private System.Windows.Forms.Button btnConsultar;
@@ -1622,5 +1640,7 @@
         private System.Windows.Forms.CheckBox chkAbstenerseLugar;
         private System.Windows.Forms.CheckBox chkRegimenProvisional;
         private System.Windows.Forms.CheckBox chkDesalojo;
+        private System.Windows.Forms.ComboBox cmbHijosMenores;
+        private System.Windows.Forms.Label label13;
     }
 }

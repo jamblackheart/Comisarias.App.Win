@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label17;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFuncionario));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtDocumento = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,7 +53,6 @@
             this.dbComisariaDataSet1 = new Comisarias.App.Escritorio.dbComisariaDataSet1();
             this.motivoVisitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.motivoVisitaTableAdapter = new Comisarias.App.Escritorio.dbComisariaDataSet1TableAdapters.MotivoVisitaTableAdapter();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -65,7 +63,6 @@
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbComisariaDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motivoVisitaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label17
@@ -307,7 +304,6 @@
             this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(64)))), ((int)(((byte)(58)))));
             this.pnlTitulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlTitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlTitulo.Controls.Add(this.pictureBox1);
             this.pnlTitulo.Controls.Add(label17);
             this.pnlTitulo.Controls.Add(this.label19);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -345,17 +341,6 @@
             // 
             this.motivoVisitaTableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(783, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -383,7 +368,6 @@
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbComisariaDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motivoVisitaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -407,7 +391,6 @@
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.Button Eliminar;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtApellidos;

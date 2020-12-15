@@ -16,6 +16,8 @@ namespace Comisarias.App.Escritorio.Models
         public string TipoViolencia { get; set; }
         public string IdentificacionViolencia { get; set; }
         public string ValoracionRiesgo { get; set; }
-      
+
+        public string Adjunto { get; set; }
+
     }
 }

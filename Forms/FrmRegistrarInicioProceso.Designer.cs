@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label label17;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarInicioProceso));
             this.pnlTitulo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCedulaConsultar = new System.Windows.Forms.TextBox();
@@ -184,9 +182,10 @@
             this.dgvAgresiones = new System.Windows.Forms.DataGridView();
             this.pnlVisitas = new System.Windows.Forms.GroupBox();
             this.dgvVisitasAnteriores = new System.Windows.Forms.DataGridView();
+            this.cmbHijosMenores = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             label17 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grbFechaNacimiento.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -242,7 +241,6 @@
             this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(64)))), ((int)(((byte)(58)))));
             this.pnlTitulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlTitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlTitulo.Controls.Add(this.pictureBox1);
             this.pnlTitulo.Controls.Add(label17);
             this.pnlTitulo.Controls.Add(this.label19);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -252,17 +250,6 @@
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(1768, 147);
             this.pnlTitulo.TabIndex = 33;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(941, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // label19
             // 
@@ -693,6 +680,8 @@
             // 
             // pnlRegistro
             // 
+            this.pnlRegistro.Controls.Add(this.cmbHijosMenores);
+            this.pnlRegistro.Controls.Add(this.label11);
             this.pnlRegistro.Controls.Add(this.grbFechaNacimiento);
             this.pnlRegistro.Controls.Add(this.txtEmail);
             this.pnlRegistro.Controls.Add(this.label9);
@@ -1557,7 +1546,7 @@
             this.chkOtra.Size = new System.Drawing.Size(487, 516);
             this.chkOtra.TabIndex = 77;
             this.chkOtra.TabStop = false;
-            this.chkOtra.Text = "Medidas de proteccion";
+            this.chkOtra.Text = "Medidas de protección provisionales";
             // 
             // txtOtraMedida
             // 
@@ -2128,6 +2117,37 @@
             this.dgvVisitasAnteriores.Size = new System.Drawing.Size(591, 179);
             this.dgvVisitasAnteriores.TabIndex = 24;
             // 
+            // cmbHijosMenores
+            // 
+            this.cmbHijosMenores.FormattingEnabled = true;
+            this.cmbHijosMenores.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cmbHijosMenores.Location = new System.Drawing.Point(985, 121);
+            this.cmbHijosMenores.Name = "cmbHijosMenores";
+            this.cmbHijosMenores.Size = new System.Drawing.Size(90, 33);
+            this.cmbHijosMenores.TabIndex = 73;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label11.Location = new System.Drawing.Point(823, 121);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(137, 25);
+            this.label11.TabIndex = 72;
+            this.label11.Text = "Hijos Menores";
+            // 
             // FrmRegistrarInicioProceso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2155,7 +2175,6 @@
             this.Load += new System.EventHandler(this.FrmRegistrarAgresion_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grbFechaNacimiento.ResumeLayout(false);
             this.grbFechaNacimiento.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -2213,7 +2232,6 @@
         #endregion
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCedulaConsultar;
         private System.Windows.Forms.Button btnConsultar;
@@ -2365,5 +2383,7 @@
         private System.Windows.Forms.DataGridView dgvAgresiones;
         private System.Windows.Forms.GroupBox pnlVisitas;
         private System.Windows.Forms.DataGridView dgvVisitasAnteriores;
+        private System.Windows.Forms.ComboBox cmbHijosMenores;
+        private System.Windows.Forms.Label label11;
     }
 }

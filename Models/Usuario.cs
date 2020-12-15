@@ -25,5 +25,7 @@ namespace Comisarias.App.Escritorio.Models
         public bool VictimaConflictoArmado { get; set; }
         public string Documento { get; set; }
 
+        public string HijosMenores { get; set; }
+
     }
 }

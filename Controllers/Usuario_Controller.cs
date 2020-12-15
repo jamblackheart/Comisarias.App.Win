@@ -108,12 +108,12 @@ namespace Comisarias.App.Escritorio.Controllers
                                                                                    GeneroId,Area,Direccion,
                                                                                    Telefono,Correo,PerteneceEtnia,
                                                                                    CualEtnia,Discapacidad,CualDiscapacidad,
-                                                                                   VictimaConflictoArmado,Documento)  
+                                                                                   VictimaConflictoArmado,Documento, HijosMenores)  
                                                                            VALUES (@pFechaNacimiento,@pNombres,@pApellidos,
                                                                                    @pGeneroId,@pArea,@pDireccion,
                                                                                    @pTelefono,@pCorreo,@pPerteneceEtnia,
                                                                                    @pCualEtnia,@pDiscapacidad,@pCualDiscapacidad,
-                                                                                   @pVictimaConflictoArmado,@pDocumento)", con))
+                                                                                   @pVictimaConflictoArmado,@pDocumento, @pHijosMenores)", con))
                     {
 
 
@@ -134,6 +134,7 @@ namespace Comisarias.App.Escritorio.Controllers
                         SqlParameter pCualDiscapacidad = new SqlParameter("@pCualDiscapacidad", SqlDbType.VarChar);
                         SqlParameter pVictimaConflictoArmado = new SqlParameter("@pVictimaConflictoArmado", SqlDbType.VarChar);
                         SqlParameter pDocumento = new SqlParameter("@pDocumento", SqlDbType.VarChar);
+                        SqlParameter pHijosMenores = new SqlParameter("@pHijosMenores", SqlDbType.VarChar);
 
 
                         pFechaNacimiento.Value = usuario.FechaNacimiento;
@@ -150,6 +151,7 @@ namespace Comisarias.App.Escritorio.Controllers
                         pCualDiscapacidad.Value = usuario.CualDiscapacidad;
                         pVictimaConflictoArmado.Value = usuario.VictimaConflictoArmado;
                         pDocumento.Value = usuario.Documento;
+                        pHijosMenores.Value = usuario.HijosMenores;
 
                         command.Parameters.Add(pFechaNacimiento);
                         command.Parameters.Add(pNombres);
@@ -165,6 +167,7 @@ namespace Comisarias.App.Escritorio.Controllers
                         command.Parameters.Add(pCualDiscapacidad);
                         command.Parameters.Add(pVictimaConflictoArmado);
                         command.Parameters.Add(pDocumento);
+                        command.Parameters.Add(pHijosMenores);
 
 
 
@@ -216,7 +219,9 @@ namespace Comisarias.App.Escritorio.Controllers
                                                                         Discapacidad=@pDiscapacidad,
                                                                         CualDiscapacidad=@pCualDiscapacidad,
                                                                         VictimaConflictoArmado=@pVictimaConflictoArmado,
-                                                                        Documento= @pDocumento
+                                                                        Documento= @pDocumento,
+                                                                        HijosMenores= @HijosMenores
+
                                                                 WHERE Id = @pId", con))
                     {
                         SqlParameter pId = new SqlParameter("@pId", SqlDbType.VarChar);
@@ -235,6 +240,7 @@ namespace Comisarias.App.Escritorio.Controllers
                         SqlParameter pCualDiscapacidad = new SqlParameter("@pCualDiscapacidad", SqlDbType.VarChar);
                         SqlParameter pVictimaConflictoArmado = new SqlParameter("@pVictimaConflictoArmado", SqlDbType.VarChar);
                         SqlParameter pDocumento = new SqlParameter("@pDocumento", SqlDbType.VarChar);
+                        SqlParameter pHijosMenores = new SqlParameter("@pHijosMenores", SqlDbType.VarChar);
 
 
                         pId.Value = usuario.Id;
@@ -252,6 +258,7 @@ namespace Comisarias.App.Escritorio.Controllers
                         pCualDiscapacidad.Value = usuario.CualDiscapacidad;
                         pVictimaConflictoArmado.Value = usuario.VictimaConflictoArmado;
                         pDocumento.Value = usuario.Documento;
+                        pHijosMenores.Value = usuario.HijosMenores;
 
                         command.Parameters.Add(pId);
                         command.Parameters.Add(pFechaNacimiento);
@@ -268,6 +275,7 @@ namespace Comisarias.App.Escritorio.Controllers
                         command.Parameters.Add(pCualDiscapacidad);
                         command.Parameters.Add(pVictimaConflictoArmado);
                         command.Parameters.Add(pDocumento);
+                        command.Parameters.Add(pHijosMenores);
 
                         command.ExecuteNonQuery();
                         retorno.FueExitosa = true;
@@ -329,6 +337,7 @@ namespace Comisarias.App.Escritorio.Controllers
                             retorno.CualDiscapacidad = reader["CualDiscapacidad"].ToString();
                             retorno.VictimaConflictoArmado = (Boolean)reader["VictimaConflictoArmado"];
                             retorno.Documento = reader["Documento"].ToString();
+                            retorno.HijosMenores = reader["HijosMenores"].ToString();
 
 
                         }

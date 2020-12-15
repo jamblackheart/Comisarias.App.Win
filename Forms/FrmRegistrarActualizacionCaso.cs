@@ -84,6 +84,7 @@ namespace Comisarias.App.Escritorio.Forms
             txtApellidos.Enabled = false;
             cmbGeneros.Enabled = false;
             cmbArea.Enabled = false;
+            cmbHijosMenores.Enabled = false;
             txtTelefono.Enabled = false;
             txtEmail.Enabled = false;
             txtDireccion.Enabled = false;
@@ -389,6 +390,7 @@ namespace Comisarias.App.Escritorio.Forms
             txtApellidos.Text = usuario.Apellidos;
             cmbGeneros.SelectedText = usuario.Genero;
             cmbArea.SelectedText = usuario.Area;
+            cmbHijosMenores.SelectedText = usuario.HijosMenores;
             txtTelefono.Text = usuario.Telefono;
             txtEmail.Text = usuario.Correo;
             txtDireccion.Text = usuario.Direccion;

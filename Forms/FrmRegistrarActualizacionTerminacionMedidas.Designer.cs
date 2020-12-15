@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label label17;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarActualizacionTerminacionMedidas));
             this.pnlTitulo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCedulaConsultar = new System.Windows.Forms.TextBox();
@@ -73,27 +71,36 @@
             this.pnlRegistro = new System.Windows.Forms.Panel();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.pnlRegistroNuevo = new System.Windows.Forms.GroupBox();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.label36 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cmbFalloRevision = new System.Windows.Forms.ComboBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.txtPruebas = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.rdbRecursoNO = new System.Windows.Forms.RadioButton();
+            this.rdbRecursoSI = new System.Windows.Forms.RadioButton();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtPruebas = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -130,9 +137,10 @@
             this.dgvAgresiones = new System.Windows.Forms.DataGridView();
             this.pnlVisitas = new System.Windows.Forms.GroupBox();
             this.dgvVisitasAnteriores = new System.Windows.Forms.DataGridView();
+            this.cmbHijosMenores = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
             label17 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grbFechaNacimiento.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -140,10 +148,10 @@
             this.groupBox1.SuspendLayout();
             this.pnlRegistro.SuspendLayout();
             this.pnlRegistroNuevo.SuspendLayout();
-            this.groupBox14.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            this.groupBox12.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox15.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -186,7 +194,6 @@
             this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(64)))), ((int)(((byte)(58)))));
             this.pnlTitulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlTitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlTitulo.Controls.Add(this.pictureBox1);
             this.pnlTitulo.Controls.Add(label17);
             this.pnlTitulo.Controls.Add(this.label19);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -196,17 +203,6 @@
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(1765, 147);
             this.pnlTitulo.TabIndex = 33;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(941, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // label19
             // 
@@ -637,6 +633,8 @@
             // 
             // pnlRegistro
             // 
+            this.pnlRegistro.Controls.Add(this.cmbHijosMenores);
+            this.pnlRegistro.Controls.Add(this.label20);
             this.pnlRegistro.Controls.Add(this.grbFechaNacimiento);
             this.pnlRegistro.Controls.Add(this.txtEmail);
             this.pnlRegistro.Controls.Add(this.label9);
@@ -674,13 +672,22 @@
             // 
             // pnlRegistroNuevo
             // 
-            this.pnlRegistroNuevo.Controls.Add(this.groupBox14);
-            this.pnlRegistroNuevo.Controls.Add(this.groupBox13);
-            this.pnlRegistroNuevo.Controls.Add(this.label35);
+            this.pnlRegistroNuevo.Controls.Add(this.label18);
+            this.pnlRegistroNuevo.Controls.Add(this.comboBox5);
+            this.pnlRegistroNuevo.Controls.Add(this.label16);
+            this.pnlRegistroNuevo.Controls.Add(this.cmbFalloRevision);
+            this.pnlRegistroNuevo.Controls.Add(this.groupBox11);
+            this.pnlRegistroNuevo.Controls.Add(this.label12);
+            this.pnlRegistroNuevo.Controls.Add(this.comboBox7);
+            this.pnlRegistroNuevo.Controls.Add(this.groupBox6);
+            this.pnlRegistroNuevo.Controls.Add(this.groupBox12);
+            this.pnlRegistroNuevo.Controls.Add(this.groupBox15);
+            this.pnlRegistroNuevo.Controls.Add(this.textBox7);
+            this.pnlRegistroNuevo.Controls.Add(this.label13);
+            this.pnlRegistroNuevo.Controls.Add(this.textBox1);
+            this.pnlRegistroNuevo.Controls.Add(this.label15);
             this.pnlRegistroNuevo.Controls.Add(this.txtPruebas);
             this.pnlRegistroNuevo.Controls.Add(this.label34);
-            this.pnlRegistroNuevo.Controls.Add(this.groupBox12);
-            this.pnlRegistroNuevo.Controls.Add(this.groupBox6);
             this.pnlRegistroNuevo.Controls.Add(this.groupBox5);
             this.pnlRegistroNuevo.Controls.Add(this.btnGuardar);
             this.pnlRegistroNuevo.Controls.Add(this.groupBox7);
@@ -690,188 +697,279 @@
             this.pnlRegistroNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRegistroNuevo.Name = "pnlRegistroNuevo";
             this.pnlRegistroNuevo.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlRegistroNuevo.Size = new System.Drawing.Size(1116, 682);
+            this.pnlRegistroNuevo.Size = new System.Drawing.Size(1116, 1687);
             this.pnlRegistroNuevo.TabIndex = 41;
             this.pnlRegistroNuevo.TabStop = false;
             this.pnlRegistroNuevo.Text = "ACTUALIZACIÓN TERMINACIÓN DE MEDIDAS";
             this.pnlRegistroNuevo.Visible = false;
             // 
-            // groupBox14
+            // label18
             // 
-            this.groupBox14.Controls.Add(this.label37);
-            this.groupBox14.Controls.Add(this.comboBox6);
-            this.groupBox14.Controls.Add(this.radioButton3);
-            this.groupBox14.Controls.Add(this.radioButton4);
-            this.groupBox14.Location = new System.Drawing.Point(557, 239);
-            this.groupBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox14.Size = new System.Drawing.Size(495, 103);
-            this.groupBox14.TabIndex = 106;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Consulta sanción?";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label37.Location = new System.Drawing.Point(38, 61);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(51, 25);
-            this.label37.TabIndex = 89;
-            this.label37.Text = "Tipo";
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "Psicológico",
-            "Físico",
-            "Psicológico y Físico"});
-            this.comboBox6.Location = new System.Drawing.Point(185, 57);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(278, 33);
-            this.comboBox6.TabIndex = 90;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(173, 28);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(63, 29);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "NO";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(76, 30);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(52, 29);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "SI";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.label36);
-            this.groupBox13.Controls.Add(this.comboBox5);
-            this.groupBox13.Controls.Add(this.radioButton1);
-            this.groupBox13.Controls.Add(this.radioButton2);
-            this.groupBox13.Location = new System.Drawing.Point(559, 102);
-            this.groupBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox13.Size = new System.Drawing.Size(495, 103);
-            this.groupBox13.TabIndex = 105;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Sanción?";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label36.Location = new System.Drawing.Point(8, 61);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(51, 25);
-            this.label36.TabIndex = 87;
-            this.label36.Text = "Tipo";
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label18.Location = new System.Drawing.Point(561, 127);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(253, 25);
+            this.label18.TabIndex = 135;
+            this.label18.Text = "Auto que resuelve incidente";
             // 
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
-            "Psicológico",
-            "Físico",
-            "Psicológico y Físico"});
-            this.comboBox5.Location = new System.Drawing.Point(155, 57);
+            "",
+            "Termina las medidas",
+            "Continúan las medidas"});
+            this.comboBox5.Location = new System.Drawing.Point(564, 163);
             this.comboBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(278, 33);
-            this.comboBox5.TabIndex = 88;
+            this.comboBox5.Size = new System.Drawing.Size(506, 33);
+            this.comboBox5.TabIndex = 136;
             // 
-            // radioButton1
+            // label16
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(173, 28);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(63, 29);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "NO";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label16.Location = new System.Drawing.Point(561, 339);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(126, 25);
+            this.label16.TabIndex = 132;
+            this.label16.Text = "Fallo revisión";
             // 
-            // radioButton2
+            // cmbFalloRevision
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(76, 30);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(52, 29);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "SI";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.cmbFalloRevision.FormattingEnabled = true;
+            this.cmbFalloRevision.Items.AddRange(new object[] {
+            "",
+            "Confirma",
+            "Revoca"});
+            this.cmbFalloRevision.Location = new System.Drawing.Point(712, 336);
+            this.cmbFalloRevision.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbFalloRevision.Name = "cmbFalloRevision";
+            this.cmbFalloRevision.Size = new System.Drawing.Size(358, 33);
+            this.cmbFalloRevision.TabIndex = 134;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.textBox11);
+            this.groupBox11.Controls.Add(this.label35);
+            this.groupBox11.Controls.Add(this.rdbRecursoNO);
+            this.groupBox11.Controls.Add(this.rdbRecursoSI);
+            this.groupBox11.Location = new System.Drawing.Point(564, 229);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox11.Size = new System.Drawing.Size(504, 83);
+            this.groupBox11.TabIndex = 133;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Recurso";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox11.Location = new System.Drawing.Point(319, 224);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(144, 30);
+            this.textBox11.TabIndex = 84;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label35.Location = new System.Drawing.Point(559, 44);
+            this.label35.Location = new System.Drawing.Point(21, 226);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(76, 25);
-            this.label35.TabIndex = 104;
-            this.label35.Text = "FALLO";
+            this.label35.Size = new System.Drawing.Size(237, 25);
+            this.label35.TabIndex = 83;
+            this.label35.Text = "numero de noticia criminal";
             // 
-            // txtPruebas
+            // rdbRecursoNO
             // 
-            this.txtPruebas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPruebas.Location = new System.Drawing.Point(44, 529);
-            this.txtPruebas.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPruebas.Multiline = true;
-            this.txtPruebas.Name = "txtPruebas";
-            this.txtPruebas.Size = new System.Drawing.Size(517, 127);
-            this.txtPruebas.TabIndex = 103;
+            this.rdbRecursoNO.AutoSize = true;
+            this.rdbRecursoNO.Checked = true;
+            this.rdbRecursoNO.Location = new System.Drawing.Point(107, 37);
+            this.rdbRecursoNO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbRecursoNO.Name = "rdbRecursoNO";
+            this.rdbRecursoNO.Size = new System.Drawing.Size(63, 29);
+            this.rdbRecursoNO.TabIndex = 1;
+            this.rdbRecursoNO.TabStop = true;
+            this.rdbRecursoNO.Text = "NO";
+            this.rdbRecursoNO.UseVisualStyleBackColor = true;
             // 
-            // label34
+            // rdbRecursoSI
             // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label34.Location = new System.Drawing.Point(39, 498);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(85, 25);
-            this.label34.TabIndex = 102;
-            this.label34.Text = "Pruebas";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.rdbRecursoSI.AutoSize = true;
+            this.rdbRecursoSI.Location = new System.Drawing.Point(19, 37);
+            this.rdbRecursoSI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbRecursoSI.Name = "rdbRecursoSI";
+            this.rdbRecursoSI.Size = new System.Drawing.Size(52, 29);
+            this.rdbRecursoSI.TabIndex = 0;
+            this.rdbRecursoSI.TabStop = true;
+            this.rdbRecursoSI.Text = "SI";
+            this.rdbRecursoSI.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label12.Location = new System.Drawing.Point(557, 51);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(128, 25);
+            this.label12.TabIndex = 130;
+            this.label12.Text = "A solicitud de";
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Items.AddRange(new object[] {
+            "",
+            "Defensor de Familia",
+            "Ministerio Público",
+            "Parte interesada "});
+            this.comboBox7.Location = new System.Drawing.Point(719, 51);
+            this.comboBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(340, 33);
+            this.comboBox7.TabIndex = 131;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label14);
+            this.groupBox6.Controls.Add(this.comboBox1);
+            this.groupBox6.Controls.Add(this.checkBox1);
+            this.groupBox6.Controls.Add(this.checkBox2);
+            this.groupBox6.Location = new System.Drawing.Point(23, 517);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox6.Size = new System.Drawing.Size(518, 203);
+            this.groupBox6.TabIndex = 129;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Notificacion agresor?";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label14.Location = new System.Drawing.Point(7, 102);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(133, 25);
+            this.label14.TabIndex = 51;
+            this.label14.Text = "Notificaciones";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Personal",
+            "Por estado"});
+            this.comboBox1.Location = new System.Drawing.Point(6, 142);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(476, 33);
+            this.comboBox1.TabIndex = 52;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(171, 53);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(121, 29);
+            this.checkBox1.TabIndex = 2;
+            this.checkBox1.Text = "Verificada";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(23, 53);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(105, 29);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "Enviada";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.checkBox3);
-            this.groupBox12.Controls.Add(this.checkBox4);
-            this.groupBox12.Location = new System.Drawing.Point(274, 161);
+            this.groupBox12.Controls.Add(this.textBox8);
+            this.groupBox12.Controls.Add(this.label11);
+            this.groupBox12.Controls.Add(this.checkBox5);
+            this.groupBox12.Controls.Add(this.checkBox6);
+            this.groupBox12.Location = new System.Drawing.Point(16, 742);
             this.groupBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox12.Size = new System.Drawing.Size(242, 143);
-            this.groupBox12.TabIndex = 101;
+            this.groupBox12.Size = new System.Drawing.Size(525, 131);
+            this.groupBox12.TabIndex = 127;
             this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Notificacion victima?";
+            this.groupBox12.Text = "Notificacion otros?";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox8.Location = new System.Drawing.Point(169, 92);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(349, 30);
+            this.textBox8.TabIndex = 96;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label11.Location = new System.Drawing.Point(17, 92);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(102, 25);
+            this.label11.TabIndex = 95;
+            this.label11.Text = "Cual otro?";
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(173, 46);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(121, 29);
+            this.checkBox5.TabIndex = 2;
+            this.checkBox5.Text = "Verificada";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(23, 46);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(105, 29);
+            this.checkBox6.TabIndex = 1;
+            this.checkBox6.Text = "Enviada";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.checkBox3);
+            this.groupBox15.Controls.Add(this.checkBox4);
+            this.groupBox15.Location = new System.Drawing.Point(23, 407);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox15.Size = new System.Drawing.Size(518, 88);
+            this.groupBox15.TabIndex = 128;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Notificacion victima?";
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(22, 93);
+            this.checkBox3.Location = new System.Drawing.Point(173, 41);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(121, 29);
@@ -890,65 +988,68 @@
             this.checkBox4.Text = "Enviada";
             this.checkBox4.UseVisualStyleBackColor = true;
             // 
-            // groupBox6
+            // textBox7
             // 
-            this.groupBox6.Controls.Add(this.label11);
-            this.groupBox6.Controls.Add(this.comboBox1);
-            this.groupBox6.Controls.Add(this.checkBox1);
-            this.groupBox6.Controls.Add(this.checkBox2);
-            this.groupBox6.Location = new System.Drawing.Point(32, 161);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox6.Size = new System.Drawing.Size(227, 211);
-            this.groupBox6.TabIndex = 100;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Notificacion agresor?";
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox7.Location = new System.Drawing.Point(19, 945);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(522, 61);
+            this.textBox7.TabIndex = 126;
             // 
-            // label11
+            // label13
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label11.Location = new System.Drawing.Point(11, 49);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(133, 25);
-            this.label11.TabIndex = 51;
-            this.label11.Text = "Notificaciones";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label13.Location = new System.Drawing.Point(14, 916);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(225, 25);
+            this.label13.TabIndex = 125;
+            this.label13.Text = "Observacion notificación";
             // 
-            // comboBox1
+            // textBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Personal",
-            "Por estado"});
-            this.comboBox1.Location = new System.Drawing.Point(15, 78);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(184, 33);
-            this.comboBox1.TabIndex = 52;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox1.Location = new System.Drawing.Point(156, 344);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(349, 30);
+            this.textBox1.TabIndex = 124;
             // 
-            // checkBox1
+            // label15
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(16, 163);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(121, 29);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Verificada";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label15.Location = new System.Drawing.Point(24, 347);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(126, 25);
+            this.label15.TabIndex = 123;
+            this.label15.Text = "Responsable";
             // 
-            // checkBox2
+            // txtPruebas
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(15, 130);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(105, 29);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Enviada";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.txtPruebas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPruebas.Location = new System.Drawing.Point(24, 1067);
+            this.txtPruebas.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPruebas.Multiline = true;
+            this.txtPruebas.Name = "txtPruebas";
+            this.txtPruebas.Size = new System.Drawing.Size(517, 127);
+            this.txtPruebas.TabIndex = 122;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label34.Location = new System.Drawing.Point(19, 1036);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(85, 25);
+            this.label34.TabIndex = 121;
+            this.label34.Text = "Pruebas";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // groupBox5
             // 
@@ -958,12 +1059,12 @@
             this.groupBox5.Controls.Add(this.comboBox3);
             this.groupBox5.Controls.Add(this.label31);
             this.groupBox5.Controls.Add(this.comboBox4);
-            this.groupBox5.Location = new System.Drawing.Point(34, 376);
+            this.groupBox5.Location = new System.Drawing.Point(24, 212);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Size = new System.Drawing.Size(413, 113);
-            this.groupBox5.TabIndex = 97;
+            this.groupBox5.TabIndex = 120;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Fecha audiencia";
             // 
@@ -1043,7 +1144,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnGuardar.Location = new System.Drawing.Point(885, 571);
+            this.btnGuardar.Location = new System.Drawing.Point(903, 771);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(156, 46);
@@ -1412,6 +1513,37 @@
             this.dgvVisitasAnteriores.Size = new System.Drawing.Size(591, 179);
             this.dgvVisitasAnteriores.TabIndex = 24;
             // 
+            // cmbHijosMenores
+            // 
+            this.cmbHijosMenores.FormattingEnabled = true;
+            this.cmbHijosMenores.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cmbHijosMenores.Location = new System.Drawing.Point(985, 124);
+            this.cmbHijosMenores.Name = "cmbHijosMenores";
+            this.cmbHijosMenores.Size = new System.Drawing.Size(90, 33);
+            this.cmbHijosMenores.TabIndex = 73;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label20.Location = new System.Drawing.Point(823, 124);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(137, 25);
+            this.label20.TabIndex = 72;
+            this.label20.Text = "Hijos Menores";
+            // 
             // FrmRegistrarActualizacionTerminacionMedidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1439,7 +1571,6 @@
             this.Load += new System.EventHandler(this.FrmRegistrarAgresion_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grbFechaNacimiento.ResumeLayout(false);
             this.grbFechaNacimiento.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1454,14 +1585,14 @@
             this.pnlRegistro.PerformLayout();
             this.pnlRegistroNuevo.ResumeLayout(false);
             this.pnlRegistroNuevo.PerformLayout();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -1493,7 +1624,6 @@
         #endregion
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCedulaConsultar;
         private System.Windows.Forms.Button btnConsultar;
@@ -1543,34 +1673,6 @@
         private System.Windows.Forms.ComboBox cmbDia;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.TextBox txtPruebas;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Label label35;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.DataGridView dgvActualizacionIncumplimiento;
         private System.Windows.Forms.GroupBox groupBox9;
@@ -1591,5 +1693,44 @@
         private System.Windows.Forms.DataGridView dgvAgresiones;
         private System.Windows.Forms.GroupBox pnlVisitas;
         private System.Windows.Forms.DataGridView dgvVisitasAnteriores;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtPruebas;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox cmbFalloRevision;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.RadioButton rdbRecursoNO;
+        private System.Windows.Forms.RadioButton rdbRecursoSI;
+        private System.Windows.Forms.ComboBox cmbHijosMenores;
+        private System.Windows.Forms.Label label20;
     }
 }

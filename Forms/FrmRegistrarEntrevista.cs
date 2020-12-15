@@ -31,6 +31,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         Entrevista objRegistro = new Entrevista();
 
+        string adjunto = "";
 
         public FrmRegistrarEntrevista()
         {
@@ -95,6 +96,7 @@ namespace Comisarias.App.Escritorio.Forms
             txtApellidos.Enabled = false;
             cmbGeneros.Enabled = false;
             cmbArea.Enabled = false;
+            cmbHijosMenores.Enabled = false;
             txtTelefono.Enabled = false;
             txtEmail.Enabled = false;
             txtDireccion.Enabled = false;
@@ -414,6 +416,7 @@ namespace Comisarias.App.Escritorio.Forms
             txtApellidos.Text = usuario.Apellidos;
             cmbGeneros.SelectedText = usuario.Genero;
             cmbArea.SelectedText = usuario.Area;
+            cmbHijosMenores.SelectedText = usuario.HijosMenores;
             txtTelefono.Text = usuario.Telefono;
             txtEmail.Text = usuario.Correo;
             txtDireccion.Text = usuario.Direccion;
@@ -501,6 +504,7 @@ namespace Comisarias.App.Escritorio.Forms
             objRegistro.TipoViolencia = TipoViolencia();
             objRegistro.IdentificacionViolencia = cmbIdentificacionViolencia.Text;
             objRegistro.ValoracionRiesgo = cmbValoracionDelRiesgo.Text;
+            objRegistro.Adjunto = adjunto;
            
         }
 
@@ -610,6 +614,85 @@ namespace Comisarias.App.Escritorio.Forms
         {
             ReiniciarPagina();
         }
+
+        private void btnSubirAdjunto_Click(object sender, EventArgs e)
+        {
+            Respuesta respuesta = SubirArchivo();
+            if (respuesta.FueExitosa)
+            {
+                adjunto = respuesta.Mensaje;
+                string[] tdatosRuta = respuesta.Mensaje.Split('\\');
+                lblAdjunto.Text = tdatosRuta[tdatosRuta.Length - 1];
+            }
+            else
+            {
+                MessageBox.Show(respuesta.Mensaje);
+                lblAdjunto.Text = "Error";
+            }
+        }
+
+        private Respuesta SubirArchivo()
+        {
+            Respuesta respuesta = new Respuesta();
+
+            respuesta.FueExitosa = false;
+            respuesta.Mensaje = "Procesando...";
+
+            try
+            {
+                Archivo archivo = showDialog();
+
+                lblAdjunto.Text = archivo.Nombre;
+
+                string nombreArchivo = archivo.Nombre.Split('.')[0] + "_" + System.DateTime.Now.ToString("dd_MM_yyyy HH_mm_ss") + "." + archivo.Nombre.Split('.')[archivo.Nombre.Split('.').Length - 1];
+                string rutaArchivoOrigen = archivo.Ruta;
+                string carpetaArchivosDestino = @Program.parametroSistema.RutaDocumentos + "\\" + usuario.Documento;
+                string rutaArchivoDestino = @Program.parametroSistema.RutaDocumentos + "\\" + usuario.Documento + "\\" + nombreArchivo;
+
+                System.IO.Directory.CreateDirectory(carpetaArchivosDestino);
+
+                System.IO.File.Copy(rutaArchivoOrigen, rutaArchivoDestino, true);
+
+                respuesta.FueExitosa = true;
+                respuesta.Mensaje = rutaArchivoDestino;
+
+            }
+            catch (Exception e)
+            {
+
+                respuesta.FueExitosa = false;
+                respuesta.Mensaje = "Falló la carga del archivo: " + e.Message;
+            }
+
+            return respuesta;
+
+        }
+
+        private static Archivo showDialog()
+        {
+            Archivo respuesta = new Archivo();
+
+            try
+            {
+                OpenFileDialog dialog
+                     = new OpenFileDialog();
+                //dialog.Filter = "pdf files(.*pdf)|*.*";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    respuesta.Ruta = dialog.FileName;
+                    respuesta.Nombre = dialog.SafeFileName;
+
+                }
+            }
+            catch (Exception er)
+            {
+
+                MessageBox.Show("A ocurrido un error: " + er.Message);
+
+            }
+            return respuesta;
+        }
+
 
     }
 }

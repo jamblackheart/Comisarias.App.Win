@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label label17;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarAudiencia));
             this.pnlTitulo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCedulaConsultar = new System.Windows.Forms.TextBox();
@@ -73,24 +71,46 @@
             this.pnlRegistro = new System.Windows.Forms.Panel();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.pnlRegistroNuevo = new System.Windows.Forms.GroupBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.radioButton13 = new System.Windows.Forms.RadioButton();
+            this.radioButton14 = new System.Windows.Forms.RadioButton();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.cmbAnioRemisionEPS = new System.Windows.Forms.ComboBox();
+            this.cmbMesRemisionEPS = new System.Windows.Forms.ComboBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.cmbDiaRemisionEPS = new System.Windows.Forms.ComboBox();
+            this.rdbRemisionEPSNO = new System.Windows.Forms.RadioButton();
+            this.rdbRemisionEPSSI = new System.Windows.Forms.RadioButton();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -186,9 +206,10 @@
             this.dgvAgresiones = new System.Windows.Forms.DataGridView();
             this.pnlVisitas = new System.Windows.Forms.GroupBox();
             this.dgvVisitasAnteriores = new System.Windows.Forms.DataGridView();
+            this.cmbHijosMenores = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
             label17 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grbFechaNacimiento.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -197,6 +218,12 @@
             this.pnlRegistro.SuspendLayout();
             this.pnlRegistroNuevo.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            this.groupBox22.SuspendLayout();
+            this.groupBox21.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.groupBox17.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -246,7 +273,6 @@
             this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(64)))), ((int)(((byte)(58)))));
             this.pnlTitulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlTitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlTitulo.Controls.Add(this.pictureBox1);
             this.pnlTitulo.Controls.Add(label17);
             this.pnlTitulo.Controls.Add(this.label19);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -256,17 +282,6 @@
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(1768, 147);
             this.pnlTitulo.TabIndex = 33;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(941, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // label19
             // 
@@ -697,6 +712,8 @@
             // 
             // pnlRegistro
             // 
+            this.pnlRegistro.Controls.Add(this.cmbHijosMenores);
+            this.pnlRegistro.Controls.Add(this.label28);
             this.pnlRegistro.Controls.Add(this.grbFechaNacimiento);
             this.pnlRegistro.Controls.Add(this.txtEmail);
             this.pnlRegistro.Controls.Add(this.label9);
@@ -734,6 +751,8 @@
             // 
             // pnlRegistroNuevo
             // 
+            this.pnlRegistroNuevo.Controls.Add(this.textBox10);
+            this.pnlRegistroNuevo.Controls.Add(this.label27);
             this.pnlRegistroNuevo.Controls.Add(this.groupBox9);
             this.pnlRegistroNuevo.Controls.Add(this.label12);
             this.pnlRegistroNuevo.Controls.Add(this.groupBox8);
@@ -760,39 +779,477 @@
             this.pnlRegistroNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRegistroNuevo.Name = "pnlRegistroNuevo";
             this.pnlRegistroNuevo.Padding = new System.Windows.Forms.Padding(4);
-            this.pnlRegistroNuevo.Size = new System.Drawing.Size(1116, 1845);
+            this.pnlRegistroNuevo.Size = new System.Drawing.Size(1116, 2148);
             this.pnlRegistroNuevo.TabIndex = 41;
             this.pnlRegistroNuevo.TabStop = false;
             this.pnlRegistroNuevo.Text = "AUDIENCIA";
             this.pnlRegistroNuevo.Visible = false;
             // 
+            // textBox10
+            // 
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox10.Location = new System.Drawing.Point(24, 1613);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(517, 52);
+            this.textBox10.TabIndex = 102;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label27.Location = new System.Drawing.Point(19, 1582);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(78, 25);
+            this.label27.TabIndex = 101;
+            this.label27.Text = "Archivo";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.groupBox20);
+            this.groupBox9.Controls.Add(this.groupBox19);
+            this.groupBox9.Controls.Add(this.groupBox18);
+            this.groupBox9.Controls.Add(this.label15);
+            this.groupBox9.Controls.Add(this.comboBox2);
+            this.groupBox9.Controls.Add(this.groupBox17);
             this.groupBox9.Controls.Add(this.radioButton7);
-            this.groupBox9.Controls.Add(this.textBox2);
             this.groupBox9.Controls.Add(this.radioButton8);
-            this.groupBox9.Controls.Add(this.checkBox7);
-            this.groupBox9.Controls.Add(this.checkBox8);
-            this.groupBox9.Controls.Add(this.checkBox9);
-            this.groupBox9.Controls.Add(this.checkBox10);
-            this.groupBox9.Controls.Add(this.checkBox11);
-            this.groupBox9.Controls.Add(this.checkBox12);
-            this.groupBox9.Controls.Add(this.checkBox13);
-            this.groupBox9.Controls.Add(this.checkBox14);
-            this.groupBox9.Controls.Add(this.label13);
-            this.groupBox9.Controls.Add(this.checkBox15);
-            this.groupBox9.Controls.Add(this.checkBox16);
-            this.groupBox9.Controls.Add(this.checkBox17);
-            this.groupBox9.Controls.Add(this.checkBox18);
-            this.groupBox9.Controls.Add(this.checkBox19);
             this.groupBox9.Location = new System.Drawing.Point(590, 678);
             this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Size = new System.Drawing.Size(506, 491);
+            this.groupBox9.Size = new System.Drawing.Size(506, 1086);
             this.groupBox9.TabIndex = 100;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Otorga Medidas de atención";
+            this.groupBox9.Text = "Medidas de atención";
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.groupBox22);
+            this.groupBox20.Controls.Add(this.groupBox21);
+            this.groupBox20.Controls.Add(this.textBox4);
+            this.groupBox20.Controls.Add(this.label16);
+            this.groupBox20.Controls.Add(this.label38);
+            this.groupBox20.Controls.Add(this.label40);
+            this.groupBox20.Controls.Add(this.cmbAnioRemisionEPS);
+            this.groupBox20.Controls.Add(this.cmbMesRemisionEPS);
+            this.groupBox20.Controls.Add(this.label41);
+            this.groupBox20.Controls.Add(this.cmbDiaRemisionEPS);
+            this.groupBox20.Controls.Add(this.rdbRemisionEPSNO);
+            this.groupBox20.Controls.Add(this.rdbRemisionEPSSI);
+            this.groupBox20.Location = new System.Drawing.Point(7, 552);
+            this.groupBox20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox20.Size = new System.Drawing.Size(493, 516);
+            this.groupBox20.TabIndex = 101;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Seguimiento";
+            // 
+            // groupBox22
+            // 
+            this.groupBox22.Controls.Add(this.textBox2);
+            this.groupBox22.Controls.Add(this.label20);
+            this.groupBox22.Controls.Add(this.radioButton13);
+            this.groupBox22.Controls.Add(this.radioButton14);
+            this.groupBox22.Location = new System.Drawing.Point(10, 420);
+            this.groupBox22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox22.Size = new System.Drawing.Size(472, 79);
+            this.groupBox22.TabIndex = 102;
+            this.groupBox22.TabStop = false;
+            this.groupBox22.Text = "Protección temporal";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox2.Location = new System.Drawing.Point(319, 224);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(144, 30);
+            this.textBox2.TabIndex = 84;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label20.Location = new System.Drawing.Point(21, 226);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(237, 25);
+            this.label20.TabIndex = 83;
+            this.label20.Text = "numero de noticia criminal";
+            // 
+            // radioButton13
+            // 
+            this.radioButton13.AutoSize = true;
+            this.radioButton13.Checked = true;
+            this.radioButton13.Location = new System.Drawing.Point(123, 37);
+            this.radioButton13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton13.Name = "radioButton13";
+            this.radioButton13.Size = new System.Drawing.Size(63, 29);
+            this.radioButton13.TabIndex = 1;
+            this.radioButton13.TabStop = true;
+            this.radioButton13.Text = "NO";
+            this.radioButton13.UseVisualStyleBackColor = true;
+            // 
+            // radioButton14
+            // 
+            this.radioButton14.AutoSize = true;
+            this.radioButton14.Location = new System.Drawing.Point(19, 37);
+            this.radioButton14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton14.Name = "radioButton14";
+            this.radioButton14.Size = new System.Drawing.Size(52, 29);
+            this.radioButton14.TabIndex = 0;
+            this.radioButton14.TabStop = true;
+            this.radioButton14.Text = "SI";
+            this.radioButton14.UseVisualStyleBackColor = true;
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.checkBox11);
+            this.groupBox21.Controls.Add(this.checkBox10);
+            this.groupBox21.Controls.Add(this.checkBox9);
+            this.groupBox21.Controls.Add(this.textBox5);
+            this.groupBox21.Controls.Add(this.label18);
+            this.groupBox21.Location = new System.Drawing.Point(14, 123);
+            this.groupBox21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox21.Size = new System.Drawing.Size(468, 148);
+            this.groupBox21.TabIndex = 101;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "Tipo de medidas";
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.Location = new System.Drawing.Point(20, 106);
+            this.checkBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(128, 29);
+            this.checkBox11.TabIndex = 96;
+            this.checkBox11.Text = "Hospedaje";
+            this.checkBox11.UseVisualStyleBackColor = true;
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(20, 73);
+            this.checkBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(146, 29);
+            this.checkBox10.TabIndex = 95;
+            this.checkBox10.Text = "Alimentación";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(20, 40);
+            this.checkBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(129, 29);
+            this.checkBox9.TabIndex = 94;
+            this.checkBox9.Text = "Transporte";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox5.Location = new System.Drawing.Point(319, 224);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(144, 30);
+            this.textBox5.TabIndex = 84;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label18.Location = new System.Drawing.Point(21, 226);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(237, 25);
+            this.label18.TabIndex = 83;
+            this.label18.Text = "numero de noticia criminal";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox4.Location = new System.Drawing.Point(10, 316);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(472, 96);
+            this.textBox4.TabIndex = 95;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label16.Location = new System.Drawing.Point(5, 285);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(144, 25);
+            this.label16.TabIndex = 94;
+            this.label16.Text = "Observaciones";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label38.Location = new System.Drawing.Point(371, 37);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(48, 25);
+            this.label38.TabIndex = 89;
+            this.label38.Text = "Año";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label40.Location = new System.Drawing.Point(207, 37);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(50, 25);
+            this.label40.TabIndex = 87;
+            this.label40.Text = "Mes";
+            // 
+            // cmbAnioRemisionEPS
+            // 
+            this.cmbAnioRemisionEPS.FormattingEnabled = true;
+            this.cmbAnioRemisionEPS.Location = new System.Drawing.Point(369, 66);
+            this.cmbAnioRemisionEPS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbAnioRemisionEPS.Name = "cmbAnioRemisionEPS";
+            this.cmbAnioRemisionEPS.Size = new System.Drawing.Size(121, 33);
+            this.cmbAnioRemisionEPS.TabIndex = 90;
+            // 
+            // cmbMesRemisionEPS
+            // 
+            this.cmbMesRemisionEPS.FormattingEnabled = true;
+            this.cmbMesRemisionEPS.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cmbMesRemisionEPS.Location = new System.Drawing.Point(211, 66);
+            this.cmbMesRemisionEPS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbMesRemisionEPS.Name = "cmbMesRemisionEPS";
+            this.cmbMesRemisionEPS.Size = new System.Drawing.Size(151, 33);
+            this.cmbMesRemisionEPS.TabIndex = 88;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label41.Location = new System.Drawing.Point(115, 37);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(41, 25);
+            this.label41.TabIndex = 85;
+            this.label41.Text = "Día";
+            // 
+            // cmbDiaRemisionEPS
+            // 
+            this.cmbDiaRemisionEPS.FormattingEnabled = true;
+            this.cmbDiaRemisionEPS.Location = new System.Drawing.Point(120, 66);
+            this.cmbDiaRemisionEPS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDiaRemisionEPS.Name = "cmbDiaRemisionEPS";
+            this.cmbDiaRemisionEPS.Size = new System.Drawing.Size(76, 33);
+            this.cmbDiaRemisionEPS.TabIndex = 86;
+            // 
+            // rdbRemisionEPSNO
+            // 
+            this.rdbRemisionEPSNO.AutoSize = true;
+            this.rdbRemisionEPSNO.Checked = true;
+            this.rdbRemisionEPSNO.Location = new System.Drawing.Point(19, 70);
+            this.rdbRemisionEPSNO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbRemisionEPSNO.Name = "rdbRemisionEPSNO";
+            this.rdbRemisionEPSNO.Size = new System.Drawing.Size(63, 29);
+            this.rdbRemisionEPSNO.TabIndex = 1;
+            this.rdbRemisionEPSNO.TabStop = true;
+            this.rdbRemisionEPSNO.Text = "NO";
+            this.rdbRemisionEPSNO.UseVisualStyleBackColor = true;
+            // 
+            // rdbRemisionEPSSI
+            // 
+            this.rdbRemisionEPSSI.AutoSize = true;
+            this.rdbRemisionEPSSI.Location = new System.Drawing.Point(19, 37);
+            this.rdbRemisionEPSSI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbRemisionEPSSI.Name = "rdbRemisionEPSSI";
+            this.rdbRemisionEPSSI.Size = new System.Drawing.Size(52, 29);
+            this.rdbRemisionEPSSI.TabIndex = 0;
+            this.rdbRemisionEPSSI.TabStop = true;
+            this.rdbRemisionEPSSI.Text = "SI";
+            this.rdbRemisionEPSSI.UseVisualStyleBackColor = true;
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.radioButton11);
+            this.groupBox19.Controls.Add(this.radioButton12);
+            this.groupBox19.Location = new System.Drawing.Point(7, 472);
+            this.groupBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox19.Size = new System.Drawing.Size(493, 76);
+            this.groupBox19.TabIndex = 100;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Remisión a la entidad territorial";
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Location = new System.Drawing.Point(78, 37);
+            this.radioButton11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(63, 29);
+            this.radioButton11.TabIndex = 1;
+            this.radioButton11.Text = "NO";
+            this.radioButton11.UseVisualStyleBackColor = true;
+            // 
+            // radioButton12
+            // 
+            this.radioButton12.AutoSize = true;
+            this.radioButton12.Location = new System.Drawing.Point(10, 37);
+            this.radioButton12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton12.Name = "radioButton12";
+            this.radioButton12.Size = new System.Drawing.Size(52, 29);
+            this.radioButton12.TabIndex = 0;
+            this.radioButton12.Text = "SI";
+            this.radioButton12.UseVisualStyleBackColor = true;
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.checkBox13);
+            this.groupBox18.Controls.Add(this.checkBox14);
+            this.groupBox18.Location = new System.Drawing.Point(7, 366);
+            this.groupBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox18.Size = new System.Drawing.Size(493, 88);
+            this.groupBox18.TabIndex = 99;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Notificacion victima?";
+            // 
+            // checkBox13
+            // 
+            this.checkBox13.AutoSize = true;
+            this.checkBox13.Location = new System.Drawing.Point(173, 41);
+            this.checkBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(121, 29);
+            this.checkBox13.TabIndex = 2;
+            this.checkBox13.Text = "Verificada";
+            this.checkBox13.UseVisualStyleBackColor = true;
+            // 
+            // checkBox14
+            // 
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.Location = new System.Drawing.Point(23, 41);
+            this.checkBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(105, 29);
+            this.checkBox14.TabIndex = 1;
+            this.checkBox14.Text = "Enviada";
+            this.checkBox14.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label15.Location = new System.Drawing.Point(14, 281);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(92, 25);
+            this.label15.TabIndex = 91;
+            this.label15.Text = "Remisión";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "",
+            "EPS y IPS",
+            "Régimen especial",
+            "ESE "});
+            this.comboBox2.Location = new System.Drawing.Point(13, 316);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(476, 33);
+            this.comboBox2.TabIndex = 92;
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.textBox3);
+            this.groupBox17.Controls.Add(this.label13);
+            this.groupBox17.Controls.Add(this.radioButton9);
+            this.groupBox17.Controls.Add(this.radioButton10);
+            this.groupBox17.Location = new System.Drawing.Point(4, 76);
+            this.groupBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox17.Size = new System.Drawing.Size(496, 187);
+            this.groupBox17.TabIndex = 90;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Verificación de situación de riesgo";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox3.Location = new System.Drawing.Point(7, 112);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(479, 61);
+            this.textBox3.TabIndex = 99;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label13.Location = new System.Drawing.Point(5, 78);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(123, 25);
+            this.label13.TabIndex = 98;
+            this.label13.Text = "Observación";
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(78, 37);
+            this.radioButton9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(63, 29);
+            this.radioButton9.TabIndex = 1;
+            this.radioButton9.Text = "NO";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Location = new System.Drawing.Point(10, 37);
+            this.radioButton10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(52, 29);
+            this.radioButton10.TabIndex = 0;
+            this.radioButton10.Text = "SI";
+            this.radioButton10.UseVisualStyleBackColor = true;
             // 
             // radioButton7
             // 
@@ -807,15 +1264,6 @@
             this.radioButton7.Text = "NO";
             this.radioButton7.UseVisualStyleBackColor = true;
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(68, 502);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(383, 30);
-            this.textBox2.TabIndex = 89;
-            // 
             // radioButton8
             // 
             this.radioButton8.AutoSize = true;
@@ -827,158 +1275,6 @@
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "SI";
             this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(7, 467);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(151, 29);
-            this.checkBox7.TabIndex = 59;
-            this.checkBox7.Text = "Otra. ¿Cuál? ";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(7, 434);
-            this.checkBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(378, 29);
-            this.checkBox8.TabIndex = 58;
-            this.checkBox8.Text = "Devolución de los objetos de las víctima";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(7, 405);
-            this.checkBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(427, 29);
-            this.checkBox9.TabIndex = 57;
-            this.checkBox9.Text = "Prohibición de venta o enajenación de bienes";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(7, 376);
-            this.checkBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(256, 29);
-            this.checkBox10.TabIndex = 56;
-            this.checkBox10.Text = "Uso y disfrute de vivienda";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(7, 347);
-            this.checkBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(235, 29);
-            this.checkBox11.TabIndex = 55;
-            this.checkBox11.Text = "Pensiones alimentarias";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(7, 259);
-            this.checkBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(417, 29);
-            this.checkBox12.TabIndex = 53;
-            this.checkBox12.Text = "Acompañamiento para reingreso al domicilio";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(7, 231);
-            this.checkBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(196, 29);
-            this.checkBox13.TabIndex = 52;
-            this.checkBox13.Text = "Protección policiva";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(7, 172);
-            this.checkBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(451, 29);
-            this.checkBox14.TabIndex = 50;
-            this.checkBox14.Text = "Prohibición de trasladar o esconder a hijas/hijos ";
-            this.checkBox14.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label13.Location = new System.Drawing.Point(29, 120);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(448, 54);
-            this.label13.TabIndex = 49;
-            this.label13.Text = "Abstenerse de penetrar en cualquier lugar donde esté la víctima";
-            // 
-            // checkBox15
-            // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(7, 202);
-            this.checkBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(207, 29);
-            this.checkBox15.TabIndex = 4;
-            this.checkBox15.Text = "Acudir a tratamiento";
-            this.checkBox15.UseVisualStyleBackColor = true;
-            // 
-            // checkBox16
-            // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(7, 318);
-            this.checkBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(350, 29);
-            this.checkBox16.TabIndex = 3;
-            this.checkBox16.Text = "Suspensión de la tenencia de armas";
-            this.checkBox16.UseVisualStyleBackColor = true;
-            // 
-            // checkBox17
-            // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(7, 134);
-            this.checkBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(18, 17);
-            this.checkBox17.TabIndex = 2;
-            this.checkBox17.UseVisualStyleBackColor = true;
-            // 
-            // checkBox18
-            // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(7, 289);
-            this.checkBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(459, 29);
-            this.checkBox18.TabIndex = 1;
-            this.checkBox18.Text = "Régimen provisional de visitas, guarda y custodia";
-            this.checkBox18.UseVisualStyleBackColor = true;
-            // 
-            // checkBox19
-            // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(7, 90);
-            this.checkBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(110, 29);
-            this.checkBox19.TabIndex = 0;
-            this.checkBox19.Text = "Desalojo";
-            this.checkBox19.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -997,11 +1293,11 @@
             this.groupBox8.Controls.Add(this.comboBox1);
             this.groupBox8.Controls.Add(this.checkBox1);
             this.groupBox8.Controls.Add(this.checkBox2);
-            this.groupBox8.Location = new System.Drawing.Point(24, 274);
+            this.groupBox8.Location = new System.Drawing.Point(28, 428);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Size = new System.Drawing.Size(227, 191);
+            this.groupBox8.Size = new System.Drawing.Size(518, 203);
             this.groupBox8.TabIndex = 99;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Notificacion agresor?";
@@ -1010,7 +1306,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label14.Location = new System.Drawing.Point(11, 49);
+            this.label14.Location = new System.Drawing.Point(7, 102);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(133, 25);
@@ -1023,16 +1319,16 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Personal",
             "Por estado"});
-            this.comboBox1.Location = new System.Drawing.Point(15, 78);
+            this.comboBox1.Location = new System.Drawing.Point(6, 142);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(184, 33);
+            this.comboBox1.Size = new System.Drawing.Size(476, 33);
             this.comboBox1.TabIndex = 52;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(16, 163);
+            this.checkBox1.Location = new System.Drawing.Point(171, 53);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(121, 29);
@@ -1043,7 +1339,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(15, 130);
+            this.checkBox2.Location = new System.Drawing.Point(23, 53);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(105, 29);
@@ -1055,7 +1351,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label36.Location = new System.Drawing.Point(585, 1497);
+            this.label36.Location = new System.Drawing.Point(587, 1975);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(126, 25);
@@ -1071,7 +1367,7 @@
             "Confirma medidas de protección",
             "Modifica medidas de protección → Actualizar las que quedan vigentes y cómo quedar" +
                 "on"});
-            this.cmbFalloRevision.Location = new System.Drawing.Point(736, 1494);
+            this.cmbFalloRevision.Location = new System.Drawing.Point(738, 1972);
             this.cmbFalloRevision.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbFalloRevision.Name = "cmbFalloRevision";
             this.cmbFalloRevision.Size = new System.Drawing.Size(358, 33);
@@ -1083,11 +1379,11 @@
             this.groupBox14.Controls.Add(this.label35);
             this.groupBox14.Controls.Add(this.rdbRecursoNO);
             this.groupBox14.Controls.Add(this.rdbRecursoSI);
-            this.groupBox14.Location = new System.Drawing.Point(590, 1345);
+            this.groupBox14.Location = new System.Drawing.Point(590, 1865);
             this.groupBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox14.Size = new System.Drawing.Size(504, 128);
+            this.groupBox14.Size = new System.Drawing.Size(504, 83);
             this.groupBox14.TabIndex = 96;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Recurso";
@@ -1116,7 +1412,7 @@
             // 
             this.rdbRecursoNO.AutoSize = true;
             this.rdbRecursoNO.Checked = true;
-            this.rdbRecursoNO.Location = new System.Drawing.Point(19, 70);
+            this.rdbRecursoNO.Location = new System.Drawing.Point(107, 37);
             this.rdbRecursoNO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbRecursoNO.Name = "rdbRecursoNO";
             this.rdbRecursoNO.Size = new System.Drawing.Size(63, 29);
@@ -1140,7 +1436,7 @@
             // txtPruebas
             // 
             this.txtPruebas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPruebas.Location = new System.Drawing.Point(22, 1210);
+            this.txtPruebas.Location = new System.Drawing.Point(24, 1433);
             this.txtPruebas.Margin = new System.Windows.Forms.Padding(4);
             this.txtPruebas.Multiline = true;
             this.txtPruebas.Name = "txtPruebas";
@@ -1153,7 +1449,7 @@
             this.groupBox13.Controls.Add(this.label31);
             this.groupBox13.Controls.Add(this.checkBox5);
             this.groupBox13.Controls.Add(this.checkBox6);
-            this.groupBox13.Location = new System.Drawing.Point(21, 469);
+            this.groupBox13.Location = new System.Drawing.Point(21, 653);
             this.groupBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1208,11 +1504,11 @@
             // 
             this.groupBox12.Controls.Add(this.checkBox3);
             this.groupBox12.Controls.Add(this.checkBox4);
-            this.groupBox12.Location = new System.Drawing.Point(304, 310);
+            this.groupBox12.Location = new System.Drawing.Point(28, 318);
             this.groupBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox12.Size = new System.Drawing.Size(242, 143);
+            this.groupBox12.Size = new System.Drawing.Size(518, 88);
             this.groupBox12.TabIndex = 98;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Notificacion victima?";
@@ -1220,7 +1516,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(22, 93);
+            this.checkBox3.Location = new System.Drawing.Point(173, 41);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(121, 29);
@@ -1243,7 +1539,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label33.Location = new System.Drawing.Point(17, 1179);
+            this.label33.Location = new System.Drawing.Point(19, 1402);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(85, 25);
@@ -1468,7 +1764,7 @@
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox7.Location = new System.Drawing.Point(24, 631);
+            this.textBox7.Location = new System.Drawing.Point(24, 856);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
@@ -1485,7 +1781,7 @@
             this.groupBox6.Controls.Add(this.label34);
             this.groupBox6.Controls.Add(this.chkAlimentos);
             this.groupBox6.Controls.Add(this.chkCustodia);
-            this.groupBox6.Location = new System.Drawing.Point(21, 820);
+            this.groupBox6.Location = new System.Drawing.Point(21, 1055);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1584,7 +1880,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label22.Location = new System.Drawing.Point(19, 602);
+            this.label22.Location = new System.Drawing.Point(19, 827);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(225, 25);
@@ -1617,11 +1913,11 @@
             this.groupBox11.Controls.Add(this.label49);
             this.groupBox11.Controls.Add(this.rdbAcompanamientoComisariaNO);
             this.groupBox11.Controls.Add(this.rdbAcompanamientoComisariaSI);
-            this.groupBox11.Location = new System.Drawing.Point(590, 1195);
+            this.groupBox11.Location = new System.Drawing.Point(590, 1781);
             this.groupBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox11.Size = new System.Drawing.Size(506, 128);
+            this.groupBox11.Size = new System.Drawing.Size(506, 75);
             this.groupBox11.TabIndex = 95;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Extensiva a hijos(as)?";
@@ -1650,7 +1946,7 @@
             // 
             this.rdbAcompanamientoComisariaNO.AutoSize = true;
             this.rdbAcompanamientoComisariaNO.Checked = true;
-            this.rdbAcompanamientoComisariaNO.Location = new System.Drawing.Point(19, 70);
+            this.rdbAcompanamientoComisariaNO.Location = new System.Drawing.Point(128, 37);
             this.rdbAcompanamientoComisariaNO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbAcompanamientoComisariaNO.Name = "rdbAcompanamientoComisariaNO";
             this.rdbAcompanamientoComisariaNO.Size = new System.Drawing.Size(63, 29);
@@ -1674,7 +1970,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnGuardar.Location = new System.Drawing.Point(940, 1638);
+            this.btnGuardar.Location = new System.Drawing.Point(934, 2056);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(156, 46);
@@ -1687,7 +1983,7 @@
             // 
             this.groupBox5.Controls.Add(this.rdbMedidasProteccionNO);
             this.groupBox5.Controls.Add(this.rdbMedidasProteccionSI);
-            this.groupBox5.Location = new System.Drawing.Point(24, 708);
+            this.groupBox5.Location = new System.Drawing.Point(24, 955);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -2127,6 +2423,37 @@
             this.dgvVisitasAnteriores.Size = new System.Drawing.Size(591, 179);
             this.dgvVisitasAnteriores.TabIndex = 24;
             // 
+            // cmbHijosMenores
+            // 
+            this.cmbHijosMenores.FormattingEnabled = true;
+            this.cmbHijosMenores.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cmbHijosMenores.Location = new System.Drawing.Point(982, 121);
+            this.cmbHijosMenores.Name = "cmbHijosMenores";
+            this.cmbHijosMenores.Size = new System.Drawing.Size(90, 33);
+            this.cmbHijosMenores.TabIndex = 73;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label28.Location = new System.Drawing.Point(820, 121);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(137, 25);
+            this.label28.TabIndex = 72;
+            this.label28.Text = "Hijos Menores";
+            // 
             // FrmRegistrarAudiencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2154,7 +2481,6 @@
             this.Load += new System.EventHandler(this.FrmRegistrarAgresion_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grbFechaNacimiento.ResumeLayout(false);
             this.grbFechaNacimiento.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -2171,6 +2497,18 @@
             this.pnlRegistroNuevo.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
+            this.groupBox22.ResumeLayout(false);
+            this.groupBox22.PerformLayout();
+            this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox14.ResumeLayout(false);
@@ -2216,7 +2554,6 @@
         #endregion
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCedulaConsultar;
         private System.Windows.Forms.Button btnConsultar;
@@ -2326,22 +2663,7 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.CheckBox checkBox18;
-        private System.Windows.Forms.CheckBox checkBox19;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.CheckBox checkBox1;
@@ -2370,5 +2692,44 @@
         private System.Windows.Forms.DataGridView dgvAgresiones;
         private System.Windows.Forms.GroupBox pnlVisitas;
         private System.Windows.Forms.DataGridView dgvVisitasAnteriores;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.RadioButton radioButton11;
+        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.GroupBox groupBox22;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.RadioButton radioButton13;
+        private System.Windows.Forms.RadioButton radioButton14;
+        private System.Windows.Forms.GroupBox groupBox21;
+        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.ComboBox cmbAnioRemisionEPS;
+        private System.Windows.Forms.ComboBox cmbMesRemisionEPS;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.ComboBox cmbDiaRemisionEPS;
+        private System.Windows.Forms.RadioButton rdbRemisionEPSNO;
+        private System.Windows.Forms.RadioButton rdbRemisionEPSSI;
+        private System.Windows.Forms.ComboBox cmbHijosMenores;
+        private System.Windows.Forms.Label label28;
     }
 }
