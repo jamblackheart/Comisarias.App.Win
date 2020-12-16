@@ -17,10 +17,11 @@ namespace Comisarias.App.Escritorio.Models
         public string Adjunto { get; set; }
         public string Observacion { get; set; }
 
+        public string TipoSeguimiento { get; set; }
 
-       
 
-      
+
+
 
     }
 }

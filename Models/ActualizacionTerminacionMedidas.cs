@@ -12,43 +12,38 @@ namespace Comisarias.App.Escritorio.Models
         public int UsuarioId { get; set; }
         public DateTime? Fecha { get; set; }
 
+        public DateTime? FechaAudiencia { get; set; }
+
         public string Responsable { get; set; }
 
-        public DateTime? IncumplimientoFecha { get; set; }
-        public string IncumplimientoNotificaciones { get; set; }
-        public string IncumplimientoAudiencia { get; set; }
-        public DateTime? IncumplimientoAudienciaFecha { get; set; }
-        public string IncumplimientoPruebas { get; set; }
-        public string IncumplimientoFallo { get; set; }
-        public string IncumplimientoSancion { get; set; }
-        public string IncumplimientoSancionCual { get; set; }
+        public string NotificacionVictima { get; set; }
+        public string NotificacionVictimaVerificada { get; set; }
 
-        public string IncumplimientoSancionConsulta { get; set; }
+        public string NotificacionAgresor { get; set; }
+        public string NotificacionAgresorVerificada { get; set; }
 
-        public string IncumplimientoRevocaConfirmaSancion { get; set; }
-        public string IncumplimientoNota { get; set; }
+        public string NotificacionAgresorTipo { get; set; }
 
+        public string NotificacionOtros { get; set; }
+        public string NotificacionOtrosVerificada { get; set; }
+
+        public string NotificacionOtrosCual { get; set; }
 
 
-        public string AmpliacionDeMedidasProtecccion { get; set; }
-        public string AmpliacionDeMedidasProtecccionCuales { get; set; }
+        public string NotificacionObservacion { get; set; }
 
 
+        public string Pruebas { get; set; }
 
-        public string TerminacionDeMedida { get; set; }
-        public string TerminacionDeMedidaAsolicitudDe { get; set; }
+        public string AsolicitudDe { get; set; }
 
-        public string TerminacionDeMedidaPruebas { get; set; }
+        public string AutoResuelveIncidente { get; set; }
 
-        public string TerminacionDeMedidaPruebasAutoQueResuelveIncidente { get; set; }
+        public string Recurso { get; set; }
 
-        public string TerminacionDeMedidaRecurso { get; set; }
-        public string TerminacionDeMedidaFallo { get; set; }
+        public string FalloRevision { get; set; }
 
-        public string TerminacionDeMedidaArchivo { get; set; }
-
-
-        public string TerminacionDeMedidaNota { get; set; }
+       
 
       
 

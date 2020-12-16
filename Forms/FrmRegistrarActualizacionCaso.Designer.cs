@@ -71,6 +71,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.pnlRegistro = new System.Windows.Forms.Panel();
+            this.cmbHijosMenores = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.pnlAgresiones = new System.Windows.Forms.GroupBox();
             this.dgvAgresiones = new System.Windows.Forms.DataGridView();
@@ -96,7 +98,7 @@
             this.label34 = new System.Windows.Forms.Label();
             this.txtObservacion = new System.Windows.Forms.TextBox();
             this.pnlRegistroNuevo = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTipoSeguimiento = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.lblRutaArchivoAdjunto = new System.Windows.Forms.Label();
             this.btnSubirArchivo = new System.Windows.Forms.Button();
@@ -109,8 +111,6 @@
             this.dgvActualizacionTerminacionMedidas = new System.Windows.Forms.DataGridView();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.dgvActualizacionIncumplimiento = new System.Windows.Forms.DataGridView();
-            this.cmbHijosMenores = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             label17 = new System.Windows.Forms.Label();
             this.pnlVisitas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitasAnteriores)).BeginInit();
@@ -654,6 +654,37 @@
             this.pnlRegistro.TabIndex = 67;
             this.pnlRegistro.Visible = false;
             // 
+            // cmbHijosMenores
+            // 
+            this.cmbHijosMenores.FormattingEnabled = true;
+            this.cmbHijosMenores.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cmbHijosMenores.Location = new System.Drawing.Point(984, 124);
+            this.cmbHijosMenores.Name = "cmbHijosMenores";
+            this.cmbHijosMenores.Size = new System.Drawing.Size(90, 33);
+            this.cmbHijosMenores.TabIndex = 73;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label13.Location = new System.Drawing.Point(822, 124);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(137, 25);
+            this.label13.TabIndex = 72;
+            this.label13.Text = "Hijos Menores";
+            // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -955,7 +986,7 @@
             // 
             // pnlRegistroNuevo
             // 
-            this.pnlRegistroNuevo.Controls.Add(this.textBox1);
+            this.pnlRegistroNuevo.Controls.Add(this.txtTipoSeguimiento);
             this.pnlRegistroNuevo.Controls.Add(this.label12);
             this.pnlRegistroNuevo.Controls.Add(this.lblRutaArchivoAdjunto);
             this.pnlRegistroNuevo.Controls.Add(this.btnSubirArchivo);
@@ -978,15 +1009,15 @@
             this.pnlRegistroNuevo.Text = "ACTUALIZACIÓN DEL CASO";
             this.pnlRegistroNuevo.Visible = false;
             // 
-            // textBox1
+            // txtTipoSeguimiento
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(36, 286);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(517, 58);
-            this.textBox1.TabIndex = 110;
+            this.txtTipoSeguimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTipoSeguimiento.Location = new System.Drawing.Point(36, 286);
+            this.txtTipoSeguimiento.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTipoSeguimiento.Multiline = true;
+            this.txtTipoSeguimiento.Name = "txtTipoSeguimiento";
+            this.txtTipoSeguimiento.Size = new System.Drawing.Size(517, 58);
+            this.txtTipoSeguimiento.TabIndex = 110;
             // 
             // label12
             // 
@@ -1128,37 +1159,6 @@
             this.dgvActualizacionIncumplimiento.RowHeadersWidth = 51;
             this.dgvActualizacionIncumplimiento.Size = new System.Drawing.Size(591, 179);
             this.dgvActualizacionIncumplimiento.TabIndex = 24;
-            // 
-            // cmbHijosMenores
-            // 
-            this.cmbHijosMenores.FormattingEnabled = true;
-            this.cmbHijosMenores.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.cmbHijosMenores.Location = new System.Drawing.Point(984, 124);
-            this.cmbHijosMenores.Name = "cmbHijosMenores";
-            this.cmbHijosMenores.Size = new System.Drawing.Size(90, 33);
-            this.cmbHijosMenores.TabIndex = 73;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label13.Location = new System.Drawing.Point(822, 124);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(137, 25);
-            this.label13.TabIndex = 72;
-            this.label13.Text = "Hijos Menores";
             // 
             // FrmRegistrarActualizacionCaso
             // 
@@ -1306,7 +1306,7 @@
         private System.Windows.Forms.DataGridView dgvActualizacionTerminacionMedidas;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.DataGridView dgvActualizacionIncumplimiento;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTipoSeguimiento;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cmbHijosMenores;
         private System.Windows.Forms.Label label13;

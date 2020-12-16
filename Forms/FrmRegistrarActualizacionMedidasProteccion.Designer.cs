@@ -69,6 +69,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.pnlRegistro = new System.Windows.Forms.Panel();
+            this.cmbHijosMenores = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -194,8 +196,6 @@
             this.dgvAgresiones = new System.Windows.Forms.DataGridView();
             this.pnlVisitas = new System.Windows.Forms.GroupBox();
             this.dgvVisitasAnteriores = new System.Windows.Forms.DataGridView();
-            this.cmbHijosMenores = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
             label17 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
             this.grbFechaNacimiento.SuspendLayout();
@@ -726,6 +726,37 @@
             this.pnlRegistro.Size = new System.Drawing.Size(1085, 294);
             this.pnlRegistro.TabIndex = 67;
             this.pnlRegistro.Visible = false;
+            // 
+            // cmbHijosMenores
+            // 
+            this.cmbHijosMenores.FormattingEnabled = true;
+            this.cmbHijosMenores.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cmbHijosMenores.Location = new System.Drawing.Point(985, 121);
+            this.cmbHijosMenores.Name = "cmbHijosMenores";
+            this.cmbHijosMenores.Size = new System.Drawing.Size(90, 33);
+            this.cmbHijosMenores.TabIndex = 73;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label24.Location = new System.Drawing.Point(823, 121);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(137, 25);
+            this.label24.TabIndex = 72;
+            this.label24.Text = "Hijos Menores";
             // 
             // txtEmail
             // 
@@ -1343,9 +1374,9 @@
             this.checkBox11.Location = new System.Drawing.Point(20, 106);
             this.checkBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(378, 29);
+            this.checkBox11.Size = new System.Drawing.Size(160, 36);
             this.checkBox11.TabIndex = 96;
-            this.checkBox11.Text = "Devolución de los objetos de las víctima";
+            this.checkBox11.Text = "Hospedaje";
             this.checkBox11.UseVisualStyleBackColor = true;
             // 
             // checkBox10
@@ -1354,9 +1385,9 @@
             this.checkBox10.Location = new System.Drawing.Point(20, 73);
             this.checkBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(378, 29);
+            this.checkBox10.Size = new System.Drawing.Size(183, 36);
             this.checkBox10.TabIndex = 95;
-            this.checkBox10.Text = "Devolución de los objetos de las víctima";
+            this.checkBox10.Text = "Alimentación";
             this.checkBox10.UseVisualStyleBackColor = true;
             // 
             // checkBox9
@@ -1365,9 +1396,9 @@
             this.checkBox9.Location = new System.Drawing.Point(20, 40);
             this.checkBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(378, 29);
+            this.checkBox9.Size = new System.Drawing.Size(161, 36);
             this.checkBox9.TabIndex = 94;
-            this.checkBox9.Text = "Devolución de los objetos de las víctima";
+            this.checkBox9.Text = "Transporte";
             this.checkBox9.UseVisualStyleBackColor = true;
             // 
             // textBox5
@@ -2272,37 +2303,6 @@
             this.dgvVisitasAnteriores.RowHeadersWidth = 51;
             this.dgvVisitasAnteriores.Size = new System.Drawing.Size(591, 179);
             this.dgvVisitasAnteriores.TabIndex = 24;
-            // 
-            // cmbHijosMenores
-            // 
-            this.cmbHijosMenores.FormattingEnabled = true;
-            this.cmbHijosMenores.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.cmbHijosMenores.Location = new System.Drawing.Point(985, 121);
-            this.cmbHijosMenores.Name = "cmbHijosMenores";
-            this.cmbHijosMenores.Size = new System.Drawing.Size(90, 33);
-            this.cmbHijosMenores.TabIndex = 73;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label24.Location = new System.Drawing.Point(823, 121);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(137, 25);
-            this.label24.TabIndex = 72;
-            this.label24.Text = "Hijos Menores";
             // 
             // FrmRegistrarActualizacionMedidasProteccion
             // 

@@ -9,7 +9,7 @@ namespace Comisarias.App.Escritorio.Forms
 {
     public partial class FrmRegistrarActualizacionCaso : Form
     {
-       
+
         private string[] meses = { "Enero", "Febrero" , "Marzo", "Abril" ,
             "Mayo" , "Junio" , "Julio" , "Agosto" , "Septiembre" ,
             "Octubre" , "Noviembre" , "Diciembre"};
@@ -66,12 +66,28 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LimpiarRegistro()
         {
+            pnlRegistroNuevo.Enabled = true;
+
+            lblMensaje.Text = "";
+            cmbDia.Text = "";
+            cmbAnio.Text = "";
+            cmbMes.Text = "";
+
+
+            usuario = new Usuario();
+
+            archivoAdjunto = "";
+
+            txtResponsable.Text = "";
+            txtTipoSeguimiento.Text = "";
+            lblRutaArchivoAdjunto.Text = "";
+            txtObservacion.Text = "";
 
         }
 
         private void CargarInfomacionEnControles()
         {
-            
+
         }
 
 
@@ -88,7 +104,7 @@ namespace Comisarias.App.Escritorio.Forms
             txtTelefono.Enabled = false;
             txtEmail.Enabled = false;
             txtDireccion.Enabled = false;
-           
+
             txtCualDiscapacidad.Enabled = false;
             txtCualEtnia.Enabled = false;
             rbtDiscapacidadSi.Enabled = false;
@@ -224,7 +240,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void ObtenerIniciosProceso()
         {
-            RespuestaGetDatos respuesta = controlador_actualizacionCaso.ObtenerPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_inicioProceso.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
@@ -385,7 +401,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LlenarCamposUsuario()
         {
-            
+
             txtNombres.Text = usuario.Nombres;
             txtApellidos.Text = usuario.Apellidos;
             cmbGeneros.SelectedText = usuario.Genero;
@@ -406,7 +422,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         }
 
-       
+
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             ReiniciarPagina();
@@ -414,22 +430,27 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LlenarCamposFecha()
         {
+
+            cmbDia.Items.Clear();
+            cmbAnio.Items.Clear();
+            cmbMes.Items.Clear();
+            
             for (int i = 1; i <= 31; i++)
             {
                 cmbDia.Items.Add(i);
-               
+
 
             }
             for (int i = System.DateTime.Now.Year; i >= System.DateTime.Now.Year - 100; i--)
             {
                 cmbAnio.Items.Add(i);
-                
+
 
             }
             foreach (string item in meses)
             {
                 cmbMes.Items.Add(item);
-               
+
             }
 
         }
@@ -465,7 +486,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         }
 
-      
+
 
         private void Registrar()
         {
@@ -473,6 +494,8 @@ namespace Comisarias.App.Escritorio.Forms
             objRegistro.Fecha = ObtenerFechaFormulario(cmbAnio.Text, cmbMes.Text, cmbDia.Text);
             objRegistro.Responsable = txtResponsable.Text;
             objRegistro.Observacion = txtObservacion.Text;
+            objRegistro.TipoSeguimiento = txtTipoSeguimiento.Text;
+
             objRegistro.Adjunto = archivoAdjunto;
 
         }
@@ -486,6 +509,18 @@ namespace Comisarias.App.Escritorio.Forms
             {
                 valido = false;
                 mensaje += " Fecha,";
+            }
+
+            if (objRegistro.Responsable == "")
+            {
+                valido = false;
+                mensaje += " Responsable,";
+            }
+
+            if (objRegistro.TipoSeguimiento == "")
+            {
+                valido = false;
+                mensaje += " Tipo seguimiento,";
             }
 
             if (!valido)

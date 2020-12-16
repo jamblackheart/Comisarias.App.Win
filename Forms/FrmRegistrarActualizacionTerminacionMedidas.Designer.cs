@@ -69,10 +69,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.pnlRegistro = new System.Windows.Forms.Panel();
+            this.cmbHijosMenores = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.pnlRegistroNuevo = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cmbAutoResuelveIncidente = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cmbFalloRevision = new System.Windows.Forms.ComboBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -81,33 +83,33 @@
             this.rdbRecursoNO = new System.Windows.Forms.RadioButton();
             this.rdbRecursoSI = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.cmbAsolicitudDe = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.cmbTipoNotificacionAgresor = new System.Windows.Forms.ComboBox();
+            this.chkNotificacionAgresorVerificada = new System.Windows.Forms.CheckBox();
+            this.chkNotificacionAgresor = new System.Windows.Forms.CheckBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtNotificacionOtroCual = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.chkNotificacionOtroVerificada = new System.Windows.Forms.CheckBox();
+            this.chkNotificacionOtro = new System.Windows.Forms.CheckBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.chkNotificacionVictimaVerificada = new System.Windows.Forms.CheckBox();
+            this.chkNotificacionVictima = new System.Windows.Forms.CheckBox();
+            this.txtObservacionNotificacion = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtResponsable = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtPruebas = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbAnioAudiencia = new System.Windows.Forms.ComboBox();
+            this.cmbMesAudiencia = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbDiaAudiencia = new System.Windows.Forms.ComboBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -137,8 +139,6 @@
             this.dgvAgresiones = new System.Windows.Forms.DataGridView();
             this.pnlVisitas = new System.Windows.Forms.GroupBox();
             this.dgvVisitasAnteriores = new System.Windows.Forms.DataGridView();
-            this.cmbHijosMenores = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
             label17 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
             this.grbFechaNacimiento.SuspendLayout();
@@ -185,9 +185,9 @@
             label17.Location = new System.Drawing.Point(309, 57);
             label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label17.Name = "label17";
-            label17.Size = new System.Drawing.Size(454, 31);
+            label17.Size = new System.Drawing.Size(549, 31);
             label17.TabIndex = 2;
-            label17.Text = "REGISTRAR INICIO DE PROCESO";
+            label17.Text = "REGISTRAR TERMINACIÓN DE MEDIDAS";
             // 
             // pnlTitulo
             // 
@@ -201,7 +201,7 @@
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
             this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(1765, 147);
+            this.pnlTitulo.Size = new System.Drawing.Size(1757, 147);
             this.pnlTitulo.TabIndex = 33;
             // 
             // label19
@@ -661,6 +661,37 @@
             this.pnlRegistro.TabIndex = 67;
             this.pnlRegistro.Visible = false;
             // 
+            // cmbHijosMenores
+            // 
+            this.cmbHijosMenores.FormattingEnabled = true;
+            this.cmbHijosMenores.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cmbHijosMenores.Location = new System.Drawing.Point(985, 124);
+            this.cmbHijosMenores.Name = "cmbHijosMenores";
+            this.cmbHijosMenores.Size = new System.Drawing.Size(90, 33);
+            this.cmbHijosMenores.TabIndex = 73;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label20.Location = new System.Drawing.Point(823, 124);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(137, 25);
+            this.label20.TabIndex = 72;
+            this.label20.Text = "Hijos Menores";
+            // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -673,18 +704,18 @@
             // pnlRegistroNuevo
             // 
             this.pnlRegistroNuevo.Controls.Add(this.label18);
-            this.pnlRegistroNuevo.Controls.Add(this.comboBox5);
+            this.pnlRegistroNuevo.Controls.Add(this.cmbAutoResuelveIncidente);
             this.pnlRegistroNuevo.Controls.Add(this.label16);
             this.pnlRegistroNuevo.Controls.Add(this.cmbFalloRevision);
             this.pnlRegistroNuevo.Controls.Add(this.groupBox11);
             this.pnlRegistroNuevo.Controls.Add(this.label12);
-            this.pnlRegistroNuevo.Controls.Add(this.comboBox7);
+            this.pnlRegistroNuevo.Controls.Add(this.cmbAsolicitudDe);
             this.pnlRegistroNuevo.Controls.Add(this.groupBox6);
             this.pnlRegistroNuevo.Controls.Add(this.groupBox12);
             this.pnlRegistroNuevo.Controls.Add(this.groupBox15);
-            this.pnlRegistroNuevo.Controls.Add(this.textBox7);
+            this.pnlRegistroNuevo.Controls.Add(this.txtObservacionNotificacion);
             this.pnlRegistroNuevo.Controls.Add(this.label13);
-            this.pnlRegistroNuevo.Controls.Add(this.textBox1);
+            this.pnlRegistroNuevo.Controls.Add(this.txtResponsable);
             this.pnlRegistroNuevo.Controls.Add(this.label15);
             this.pnlRegistroNuevo.Controls.Add(this.txtPruebas);
             this.pnlRegistroNuevo.Controls.Add(this.label34);
@@ -714,18 +745,18 @@
             this.label18.TabIndex = 135;
             this.label18.Text = "Auto que resuelve incidente";
             // 
-            // comboBox5
+            // cmbAutoResuelveIncidente
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.cmbAutoResuelveIncidente.FormattingEnabled = true;
+            this.cmbAutoResuelveIncidente.Items.AddRange(new object[] {
             "",
             "Termina las medidas",
             "Continúan las medidas"});
-            this.comboBox5.Location = new System.Drawing.Point(564, 163);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(506, 33);
-            this.comboBox5.TabIndex = 136;
+            this.cmbAutoResuelveIncidente.Location = new System.Drawing.Point(564, 163);
+            this.cmbAutoResuelveIncidente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbAutoResuelveIncidente.Name = "cmbAutoResuelveIncidente";
+            this.cmbAutoResuelveIncidente.Size = new System.Drawing.Size(506, 33);
+            this.cmbAutoResuelveIncidente.TabIndex = 136;
             // 
             // label16
             // 
@@ -822,26 +853,26 @@
             this.label12.TabIndex = 130;
             this.label12.Text = "A solicitud de";
             // 
-            // comboBox7
+            // cmbAsolicitudDe
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.cmbAsolicitudDe.FormattingEnabled = true;
+            this.cmbAsolicitudDe.Items.AddRange(new object[] {
             "",
             "Defensor de Familia",
             "Ministerio Público",
             "Parte interesada "});
-            this.comboBox7.Location = new System.Drawing.Point(719, 51);
-            this.comboBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(340, 33);
-            this.comboBox7.TabIndex = 131;
+            this.cmbAsolicitudDe.Location = new System.Drawing.Point(719, 51);
+            this.cmbAsolicitudDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbAsolicitudDe.Name = "cmbAsolicitudDe";
+            this.cmbAsolicitudDe.Size = new System.Drawing.Size(340, 33);
+            this.cmbAsolicitudDe.TabIndex = 131;
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.label14);
-            this.groupBox6.Controls.Add(this.comboBox1);
-            this.groupBox6.Controls.Add(this.checkBox1);
-            this.groupBox6.Controls.Add(this.checkBox2);
+            this.groupBox6.Controls.Add(this.cmbTipoNotificacionAgresor);
+            this.groupBox6.Controls.Add(this.chkNotificacionAgresorVerificada);
+            this.groupBox6.Controls.Add(this.chkNotificacionAgresor);
             this.groupBox6.Location = new System.Drawing.Point(23, 517);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Name = "groupBox6";
@@ -862,46 +893,46 @@
             this.label14.TabIndex = 51;
             this.label14.Text = "Notificaciones";
             // 
-            // comboBox1
+            // cmbTipoNotificacionAgresor
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbTipoNotificacionAgresor.FormattingEnabled = true;
+            this.cmbTipoNotificacionAgresor.Items.AddRange(new object[] {
             "Personal",
             "Por estado"});
-            this.comboBox1.Location = new System.Drawing.Point(6, 142);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(476, 33);
-            this.comboBox1.TabIndex = 52;
+            this.cmbTipoNotificacionAgresor.Location = new System.Drawing.Point(6, 142);
+            this.cmbTipoNotificacionAgresor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbTipoNotificacionAgresor.Name = "cmbTipoNotificacionAgresor";
+            this.cmbTipoNotificacionAgresor.Size = new System.Drawing.Size(476, 33);
+            this.cmbTipoNotificacionAgresor.TabIndex = 52;
             // 
-            // checkBox1
+            // chkNotificacionAgresorVerificada
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(171, 53);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(121, 29);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Verificada";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkNotificacionAgresorVerificada.AutoSize = true;
+            this.chkNotificacionAgresorVerificada.Location = new System.Drawing.Point(171, 53);
+            this.chkNotificacionAgresorVerificada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkNotificacionAgresorVerificada.Name = "chkNotificacionAgresorVerificada";
+            this.chkNotificacionAgresorVerificada.Size = new System.Drawing.Size(121, 29);
+            this.chkNotificacionAgresorVerificada.TabIndex = 2;
+            this.chkNotificacionAgresorVerificada.Text = "Verificada";
+            this.chkNotificacionAgresorVerificada.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chkNotificacionAgresor
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(23, 53);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(105, 29);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Enviada";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkNotificacionAgresor.AutoSize = true;
+            this.chkNotificacionAgresor.Location = new System.Drawing.Point(23, 53);
+            this.chkNotificacionAgresor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkNotificacionAgresor.Name = "chkNotificacionAgresor";
+            this.chkNotificacionAgresor.Size = new System.Drawing.Size(105, 29);
+            this.chkNotificacionAgresor.TabIndex = 1;
+            this.chkNotificacionAgresor.Text = "Enviada";
+            this.chkNotificacionAgresor.UseVisualStyleBackColor = true;
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.textBox8);
+            this.groupBox12.Controls.Add(this.txtNotificacionOtroCual);
             this.groupBox12.Controls.Add(this.label11);
-            this.groupBox12.Controls.Add(this.checkBox5);
-            this.groupBox12.Controls.Add(this.checkBox6);
+            this.groupBox12.Controls.Add(this.chkNotificacionOtroVerificada);
+            this.groupBox12.Controls.Add(this.chkNotificacionOtro);
             this.groupBox12.Location = new System.Drawing.Point(16, 742);
             this.groupBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox12.Name = "groupBox12";
@@ -911,14 +942,14 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Notificacion otros?";
             // 
-            // textBox8
+            // txtNotificacionOtroCual
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox8.Location = new System.Drawing.Point(169, 92);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(349, 30);
-            this.textBox8.TabIndex = 96;
+            this.txtNotificacionOtroCual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNotificacionOtroCual.Location = new System.Drawing.Point(169, 92);
+            this.txtNotificacionOtroCual.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNotificacionOtroCual.Name = "txtNotificacionOtroCual";
+            this.txtNotificacionOtroCual.Size = new System.Drawing.Size(349, 30);
+            this.txtNotificacionOtroCual.TabIndex = 96;
             // 
             // label11
             // 
@@ -931,32 +962,32 @@
             this.label11.TabIndex = 95;
             this.label11.Text = "Cual otro?";
             // 
-            // checkBox5
+            // chkNotificacionOtroVerificada
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(173, 46);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(121, 29);
-            this.checkBox5.TabIndex = 2;
-            this.checkBox5.Text = "Verificada";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chkNotificacionOtroVerificada.AutoSize = true;
+            this.chkNotificacionOtroVerificada.Location = new System.Drawing.Point(173, 46);
+            this.chkNotificacionOtroVerificada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkNotificacionOtroVerificada.Name = "chkNotificacionOtroVerificada";
+            this.chkNotificacionOtroVerificada.Size = new System.Drawing.Size(121, 29);
+            this.chkNotificacionOtroVerificada.TabIndex = 2;
+            this.chkNotificacionOtroVerificada.Text = "Verificada";
+            this.chkNotificacionOtroVerificada.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // chkNotificacionOtro
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(23, 46);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(105, 29);
-            this.checkBox6.TabIndex = 1;
-            this.checkBox6.Text = "Enviada";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.chkNotificacionOtro.AutoSize = true;
+            this.chkNotificacionOtro.Location = new System.Drawing.Point(23, 46);
+            this.chkNotificacionOtro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkNotificacionOtro.Name = "chkNotificacionOtro";
+            this.chkNotificacionOtro.Size = new System.Drawing.Size(105, 29);
+            this.chkNotificacionOtro.TabIndex = 1;
+            this.chkNotificacionOtro.Text = "Enviada";
+            this.chkNotificacionOtro.UseVisualStyleBackColor = true;
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.checkBox3);
-            this.groupBox15.Controls.Add(this.checkBox4);
+            this.groupBox15.Controls.Add(this.chkNotificacionVictimaVerificada);
+            this.groupBox15.Controls.Add(this.chkNotificacionVictima);
             this.groupBox15.Location = new System.Drawing.Point(23, 407);
             this.groupBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox15.Name = "groupBox15";
@@ -966,37 +997,37 @@
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Notificacion victima?";
             // 
-            // checkBox3
+            // chkNotificacionVictimaVerificada
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(173, 41);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(121, 29);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Verificada";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chkNotificacionVictimaVerificada.AutoSize = true;
+            this.chkNotificacionVictimaVerificada.Location = new System.Drawing.Point(173, 41);
+            this.chkNotificacionVictimaVerificada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkNotificacionVictimaVerificada.Name = "chkNotificacionVictimaVerificada";
+            this.chkNotificacionVictimaVerificada.Size = new System.Drawing.Size(121, 29);
+            this.chkNotificacionVictimaVerificada.TabIndex = 2;
+            this.chkNotificacionVictimaVerificada.Text = "Verificada";
+            this.chkNotificacionVictimaVerificada.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // chkNotificacionVictima
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(23, 41);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(105, 29);
-            this.checkBox4.TabIndex = 1;
-            this.checkBox4.Text = "Enviada";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chkNotificacionVictima.AutoSize = true;
+            this.chkNotificacionVictima.Location = new System.Drawing.Point(23, 41);
+            this.chkNotificacionVictima.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkNotificacionVictima.Name = "chkNotificacionVictima";
+            this.chkNotificacionVictima.Size = new System.Drawing.Size(105, 29);
+            this.chkNotificacionVictima.TabIndex = 1;
+            this.chkNotificacionVictima.Text = "Enviada";
+            this.chkNotificacionVictima.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // txtObservacionNotificacion
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox7.Location = new System.Drawing.Point(19, 945);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(522, 61);
-            this.textBox7.TabIndex = 126;
+            this.txtObservacionNotificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtObservacionNotificacion.Location = new System.Drawing.Point(19, 945);
+            this.txtObservacionNotificacion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtObservacionNotificacion.Multiline = true;
+            this.txtObservacionNotificacion.Name = "txtObservacionNotificacion";
+            this.txtObservacionNotificacion.Size = new System.Drawing.Size(522, 61);
+            this.txtObservacionNotificacion.TabIndex = 126;
             // 
             // label13
             // 
@@ -1009,14 +1040,14 @@
             this.label13.TabIndex = 125;
             this.label13.Text = "Observacion notificación";
             // 
-            // textBox1
+            // txtResponsable
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(156, 344);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(349, 30);
-            this.textBox1.TabIndex = 124;
+            this.txtResponsable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtResponsable.Location = new System.Drawing.Point(156, 344);
+            this.txtResponsable.Margin = new System.Windows.Forms.Padding(4);
+            this.txtResponsable.Name = "txtResponsable";
+            this.txtResponsable.Size = new System.Drawing.Size(349, 30);
+            this.txtResponsable.TabIndex = 124;
             // 
             // label15
             // 
@@ -1055,10 +1086,10 @@
             // 
             this.groupBox5.Controls.Add(this.label21);
             this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.comboBox2);
-            this.groupBox5.Controls.Add(this.comboBox3);
+            this.groupBox5.Controls.Add(this.cmbAnioAudiencia);
+            this.groupBox5.Controls.Add(this.cmbMesAudiencia);
             this.groupBox5.Controls.Add(this.label31);
-            this.groupBox5.Controls.Add(this.comboBox4);
+            this.groupBox5.Controls.Add(this.cmbDiaAudiencia);
             this.groupBox5.Location = new System.Drawing.Point(24, 212);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
@@ -1090,19 +1121,19 @@
             this.label22.TabIndex = 45;
             this.label22.Text = "Mes";
             // 
-            // comboBox2
+            // cmbAnioAudiencia
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(265, 62);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 33);
-            this.comboBox2.TabIndex = 48;
+            this.cmbAnioAudiencia.FormattingEnabled = true;
+            this.cmbAnioAudiencia.Location = new System.Drawing.Point(265, 62);
+            this.cmbAnioAudiencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbAnioAudiencia.Name = "cmbAnioAudiencia";
+            this.cmbAnioAudiencia.Size = new System.Drawing.Size(121, 33);
+            this.cmbAnioAudiencia.TabIndex = 48;
             // 
-            // comboBox3
+            // cmbMesAudiencia
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cmbMesAudiencia.FormattingEnabled = true;
+            this.cmbMesAudiencia.Items.AddRange(new object[] {
             "Enero",
             "Febrero",
             "Marzo",
@@ -1115,11 +1146,11 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.comboBox3.Location = new System.Drawing.Point(107, 62);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(151, 33);
-            this.comboBox3.TabIndex = 46;
+            this.cmbMesAudiencia.Location = new System.Drawing.Point(107, 62);
+            this.cmbMesAudiencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbMesAudiencia.Name = "cmbMesAudiencia";
+            this.cmbMesAudiencia.Size = new System.Drawing.Size(151, 33);
+            this.cmbMesAudiencia.TabIndex = 46;
             // 
             // label31
             // 
@@ -1132,14 +1163,14 @@
             this.label31.TabIndex = 41;
             this.label31.Text = "Día";
             // 
-            // comboBox4
+            // cmbDiaAudiencia
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(16, 62);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(76, 33);
-            this.comboBox4.TabIndex = 44;
+            this.cmbDiaAudiencia.FormattingEnabled = true;
+            this.cmbDiaAudiencia.Location = new System.Drawing.Point(16, 62);
+            this.cmbDiaAudiencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDiaAudiencia.Name = "cmbDiaAudiencia";
+            this.cmbDiaAudiencia.Size = new System.Drawing.Size(76, 33);
+            this.cmbDiaAudiencia.TabIndex = 44;
             // 
             // btnGuardar
             // 
@@ -1513,37 +1544,6 @@
             this.dgvVisitasAnteriores.Size = new System.Drawing.Size(591, 179);
             this.dgvVisitasAnteriores.TabIndex = 24;
             // 
-            // cmbHijosMenores
-            // 
-            this.cmbHijosMenores.FormattingEnabled = true;
-            this.cmbHijosMenores.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.cmbHijosMenores.Location = new System.Drawing.Point(985, 124);
-            this.cmbHijosMenores.Name = "cmbHijosMenores";
-            this.cmbHijosMenores.Size = new System.Drawing.Size(90, 33);
-            this.cmbHijosMenores.TabIndex = 73;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label20.Location = new System.Drawing.Point(823, 124);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(137, 25);
-            this.label20.TabIndex = 72;
-            this.label20.Text = "Hijos Menores";
-            // 
             // FrmRegistrarActualizacionTerminacionMedidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1694,35 +1694,35 @@
         private System.Windows.Forms.GroupBox pnlVisitas;
         private System.Windows.Forms.DataGridView dgvVisitasAnteriores;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox cmbAsolicitudDe;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.ComboBox cmbTipoNotificacionAgresor;
+        private System.Windows.Forms.CheckBox chkNotificacionAgresorVerificada;
+        private System.Windows.Forms.CheckBox chkNotificacionAgresor;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtNotificacionOtroCual;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox chkNotificacionOtroVerificada;
+        private System.Windows.Forms.CheckBox chkNotificacionOtro;
         private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.CheckBox chkNotificacionVictimaVerificada;
+        private System.Windows.Forms.CheckBox chkNotificacionVictima;
+        private System.Windows.Forms.TextBox txtObservacionNotificacion;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtResponsable;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtPruebas;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbAnioAudiencia;
+        private System.Windows.Forms.ComboBox cmbMesAudiencia;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmbDiaAudiencia;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cmbAutoResuelveIncidente;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox cmbFalloRevision;
         private System.Windows.Forms.GroupBox groupBox11;

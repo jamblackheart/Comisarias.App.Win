@@ -69,6 +69,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.pnlRegistro = new System.Windows.Forms.Panel();
+            this.cmbHijosMenores = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.pnlRegistroNuevo = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -140,8 +142,6 @@
             this.dgvAgresiones = new System.Windows.Forms.DataGridView();
             this.pnlVisitas = new System.Windows.Forms.GroupBox();
             this.dgvVisitasAnteriores = new System.Windows.Forms.DataGridView();
-            this.cmbHijosMenores = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
             label17 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
             this.grbFechaNacimiento.SuspendLayout();
@@ -665,6 +665,37 @@
             this.pnlRegistro.Size = new System.Drawing.Size(1085, 294);
             this.pnlRegistro.TabIndex = 67;
             this.pnlRegistro.Visible = false;
+            // 
+            // cmbHijosMenores
+            // 
+            this.cmbHijosMenores.FormattingEnabled = true;
+            this.cmbHijosMenores.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cmbHijosMenores.Location = new System.Drawing.Point(985, 124);
+            this.cmbHijosMenores.Name = "cmbHijosMenores";
+            this.cmbHijosMenores.Size = new System.Drawing.Size(90, 33);
+            this.cmbHijosMenores.TabIndex = 73;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label16.Location = new System.Drawing.Point(823, 124);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(137, 25);
+            this.label16.TabIndex = 72;
+            this.label16.Text = "Hijos Menores";
             // 
             // txtEmail
             // 
@@ -1551,37 +1582,6 @@
             this.dgvVisitasAnteriores.RowHeadersWidth = 51;
             this.dgvVisitasAnteriores.Size = new System.Drawing.Size(591, 179);
             this.dgvVisitasAnteriores.TabIndex = 24;
-            // 
-            // cmbHijosMenores
-            // 
-            this.cmbHijosMenores.FormattingEnabled = true;
-            this.cmbHijosMenores.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.cmbHijosMenores.Location = new System.Drawing.Point(985, 124);
-            this.cmbHijosMenores.Name = "cmbHijosMenores";
-            this.cmbHijosMenores.Size = new System.Drawing.Size(90, 33);
-            this.cmbHijosMenores.TabIndex = 73;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label16.Location = new System.Drawing.Point(823, 124);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(137, 25);
-            this.label16.TabIndex = 72;
-            this.label16.Text = "Hijos Menores";
             // 
             // FrmRegistrarActualizacionIncumplimiento
             // 
