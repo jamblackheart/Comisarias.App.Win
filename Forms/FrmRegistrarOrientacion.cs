@@ -462,6 +462,7 @@ namespace Comisarias.App.Escritorio.Forms
                         MessageBox.Show("Registro exitoso");
                         CargarHistoria();
                         pnlRegistroNuevo.Enabled = false;
+                        lblMensaje.Text = "Guardado";
 
                     }
                 }

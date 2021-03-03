@@ -84,7 +84,7 @@ namespace Comisarias.App.Escritorio.Forms
             txtApellidos.Enabled = false;
             cmbGeneros.Enabled = false;
             cmbArea.Enabled = false;
-            
+
             cmbHijosMenores.Enabled = false;
             txtTelefono.Enabled = false;
             txtEmail.Enabled = false;
@@ -384,16 +384,16 @@ namespace Comisarias.App.Escritorio.Forms
                     txtCedulaConsultar.Enabled = false;
                     btnConsultar.Enabled = false;
                     btnConsultar.Visible = false;
-                    
+
                     //
                     LlenarCamposUsuario();
                     CargarHistoria();
-                   // BloquearFormulario();
+                    // BloquearFormulario();
                     LlenarCamposFecha();
                 }
                 else
                 {
-                                      
+
 
                     lblMensaje.Text = "Usuario nuevo, se creará con los datos ingresados en este formulario";
                 }
@@ -403,7 +403,7 @@ namespace Comisarias.App.Escritorio.Forms
         }
 
 
-       
+
 
 
         private void LlenarCamposUsuario()
@@ -413,6 +413,7 @@ namespace Comisarias.App.Escritorio.Forms
             cmbMes.Text = "";
             cmbGeneros.Text = "";
             cmbArea.Text = "";
+            cmbHijosMenores.Text = "";
 
             lblMensaje.Text = "";
 
@@ -421,12 +422,12 @@ namespace Comisarias.App.Escritorio.Forms
             cmbGeneros.SelectedText = usuario.Genero;
             cmbArea.SelectedText = usuario.Area;
             cmbHijosMenores.SelectedText = usuario.HijosMenores;
-            cmbHijosMenores.SelectedText = usuario.HijosMenores;
+            
             txtTelefono.Text = usuario.Telefono;
             txtEmail.Text = usuario.Correo;
             txtDireccion.Text = usuario.Direccion;
             cmbDia.SelectedText = usuario.FechaNacimiento.Day.ToString();
-            cmbMes.SelectedText = meses[usuario.FechaNacimiento.Month];
+            cmbMes.SelectedText = meses[usuario.FechaNacimiento.Month-1];
             cmbAnio.SelectedText = usuario.FechaNacimiento.Year.ToString();
             txtCualDiscapacidad.Text = usuario.CualDiscapacidad;
             txtCualEtnia.Text = usuario.CualEtnia;
@@ -447,9 +448,9 @@ namespace Comisarias.App.Escritorio.Forms
 
 
 
-       
 
-       
+
+
 
         private void LlenarCamposFecha()
         {
@@ -477,7 +478,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            
+
 
             if (ValidarDatos())
             {
@@ -487,20 +488,23 @@ namespace Comisarias.App.Escritorio.Forms
                     Respuesta respuesta = controlador_usuario.ActualizarRegistro(usuario);
                     if (respuesta.FueExitosa)
                     {
-                       
-                        GuardarVisita();                        
+
+                        GuardarVisita();
+                        CargarHistoria();
+                        lblMensaje.Text = "";
                     }
-                    else {
+                    else
+                    {
                         lblMensaje.Text = "Problema con la actualización del usuario consultado, no pudo agregarse la visita";
                     }
-                    
+
                 }
                 else
                 {
                     Respuesta respuesta = controlador_usuario.AgregarRegistro(usuario);
                     if (respuesta.FueExitosa)
                     {
-                       
+
                         GuardarVisita();
 
                     }
@@ -510,11 +514,12 @@ namespace Comisarias.App.Escritorio.Forms
                     }
                 }
 
-            }   
+            }
 
         }
 
-        public void GuardarVisita() {
+        public void GuardarVisita()
+        {
 
 
             usuario = controlador_usuario.ObtenerUsuarioPorDocumento(txtCedulaConsultar.Text);
@@ -529,12 +534,13 @@ namespace Comisarias.App.Escritorio.Forms
                     MessageBox.Show("Registro exitoso");
                     CargarHistoria();
                     pnlRegistro.Enabled = false;
+                    lblMensaje.Text = "Guardado";
 
                 }
             }
             else
             {
-              
+
                 lblMensaje.Text = "Problema con el usuario consultado no pudo agregarse la agresion";
             }
         }
@@ -577,7 +583,7 @@ namespace Comisarias.App.Escritorio.Forms
             if (motivoVisita.Id != 0)
                 objRegistro.MotivoVisitaId = motivoVisita.Id;
 
-           
+
 
         }
 
@@ -592,7 +598,7 @@ namespace Comisarias.App.Escritorio.Forms
                 mensaje += " Fecha,";
             }
 
-           
+
 
 
             if (txtCedulaConsultar.Text == "")
@@ -661,6 +667,18 @@ namespace Comisarias.App.Escritorio.Forms
             {
                 valido = false;
                 mensaje += " Fecha de nacimiento,";
+            }
+
+            if (rbtEtniaSi.Checked && txtCualEtnia.Text == "")
+            {
+                valido = false;
+                mensaje += " Cúal etnia,";
+            }
+
+            if (rbtDiscapacidadSi.Checked && txtCualDiscapacidad.Text == "")
+            {
+                valido = false;
+                mensaje += " Cúal discapacidad,";
             }
 
             if (!valido)
@@ -740,12 +758,30 @@ namespace Comisarias.App.Escritorio.Forms
 
         }
 
+        private void rbtEtniaSi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtEtniaSi.Checked)
+            {
+                txtCualEtnia.Enabled = true;
+            }
+            else
+            {
+                txtCualEtnia.Text = "";
+                txtCualEtnia.Enabled = false;
+            }
+        }
 
-
-             
-
-      
-
-      
+        private void rbtDiscapacidadSi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtDiscapacidadSi.Checked)
+            {
+                txtCualDiscapacidad.Enabled = true;
+            }
+            else
+            {
+                txtCualDiscapacidad.Text = "";
+                txtCualDiscapacidad.Enabled = false;
+            }
+        }
     }
 }

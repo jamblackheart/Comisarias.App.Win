@@ -220,7 +220,7 @@ namespace Comisarias.App.Escritorio.Controllers
                                                                         CualDiscapacidad=@pCualDiscapacidad,
                                                                         VictimaConflictoArmado=@pVictimaConflictoArmado,
                                                                         Documento= @pDocumento,
-                                                                        HijosMenores= @HijosMenores
+                                                                        HijosMenores= @pHijosMenores
 
                                                                 WHERE Id = @pId", con))
                     {

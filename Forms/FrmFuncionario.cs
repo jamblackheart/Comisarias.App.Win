@@ -96,12 +96,12 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            string nombres = txtNombres.Text;
-            string apellidos = txtApellidos.Text;
-            string documentos = txtDocumento.Text;
-            string password = txtPassword.Text;
+            string nombres = txtNombres.Text.Trim();
+            string apellidos = txtApellidos.Text.Trim();
+            string documentos = txtDocumento.Text.Trim();
+            string password = txtPassword.Text.Trim();
 
-            if (nombres != "" || apellidos != "" || documentos != "" || password != "" )
+            if (nombres != "" || apellidos != "" || documentos != "" || password != "")
             {
 
                 Respuesta respuesta = Controlador.AgregarRegistro(new User
@@ -118,7 +118,8 @@ namespace Comisarias.App.Escritorio.Forms
                     LimpiarValores();
                     MessageBox.Show("Registro creado correctamente.");
                 }
-                else {
+                else
+                {
                     MessageBox.Show("Error creando el registro: " + respuesta.Mensaje);
                 }
             }
@@ -131,17 +132,17 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            
-           
+
+
 
             if (txtNombres.Text != "" || txtApellidos.Text != "" || txtDocumento.Text != "" || txtPassword.Text != "")
             {
-                user.Nombres = txtNombres.Text;
-                user.Apellidos = txtApellidos.Text;
-                user.Documento = txtDocumento.Text;
-                user.Password = txtPassword.Text;
+                user.Nombres = txtNombres.Text.Trim();
+                user.Apellidos = txtApellidos.Text.Trim();
+                user.Documento = txtDocumento.Text.Trim();
+                user.Password = txtPassword.Text.Trim();
 
-                    Respuesta respuesta = Controlador.ActualizarRegistro(user);
+                Respuesta respuesta = Controlador.ActualizarRegistro(user);
                 if (respuesta.FueExitosa)
                 {
                     CargarDatos();
@@ -168,7 +169,7 @@ namespace Comisarias.App.Escritorio.Forms
             user.Documento = dgvDatos.Rows[e.RowIndex].Cells["Documento"].Value.ToString();
             user.Password = dgvDatos.Rows[e.RowIndex].Cells["Password"].Value.ToString();
 
-           
+
             InjectarValores();
         }
 

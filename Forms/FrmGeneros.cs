@@ -125,9 +125,12 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void dgvDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            parametro.Id = dgvDatos.Rows[e.RowIndex].Cells[0].Value.ToString();
-            parametro.Nombre = dgvDatos.Rows[e.RowIndex].Cells[1].Value.ToString();
-            InjectarValores();
+            if (e.RowIndex >= 0)
+            {
+                parametro.Id = dgvDatos.Rows[e.RowIndex].Cells[0].Value.ToString();
+                parametro.Nombre = dgvDatos.Rows[e.RowIndex].Cells[1].Value.ToString();
+                InjectarValores();
+            }
         }
 
       

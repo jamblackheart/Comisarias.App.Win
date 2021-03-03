@@ -31,7 +31,8 @@ namespace Comisarias.App.Escritorio.Forms
 
 
         ActualizacionIncumplimiento objRegistro = new ActualizacionIncumplimiento();
-       
+
+        string ArchivoAutoTramiteIncumplimiento = "";
 
         public FrmRegistrarActualizacionIncumplimiento()
         {
@@ -62,6 +63,37 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LimpiarRegistro()
         {
+            pnlRegistroNuevo.Enabled = true;
+
+            lblMensaje.Text = "";
+            cmbDia.Text = "";
+            cmbAnio.Text = "";
+            cmbMes.Text = "";
+
+            ArchivoAutoTramiteIncumplimiento = "";
+
+            txtResponsable.Text = "";
+
+            chkNotificacionVictima.Checked = false;
+            chkNotificacionVictimaVerificada.Checked = false;
+            chkNotificacionAgresor.Checked = false;
+            chkNotificacionAgresorVerificada.Checked = false;
+            cmbTipoNotificacionAgresor.Text = "";
+
+            chkNotificacionOtro.Checked = false;
+            chkNotificacionOtroVerificada.Checked = false;
+            txtNotificacionOtroCual.Text = "";
+
+            txtObservacionNotificacion.Text = "";
+            txtPruebas.Text = "";
+
+            rbtSancionSI.Checked = false;
+            rbtSancionNO.Checked = true;
+            cmbTipoSancion.Text = "";
+            rbtConsultaSancionSI.Checked = false;
+            rbtConsultaSancionNO.Checked = true;
+            rbtRevoca.Checked = false;
+            rbtConfirma.Checked = true;
 
         }
 
@@ -220,7 +252,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void ObtenerIniciosProceso()
         {
-            RespuestaGetDatos respuesta = controlador_actualizacionCaso.ObtenerPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_inicioProceso.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
@@ -410,23 +442,33 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LlenarCamposFecha()
         {
+            cmbDia.Items.Clear();
+            cmbAnio.Items.Clear();
+            cmbMes.Items.Clear();
+            cmbDiaAudiencia.Items.Clear();
+            cmbMesAudiencia.Items.Clear();
+            cmbAnioAudiencia.Items.Clear();
+
             for (int i = 1; i <= 31; i++)
             {
                 cmbDia.Items.Add(i);
-               
+                cmbDiaAudiencia.Items.Add(i);
+
 
             }
             for (int i = System.DateTime.Now.Year; i >= System.DateTime.Now.Year - 100; i--)
             {
                 cmbAnio.Items.Add(i);
-               
+                cmbAnioAudiencia.Items.Add(i);
+
 
 
             }
             foreach (string item in meses)
             {
                 cmbMes.Items.Add(item);
-               
+                cmbMesAudiencia.Items.Add(item);
+
             }
 
         }
@@ -449,6 +491,7 @@ namespace Comisarias.App.Escritorio.Forms
                         MessageBox.Show("Registro exitoso");
                         CargarHistoria();
                         pnlRegistroNuevo.Enabled = false;
+                        lblMensaje.Text = "Guardado";
 
                     }
                 }
@@ -462,36 +505,47 @@ namespace Comisarias.App.Escritorio.Forms
 
         }
 
-        private string MedidasDeProteccion()
-        {
-            string retorno = "";
-           
-
-            return retorno;
-        }
+      
 
         private void Registrar()
         {
             objRegistro.UsuarioId = usuario.Id;
             objRegistro.Fecha = ObtenerFechaFormulario(cmbAnio.Text, cmbMes.Text, cmbDia.Text);
-            //objRegistro.AutoQueAvocaConocimiento = AutoQueAvocaConocimiento;
-            //objRegistro.OpcionMedidasProteccion = rdbMedidasProteccionSI.Checked ? "SI" : "NO";
-            //objRegistro.MedidasProteccion = MedidasDeProteccion();
-            //objRegistro.OtraRelacionMedidaProteccion = txtOtraMedida.Text;
-            //objRegistro.SolicitudAmpliacionMedidas = rdbAmpliacionMedidasSI.Checked ? "SI" : "NO";
-            //objRegistro.SolicitudAmpliacionMedidasFecha = ObtenerFechaFormulario(cmbAnioAmpliacionMedidas.Text, cmbMesAmpliacionMedidas.Text, cmbDiaAmpliacionMedidas.Text);
-            //objRegistro.SolicitudAmpliacionMedidasSeOtorgaron = cmbSeOtorgaronAmpliacionMedidas.SelectedText;
-            //objRegistro.RemisionFiscalia = rdbRemisionFiscaliaSI.Checked ? "SI" : "NO";
-            //objRegistro.RemisionFiscaliaFecha = ObtenerFechaFormulario(cmbAnioRemisionFiscalia.Text, cmbMesRemisionFiscalia.Text, cmbDiaRemisionFiscalia.Text);
-            //objRegistro.RemisionFiscaliaNumeroNoticiaCriminal = txtNumeroNoticiaRemisionFiscalia.Text;
-            //objRegistro.RemisionMedicinaLegal = rdbRemisionMedicinaLegalSI.Checked ? "SI" : "NO";
-            //objRegistro.RemisionMedicinaLegalFecha = ObtenerFechaFormulario(cmbAnioRemisionMedicinaLegal.Text, cmbMesRemisionMedicinaLegal.Text, cmbDiaRemisionMedicinaLegal.Text);
-            //objRegistro.RemisionMedicinaLegalInforme = RemisionMedicinaLegalInforme;
-            //objRegistro.RemisionEps = rdbRemisionEPSSI.Checked ? "SI" : "NO";
-            //objRegistro.RemisionEpsFecha = ObtenerFechaFormulario(cmbAnioRemisionEPS.Text, cmbMesRemisionEPS.Text, cmbDiaRemisionEPS.Text);
-            //objRegistro.RemisionEpsTipo = cmbTipoRemisionRemisionEPS.SelectedText;
-            //objRegistro.AcompañamientoComisaria = rdbAcompanamientoComisariaSI.Checked ? "SI" : "NO";
-            //objRegistro.AcompañamientoComisariaObservacion = txtObservacionAcompanamientoComisaria.Text;
+            objRegistro.ArchivoAutoTramiteIncumplimiento = ArchivoAutoTramiteIncumplimiento;
+
+            objRegistro.FechaAudiencia = ObtenerFechaFormulario(cmbAnioAudiencia.Text, cmbMesAudiencia.Text, cmbDiaAudiencia.Text);
+
+
+
+            objRegistro.Responsable = txtResponsable.Text;
+
+
+            objRegistro.NotificacionVictima = chkNotificacionVictima.Checked ? "SI" : "NO";
+            objRegistro.NotificacionVictimaVerificada = chkNotificacionVictimaVerificada.Checked ? "SI" : "NO";
+
+            objRegistro.NotificacionAgresor = chkNotificacionAgresor.Checked ? "SI" : "NO";
+            objRegistro.NotificacionAgresorVerificada = chkNotificacionAgresorVerificada.Checked ? "SI" : "NO";
+
+            objRegistro.NotificacionAgresorTipo = cmbTipoNotificacionAgresor.Text;
+
+            objRegistro.NotificacionOtros = chkNotificacionOtro.Checked ? "SI" : "NO";
+            objRegistro.NotificacionOtrosVerificada = chkNotificacionOtroVerificada.Checked ? "SI" : "NO";
+
+            objRegistro.NotificacionOtrosCual = txtNotificacionOtroCual.Text;
+
+            objRegistro.NotificacionObservacion = txtObservacionNotificacion.Text;
+
+            objRegistro.Pruebas = txtPruebas.Text;
+
+            objRegistro.Sancion = rbtSancionSI.Checked ? "SI" : "NO";
+
+            objRegistro.SancionTipo = cmbTipoSancion.Text;
+
+                  objRegistro.ConsultaSancion = rbtConsultaSancionSI.Checked ? "SI" : "NO";
+
+            objRegistro.RevocaConfirma = rbtRevoca.Checked ? "Revoca" : "Confirma";
+
+
         }
 
         private bool ValidarDatos()
@@ -503,6 +557,19 @@ namespace Comisarias.App.Escritorio.Forms
             {
                 valido = false;
                 mensaje += " Fecha,";
+            }
+
+            if (objRegistro.FechaAudiencia == null)
+            {
+                valido = false;
+                mensaje += " Fecha audiencia,";
+            }
+
+
+            if (objRegistro.Responsable == "")
+            {
+                valido = false;
+                mensaje += " Responsable,";
             }
 
             if (!valido)
@@ -551,7 +618,7 @@ namespace Comisarias.App.Escritorio.Forms
             {
                 Archivo archivo = showDialog();
 
-                //lblRutaAutoAvoca.Text = archivo.Nombre;
+                lblRutaArchivoAdjunto.Text = archivo.Nombre;
 
                 string nombreArchivo = archivo.Nombre.Split('.')[0] + "_" + System.DateTime.Now.ToString("dd_MM_yyyy HH_mm_ss") + "." + archivo.Nombre.Split('.')[archivo.Nombre.Split('.').Length - 1];
                 string rutaArchivoOrigen = archivo.Ruta;
@@ -604,38 +671,33 @@ namespace Comisarias.App.Escritorio.Forms
 
 
 
-
-
-        private void btnSubirAutoAvocaConocimiento_Click(object sender, EventArgs e)
+        private void btnSubirArchivo_Click(object sender, EventArgs e)
         {
             Respuesta respuesta = SubirArchivo();
             if (respuesta.FueExitosa)
             {
-               // AutoQueAvocaConocimiento = respuesta.Mensaje;
+                ArchivoAutoTramiteIncumplimiento = respuesta.Mensaje;
                 string[] tdatosRuta = respuesta.Mensaje.Split('\\');
-               // lblRutaAutoAvoca.Text = tdatosRuta[tdatosRuta.Length - 1];
+                lblRutaArchivoAdjunto.Text = tdatosRuta[tdatosRuta.Length - 1];
             }
             else
             {
                 MessageBox.Show(respuesta.Mensaje);
-                //lblInforme.Text = "Error";
+                lblRutaArchivoAdjunto.Text = "Error";
             }
         }
 
-        private void BtnInformeRemisionMedicinaLegal_Click(object sender, EventArgs e)
+        private void rbtSancionSI_CheckedChanged(object sender, EventArgs e)
         {
-            Respuesta respuesta = SubirArchivo();
-            if (respuesta.FueExitosa)
+            if (rbtSancionSI.Checked)
             {
-                //RemisionMedicinaLegalInforme = respuesta.Mensaje;
-                string[] tdatosRuta = respuesta.Mensaje.Split('\\');
-               // lblInforme.Text = tdatosRuta[tdatosRuta.Length - 1];
+                cmbTipoSancion.Enabled = true;
             }
-            else
-            {
-                MessageBox.Show(respuesta.Mensaje);
-               // lblInforme.Text = "Error";
+            else { 
+                cmbTipoSancion.Enabled = false;
+                cmbTipoSancion.Text = "";
             }
+
         }
     }
 }

@@ -485,6 +485,22 @@ namespace Comisarias.App.Escritorio.Forms
             cmbAnio.Items.Clear();
             cmbMes.Items.Clear();
 
+            cmbDiaAmpliacionMedidas.Items.Clear();
+            cmbAnioAmpliacionMedidas.Items.Clear();
+            cmbMesAmpliacionMedidas.Items.Clear();
+
+            cmbDiaRemisionFiscalia.Items.Clear();
+            cmbAnioRemisionFiscalia.Items.Clear();
+            cmbMesRemisionFiscalia.Items.Clear();
+
+            cmbDiaRemisionMedicinaLegal.Items.Clear();
+            cmbAnioRemisionMedicinaLegal.Items.Clear();
+            cmbMesRemisionMedicinaLegal.Items.Clear();
+
+            cmbDiaRemisionEPS.Items.Clear();
+            cmbAnioRemisionEPS.Items.Clear();
+            cmbMesRemisionEPS.Items.Clear();
+
 
             for (int i = 1; i <= 31; i++)
             {
@@ -534,6 +550,7 @@ namespace Comisarias.App.Escritorio.Forms
                         MessageBox.Show("Registro exitoso");
                         CargarHistoria();
                         pnlRegistroNuevo.Enabled = false;
+                        lblMensaje.Text = "Guardado";
 
                     }
                 }
@@ -553,12 +570,12 @@ namespace Comisarias.App.Escritorio.Forms
             objRegistro.UsuarioId = usuario.Id;
             objRegistro.Fecha = ObtenerFechaFormulario(cmbAnio.Text, cmbMes.Text, cmbDia.Text);
             objRegistro.AutoQueAvocaConocimiento = AutoQueAvocaConocimiento;
-            objRegistro.OpcionMedidasProteccion = rdbMedidasProteccionSI.Checked ? "SI" : "NO";
+            objRegistro.OpcionMedidasProteccion = rdbCuentaConMedidasPreventivasSI.Checked ? "SI" : "NO";
             objRegistro.MedidasProteccion = MedidasDeProteccion();
             objRegistro.OtraRelacionMedidaProteccion = txtOtraMedida.Text;
             objRegistro.SolicitudAmpliacionMedidas = rdbAmpliacionMedidasSI.Checked ? "SI" : "NO";
             objRegistro.SolicitudAmpliacionMedidasFecha = ObtenerFechaFormulario(cmbAnioAmpliacionMedidas.Text, cmbMesAmpliacionMedidas.Text, cmbDiaAmpliacionMedidas.Text);
-            objRegistro.SolicitudAmpliacionMedidasSeOtorgaron = cmbSeOtorgaronAmpliacionMedidas.SelectedText;
+            objRegistro.SolicitudAmpliacionMedidasSeOtorgaron = cmbSeOtorgaronAmpliacionMedidas.Text;
             objRegistro.RemisionFiscalia = rdbRemisionFiscaliaSI.Checked ? "SI" : "NO";
             objRegistro.RemisionFiscaliaFecha = ObtenerFechaFormulario(cmbAnioRemisionFiscalia.Text, cmbMesRemisionFiscalia.Text, cmbDiaRemisionFiscalia.Text);
             objRegistro.RemisionFiscaliaNumeroNoticiaCriminal = txtNumeroNoticiaRemisionFiscalia.Text;
@@ -567,7 +584,7 @@ namespace Comisarias.App.Escritorio.Forms
             objRegistro.RemisionMedicinaLegalInforme = RemisionMedicinaLegalInforme;
             objRegistro.RemisionEps = rdbRemisionEPSSI.Checked ? "SI" : "NO";
             objRegistro.RemisionEpsFecha = ObtenerFechaFormulario(cmbAnioRemisionEPS.Text, cmbMesRemisionEPS.Text, cmbDiaRemisionEPS.Text);
-            objRegistro.RemisionEpsTipo = cmbTipoRemisionRemisionEPS.SelectedText;
+            objRegistro.RemisionEpsTipo = cmbTipoRemisionRemisionEPS.Text;
             objRegistro.AcompañamientoComisaria = rdbAcompanamientoComisariaSI.Checked ? "SI" : "NO";
             objRegistro.AcompañamientoComisariaObservacion = txtObservacionAcompanamientoComisaria.Text;
         }
@@ -784,6 +801,203 @@ namespace Comisarias.App.Escritorio.Forms
             {
                 MessageBox.Show(respuesta.Mensaje);
                 lblInforme.Text = "Error";
+            }
+        }
+
+        private void rdbCuentaConMedidasPreventivasSI_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbCuentaConMedidasPreventivasSI.Checked)
+            {
+
+                chkDesalojo.Enabled = true;
+                chkAbstenerseLugar.Enabled = true;
+                lblAbtenerseLugar.Enabled = true;
+                chkEsconderHijos.Enabled = true;
+                chkAcudirTratamiento.Enabled = true;
+                chkProteccionPoliciva.Enabled = true;
+                chkAcompanamientoCasa.Enabled = true;
+                chkRegimenProvisional.Enabled = true;
+                chkSuspencionArmas.Enabled = true;
+                chkPensionAlimentaria.Enabled = true;
+                chkUsoVivienda.Enabled = true;
+                chkProhibicionVenta.Enabled = true;
+                chkDevolucionObjetos.Enabled = true;
+                chkOtraMedida.Enabled = true;
+            }
+            else
+            {
+
+
+                txtOtraMedida.Text = "";
+
+                chkDesalojo.Checked = false;
+                chkAbstenerseLugar.Checked = false;
+                lblAbtenerseLugar.Enabled = false;
+                chkEsconderHijos.Checked = false;
+                chkAcudirTratamiento.Checked = false;
+                chkProteccionPoliciva.Checked = false;
+                chkAcompanamientoCasa.Checked = false;
+                chkRegimenProvisional.Checked = false;
+                chkSuspencionArmas.Checked = false;
+                chkPensionAlimentaria.Checked = false;
+                chkUsoVivienda.Checked = false;
+                chkProhibicionVenta.Checked = false;
+                chkDevolucionObjetos.Checked = false;
+                chkOtraMedida.Checked = false;
+
+
+                chkDesalojo.Enabled = false;
+                chkAbstenerseLugar.Enabled = false;
+                chkEsconderHijos.Enabled = false;
+                chkAcudirTratamiento.Enabled = false;
+                chkProteccionPoliciva.Enabled = false;
+                chkAcompanamientoCasa.Enabled = false;
+                chkRegimenProvisional.Enabled = false;
+                chkSuspencionArmas.Enabled = false;
+                chkPensionAlimentaria.Enabled = false;
+                chkUsoVivienda.Enabled = false;
+                chkProhibicionVenta.Enabled = false;
+                chkDevolucionObjetos.Enabled = false;
+                chkOtraMedida.Enabled = false;
+
+            }
+        }
+
+        private void chkOtraMedida_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkOtraMedida.Checked)
+            {
+                txtOtraMedida.Enabled = true;
+            }
+            else
+            {
+
+                txtOtraMedida.Enabled = false;
+                txtOtraMedida.Text = "";
+            }
+        }
+
+        private void rdbAmpliacionMedidasSI_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbAmpliacionMedidasSI.Checked)
+            {
+                cmbDiaAmpliacionMedidas.Enabled = true;
+                cmbMesAmpliacionMedidas.Enabled = true;
+                cmbAnioAmpliacionMedidas.Enabled = true;
+                cmbSeOtorgaronAmpliacionMedidas.Enabled = true;
+            }
+            else {
+                cmbDiaAmpliacionMedidas.Enabled = false;
+                cmbMesAmpliacionMedidas.Enabled = false;
+                cmbAnioAmpliacionMedidas.Enabled = false;
+                cmbSeOtorgaronAmpliacionMedidas.Enabled = false;
+
+                cmbDiaAmpliacionMedidas.Text = "";
+                cmbMesAmpliacionMedidas.Text = "";
+                cmbAnioAmpliacionMedidas.Text = "";
+                cmbSeOtorgaronAmpliacionMedidas.Text = "";
+
+            }
+        }
+
+        private void rdbRemisionFiscaliaSI_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbRemisionFiscaliaSI.Checked)
+            {
+                cmbDiaRemisionFiscalia.Enabled = true;
+                cmbMesRemisionFiscalia.Enabled = true;
+                cmbAnioRemisionFiscalia.Enabled = true;
+                txtNumeroNoticiaRemisionFiscalia.Enabled = true;
+            }
+            else
+            {
+                cmbDiaRemisionFiscalia.Enabled = false;
+                cmbMesRemisionFiscalia.Enabled = false;
+                cmbAnioRemisionFiscalia.Enabled = false;
+                txtNumeroNoticiaRemisionFiscalia.Enabled = false;
+
+
+                cmbDiaRemisionFiscalia.Text = "";
+                cmbMesRemisionFiscalia.Text = "";
+                cmbAnioRemisionFiscalia.Text = "";
+
+                txtNumeroNoticiaRemisionFiscalia.Text = "";
+               
+
+            }
+        }
+
+        private void rdbRemisionMedicinaLegalSI_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbRemisionMedicinaLegalSI.Checked)
+            {
+                cmbDiaRemisionMedicinaLegal.Enabled = true;
+                cmbMesRemisionMedicinaLegal.Enabled = true;
+                cmbAnioRemisionMedicinaLegal.Enabled = true;
+              
+            }
+            else
+            {
+                cmbDiaRemisionMedicinaLegal.Enabled = false;
+                cmbMesRemisionMedicinaLegal.Enabled = false;
+                cmbAnioRemisionMedicinaLegal.Enabled = false;
+
+
+                cmbDiaRemisionMedicinaLegal.Text = "";
+                cmbMesRemisionMedicinaLegal.Text = "";
+                cmbAnioRemisionMedicinaLegal.Text = "";
+
+
+
+            }
+        }
+
+        private void rdbRemisionEPSSI_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (rdbRemisionEPSSI.Checked)
+            {
+                cmbDiaRemisionEPS.Enabled = true;
+                cmbMesRemisionEPS.Enabled = true;
+                cmbAnioRemisionEPS.Enabled = true;
+                cmbTipoRemisionRemisionEPS.Enabled = true;
+            }
+            else
+            {
+                cmbDiaRemisionEPS.Enabled = false;
+                cmbMesRemisionEPS.Enabled = false;
+                cmbAnioRemisionEPS.Enabled = false;
+                cmbTipoRemisionRemisionEPS.Enabled = false;
+
+
+                cmbDiaRemisionEPS.Text = "";
+                cmbMesRemisionEPS.Text = "";
+                cmbAnioRemisionEPS.Text = "";
+                cmbTipoRemisionRemisionEPS.Text = "";
+
+
+
+
+            }
+
+        }
+
+        private void rdbAcompanamientoComisariaSI_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbAcompanamientoComisariaSI.Checked)
+            {
+                txtObservacionAcompanamientoComisaria.Enabled = true;
+              
+            }
+            else
+            {
+                txtObservacionAcompanamientoComisaria.Enabled = false;
+
+
+
+                txtObservacionAcompanamientoComisaria.Text = "";
+               
+
             }
         }
     }

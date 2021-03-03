@@ -8,7 +8,7 @@ namespace Comisarias.App.Escritorio.Forms
 {
     public partial class FrmRegistrarAudiencia : Form
     {
-       
+
         private string[] meses = { "Enero", "Febrero" , "Marzo", "Abril" ,
             "Mayo" , "Junio" , "Julio" , "Agosto" , "Septiembre" ,
             "Octubre" , "Noviembre" , "Diciembre"};
@@ -30,9 +30,8 @@ namespace Comisarias.App.Escritorio.Forms
         ActualizacionCaso_Controller controlador_actualizacionCaso = new ActualizacionCaso_Controller();
 
 
-        InicioProceso objRegistro = new InicioProceso();
-        string AutoQueAvocaConocimiento = "";
-        string RemisionMedicinaLegalInforme = "";
+        Audiencia objRegistro = new Audiencia();
+
 
         public FrmRegistrarAudiencia()
         {
@@ -64,11 +63,104 @@ namespace Comisarias.App.Escritorio.Forms
         private void LimpiarRegistro()
         {
 
+            pnlRegistroNuevo.Enabled = true;
+
+            lblMensaje.Text = "";
+            cmbDia.Text = "";
+            cmbAnio.Text = "";
+            cmbMes.Text = "";
+
+            rdbAudienciaSI.Checked = false;
+            rdbAudienciaNO.Checked = true;
+
+            txtPorqueNo.Text = "";
+
+            txtResponsable.Text = "";
+
+            chkNotificacionVictima.Checked = false;
+            chkNotificacionVictimaVerificada.Checked = false;
+            chkNotificacionAgresor.Checked = false;
+            chkNotificacionAgresorVerificada.Checked = false;
+            cmbTipoNotificacionAgresor.Text = "";
+
+            chkNotificacionOtro.Checked = false;
+            chkNotificacionOtroVerificada.Checked = false;
+            txtNotificacionOtroCual.Text = "";
+
+            txtObservacionNotificacion.Text = "";
+            txtPruebas.Text = "";
+
+            rdbNoConfrontacionSI.Checked = false;
+            rdbNoConfrontacionNO.Checked = true;
+
+            chkCustodia.Checked = false;
+            chkAlimentos.Checked = false;
+            chkManejoBienes.Checked = false;
+            chkAcuerdosOtra.Checked = false;
+            txtAcuerdosOtraCual.Text = "";
+
+            txtArchivo.Text = "";
+
+            rbtAmpliacionMedidasSI.Checked = false;
+            rbtAmpliacionMedidasNO.Checked = true;
+
+            chkDesalojo.Checked = false;
+            chkAbstenerseLugar.Checked = false;
+            chkEsconderHijos.Checked = false;
+            chkAcudirTratamiento.Checked = false;
+            chkProteccionPoliciva.Checked = false;
+            chkAcompanamientoCasa.Checked = false;
+            chkRegimenProvisional.Checked = false;
+            chkSuspencionArmas.Checked = false;
+            chkPensionAlimentaria.Checked = false;
+            chkUsoVivienda.Checked = false;
+            chkProhibicionVenta.Checked = false;
+            chkDevolucionObjetos.Checked = false;
+            chkOtraMedida.Checked = false;
+
+            txtOtraMedida.Text = "";
+
+            rdbMedidasAtencionSI.Checked = false;
+            rdbMedidasAtencionNO.Checked = true;
+            rdbVerificacionSituacionRiesgoSI.Checked = false;
+            rdbVerificacionSituacionRiesgoNO.Checked = true;
+            txtObservacionVerificacionSituacionRiesgo.Text = "";
+            cmbRemision.Text = "";
+            chkNotifiacionVictimaMedidasAtencion.Checked = false;
+            NotifiacionVictimaMedidasAtencionVerificada.Checked = false;
+            rdbRemisionEntidadTerritorialSI.Checked = false;
+            rdbRemisionEntidadTerritoriaNO.Checked = true;
+            rdbSeguimientoSI.Checked = false;
+            rdbSeguimientoNO.Checked = true;
+
+            cmbDiaSeguimiento.Text = "";
+            cmbMesSeguimiento.Text = "";
+            cmbAnioSeguimiento.Text = "";
+
+            chkTipoMedidaTransporte.Checked = false;
+            chkTipoMedidaAlimentacion.Checked = false;
+            chkTipoMedidaHospedaje.Checked = false;
+
+            txtTipoMedidaObservacion.Text = "";
+
+            rdbProteccionTemporalSI.Checked = false;
+            rdbProteccionTemporalNO.Checked = true;
+
+            rdbExtensivaHijosSI.Checked = false;
+            rdbExtensivaHijosNO.Checked = true;
+
+            rdbRecursoSI.Checked = false;
+            rdbRecursoNO.Checked = true;
+
+            cmbFalloRevision.Text = "";
+
+
+
         }
 
         private void CargarInfomacionEnControles()
         {
-            
+
         }
 
 
@@ -85,7 +177,7 @@ namespace Comisarias.App.Escritorio.Forms
             txtTelefono.Enabled = false;
             txtEmail.Enabled = false;
             txtDireccion.Enabled = false;
-           
+
             txtCualDiscapacidad.Enabled = false;
             txtCualEtnia.Enabled = false;
             rbtDiscapacidadSi.Enabled = false;
@@ -221,7 +313,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void ObtenerIniciosProceso()
         {
-            RespuestaGetDatos respuesta = controlador_actualizacionCaso.ObtenerPorIdUsuario(usuario.Id);
+            RespuestaGetDatos respuesta = controlador_inicioProceso.ObtenerPorIdUsuario(usuario.Id);
 
             if (respuesta.FueExitosa)
             {
@@ -382,7 +474,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LlenarCamposUsuario()
         {
-            
+
             txtNombres.Text = usuario.Nombres;
             txtApellidos.Text = usuario.Apellidos;
             cmbGeneros.SelectedText = usuario.Genero;
@@ -403,7 +495,7 @@ namespace Comisarias.App.Escritorio.Forms
 
         }
 
-       
+
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             ReiniciarPagina();
@@ -411,32 +503,34 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void LlenarCamposFecha()
         {
+
+            cmbDia.Items.Clear();
+            cmbAnio.Items.Clear();
+            cmbMes.Items.Clear();
+            cmbDiaSeguimiento.Items.Clear();
+            cmbMesSeguimiento.Items.Clear();
+            cmbAnioSeguimiento.Items.Clear();
+
             for (int i = 1; i <= 31; i++)
             {
                 cmbDia.Items.Add(i);
-                //cmbDiaAmpliacionMedidas.Items.Add(i);
-                //cmbDiaRemisionFiscalia.Items.Add(i);
-                //cmbDiaRemisionMedicinaLegal.Items.Add(i);
-                //cmbDiaRemisionEPS.Items.Add(i);
+                cmbDiaSeguimiento.Items.Add(i);
+
 
             }
             for (int i = System.DateTime.Now.Year; i >= System.DateTime.Now.Year - 100; i--)
             {
                 cmbAnio.Items.Add(i);
-                //cmbAnioAmpliacionMedidas.Items.Add(i);
-                //cmbAnioRemisionFiscalia.Items.Add(i);
-                //cmbAnioRemisionMedicinaLegal.Items.Add(i);
-                //cmbAnioRemisionEPS.Items.Add(i);
+                cmbAnioSeguimiento.Items.Add(i);
+
 
 
             }
             foreach (string item in meses)
             {
                 cmbMes.Items.Add(item);
-                //cmbMesAmpliacionMedidas.Items.Add(item);
-                //cmbMesRemisionFiscalia.Items.Add(item);
-                //cmbMesRemisionMedicinaLegal.Items.Add(item);
-                //cmbMesRemisionEPS.Items.Add(item);
+                cmbMesSeguimiento.Items.Add(item);
+
             }
 
         }
@@ -459,6 +553,7 @@ namespace Comisarias.App.Escritorio.Forms
                         MessageBox.Show("Registro exitoso");
                         CargarHistoria();
                         pnlRegistroNuevo.Enabled = false;
+                        lblMensaje.Text = "Guardado";
 
                     }
                 }
@@ -543,28 +638,110 @@ namespace Comisarias.App.Escritorio.Forms
             return retorno;
         }
 
+
+        private string AcuerdosPrevios()
+        {
+            string retorno = "";
+            if (chkCustodia.Checked)
+            {
+                retorno += chkCustodia.Text + ",";
+            }
+
+            if (chkAlimentos.Checked)
+            {
+                retorno += chkAlimentos.Text + ",";
+            }
+
+            if (chkManejoBienes.Checked)
+            {
+                retorno += chkManejoBienes.Text + ",";
+            }
+
+
+
+            if (chkAcuerdosOtra.Checked)
+            {
+                retorno += chkAcuerdosOtra.Text + ",";
+            }
+
+            return retorno;
+        }
+
+
+        private string TiposMedida()
+        {
+            string retorno = "";
+            if (chkTipoMedidaTransporte.Checked)
+            {
+                retorno += chkTipoMedidaTransporte.Text + ",";
+            }
+
+            if (chkTipoMedidaAlimentacion.Checked)
+            {
+                retorno += chkTipoMedidaAlimentacion.Text + ",";
+            }
+
+            if (chkTipoMedidaHospedaje.Checked)
+            {
+                retorno += chkTipoMedidaHospedaje.Text + ",";
+            }
+
+
+
+            return retorno;
+        }
+
         private void Registrar()
         {
+
             objRegistro.UsuarioId = usuario.Id;
             objRegistro.Fecha = ObtenerFechaFormulario(cmbAnio.Text, cmbMes.Text, cmbDia.Text);
-            objRegistro.AutoQueAvocaConocimiento = AutoQueAvocaConocimiento;
-            objRegistro.OpcionMedidasProteccion = rdbMedidasProteccionSI.Checked ? "SI" : "NO";
-            objRegistro.MedidasProteccion = MedidasDeProteccion();
-            objRegistro.OtraRelacionMedidaProteccion = txtOtraMedida.Text;
-            //objRegistro.SolicitudAmpliacionMedidas = rdbAmpliacionMedidasSI.Checked ? "SI" : "NO";
-            //objRegistro.SolicitudAmpliacionMedidasFecha = ObtenerFechaFormulario(cmbAnioAmpliacionMedidas.Text, cmbMesAmpliacionMedidas.Text, cmbDiaAmpliacionMedidas.Text);
-            //objRegistro.SolicitudAmpliacionMedidasSeOtorgaron = cmbSeOtorgaronAmpliacionMedidas.SelectedText;
-            //objRegistro.RemisionFiscalia = rdbRemisionFiscaliaSI.Checked ? "SI" : "NO";
-            //objRegistro.RemisionFiscaliaFecha = ObtenerFechaFormulario(cmbAnioRemisionFiscalia.Text, cmbMesRemisionFiscalia.Text, cmbDiaRemisionFiscalia.Text);
-            //objRegistro.RemisionFiscaliaNumeroNoticiaCriminal = txtNumeroNoticiaRemisionFiscalia.Text;
-            //objRegistro.RemisionMedicinaLegal = rdbRemisionMedicinaLegalSI.Checked ? "SI" : "NO";
-            //objRegistro.RemisionMedicinaLegalFecha = ObtenerFechaFormulario(cmbAnioRemisionMedicinaLegal.Text, cmbMesRemisionMedicinaLegal.Text, cmbDiaRemisionMedicinaLegal.Text);
-            //objRegistro.RemisionMedicinaLegalInforme = RemisionMedicinaLegalInforme;
-            //objRegistro.RemisionEps = rdbRemisionEPSSI.Checked ? "SI" : "NO";
-            //objRegistro.RemisionEpsFecha = ObtenerFechaFormulario(cmbAnioRemisionEPS.Text, cmbMesRemisionEPS.Text, cmbDiaRemisionEPS.Text);
-            //objRegistro.RemisionEpsTipo = cmbTipoRemisionRemisionEPS.SelectedText;
-            objRegistro.AcompañamientoComisaria = rdbAcompanamientoComisariaSI.Checked ? "SI" : "NO";
-            objRegistro.AcompañamientoComisariaObservacion = txtPruebas.Text;
+            objRegistro.SeRealizo = rdbAudienciaSI.Checked ? "SI" : "NO";
+            objRegistro.PorqueNoSeRealizo = txtPorqueNo.Text;
+            objRegistro.Responsable = txtResponsable.Text;
+
+
+            objRegistro.NotificacionVictima = chkNotificacionVictima.Checked ? "SI" : "NO";
+            objRegistro.NotificacionVictimaVerificada = chkNotificacionVictimaVerificada.Checked ? "SI" : "NO";
+
+            objRegistro.NotificacionAgresor = chkNotificacionAgresor.Checked ? "SI" : "NO";
+            objRegistro.NotificacionAgresorVerificada = chkNotificacionAgresorVerificada.Checked ? "SI" : "NO";
+
+            objRegistro.NotificacionAgresorTipo = cmbTipoNotificacionAgresor.Text;
+
+            objRegistro.NotificacionOtros = chkNotificacionOtro.Checked ? "SI" : "NO";
+            objRegistro.NotificacionOtrosVerificada = chkNotificacionOtroVerificada.Checked ? "SI" : "NO";
+
+            objRegistro.NotificacionOtrosCual = txtNotificacionOtroCual.Text;
+
+            objRegistro.NotificacionObservacion = txtObservacionNotificacion.Text;
+
+            objRegistro.Pruebas = txtPruebas.Text;
+
+            objRegistro.NoConfrontacionConElAgresor = rdbNoConfrontacionSI.Checked ? "SI" : "NO";
+            objRegistro.AcuerdosPrevios = rdbAcuerdosPreviosSI.Checked ? "SI" : "NO";
+            objRegistro.AcuerdosPreviosCuales = AcuerdosPrevios();
+            objRegistro.AcuerdosPreviosCualesOtra = txtAcuerdosOtraCual.Text;
+            objRegistro.Archivo = txtArchivo.Text;
+            objRegistro.OtorgaMedidasProteccion = rbtAmpliacionMedidasSI.Checked ? "SI" : "NO";
+            objRegistro.OtorgaMedidasProteccionCuales = MedidasDeProteccion();
+            objRegistro.OtorgaMedidasProteccionCualesOtra = txtOtraMedida.Text;
+            objRegistro.MedidasDeAtencion = rdbMedidasAtencionSI.Checked ? "SI" : "NO";
+
+            objRegistro.VerificacionSituacionRiesgo = rdbVerificacionSituacionRiesgoSI.Checked ? "SI" : "NO";
+            objRegistro.ObservacionVerificacionSituacionRiesgo = txtObservacionVerificacionSituacionRiesgo.Text;
+            objRegistro.Remision = cmbRemision.Text;
+            objRegistro.NotifiacionVictimaMedidasAtencion = chkNotifiacionVictimaMedidasAtencion.Checked ? "SI" : "NO";
+            objRegistro.NotifiacionVictimaMedidasAtencionVerificada = NotifiacionVictimaMedidasAtencionVerificada.Checked ? "SI" : "NO";
+            objRegistro.RemisionEntidadTerritorial = rdbRemisionEntidadTerritorialSI.Checked ? "SI" : "NO";
+            objRegistro.Seguimiento = rdbSeguimientoSI.Checked ? "SI" : "NO";
+            objRegistro.FechaSeguimiento = ObtenerFechaFormulario(cmbAnioSeguimiento.Text, cmbMesSeguimiento.Text, cmbDiaSeguimiento.Text).ToString();
+            objRegistro.TiposMedida = TiposMedida();
+            objRegistro.ObservacionMedida = txtTipoMedidaObservacion.Text;
+            objRegistro.ProteccionTemporal = rdbProteccionTemporalSI.Checked ? "SI" : "NO";
+            objRegistro.ExtensivaHijos = rdbExtensivaHijosSI.Checked ? "SI" : "NO";
+            objRegistro.Recurso = rdbRecursoSI.Checked ? "SI" : "NO";
+            objRegistro.FalloRevision = cmbFalloRevision.Text;
         }
 
         private bool ValidarDatos()
@@ -576,6 +753,12 @@ namespace Comisarias.App.Escritorio.Forms
             {
                 valido = false;
                 mensaje += " Fecha,";
+            }
+
+            if (objRegistro.Responsable == null)
+            {
+                valido = false;
+                mensaje += " Responsable,";
             }
 
             if (!valido)
@@ -613,101 +796,76 @@ namespace Comisarias.App.Escritorio.Forms
             ReiniciarPagina();
         }
 
-        private Respuesta SubirArchivo()
+        private void rbtAmpliacionMedidasSI_CheckedChanged(object sender, EventArgs e)
         {
-            Respuesta respuesta = new Respuesta();
-
-            respuesta.FueExitosa = false;
-            respuesta.Mensaje = "Procesando...";
-
-            try
-            {
-                Archivo archivo = showDialog();
-
-               // lblRutaAutoAvoca.Text = archivo.Nombre;
-
-                string nombreArchivo = archivo.Nombre.Split('.')[0] + "_" + System.DateTime.Now.ToString("dd_MM_yyyy HH_mm_ss") + "." + archivo.Nombre.Split('.')[archivo.Nombre.Split('.').Length - 1];
-                string rutaArchivoOrigen = archivo.Ruta;
-                string carpetaArchivosDestino = @Program.parametroSistema.RutaDocumentos + "\\" + usuario.Documento;
-                string rutaArchivoDestino = @Program.parametroSistema.RutaDocumentos + "\\" + usuario.Documento + "\\" + nombreArchivo;
-
-                System.IO.Directory.CreateDirectory(carpetaArchivosDestino);
-
-                System.IO.File.Copy(rutaArchivoOrigen, rutaArchivoDestino, true);
-
-                respuesta.FueExitosa = true;
-                respuesta.Mensaje = rutaArchivoDestino;
-
-            }
-            catch (Exception e)
+            if (rbtAmpliacionMedidasSI.Checked)
             {
 
-                respuesta.FueExitosa = false;
-                respuesta.Mensaje = "Falló la carga del archivo: " + e.Message;
-            }
-
-            return respuesta;
-
-        }
-
-        private static Archivo showDialog()
-        {
-            Archivo respuesta = new Archivo();
-
-            try
-            {
-                OpenFileDialog dialog
-                     = new OpenFileDialog();
-                //dialog.Filter = "pdf files(.*pdf)|*.*";
-                if (dialog.ShowDialog() == DialogResult.OK)
-                {
-                    respuesta.Ruta = dialog.FileName;
-                    respuesta.Nombre = dialog.SafeFileName;
-
-                }
-            }
-            catch (Exception er)
-            {
-
-                MessageBox.Show("A ocurrido un error: " + er.Message);
-
-            }
-            return respuesta;
-        }
-
-
-
-
-
-        private void btnSubirAutoAvocaConocimiento_Click(object sender, EventArgs e)
-        {
-            Respuesta respuesta = SubirArchivo();
-            if (respuesta.FueExitosa)
-            {
-                AutoQueAvocaConocimiento = respuesta.Mensaje;
-                string[] tdatosRuta = respuesta.Mensaje.Split('\\');
-              //  lblRutaAutoAvoca.Text = tdatosRuta[tdatosRuta.Length - 1];
+                chkDesalojo.Enabled = true;
+                chkAbstenerseLugar.Enabled = true;
+                lblAbtenerseLugar.Enabled = true;
+                chkEsconderHijos.Enabled = true;
+                chkAcudirTratamiento.Enabled = true;
+                chkProteccionPoliciva.Enabled = true;
+                chkAcompanamientoCasa.Enabled = true;
+                chkRegimenProvisional.Enabled = true;
+                chkSuspencionArmas.Enabled = true;
+                chkPensionAlimentaria.Enabled = true;
+                chkUsoVivienda.Enabled = true;
+                chkProhibicionVenta.Enabled = true;
+                chkDevolucionObjetos.Enabled = true;
+                chkOtraMedida.Enabled = true;
             }
             else
             {
-                MessageBox.Show(respuesta.Mensaje);
-               // lblInforme.Text = "Error";
+
+
+                txtOtraMedida.Text = "";
+
+                chkDesalojo.Checked = false;
+                chkAbstenerseLugar.Checked = false;
+                lblAbtenerseLugar.Enabled = false;
+                chkEsconderHijos.Checked = false;
+                chkAcudirTratamiento.Checked = false;
+                chkProteccionPoliciva.Checked = false;
+                chkAcompanamientoCasa.Checked = false;
+                chkRegimenProvisional.Checked = false;
+                chkSuspencionArmas.Checked = false;
+                chkPensionAlimentaria.Checked = false;
+                chkUsoVivienda.Checked = false;
+                chkProhibicionVenta.Checked = false;
+                chkDevolucionObjetos.Checked = false;
+                chkOtraMedida.Checked = false;
+
+
+                chkDesalojo.Enabled = false;
+                chkAbstenerseLugar.Enabled = false;
+                chkEsconderHijos.Enabled = false;
+                chkAcudirTratamiento.Enabled = false;
+                chkProteccionPoliciva.Enabled = false;
+                chkAcompanamientoCasa.Enabled = false;
+                chkRegimenProvisional.Enabled = false;
+                chkSuspencionArmas.Enabled = false;
+                chkPensionAlimentaria.Enabled = false;
+                chkUsoVivienda.Enabled = false;
+                chkProhibicionVenta.Enabled = false;
+                chkDevolucionObjetos.Enabled = false;
+                chkOtraMedida.Enabled = false;
+
             }
         }
 
-        private void BtnInformeRemisionMedicinaLegal_Click(object sender, EventArgs e)
+        private void chkOtraMedida_CheckedChanged(object sender, EventArgs e)
         {
-            Respuesta respuesta = SubirArchivo();
-            if (respuesta.FueExitosa)
+            if (chkOtraMedida.Checked)
             {
-                RemisionMedicinaLegalInforme = respuesta.Mensaje;
-                string[] tdatosRuta = respuesta.Mensaje.Split('\\');
-             //   lblInforme.Text = tdatosRuta[tdatosRuta.Length - 1];
+                txtOtraMedida.Enabled = true;
             }
             else
             {
-                MessageBox.Show(respuesta.Mensaje);
-             //   lblInforme.Text = "Error";
+
+                txtOtraMedida.Enabled = false;
+                txtOtraMedida.Text = "";
             }
         }
     }

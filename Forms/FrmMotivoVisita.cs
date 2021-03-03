@@ -25,6 +25,8 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void FrmMotivoVisita_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'comisariaDataSet1.MotivoVisita' table. You can move, or remove it, as needed.
+            //this.motivoVisitaTableAdapter.Fill(this.comisariaDataSet1.MotivoVisita);
         }
 
         private void CargarDatos()
@@ -124,9 +126,12 @@ namespace Comisarias.App.Escritorio.Forms
 
         private void dgvDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if(e.RowIndex >= 0)
+            { 
             parametro.Id = dgvDatos.Rows[e.RowIndex].Cells[0].Value.ToString();
             parametro.Nombre = dgvDatos.Rows[e.RowIndex].Cells[1].Value.ToString();
             InjectarValores();
+            }
         }
     }
 }

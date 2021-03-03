@@ -481,7 +481,7 @@ namespace Comisarias.App.Escritorio.Forms
                         MessageBox.Show("Registro exitoso");
                         CargarHistoria();
                         pnlRegistroNuevo.Enabled = false;
-
+                        lblMensaje.Text = "Guardado";
                     }
                 }
                 else
@@ -575,6 +575,16 @@ namespace Comisarias.App.Escritorio.Forms
             {
                 valido = false;
                 mensaje += " Identificación de la violencia,";
+            }
+
+            if (!chkViolenciaFisica.Checked && 
+                !chkPsicologica.Checked &&
+                !chkPatrimonial.Checked &&
+                !chkVerbal.Checked &&
+                !chkSexual.Checked)
+            {
+                valido = false;
+                mensaje += " Algún tipo de violencia,";
             }
 
             if (!valido)

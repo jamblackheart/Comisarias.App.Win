@@ -17,7 +17,7 @@
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\ComisariasPublicacion\version4\</PublishUrl>
+    <PublishUrl>D:\ComisariasPublicacion\version11\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,7 +27,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>70</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -259,16 +259,6 @@
     <Compile Include="Controllers\MedidasProteccion_Controller.cs" />
     <Compile Include="Controllers\MotivosVisita_Controller.cs" />
     <Compile Include="Controllers\Login_Controller.cs" />
-    <Compile Include="dbComisariaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbComisariaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dbComisariaDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbComisariaDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FrmConsultaHistoriaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -486,28 +476,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="dbComisariaDataSet.xsc">
-      <DependentUpon>dbComisariaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="dbComisariaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbComisariaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbComisariaDataSet.xss">
-      <DependentUpon>dbComisariaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="dbComisariaDataSet1.xsc">
-      <DependentUpon>dbComisariaDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="dbComisariaDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbComisariaDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbComisariaDataSet1.xss">
-      <DependentUpon>dbComisariaDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -524,14 +492,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="Configuracion.xml" />
     <Content Include="Content\img\imgPerrito.jpg" />
-    <Content Include="dbComisaria.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="dbComisaria_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>dbComisaria.mdf</DependentUpon>
-    </Content>
     <Content Include="Resources\close.png" />
     <None Include="Resources\close1.png" />
     <Content Include="Resources\comisaria_de_familia.jpg" />

@@ -91,7 +91,7 @@ namespace Comisarias.App.Escritorio.Controllers
 
         //}
 
-        public Respuesta AgregarRegistro(InicioProceso obj)
+        public Respuesta AgregarRegistro(Audiencia obj)
         {
             Respuesta retorno = new Respuesta();
             retorno.FueExitosa = false;
@@ -104,116 +104,213 @@ namespace Comisarias.App.Escritorio.Controllers
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    using (SqlCommand command = new SqlCommand(@"INSERT INTO InicioProceso 
+                    using (SqlCommand command = new SqlCommand(@"INSERT INTO Audiencias 
                                                                     (UsuarioId
                                                                        ,Fecha
-                                                                       ,AutoQueAvocaConocimiento
-                                                                       ,OpcionMedidasProteccion
-                                                                       ,MedidasProteccion
-                                                                       ,OtraRelacionMedidaProteccion
-                                                                       ,SolicitudAmpliacionMedidas
-                                                                       ,SolicitudAmpliacionMedidasFecha
-                                                                       ,SolicitudAmpliacionMedidasSeOtorgaron
-                                                                       ,RemisionFiscalia
-                                                                       ,RemisionFiscaliaFecha
-                                                                       ,RemisionFiscaliaNumeroNoticiaCriminal
-                                                                       ,RemisionMedicinaLegal
-                                                                       ,RemisionMedicinaLegalFecha
-                                                                       ,RemisionMedicinaLegalInforme
-                                                                       ,RemisionEps
-                                                                       ,RemisionEpsFecha
-                                                                       ,RemisionEpsTipo
-                                                                       ,AcompañamientoComisaria
-                                                                       ,AcompañamientoComisariaObservacion)
+                                                                       ,SeRealizo
+                                                                       ,PorqueNoSeRealizo
+                                                                       ,Responsable
+                                                                       ,NotificacionVictima
+                                                                       ,NotificacionVictimaVerificada
+                                                                       ,NotificacionAgresor
+                                                                       ,NotificacionAgresorVerificada
+                                                                       ,NotificacionAgresorTipo
+                                                                       ,NotificacionOtros
+                                                                       ,NotificacionOtrosVerificada
+                                                                       ,NotificacionOtrosCual
+                                                                       ,NotificacionObservacion
+                                                                       ,Pruebas
+                                                                       ,NoConfrontacionConElAgresor
+                                                                       ,AcuerdosPrevios
+                                                                       ,AcuerdosPreviosCuales
+                                                                       ,AcuerdosPreviosCualesOtra
+                                                                       ,Archivo
+                                                                       ,OtorgaMedidasProteccion
+                                                                       ,OtorgaMedidasProteccionCuales
+                                                                       ,OtorgaMedidasProteccionCualesOtra
+                                                                       ,MedidasDeAtencion
+                                                                       ,VerificacionSituacionRiesgo
+                                                                       ,ObservacionVerificacionSituacionRiesgo
+                                                                       ,Remision
+                                                                       ,NotifiacionVictimaMedidasAtencion
+                                                                       ,NotifiacionVictimaMedidasAtencionVerificada
+                                                                       ,RemisionEntidadTerritorial
+                                                                       ,Seguimiento
+                                                                       ,FechaSeguimiento
+                                                                       ,TiposMedida
+                                                                       ,ObservacionMedida
+                                                                       ,ProteccionTemporal
+                                                                       ,ExtensivaHijos
+                                                                       ,Recurso
+                                                                       ,FalloRevision)
                                                             VALUES (@pUsuarioId
-                                                                       ,@pFecha
-                                                                       ,@pAutoQueAvocaConocimiento
-                                                                       ,@pOpcionMedidasProteccion
-                                                                       ,@pMedidasProteccion
-                                                                       ,@pOtraRelacionMedidaProteccion
-                                                                       ,@pSolicitudAmpliacionMedidas
-                                                                       ,@pSolicitudAmpliacionMedidasFecha
-                                                                       ,@pSolicitudAmpliacionMedidasSeOtorgaron
-                                                                       ,@pRemisionFiscalia
-                                                                       ,@pRemisionFiscaliaFecha
-                                                                       ,@pRemisionFiscaliaNumeroNoticiaCriminal
-                                                                       ,@pRemisionMedicinaLegal
-                                                                       ,@pRemisionMedicinaLegalFecha
-                                                                       ,@pRemisionMedicinaLegalInforme
-                                                                       ,@pRemisionEps
-                                                                       ,@pRemisionEpsFecha
-                                                                       ,@pRemisionEpsTipo
-                                                                       ,@pAcompañamientoComisaria
-                                                                       ,@pAcompañamientoComisariaObservacion)", con))
+                                                                   ,@pFecha
+                                                                   ,@pSeRealizo
+                                                                   ,@pPorqueNoSeRealizo
+                                                                   ,@pResponsable
+                                                                   ,@pNotificacionVictima
+                                                                   ,@pNotificacionVictimaVerificada
+                                                                   ,@pNotificacionAgresor
+                                                                   ,@pNotificacionAgresorVerificada
+                                                                   ,@pNotificacionAgresorTipo
+                                                                   ,@pNotificacionOtros
+                                                                   ,@pNotificacionOtrosVerificada
+                                                                   ,@pNotificacionOtrosCual
+                                                                   ,@pNotificacionObservacion
+                                                                   ,@pPruebas
+                                                                   ,@pNoConfrontacionConElAgresor
+                                                                   ,@pAcuerdosPrevios
+                                                                   ,@pAcuerdosPreviosCuales
+                                                                   ,@pAcuerdosPreviosCualesOtra
+                                                                   ,@pArchivo
+                                                                   ,@pOtorgaMedidasProteccion
+                                                                   ,@pOtorgaMedidasProteccionCuales
+                                                                   ,@pOtorgaMedidasProteccionCualesOtra
+                                                                   ,@pMedidasDeAtencion
+                                                                   ,@pVerificacionSituacionRiesgo
+                                                                   ,@pObservacionVerificacionSituacionRiesgo
+                                                                   ,@pRemision
+                                                                   ,@pNotifiacionVictimaMedidasAtencion
+                                                                   ,@pNotifiacionVictimaMedidasAtencionVerificada
+                                                                   ,@pRemisionEntidadTerritorial
+                                                                   ,@pSeguimiento
+                                                                   ,@pFechaSeguimiento
+                                                                   ,@pTiposMedida
+                                                                   ,@pObservacionMedida
+                                                                   ,@pProteccionTemporal
+                                                                   ,@pExtensivaHijos
+                                                                   ,@pRecurso
+                                                                   ,@pFalloRevision)", con))
                     {
                         SqlParameter pUsuarioId = new SqlParameter("@pUsuarioId", SqlDbType.Int);
                         SqlParameter pFecha = new SqlParameter("@pFecha", SqlDbType.Date);
-                        SqlParameter pAutoQueAvocaConocimiento = new SqlParameter("@pAutoQueAvocaConocimiento", SqlDbType.VarChar);
-                        SqlParameter pOpcionMedidasProteccion = new SqlParameter("@pOpcionMedidasProteccion", SqlDbType.VarChar);
 
+                        SqlParameter pSeRealizo = new SqlParameter("@pSeRealizo", SqlDbType.VarChar);
+                        SqlParameter pPorqueNoSeRealizo = new SqlParameter("@pPorqueNoSeRealizo", SqlDbType.VarChar);
+                        SqlParameter pResponsable = new SqlParameter("@pResponsable", SqlDbType.VarChar);
+                        SqlParameter pNotificacionVictima = new SqlParameter("@pNotificacionVictima", SqlDbType.VarChar);
+                        SqlParameter pNotificacionVictimaVerificada = new SqlParameter("@pNotificacionVictimaVerificada", SqlDbType.VarChar);
+                        SqlParameter pNotificacionAgresor = new SqlParameter("@pNotificacionAgresor", SqlDbType.VarChar);
+                        SqlParameter pNotificacionAgresorVerificada = new SqlParameter("@pNotificacionAgresorVerificada", SqlDbType.VarChar);
+                        SqlParameter pNotificacionAgresorTipo = new SqlParameter("@pNotificacionAgresorTipo", SqlDbType.VarChar);
+                        SqlParameter pNotificacionOtros = new SqlParameter("@pNotificacionOtros", SqlDbType.VarChar);
+                        SqlParameter pNotificacionOtrosVerificada = new SqlParameter("@pNotificacionOtrosVerificada", SqlDbType.VarChar);
+                        SqlParameter pNotificacionOtrosCual = new SqlParameter("@pNotificacionOtrosCual", SqlDbType.VarChar);
+                        SqlParameter pNotificacionObservacion = new SqlParameter("@pNotificacionObservacion", SqlDbType.VarChar);
+                        SqlParameter pPruebas = new SqlParameter("@pPruebas", SqlDbType.VarChar);
 
-                        SqlParameter pMedidasProteccion = new SqlParameter("@pMedidasProteccion", SqlDbType.VarChar);
-                        SqlParameter pOtraRelacionMedidaProteccion = new SqlParameter("@pOtraRelacionMedidaProteccion", SqlDbType.VarChar);
-                        SqlParameter pSolicitudAmpliacionMedidas = new SqlParameter("@pSolicitudAmpliacionMedidas", SqlDbType.VarChar);
-                        SqlParameter pSolicitudAmpliacionMedidasFecha = new SqlParameter("@pSolicitudAmpliacionMedidasFecha", SqlDbType.Date);
-                        SqlParameter pSolicitudAmpliacionMedidasSeOtorgaron = new SqlParameter("@pSolicitudAmpliacionMedidasSeOtorgaron", SqlDbType.VarChar);
-                        SqlParameter pRemisionFiscalia = new SqlParameter("@pRemisionFiscalia", SqlDbType.VarChar);
-                        SqlParameter pRemisionFiscaliaFecha = new SqlParameter("@pRemisionFiscaliaFecha", SqlDbType.Date);
-                        SqlParameter pRemisionFiscaliaNumeroNoticiaCriminal = new SqlParameter("@pRemisionFiscaliaNumeroNoticiaCriminal", SqlDbType.VarChar);
-                        SqlParameter pRemisionMedicinaLegal = new SqlParameter("@pRemisionMedicinaLegal", SqlDbType.VarChar);
-                        SqlParameter pRemisionMedicinaLegalFecha = new SqlParameter("@pRemisionMedicinaLegalFecha", SqlDbType.Date);
-                        SqlParameter pRemisionMedicinaLegalInforme = new SqlParameter("@pRemisionMedicinaLegalInforme", SqlDbType.VarChar);
-                        SqlParameter pRemisionEps = new SqlParameter("@pRemisionEps", SqlDbType.VarChar);
-                        SqlParameter pRemisionEpsFecha = new SqlParameter("@pRemisionEpsFecha", SqlDbType.Date);
-                        SqlParameter pRemisionEpsTipo = new SqlParameter("@pRemisionEpsTipo", SqlDbType.VarChar);
-                        SqlParameter pAcompañamientoComisaria = new SqlParameter("@pAcompañamientoComisaria", SqlDbType.VarChar);
-                        SqlParameter pAcompañamientoComisariaObservacion = new SqlParameter("@pAcompañamientoComisariaObservacion", SqlDbType.VarChar);
+                        SqlParameter pNoConfrontacionConElAgresor = new SqlParameter("@pNoConfrontacionConElAgresor", SqlDbType.VarChar);
+                        SqlParameter pAcuerdosPrevios = new SqlParameter("@pAcuerdosPrevios", SqlDbType.VarChar);
+                        SqlParameter pAcuerdosPreviosCuales = new SqlParameter("@pAcuerdosPreviosCuales", SqlDbType.VarChar);
+                        SqlParameter pAcuerdosPreviosCualesOtra = new SqlParameter("@pAcuerdosPreviosCualesOtra", SqlDbType.VarChar);
+                        SqlParameter pArchivo = new SqlParameter("@pArchivo", SqlDbType.VarChar);
+                        SqlParameter pOtorgaMedidasProteccion = new SqlParameter("@pOtorgaMedidasProteccion", SqlDbType.VarChar);
+                        SqlParameter pOtorgaMedidasProteccionCuales = new SqlParameter("@pOtorgaMedidasProteccionCuales", SqlDbType.VarChar);
+                        SqlParameter pOtorgaMedidasProteccionCualesOtra = new SqlParameter("@pOtorgaMedidasProteccionCualesOtra", SqlDbType.VarChar);
+                       
+                        SqlParameter pMedidasDeAtencion = new SqlParameter("@pMedidasDeAtencion", SqlDbType.VarChar);
+                        SqlParameter pVerificacionSituacionRiesgo = new SqlParameter("@pVerificacionSituacionRiesgo", SqlDbType.VarChar);
+                        SqlParameter pObservacionVerificacionSituacionRiesgo = new SqlParameter("@pObservacionVerificacionSituacionRiesgo", SqlDbType.VarChar);
+                        SqlParameter pRemision = new SqlParameter("@pRemision", SqlDbType.VarChar);
+                        SqlParameter pNotifiacionVictimaMedidasAtencion = new SqlParameter("@pNotifiacionVictimaMedidasAtencion", SqlDbType.VarChar);
+                        SqlParameter pNotifiacionVictimaMedidasAtencionVerificada = new SqlParameter("@pNotifiacionVictimaMedidasAtencionVerificada", SqlDbType.VarChar);
+                        SqlParameter pRemisionEntidadTerritorial = new SqlParameter("@pRemisionEntidadTerritorial", SqlDbType.VarChar);
+                        SqlParameter pSeguimiento = new SqlParameter("@pSeguimiento", SqlDbType.VarChar);
+                        SqlParameter pFechaSeguimiento = new SqlParameter("@pFechaSeguimiento", SqlDbType.VarChar);
+                        SqlParameter pTiposMedida = new SqlParameter("@pTiposMedida", SqlDbType.VarChar);
+                        SqlParameter pObservacionMedida = new SqlParameter("@pObservacionMedida", SqlDbType.VarChar);
+                        SqlParameter pProteccionTemporal = new SqlParameter("@pProteccionTemporal", SqlDbType.VarChar);
+                        SqlParameter pExtensivaHijos = new SqlParameter("@pExtensivaHijos", SqlDbType.VarChar);
+                        SqlParameter pRecurso = new SqlParameter("@pRecurso", SqlDbType.VarChar);
+                        SqlParameter pFalloRevision = new SqlParameter("@pFalloRevision", SqlDbType.VarChar);
 
+                        
 
 
                         pUsuarioId.Value = obj.UsuarioId;
                         pFecha.Value = obj.Fecha;
-                        pAutoQueAvocaConocimiento.Value = obj.AutoQueAvocaConocimiento;
-                        pOpcionMedidasProteccion.Value = obj.OpcionMedidasProteccion;
-                        pMedidasProteccion.Value = obj.MedidasProteccion;
-                        pOtraRelacionMedidaProteccion.Value = obj.OtraRelacionMedidaProteccion;
-                        pSolicitudAmpliacionMedidas.Value = obj.SolicitudAmpliacionMedidas;
-                        pSolicitudAmpliacionMedidasFecha.Value = obj.SolicitudAmpliacionMedidasFecha;
-                        pSolicitudAmpliacionMedidasSeOtorgaron.Value = obj.SolicitudAmpliacionMedidasSeOtorgaron;
-                        pRemisionFiscalia.Value = obj.RemisionFiscalia;
-                        pRemisionFiscaliaFecha.Value = obj.RemisionFiscaliaFecha;
-                        pRemisionFiscaliaNumeroNoticiaCriminal.Value = obj.RemisionFiscaliaNumeroNoticiaCriminal;
-                        pRemisionMedicinaLegal.Value = obj.RemisionMedicinaLegal;
-                        pRemisionMedicinaLegalFecha.Value = obj.RemisionMedicinaLegalFecha;
-                        pRemisionMedicinaLegalInforme.Value = obj.RemisionMedicinaLegalInforme;
-                        pRemisionEps.Value = obj.RemisionEps;
-                        pRemisionEpsFecha.Value = obj.RemisionEpsFecha;
-                        pRemisionEpsTipo.Value = obj.RemisionEpsTipo;
-                        pAcompañamientoComisaria.Value = obj.AcompañamientoComisaria;
-                        pAcompañamientoComisariaObservacion.Value = obj.AcompañamientoComisariaObservacion;
+
+                        pSeRealizo.Value = obj.SeRealizo;
+                        pPorqueNoSeRealizo.Value = obj.PorqueNoSeRealizo;
+                        pResponsable.Value = obj.Responsable;
+                        pNotificacionVictima.Value = obj.NotifiacionVictimaMedidasAtencion;
+                        pNotificacionVictimaVerificada.Value = obj.NotifiacionVictimaMedidasAtencionVerificada;
+                        pNotificacionAgresor.Value = obj.NotificacionAgresor;
+                        pNotificacionAgresorVerificada.Value = obj.NotificacionAgresorVerificada;
+                        pNotificacionAgresorTipo.Value = obj.NotificacionAgresorTipo;
+                        pNotificacionOtros.Value = obj.NotificacionOtros;
+                        pNotificacionOtrosVerificada.Value = obj.NotificacionOtrosVerificada;
+                        pNotificacionOtrosCual.Value = obj.NotificacionOtrosCual;
+                        pNotificacionObservacion.Value = obj.NotificacionObservacion;
+                        pPruebas.Value = obj.Pruebas;
+
+                        pNoConfrontacionConElAgresor.Value = obj.NoConfrontacionConElAgresor;
+                        pAcuerdosPrevios.Value = obj.AcuerdosPrevios;
+                        pAcuerdosPreviosCuales.Value = obj.AcuerdosPreviosCuales;
+                        pAcuerdosPreviosCualesOtra.Value = obj.AcuerdosPreviosCualesOtra;
+                        pArchivo.Value = obj.Archivo;
+                        pOtorgaMedidasProteccion.Value = obj.OtorgaMedidasProteccion;
+                        pOtorgaMedidasProteccionCuales.Value = obj.OtorgaMedidasProteccionCuales;
+                        pOtorgaMedidasProteccionCualesOtra.Value = obj.OtorgaMedidasProteccionCualesOtra;
+
+                        pMedidasDeAtencion.Value = obj.MedidasDeAtencion;
+                        pVerificacionSituacionRiesgo.Value = obj.VerificacionSituacionRiesgo;
+                        pObservacionVerificacionSituacionRiesgo.Value = obj.ObservacionVerificacionSituacionRiesgo;
+                        pRemision.Value = obj.Remision;
+                        pNotifiacionVictimaMedidasAtencion.Value = obj.NotifiacionVictimaMedidasAtencion;
+                        pNotifiacionVictimaMedidasAtencionVerificada.Value = obj.NotifiacionVictimaMedidasAtencionVerificada;
+                        pRemisionEntidadTerritorial.Value = obj.RemisionEntidadTerritorial;
+                        pSeguimiento.Value = obj.Seguimiento;
+                        pFechaSeguimiento.Value = obj.FechaSeguimiento;
+                        pTiposMedida.Value = obj.TiposMedida;
+                        pObservacionMedida.Value = obj.ObservacionMedida;
+                        pProteccionTemporal.Value = obj.ProteccionTemporal;
+                        pExtensivaHijos.Value = obj.ExtensivaHijos;
+                        pRecurso.Value = obj.Recurso;
+                        pFalloRevision.Value = obj.FalloRevision;
 
 
 
                         command.Parameters.Add(pUsuarioId);
                         command.Parameters.Add(pFecha);
-                        command.Parameters.Add(pAutoQueAvocaConocimiento);
-                        command.Parameters.Add(pOpcionMedidasProteccion);
-                        command.Parameters.Add(pMedidasProteccion);
-                        command.Parameters.Add(pOtraRelacionMedidaProteccion);
-                        command.Parameters.Add(pSolicitudAmpliacionMedidas);
-                        command.Parameters.Add(pSolicitudAmpliacionMedidasFecha);
-                        command.Parameters.Add(pSolicitudAmpliacionMedidasSeOtorgaron);
-                        command.Parameters.Add(pRemisionFiscalia);
-                        command.Parameters.Add(pRemisionFiscaliaFecha);
-                        command.Parameters.Add(pRemisionFiscaliaNumeroNoticiaCriminal);
-                        command.Parameters.Add(pRemisionMedicinaLegal);
-                        command.Parameters.Add(pRemisionMedicinaLegalFecha);
-                        command.Parameters.Add(pRemisionMedicinaLegalInforme);
-                        command.Parameters.Add(pRemisionEps);
-                        command.Parameters.Add(pRemisionEpsFecha);
-                        command.Parameters.Add(pRemisionEpsTipo);
-                        command.Parameters.Add(pAcompañamientoComisaria);
-                        command.Parameters.Add(pAcompañamientoComisariaObservacion);
+                        command.Parameters.Add(pSeRealizo);         
+                        command.Parameters.Add(pPorqueNoSeRealizo); 
+                        command.Parameters.Add(pResponsable);       
+                        command.Parameters.Add(pNotificacionVictima);
+                        command.Parameters.Add(pNotificacionVictimaVerificada);
+                        command.Parameters.Add(pNotificacionAgresor);         
+                        command.Parameters.Add(pNotificacionAgresorVerificada);
+                        command.Parameters.Add(pNotificacionAgresorTipo);      
+                        command.Parameters.Add(pNotificacionOtros);         
+                        command.Parameters.Add(pNotificacionOtrosVerificada);
+                        command.Parameters.Add(pNotificacionOtrosCual);      
+                        command.Parameters.Add(pNotificacionObservacion);    
+                        command.Parameters.Add(pPruebas);         
+
+                        command.Parameters.Add(pNoConfrontacionConElAgresor);  
+                        command.Parameters.Add(pAcuerdosPrevios);         
+                        command.Parameters.Add(pAcuerdosPreviosCuales);   
+                        command.Parameters.Add(pAcuerdosPreviosCualesOtra); 
+                        command.Parameters.Add(pArchivo);         
+                        command.Parameters.Add(pOtorgaMedidasProteccion);
+                        command.Parameters.Add(pOtorgaMedidasProteccionCuales);
+                        command.Parameters.Add(pOtorgaMedidasProteccionCualesOtra);       
+
+                        command.Parameters.Add(pMedidasDeAtencion);  
+                        command.Parameters.Add(pVerificacionSituacionRiesgo); 
+                        command.Parameters.Add(pObservacionVerificacionSituacionRiesgo);
+                        command.Parameters.Add(pRemision);         
+                        command.Parameters.Add(pNotifiacionVictimaMedidasAtencion); 
+                        command.Parameters.Add(pNotifiacionVictimaMedidasAtencionVerificada); 
+                        command.Parameters.Add(pRemisionEntidadTerritorial);  
+                        command.Parameters.Add(pSeguimiento);         
+                        command.Parameters.Add(pFechaSeguimiento);    
+                        command.Parameters.Add(pTiposMedida);        
+                        command.Parameters.Add(pObservacionMedida);  
+                        command.Parameters.Add(pProteccionTemporal); 
+                        command.Parameters.Add(pExtensivaHijos);     
+                        command.Parameters.Add(pRecurso);         
+                        command.Parameters.Add(pFalloRevision);   
 
                         int rowsAfected = command.ExecuteNonQuery();
                         retorno.FueExitosa = true;
@@ -237,68 +334,7 @@ namespace Comisarias.App.Escritorio.Controllers
 
         }
 
-        //  public Respuesta ActualizarRegistro(InicioProceso obj)
-        //  {
-        //      Respuesta retorno = new Respuesta();
-        //      retorno.FueExitosa = false;
-        //      retorno.Mensaje = "validando...";
-
-        //      try
-        //      {
-        //          using (SqlConnection con = new SqlConnection(connectionString))
-        //          {
-        //              con.Open();
-        //              using (SqlCommand command = new SqlCommand(@"UPDATE InicioProceso SET Fecha = @pFecha,
-        //,AutoQueAvocaConocimiento = @pAutoQueAvocaConocimiento,
-        //,OpcionMedidasProteccion = @pOpcionMedidasProteccion, 
-        //,MedidasProteccion = @pMedidasProteccion,
-        //,OtraRelacionMedidaProteccion = @pOtraRelacionMedidaProteccion,
-        //,SolicitudAmpliacionMedidas = @pSolicitudAmpliacionMedidas, 
-        //,SolicitudAmpliacionMedidasFecha = @pSolicitudAmpliacionMedidasFecha,
-        //,SolicitudAmpliacionMedidasSeOtorgaron = @pSolicitudAmpliacionMedidasSeOtorgaron, 
-        //,RemisionFiscalia = @pRemisionFiscalia, 
-        //,RemisionFiscaliaFecha = @pRemisionFiscaliaFecha,
-        //,RemisionFiscaliaNumeroNoticiaCriminal = @pRemisionFiscaliaNumeroNoticiaCriminal,
-        //,RemisionMedicinaLegal = @pRemisionMedicinaLegal, 
-        //,RemisionMedicinaLegalFecha = @pRemisionMedicinaLegalFecha,
-        //,RemisionMedicinaLegalInforme = @pRemisionMedicinaLegalInforme,
-        //,RemisionEps = @pRemisionEps, 
-        //,RemisionEpsFecha = @pRemisionEpsFecha,
-        //,RemisionEpsTipo = @pRemisionEpsTipo,
-        //,AcompañamientoComisaria = @pAcompañamientoComisaria, 
-        //,AcompañamientoComisariaObservacion = @pAcompañamientoComisariaObservacion WHERE Id = @pId", con))
-        //              {
-        //                  SqlParameter pId = new SqlParameter("@pId", SqlDbType.VarChar);
-        //                  SqlParameter pNombre = new SqlParameter("@pNombre", SqlDbType.VarChar);
-
-        //                  pId.Value = id;
-        //                  pNombre.Value = nombreGenero;
-
-        //                  command.Parameters.Add(pId);
-        //                  command.Parameters.Add(pNombre);
-
-        //                  command.ExecuteNonQuery();
-        //                  retorno.FueExitosa = true;
-        //                  retorno.Mensaje = "Registro actualizado correctamente";
-
-        //              }
-        //              if (con.State == ConnectionState.Open)
-        //              {
-        //                  con.Dispose();
-        //              }
-        //          }
-
-        //      }
-        //      catch (Exception e)
-        //      {
-        //          retorno.FueExitosa = false;
-        //          retorno.Mensaje = "Error en el servidor. Error: " + e.Message;
-        //      }
-
-        //      return retorno;
-
-        //  }
-
+     
         public RespuestaGetDatos ObtenerPorIdUsuario(int idUsuario)
         {
             RespuestaGetDatos retorno = new RespuestaGetDatos();
@@ -312,28 +348,8 @@ namespace Comisarias.App.Escritorio.Controllers
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    using (SqlCommand command = new SqlCommand(@"SELECT Id
-      ,UsuarioId
-      ,Fecha
-      ,AutoQueAvocaConocimiento 'Auto que avoca conocimiento'
-      ,OpcionMedidasProteccion 'Opción medidas proteccion?'
-      ,MedidasProteccion 'Medidas protección'
-      ,OtraRelacionMedidaProteccion 'Otra Medida?'
-      ,SolicitudAmpliacionMedidas 'Ampliación Medidas?'
-      ,SolicitudAmpliacionMedidasFecha 'Ampliación Medidas fecha'
-      ,SolicitudAmpliacionMedidasSeOtorgaron 'Se otorgaron?'
-      ,RemisionFiscalia 'Remisión a fiscalía?'
-      ,RemisionFiscaliaFecha 'Fecha fiscalía'
-      ,RemisionFiscaliaNumeroNoticiaCriminal 'Noticia criminal'
-      ,RemisionMedicinaLegal   'Remisión a medicina legal?'
-      ,RemisionMedicinaLegalFecha 'Fecha medicina legal' 
-      ,RemisionMedicinaLegalInforme 'Informe'
-      ,RemisionEps 'Remisión a EPS?'
-      ,RemisionEpsFecha 'Fecha eps'
-      ,RemisionEpsTipo 'Tipo'
-      ,AcompañamientoComisaria  'Acompañamiento comisaria?'
-      ,AcompañamientoComisariaObservacion 'Observación'
-                                                        FROM InicioProceso
+                    using (SqlCommand command = new SqlCommand(@"SELECT *
+                                                        FROM Audiencias
                                                    WHERE UsuarioId = @pUsuarioId", con))
                     {
                         SqlParameter pUsuarioId = new SqlParameter("@pUsuarioId", SqlDbType.VarChar);
@@ -368,9 +384,9 @@ namespace Comisarias.App.Escritorio.Controllers
         }
 
 
-        public InicioProceso ObtenerPorId(int id)
+        public Audiencia ObtenerPorId(int id)
         {
-            InicioProceso retorno = new InicioProceso();
+            Audiencia retorno = new Audiencia();
 
 
 
@@ -380,7 +396,7 @@ namespace Comisarias.App.Escritorio.Controllers
                 {
                     con.Open();
                     using (SqlCommand command = new SqlCommand(@"SELECT *
-                                                        FROM InicioProceso
+                                                        FROM Audiencias
                                                    WHERE Id = @pId", con))
                     {
                         SqlParameter pId = new SqlParameter("@pId", SqlDbType.VarChar);
@@ -401,46 +417,46 @@ namespace Comisarias.App.Escritorio.Controllers
                                 string ttFecha = reader["Fecha"].ToString();
                                 DateTime.TryParse(ttFecha, out tFecha);
                                 retorno.Fecha = tFecha;
-                                retorno.AutoQueAvocaConocimiento = reader["AutoQueAvocaConocimiento"].ToString();
-                                retorno.OpcionMedidasProteccion = reader["OpcionMedidasProteccion"].ToString();
-                                retorno.MedidasProteccion = reader["MedidasProteccion"].ToString();
-                                retorno.OtraRelacionMedidaProteccion = reader["OtraRelacionMedidaProteccion"].ToString();
-                                retorno.SolicitudAmpliacionMedidas = reader["SolicitudAmpliacionMedidas"].ToString();
+                                //retorno.AutoQueAvocaConocimiento = reader["AutoQueAvocaConocimiento"].ToString();
+                                //retorno.OpcionMedidasProteccion = reader["OpcionMedidasProteccion"].ToString();
+                                //retorno.MedidasProteccion = reader["MedidasProteccion"].ToString();
+                                //retorno.OtraRelacionMedidaProteccion = reader["OtraRelacionMedidaProteccion"].ToString();
+                                //retorno.SolicitudAmpliacionMedidas = reader["SolicitudAmpliacionMedidas"].ToString();
                                
-                                tFecha = DateTime.MinValue;
-                                ttFecha = reader["SolicitudAmpliacionMedidasFecha"].ToString();
-                                DateTime.TryParse(ttFecha, out tFecha);
-                                retorno.SolicitudAmpliacionMedidasFecha = tFecha;
+                                //tFecha = DateTime.MinValue;
+                                //ttFecha = reader["SolicitudAmpliacionMedidasFecha"].ToString();
+                                //DateTime.TryParse(ttFecha, out tFecha);
+                                //retorno.SolicitudAmpliacionMedidasFecha = tFecha;
 
-                                retorno.SolicitudAmpliacionMedidasSeOtorgaron = reader["SolicitudAmpliacionMedidasSeOtorgaron"].ToString();
-                                retorno.RemisionFiscalia = reader["RemisionFiscalia"].ToString();
+                                //retorno.SolicitudAmpliacionMedidasSeOtorgaron = reader["SolicitudAmpliacionMedidasSeOtorgaron"].ToString();
+                                //retorno.RemisionFiscalia = reader["RemisionFiscalia"].ToString();
 
-                                tFecha = DateTime.MinValue;
-                                ttFecha = reader["RemisionFiscaliaFecha"].ToString();
-                                DateTime.TryParse(ttFecha, out tFecha);
-                                retorno.RemisionFiscaliaFecha = tFecha;
+                                //tFecha = DateTime.MinValue;
+                                //ttFecha = reader["RemisionFiscaliaFecha"].ToString();
+                                //DateTime.TryParse(ttFecha, out tFecha);
+                                //retorno.RemisionFiscaliaFecha = tFecha;
 
-                                retorno.RemisionFiscaliaNumeroNoticiaCriminal = reader["RemisionFiscaliaNumeroNoticiaCriminal"].ToString();
-                                retorno.RemisionMedicinaLegal = reader["RemisionMedicinaLegal"].ToString();
+                                //retorno.RemisionFiscaliaNumeroNoticiaCriminal = reader["RemisionFiscaliaNumeroNoticiaCriminal"].ToString();
+                                //retorno.RemisionMedicinaLegal = reader["RemisionMedicinaLegal"].ToString();
 
-                                tFecha = DateTime.MinValue;
-                                ttFecha = reader["RemisionMedicinaLegalFecha"].ToString();
-                                DateTime.TryParse(ttFecha, out tFecha);
-                                retorno.RemisionMedicinaLegalFecha = tFecha;
+                                //tFecha = DateTime.MinValue;
+                                //ttFecha = reader["RemisionMedicinaLegalFecha"].ToString();
+                                //DateTime.TryParse(ttFecha, out tFecha);
+                                //retorno.RemisionMedicinaLegalFecha = tFecha;
                                
                                 
-                                retorno.RemisionMedicinaLegalInforme = reader["RemisionMedicinaLegalInforme"].ToString();
-                                retorno.RemisionEps = reader["RemisionEps"].ToString();
+                                //retorno.RemisionMedicinaLegalInforme = reader["RemisionMedicinaLegalInforme"].ToString();
+                                //retorno.RemisionEps = reader["RemisionEps"].ToString();
 
 
-                                tFecha = DateTime.MinValue;
-                                ttFecha = reader["RemisionEpsFecha"].ToString();
-                                DateTime.TryParse(ttFecha, out tFecha);
-                                retorno.RemisionEpsFecha = tFecha;
+                                //tFecha = DateTime.MinValue;
+                                //ttFecha = reader["RemisionEpsFecha"].ToString();
+                                //DateTime.TryParse(ttFecha, out tFecha);
+                                //retorno.RemisionEpsFecha = tFecha;
 
-                                retorno.RemisionEpsTipo = reader["RemisionEpsTipo"].ToString();
-                                retorno.AcompañamientoComisaria = reader["AcompañamientoComisaria"].ToString();
-                                retorno.AcompañamientoComisariaObservacion = reader["AcompañamientoComisariaObservacion"].ToString();
+                                //retorno.RemisionEpsTipo = reader["RemisionEpsTipo"].ToString();
+                                //retorno.AcompañamientoComisaria = reader["AcompañamientoComisaria"].ToString();
+                                //retorno.AcompañamientoComisariaObservacion = reader["AcompañamientoComisariaObservacion"].ToString();
 
 
                             }
@@ -455,7 +471,7 @@ namespace Comisarias.App.Escritorio.Controllers
             }
             catch (Exception e)
             {
-                retorno = new InicioProceso();
+                retorno = new Audiencia();
             }
 
             return retorno;

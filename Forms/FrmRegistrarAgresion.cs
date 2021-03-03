@@ -82,10 +82,11 @@ namespace Comisarias.App.Escritorio.Forms
             rdbCuentaConMedidasPreventivasSI.Checked = false;
             rdbCuentaConMedidasPreventivasNO.Checked = true ;
            
-           txtOtraMedida.Text =  "";
+            txtOtraMedida.Text =  "";
 
-           chkDesalojo.Checked = false;
-            chkAbstenerseLugar.Checked = false; 
+            chkDesalojo.Checked = false;
+            chkAbstenerseLugar.Checked = false;
+            
             chkEsconderHijos.Checked = false; 
             chkAcudirTratamiento.Checked = false; 
             chkProteccionPoliciva.Checked = false; 
@@ -505,6 +506,7 @@ namespace Comisarias.App.Escritorio.Forms
                         
                         CargarHistoria();
                         pnlRegistroNuevo.Enabled = false;
+                        lblMensaje.Text = "Guardado";
 
                     }
                 }
@@ -648,6 +650,37 @@ namespace Comisarias.App.Escritorio.Forms
             }
 
 
+            if (rdbCuentaConMedidasPreventivasSI.Checked)
+            {
+                if (chkDesalojo.Checked == false &&
+                    chkAbstenerseLugar.Checked == false &&
+                    chkEsconderHijos.Checked == false &&
+                    chkAcudirTratamiento.Checked == false &&
+                    chkProteccionPoliciva.Checked == false &&
+                    chkAcompanamientoCasa.Checked == false &&
+                    chkRegimenProvisional.Checked == false &&
+                    chkSuspencionArmas.Checked == false &&
+                    chkPensionAlimentaria.Checked == false &&
+                    chkUsoVivienda.Checked == false &&
+                    chkProhibicionVenta.Checked == false &&
+                    chkDevolucionObjetos.Checked == false &&
+                    chkOtraMedida.Checked == false) 
+                {
+                    valido = false;
+                    mensaje += " Debe seleccinar una medida de protección,";
+                }
+
+
+            }
+
+            if (chkOtraMedida.Checked && txtOtraMedida.Text == "")
+            {
+                valido = false;
+                mensaje += " Cual otra medida,";
+            }
+
+
+
             if (!valido)
             {
                 mensaje = mensaje.TrimEnd(',');
@@ -683,6 +716,78 @@ namespace Comisarias.App.Escritorio.Forms
         {
             ReiniciarPagina();
         }
+
+        private void rdbCuentaConMedidasPreventivasSI_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbCuentaConMedidasPreventivasSI.Checked)
+            {
                 
+                chkDesalojo.Enabled = true;
+                chkAbstenerseLugar.Enabled = true;
+                lblAbtenerseLugar.Enabled = true;
+                chkEsconderHijos.Enabled = true;
+                chkAcudirTratamiento.Enabled = true;
+                chkProteccionPoliciva.Enabled = true;
+                chkAcompanamientoCasa.Enabled = true;
+                chkRegimenProvisional.Enabled = true;
+                chkSuspencionArmas.Enabled = true;
+                chkPensionAlimentaria.Enabled = true;
+                chkUsoVivienda.Enabled = true;
+                chkProhibicionVenta.Enabled = true;
+                chkDevolucionObjetos.Enabled = true;
+                chkOtraMedida.Enabled = true;
+            }
+            else {
+
+
+                txtOtraMedida.Text = "";
+
+                chkDesalojo.Checked = false;
+                chkAbstenerseLugar.Checked = false;
+                lblAbtenerseLugar.Enabled = false;
+                chkEsconderHijos.Checked = false;
+                chkAcudirTratamiento.Checked = false;
+                chkProteccionPoliciva.Checked = false;
+                chkAcompanamientoCasa.Checked = false;
+                chkRegimenProvisional.Checked = false;
+                chkSuspencionArmas.Checked = false;
+                chkPensionAlimentaria.Checked = false;
+                chkUsoVivienda.Checked = false;
+                chkProhibicionVenta.Checked = false;
+                chkDevolucionObjetos.Checked = false;
+                chkOtraMedida.Checked = false;
+
+
+                chkDesalojo.Enabled = false;
+                chkAbstenerseLugar.Enabled = false;
+                chkEsconderHijos.Enabled = false;
+                chkAcudirTratamiento.Enabled = false;
+                chkProteccionPoliciva.Enabled = false;
+                chkAcompanamientoCasa.Enabled = false;
+                chkRegimenProvisional.Enabled = false;
+                chkSuspencionArmas.Enabled = false;
+                chkPensionAlimentaria.Enabled = false;
+                chkUsoVivienda.Enabled = false;
+                chkProhibicionVenta.Enabled = false;
+                chkDevolucionObjetos.Enabled = false;
+                chkOtraMedida.Enabled = false;
+
+            }
+        }
+
+        private void chkOtraMedida_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkOtraMedida.Checked)
+            {
+                txtOtraMedida.Enabled = true;
+            }
+            else {
+
+                txtOtraMedida.Enabled = false;
+                txtOtraMedida.Text = "";
+            }
+        }
     }
 }
+
+
